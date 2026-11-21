@@ -472,23 +472,23 @@ id	kind	jp	en	max	notes
 5E2	text	おれさまのなわばりを　でかい{br}顔して歩くんじゃねえ{page}とおりてえなら　出すもの{br}出してから　行きな！！	Don't go swaggerin' through{br}my turf like ya own it.{page}Ya wanna pass, hand over{br}the goods first!!	176/160 x3	
 5E3	text	てめえらか！！都から来た野郎{br}どもは！！{page}てめえを殺しゃあ　あのお方に{br}たんまり礼を　もらえんだ！！{br}かくごしやがれ！！	So it's you lot!! The ones{br}from the capital!!{page}Kill ya, and that fella pays{br}me plenty!! Get ready!!	176/160 x3	
 5E4	text	なんだい　あんたら？{page}せっかくだけど　ここは{br}とおせないねえ{page}向こう行きな！	What's with you lot?{page}Sorry, but ya ain't{br}gettin' through here.{page}Get lost!	176/160 x3	
-5E5+5E6+5E7+5E8+5E9+5EA+5EB+5EC+5ED+5EE+5EF+5F0+5F1+5F2+5F3+5F4+5F5+5F6+5F7+5F8+5F9+5FA+5FB+5FC+5FD+5FE+5FF+600	text	・・・！　これは・・これは{br}なんということだ！{br}体がっ・体がくずれる・・！{page}ぬうっ・・おのれ・・やっと{br}やっと・・よみがえったと・・{br}いうに・・・{page}ぐおーっ！		176/160 x3	
-601	text	・・・！東の結界の気配が・・{br}都に戻りましょう。{page}東の方にあやしい気配を{br}かんじます・・。{br}急ぎましょう、神楽様		176/160 x3	
-602	text	純友は　よみがえるのが{br}はやすぎたのよ・・。{page}多分、自分の力に体の方が{br}たえられなかったのね。		176/160 x3	
-603	text	それより、結界をはっている{br}人たちが心配だよ。{page}急いで都に戻ろう、神楽。		176/160 x3	
-604	text	藤原純友・か・あわれなものよ{br}神楽殿、都へ戻りましょう。{page}純友を倒した今、西国にいる{br}必要はありますまい・・。		176/160 x3	
-605	text	自滅したか・・。{br}これで西国での役目は終わった{br}都へ戻るぞ・・。{page}・・・！{page}いかん！東の結界が消える！{br}皆、急いで戻るぞ！{br}道摩め、思うたよりやる・・		176/160 x3	
-606	text	ふう・・。自滅したか・・。{page}それにしても、道摩はかなり{br}の力をもっているな・・。{page}純友をこれほどみごとに{br}よみがえらせるとは・・。{page}とりあえず都に戻りましょう。{br}道長様にほうこくしなくては・		176/160 x3	
-607	text	道摩の野郎、やるじゃねえか。{br}自滅したから、よかったが・・{br}そうじゃなけりゃ・・{page}あーかんがえたくねえ！{br}おぼえてろよ、道摩の野郎！{page}さあ、行こう。これで西は{br}かたずいたはずだ。{br}都へ戻ろう！		176/160 x3	
-608	text	反魂法珠が光った！		176/160 x3	
-609	text	・・いさん・・兄さん・・。{br}ありがとう・・兄さん。{br}これで・・眠れる・・・。		176/160 x3	
-60A	text	・・・・　三月後　・・・・		176/160 x3	
-60B	text	終わったわね、神楽様。		176/160 x3	
-60C	text	いいえ、まだです・・{br}卯月様・・・{page}正体をあらわしなさい！		176/160 x3	
-60D	text	な・・何なの？　あれは・・{page}すごい力・・・		176/160 x3	
-60E	text	あれこそ、阿古耶様のもう一つ{br}のたましい・・{page}もう何百年も前から、あれは{br}生きていたのです・・{page}戦いで血をながし、死んでいく{br}者たちの、うらみを{br}きゅうしゅうしながら・・{page}卯月様、結界をはって下さい。		176/160 x3	
-60F	text	だめ・・蝉丸、結界をはっても{br}私では、長くもたない・・{page}・・・・？{page}蝉丸！　どこへ行くの！{br}今　外へ出てはだめ！！		176/160 x3	
-610	text	いいんです・・{br}長くもたなくても・・{page}すぐに終わります、{br}卯月様・・{page}私は、このために　神楽様の元{br}へ、来たのです・・{page}この術を、まともにあつかえる{br}のは、道摩の娘、石上のほかは{br}私だけ・・{page}天と地の間、火と水の・・・		176/160 x3	
-611	text	・・・・・・？{page}・・・・・・！{page}そ・・それは　移転の法！{page}蝉丸！　あなた死ぬつもり？{page}やめなさい！　蝉丸！		176/160 x3	
-612	text	死ぬのではありません・・{br}別の世界へ、行くだけの事。{page}元々、このたましいは、{br}山童が、まだ物部一族と{br}呼ばれていたころ・・{page}我らが、つくり出してしまった{br}ものです・・私は山童として{br}封印せねばなりません・・{page}今しかできないのです、神楽様{br}が、阿古耶様を倒して、{br}よわっている、今しか・・{page}・・・神楽様、ありがとう。{br}あなたに会えてよかった・・{br}さようなら・・神楽様・・{page}卯月様、神楽様をおねがい{br}します・・・{page}・・時はかさなり無限につづき{br}無限はくだけて時をきざむ・・{br}天太祝詞移転法呪！{page}この地に宿るもの、我と共に{br}無に帰れ！		176/160 x3	
-613	text	蝉丸ーっ！		176/160 x3	
+5E5+5E6+5E7+5E8+5E9+5EA+5EB+5EC+5ED+5EE+5EF+5F0+5F1+5F2+5F3+5F4+5F5+5F6+5F7+5F8+5F9+5FA+5FB+5FC+5FD+5FE+5FF+600	text	・・・！　これは・・これは{br}なんということだ！{br}体がっ・体がくずれる・・！{page}ぬうっ・・おのれ・・やっと{br}やっと・・よみがえったと・・{br}いうに・・・{page}ぐおーっ！	...! What... What is this!{br}My body... my body crumbles!{page}Nngh... curse it... At last,{br}at last... I had risen{br}again...{page}Guoooh!	176/160 x3	
+601	text	・・・！東の結界の気配が・・{br}都に戻りましょう。{page}東の方にあやしい気配を{br}かんじます・・。{br}急ぎましょう、神楽様	...! The eastern barrier's{br}presence... Let us return to{br}the capital.{page}I sense something sinister{br}to the east...{br}Let us hurry, Kagura-sama.	176/160 x3	
+602	text	純友は　よみがえるのが{br}はやすぎたのよ・・。{page}多分、自分の力に体の方が{br}たえられなかったのね。	Sumitomo came back to life{br}too soon...{page}His body probably couldn't{br}bear his own power.	176/160 x3	
+603	text	それより、結界をはっている{br}人たちが心配だよ。{page}急いで都に戻ろう、神楽。	More importantly, I'm worried{br}about the people holding up{br}the barriers.{page}Let's hurry back to the{br}capital, Kagura.	176/160 x3	
+604	text	藤原純友・か・あわれなものよ{br}神楽殿、都へ戻りましょう。{page}純友を倒した今、西国にいる{br}必要はありますまい・・。	Fujiwara no Sumitomo... a{br}pitiful thing. Kagura-dono,{br}let us return to the capital.{page}With Sumitomo defeated, there{br}is no need to stay in the{br}west...	176/160 x3	
+605	text	自滅したか・・。{br}これで西国での役目は終わった{br}都へ戻るぞ・・。{page}・・・！{page}いかん！東の結界が消える！{br}皆、急いで戻るぞ！{br}道摩め、思うたよりやる・・	He destroyed himself...{br}With this, our task in the{br}west is done. To the capital.{page}...!{page}No! The eastern barrier is{br}fading! Everyone, hurry back!{br}Doma is better than I thought...	176/160 x3	
+606	text	ふう・・。自滅したか・・。{page}それにしても、道摩はかなり{br}の力をもっているな・・。{page}純友をこれほどみごとに{br}よみがえらせるとは・・。{page}とりあえず都に戻りましょう。{br}道長様にほうこくしなくては・	Whew... He destroyed himself...{page}Even so, Doma has{br}considerable power...{page}To revive Sumitomo so{br}perfectly...{page}For now, let us return to{br}the capital. I must report to{br}Michinaga-sama...	176/160 x3	
+607	text	道摩の野郎、やるじゃねえか。{br}自滅したから、よかったが・・{br}そうじゃなけりゃ・・{page}あーかんがえたくねえ！{br}おぼえてろよ、道摩の野郎！{page}さあ、行こう。これで西は{br}かたずいたはずだ。{br}都へ戻ろう！	That Doma's no slouch.{br}Lucky for us Sumitomo fell{br}apart, or else...{page}Agh, I don't wanna think{br}about it! Just you wait,{br}Doma, you bastard!{page}Come on, let's go. The west{br}should be settled now.{br}Back to the capital!	176/160 x3	
+608	text	反魂法珠が光った！	The Hangon Jewel shone!	176/160 x3	
+609	text	・・いさん・・兄さん・・。{br}ありがとう・・兄さん。{br}これで・・眠れる・・・。	...other... Brother...{br}Thank you... Brother.{br}Now... I can sleep...	176/160 x3	
+60A	text	・・・・　三月後　・・・・	...... Three months later ......	176/160 x3	
+60B	text	終わったわね、神楽様。	It's over, Kagura-sama.	176/160 x3	
+60C	text	いいえ、まだです・・{br}卯月様・・・{page}正体をあらわしなさい！	No, not yet...{br}Uzuki-sama...{page}Show yourself!	176/160 x3	
+60D	text	な・・何なの？　あれは・・{page}すごい力・・・	Wh... What is that...?{page}Such power...	176/160 x3	
+60E	text	あれこそ、阿古耶様のもう一つ{br}のたましい・・{page}もう何百年も前から、あれは{br}生きていたのです・・{page}戦いで血をながし、死んでいく{br}者たちの、うらみを{br}きゅうしゅうしながら・・{page}卯月様、結界をはって下さい。	That is Akoya-sama's other{br}soul...{page}It has lived for hundreds{br}of years now...{page}Feeding on the grudges of{br}those who bled and died{br}in battle...{page}Uzuki-sama, raise a barrier.	176/160 x3	
+60F	text	だめ・・蝉丸、結界をはっても{br}私では、長くもたない・・{page}・・・・？{page}蝉丸！　どこへ行くの！{br}今　外へ出てはだめ！！	No... Semimaru, even if I{br}raise a barrier, I can't hold{br}it for long...{page}.......?{page}Semimaru! Where are you going?{br}You mustn't go out now!!	176/160 x3	
+610	text	いいんです・・{br}長くもたなくても・・{page}すぐに終わります、{br}卯月様・・{page}私は、このために　神楽様の元{br}へ、来たのです・・{page}この術を、まともにあつかえる{br}のは、道摩の娘、石上のほかは{br}私だけ・・{page}天と地の間、火と水の・・・	It is all right... Even if it{br}cannot hold for long...{page}It will be over soon,{br}Uzuki-sama...{page}This is why I came to{br}Kagura-sama's side...{page}Only Doma's daughter Isogami{br}and I can truly wield{br}this art...{page}Between heaven and earth,{br}of fire and water...	176/160 x3	
+611	text	・・・・・・？{page}・・・・・・！{page}そ・・それは　移転の法！{page}蝉丸！　あなた死ぬつもり？{page}やめなさい！　蝉丸！	.......?{page}.......!{page}Th... That is the Rite of{br}Transference!{page}Semimaru! Do you mean to die?{page}Stop! Semimaru!	176/160 x3	
+612	text	死ぬのではありません・・{br}別の世界へ、行くだけの事。{page}元々、このたましいは、{br}山童が、まだ物部一族と{br}呼ばれていたころ・・{page}我らが、つくり出してしまった{br}ものです・・私は山童として{br}封印せねばなりません・・{page}今しかできないのです、神楽様{br}が、阿古耶様を倒して、{br}よわっている、今しか・・{page}・・・神楽様、ありがとう。{br}あなたに会えてよかった・・{br}さようなら・・神楽様・・{page}卯月様、神楽様をおねがい{br}します・・・{page}・・時はかさなり無限につづき{br}無限はくだけて時をきざむ・・{br}天太祝詞移転法呪！{page}この地に宿るもの、我と共に{br}無に帰れ！	I will not die...{br}I only go to another world.{page}This soul was first made long{br}ago, when the Yamawaro were{br}still called the Mononobe...{page}It is something we brought into{br}being... As a Yamawaro, I must{br}seal it away...{page}Only now can it be done, now{br}that Kagura-sama has defeated{br}Akoya-sama and it is weak...{page}...Kagura-sama, thank you.{br}I am glad I met you...{br}Farewell... Kagura-sama...{page}Uzuki-sama, please take care{br}of Kagura-sama...{page}...Time piles on time without{br}end; the endless breaks and{br}marks out time...{page}Heavenly Norito, Curse of{br}Transference!{page}All that dwells in this land,{br}return with me to nothing!	176/160 x3	
+613	text	蝉丸ーっ！	Semimaruuu!	176/160 x3	
