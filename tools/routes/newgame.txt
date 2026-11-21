@@ -1,0 +1,14 @@
+# Cold boot -> New Game (はじめから) -> first slot -> opening, mashing A through text.
+700 -
+6 start
+120 -
+6 start
+120 -
+6 a
+120 -
+6 a
+120 -
+6 a
+120 -
+6 a
+300 -

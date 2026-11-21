@@ -12,4 +12,10 @@ Addresses are for the dump in `rom.sha1` unless a note says otherwise.
 
 | File | Covers | State |
 |---|---|---|
-| <text.md> | <encoding, control codes, pointer tables> | <verified / partly guessed> |
+| text.md | encoding, control codes, pointer table, text ranges, menu-caption tilemaps, dialogue font | verified (kanji table pending) |
+| rom-map.md | header, bank map, free-space candidates, expansion plan | partly verified |
+| graphics.md | graphics-text survey | in progress |
+| prior-work.md | earlier patches and community info | done |
+
+Recon helpers: `tools/fontview.py` (glyph sheets), `tools/fontmatch.py` (first-guess kanji), `tools/textmap.py`
+(decode table, coverage), `tools/lua/readhist.lua` (ROM read histogram by PC).
