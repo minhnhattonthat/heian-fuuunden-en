@@ -57,6 +57,8 @@ battle_win_overworld	132=02		poke 7E0036=0016,7E0034=0004;400 -;6 right;30 -;6 a
 game_over	132=02		poke 7E0036=0016,7E0034=0004;400 -;6 right;30 -;6 a;wait 07.01.06;wait 07.01.08;wait 07.01.06;20 -;poke 7E1522=0000,7E0038=000F;wait 08.0B	120	battle end with $1522=0 and the leader down: mode 8 game over, 終 kanji (G13)
 quit_nosave	132=01		6 x;60 -;6 right;40 -;6 right;40 -;6 a;90 -;6 down;30 -;6 down;30 -;6 a;90 -	60	save menu option 3 このままおわる: popup 244 おつかれさまでした (VRAM 7000, 112 px)
 item_full	132=01		6 x;60 -;6 a;90 -;poke 7E003A=0012;90 -	60	item menu step $3A=12 (C0:A8CB) forced: two-line popup 1C8 どうぐがいっぱいです / 1C9 そうびできません (VRAM 7E00/7F00, 128 px)
+status_jutsu	132=01		6 x;60 -;6 right;40 -;6 a;90 -;6 a;90 -	60	status screen, A: jutsu page ($1294=0, C0:AC76 -> C1:2DA1; names C1:2E0E, VRAM table C1:A3EB 7C00.., 48 px)
+status_shikigami	132=01		6 x;60 -;6 right;40 -;6 a;90 -;6 a;90 -;6 a;90 -	60	status screen, A twice: shikigami page (names C1:57C0, VRAM table C1:A3EB, 48 px)
 squad_form	132=01		60 -;poke 7E0034=000A,7E0036=000D,7E1244=0000,7E129E=0010;400 -	60	squad formation screen: mode 0A sub 0D runs the event interpreter, command 0 from step $10 (C5:9ECE) builds it; names C1:6011 (VRAM table C1:E6CE, 3 tiles)
 confirm_prompt	132=01		60 -;poke 7E0034=000A,7E0036=000D,7E1244=0000,7E129E=0010;400 -;6 start;150 -	60	squad formation, Start: step $1F popup 28D これでいいですか？ / 28E はい いいえ (window #12, VRAM 7800/7900, 112 px)
 shop	132=01		60 -;poke 7E0034=000C,7E0036=0000,7E003A=0000;1 -;poke 7E122E=0001;240 -;6 a;120 -;6 a;120 -;6 a;120 -	240	shop (mode 0C) with type $122E=1 poked after sub 0 loads it: merchant 23C, item list, label FF 価値 (VRAM 6700, 24 px)

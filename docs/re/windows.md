@@ -22,6 +22,8 @@ pixels in emulator shots, not from the Japanese length. px = English VWF pixels 
 | Status screen class / name / equipment (0F3.., 0B9-0F2, items) | renderer 2 `C1:29D9`, VRAM 7000/7050/7100/7150 | 48 px (6 tiles) | 1 big or 2 small | measured: `marker_warp/menu_status` (small two-line markers whole) |
 | Party list names under the portraits (ids 054-083) | renderer 2 via `PartyName` (callers `C1:2C04`, `C1:32AE`, `C1:3327`), VRAM table `C1:A3CB` (`C1:A3DB` = +$200 when `$10CC`) | **40 px (5 tiles), narrow 8-px font, always** | 1 | measured: `work/qa/party/menu_items`, `menu_squad`, `menu_status` (`build.py marker --qa 054=Sadamitsu --qa 100=Yasumasa`: all 8 slots whole). Room per slot: x 32-71 (own portrait ends x 32, next starts x 72). Original: 3 tiles (24 px) of 16-px text; widened in the engine (D11, hooks.md §Party list) |
 | Battle jutsu list (ids 13C-181) | renderer 2 `C5:0D03`.. (5 rows), VRAM 6D40/6E00/6E40.. (8 tiles each) | 48 px | 1 big or 2 small | measured: `marker_warp/battle_jutsu_list` (small lines whole; the cost digit sits at x 48) |
+| Status-screen jutsu page (ids 13C-181; A in the status screen, `$1294=0`) | renderer 2 `C1:2E0E` (`C1:2DA1`, from `C0:AC99`), VRAM table `C1:A3EB` (7C00/7C50/7D00/7D50/7E00) | **48 px** | 1 big or 2 small | measured: `work/qa/probe/pjls/pjl_a` (stress `--qa 16E={small}0123456789..`, `--qa 146=ABCDEFGHIJKL`: ink x 136-182, cut at 184; cost digits from x 201). A string wider than the field spills into a neighbour slot's tiles (stress shot): the lint must hold 48 |
+| Status-screen shikigami page (ids 182-1B2; A twice) | renderer 2 `C1:57C0`, VRAM table `C1:A3EB` | **48 px** | 1 big or 2 small | measured: `pjls/pjl_aa` (ink x 152-198, cut at 200; count digit from x 217) |
 | Battle shikigami list (ids 182-1B2) | renderer 2 `C5:226F`.. | 48 px | 1 big or 2 small | measured: `marker_small/battle_shikigami_list` (same layout as the jutsu list) |
 | Overworld squad label (ids 1B3-1B8) | renderer 2 `C1:4FF3`, VRAM 6B00 | 48 px (6 tiles) | 1 big or 2 small | measured: `marker_small/overworld` |
 | Overworld province label (ids 24A-288) | renderer 2 `C1:5018`, VRAM 6B30 | 48 px (6 tiles) | 1 big or 2 small | measured: `marker_small/overworld` ("[26C] The" cut at 48; a wider string spills into the squad label's bottom row at 6B80) |
@@ -54,7 +56,7 @@ draws `{sbr}` as a space, so `{name}` in dialogue reads normally (verified: `mar
   | Caller | id | VRAM | Budget |
   |---|---|---|---|
   | `C1:6011` | `$101E` + $54 (party names) | table `C1:E6CE` | squad formation screen (shot, table above): 3 tiles, needs the D11 remedy |
-  | `C1:2E0E` / `C1:57C0` | + $13F jutsu / + $181 shikigami | table `C1:A3EB` | 48 field (guess) |
+  | `C1:2E0E` / `C1:57C0` | + $13F jutsu / + $181 shikigami | table `C1:A3EB` | 48 field (measured, status pages above) |
   | `C5:1281` / `C5:206A` | `$09EE,x` + $C2 or $12D / + $53 | 6E00 / 6D40 | ids in 001-0FE: 48 field |
   | `C5:12FF`, `C5:132A` | `C1:8785` + $1A7 (shikigami) | 6E40 / 6F00 | 48 field |
   | `C5:0064` / `0093` | fixed 101 / 102-103 | 6D40 / 6E00 | place names: 48 field |
