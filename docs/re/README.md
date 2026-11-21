@@ -14,8 +14,11 @@ Addresses are for the dump in `rom.sha1` unless a note says otherwise.
 |---|---|---|
 | text.md | encoding, control codes, pointer table, text ranges, menu-caption tilemaps, dialogue font | verified (kanji table pending) |
 | rom-map.md | header, bank map, free-space candidates, expansion plan | partly verified |
-| graphics.md | graphics-text survey | in progress |
+| graphics.md | graphics-text survey (tour + static sweep) | done; in-game shots of some rows in phase 2 |
+| compression.md | decompressor C1:05CF (3 types), block banks, load tables A/B | verified (decoder) |
 | prior-work.md | earlier patches and community info | done |
 
 Recon helpers: `tools/fontview.py` (glyph sheets), `tools/fontmatch.py` (first-guess kanji), `tools/textmap.py`
-(decode table, coverage), `tools/lua/readhist.lua` (ROM read histogram by PC).
+(decode table, coverage), `tools/lua/readhist.lua` (ROM read histogram by PC), `tools/kss_comp.py` (decode a
+block), `tools/kss_blocks.py` (enumerate block chains), `tools/gfx_sweep.py` (static tile sweep sheets),
+`tools/smallfont.py` (decode small-font BG3 words), `tools/lua/declog.lua` (log decompressions).

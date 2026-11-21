@@ -50,7 +50,8 @@ ROM: HiROM + FastROM (`$FFD5=$31`), 1.5 MB file, header size byte `$0B` (2 MB), 
   likely (status labels, battle menus): find them the same way (BG3 row from the VRAM dump, search the ROM for the words).
 - Small 8×16 font tile order (from the caption): `30-3E` あ..そ, `3F` た, `50-5F` ち..み, `70-7A` む め も や ゆ よ わ
   を ん ら り (guess past `77`). Small kana sit in the bottom tile only (ょ = top `01`, bottom `2C`). Source of the font
-  tiles in ROM: not found raw (`vramfind.py`: 299 tiles not found), so compressed or built at run time.
+  tiles: **`C8:8954`** (file 0x88954), LZ type 1, 0x1600 bytes → BG3 VRAM `$6000` (`compression.md`); full layout
+  in `tools/smallfont.py`. More small-font tilemap text (save menu, options, status labels) is in `graphics.md` §T.
 - Name plates under portraits and the party list (神楽, 藤太) use the dialogue font: names come from the table.
 
 ## Engine facts for later phases

@@ -11,6 +11,14 @@ checksum `$F5A2` / complement `$0A5D`. Developer KSS (copyright 1995 KSS; font c
 | 0x030000-0x03FFFF (C3) | dialogue pointer table + strings (full) | verified |
 | 0x060000-0x06FFFF (C6) | dialogue strings (full to 0x6FFA4) | verified |
 | 0x090000-0x09F3FF (C9) | dialogue font, 16×16 2bpp, 64 B/glyph, 0x3D0 glyphs | verified |
+| 0x0105CF / 0x01EDFD / 0x01EFA1 (C1) | decompressor; load tables A and B (`compression.md`) | verified |
+| 0x080000-0x08DF9E (C8) | compressed UI graphics and tilemaps, small font `0x88954` (`graphics.md`) | verified |
+| 0x049F08-0x04DE54 (C4), 0x070000-0x07779F (C7), 0x0B0000-0x0BBA3C (CB) | compressed map data / field tiles | verified (decode) |
+| 0x0A0000-0x0AFFFF (CA) | raw 4bpp portraits | verified (render) |
+| 0x0C0000-0x0D0000+, 0x130000 (CC-D0, D3) | raw sprites; D0:0000 damage digits | render |
+| 0x110000, 0x140000, 0x150000 (D1, D4, D5) | compressed sprites, whole banks | verified (decode) |
+| 0x160000-0x16F0FA (D6) | raw spell-effect tiles | render |
+| 0x170000-0x17C606 (D7) | compressed backgrounds + map data | verified (decode) |
 | 0x050000 (C5) | sound driver interface (`C5:4EA2` writes APU ports) | verified |
 
 ## Free space

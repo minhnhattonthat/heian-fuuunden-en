@@ -4,4 +4,6 @@
 - references/platform-snes.md: `lua/probes/snes_romreads.lua` logs one line per distinct (PC, bank), so it hides data streams; a per-(PC, 256-byte page) count (`tools/lua/readhist.lua` here) found the font loop at once. Its offsets also assume LoROM; on HiROM use `addr & 0x3FFFFF`.
 - references/pipeline.md §Recon: a hot ROM-read loop during dialogue was the sprite builder, not text; filter histograms by the text banks first.
 - references/graphics.md: menu captions here are raw BG3 tilemap words in ROM (`0x20xx`), not strings; searching the ROM for the low bytes of the dumped map row with a wildcard high byte (`54 . 35 . 5E . 58`) found the table when relative search found nothing.
+- references/graphics.md §Survey: blocks stored back to back let a chain walker (decode, jump to the end, decode again; keep chains of ≥5) enumerate every compressed block without a pointer table; chains of 3 were noise in text and code banks.
+- SKILL.md ground rules: with context-mode active, Bash output over ~4 KB and Read of files over ~4 KB come back as a stub; write to a file and Read with offset/limit, or filter in Python first.
 - references/pipeline.md §Recon: system-font matching (MS Gothic, bbox-normalised NCC) identified only ~half of a 16×16 2bpp kanji font; read the sheets by eye.
