@@ -42,11 +42,43 @@ def unpack(rom, outdir, path=LIST):
         prev_end = off + n
 
 
+# Blocks that may grow: where the game keeps their 24-bit pointers (file offsets of the 3 pointer bytes; found by
+# scanning the ROM for the block address, each checked against the original bytes before patching). A grown block
+# moves to RELOC_AREA (bank $DF upper half, after the code; 2 MB builds only).
+RELOC_PTRS = {
+    0x08939E: [0x01EEA7, 0x01EF33],            # party panel A tilemap (graphics load table C1:EE..)
+    0x089450: [0x01EEB1, 0x01EED9, 0x01EF3D],  # party panel B tilemap
+}
+RELOC_AREA = (0x1F8000, 0x200000)
+
+
+def _relocate(out, off, blk, cursor):
+    ptrs = RELOC_PTRS.get(off)
+    if not ptrs:
+        raise ValueError("block 0x%06X grew: needs relocation (add its pointers to RELOC_PTRS)" % off)
+    if len(out) < RELOC_AREA[1]:
+        raise ValueError("block 0x%06X grew: relocation needs the 2 MB ROM" % off)
+    if cursor + len(blk) > RELOC_AREA[1]:
+        raise ValueError("relocation area full")
+    if any(b != 0xFF for b in out[cursor:cursor + len(blk)]):
+        raise ValueError("relocation area at 0x%06X is not free" % cursor)
+    out[cursor:cursor + len(blk)] = blk
+    old = bytes([off & 0xFF, (off >> 8) & 0xFF, 0xC0 + (off >> 16)])
+    new = bytes([cursor & 0xFF, (cursor >> 8) & 0xFF, 0xC0 + (cursor >> 16)])
+    for p in ptrs:
+        if bytes(out[p:p + 3]) != old:
+            raise ValueError("pointer at 0x%06X does not hold block 0x%06X" % (p, off))
+        out[p:p + 3] = new
+    return cursor + len(blk)
+
+
 def pack(rom, indir, path=LIST, recompress=False):
-    """Return (new rom, stats). stats counts kept / re-encoded / exact (re-encoded and byte-identical)."""
+    """Return (new rom, stats). stats counts kept / re-encoded / exact (re-encoded and byte-identical) / moved.
+    A block that grows moves to RELOC_AREA when its pointers are known (RELOC_PTRS); `rom` must then be 2 MB."""
     out = bytearray(rom)
     indir = Path(indir)
-    stats = {"kept": 0, "encoded": 0, "exact": 0}
+    stats = {"kept": 0, "encoded": 0, "exact": 0, "moved": 0}
+    cursor = RELOC_AREA[0]
     for off, typ, packed, size in blocks(path):
         data = (indir / name(off)).read_bytes()
         orig, n = decode(rom, off)
@@ -63,6 +95,8 @@ def pack(rom, indir, path=LIST, recompress=False):
         if data == orig:
             continue  # recompress check only: content-exact is enough, keep the original bytes
         if len(blk) > n:
-            raise ValueError("block 0x%06X grew %d -> %d bytes: needs relocation" % (off, n, len(blk)))
+            cursor = _relocate(out, off, blk, cursor)
+            stats["moved"] += 1
+            continue
         out[off:off + len(blk)] = blk
     return bytes(out), stats

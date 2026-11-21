@@ -11,7 +11,9 @@ a red pixel in row 0 of a cell overrides the advance (its x + 1). Game code = 0x
 is colour 3 on the game's colour-2 paper (`docs/re/hooks.md` §VWF).
 
 build/gen: font_en.bin (16 bytes per glyph) + font_en_w.bin (0x60 widths), font_en8.bin (8 bytes per glyph) +
-font_en8_w.bin; asm/main.asm places FONT8 right after FONT (VwfDraw8 indexes it as FONT + $600).
+font_en8_w.bin, font_enn.bin + font_enn_w.bin (narrow 8 px, fonts/en_narrow.png from tools/font_narrow.py);
+asm/main.asm places FONT8 and FONTN right after FONT (VwfDraw8 indexes them as FONT + $600 / + $900).
+`preview ... --narrow` draws with the narrow font.
 """
 import sys
 from pathlib import Path
@@ -21,13 +23,18 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 SHEET = ROOT / "fonts" / "en16.png"
 SHEET8 = ROOT / "fonts" / "en8.png"
+SHEETN = ROOT / "fonts" / "en_narrow.png"
 GEN = ROOT / "build" / "gen"
 FIRST, COUNT = 0x20, 0x60
 CELL_W = 8
 
 
 def _spec(small):
-    return (SHEET8, 8, 3) if small else (SHEET, 16, 4)     # sheet, cell height, space width
+    """small: False = 16 px, True = 8 px (Pixel Operator 8), "narrow" = 8 px with 3-px letters
+    (fonts/en_narrow.png, drawn by tools/font_narrow.py). Returns sheet, cell height, space width."""
+    if small == "narrow":
+        return SHEETN, 8, 3
+    return (SHEET8, 8, 3) if small else (SHEET, 16, 4)
 
 
 def render(ttf, small=False):
@@ -92,9 +99,9 @@ def text_px(text, small=False):
 
 def build(gen=GEN):
     gen.mkdir(parents=True, exist_ok=True)
-    big, small = glyphs(), glyphs(True)
+    big, small, narrow = glyphs(), glyphs(True), glyphs("narrow")
     out = []
-    for name, gl in (("font_en", big), ("font_en8", small)):
+    for name, gl in (("font_en", big), ("font_en8", small), ("font_enn", narrow)):
         (gen / (name + ".bin")).write_bytes(bytes(b for rows, _ in gl for b in rows))
         (gen / (name + "_w.bin")).write_bytes(bytes(adv for _, adv in gl))
         out += [gen / (name + ".bin"), gen / (name + "_w.bin")]
@@ -119,8 +126,8 @@ def preview(text, out, small=False):
 
 
 if __name__ == "__main__":
-    cmd, small = sys.argv[1], "--small" in sys.argv
-    args = [a for a in sys.argv[2:] if a != "--small"]
+    cmd, small = sys.argv[1], "narrow" if "--narrow" in sys.argv else "--small" in sys.argv
+    args = [a for a in sys.argv[2:] if a not in ("--small", "--narrow")]
     if cmd == "render":
         render(args[0], small)
     elif cmd == "build":

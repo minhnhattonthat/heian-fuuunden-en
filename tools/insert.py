@@ -34,10 +34,23 @@ BREAKS = ("{br}", "{page}", "{end2}")
 FIELD_PX = 48
 FIELDS = [   # (first id, last id, px)
     (0x001, 0x0FE, 48),    # items, equipment, names: item grid / status (6 tiles; C1:2D13, C1:29D9)
-    (0x054, 0x083, 24),    # party list under the portraits (3 tiles; C1:2C04, VRAM table C1:A3CB)
     (0x13C, 0x1B8, 48),    # jutsu / shikigami lists, squad label (6-8 tiles; C5:0D03.., C5:226F.., C1:4FF3)
     (0x24A, 0x288, 48),    # provinces: overworld label (6 tiles; C1:5018)
 ]
+# Party list (ids 054-083, also shown in the 48-px status field): asm/main.asm PartyName draws every name there in
+# the narrow 8-px font on one row of 5 tiles, whatever form the string has ({small}/{narrow}/{sbr} are skipped).
+PARTY_IDS = (0x054, 0x083)
+PARTY_PX = 40
+NARROW_CHARS = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 -.'")
+
+
+def party_fits(text):
+    """Error text when an English party-list name does not fit its slot, else None."""
+    if set(text) - NARROW_CHARS:
+        return "%r: the narrow font has no %s" % (text, "".join(sorted(set(text) - NARROW_CHARS)))
+    if font_en.text_px(text, "narrow") > PARTY_PX + 1:
+        return "%r: %d px in the narrow font, party slot %d" % (text, font_en.text_px(text, "narrow") - 1, PARTY_PX)
+    return None
 
 
 def ids_of(row):
@@ -55,22 +68,24 @@ def is_field(row):
 
 
 def fit_field(text, px=FIELD_PX):
-    """Plain English name -> what goes in the ROM: as is when it fits the 16-px field, else two small lines split
-    at the space that balances them best. ValueError when neither fits (the lint reports it)."""
+    """Plain English name -> what goes in the ROM, first that fits the field: one 16-px line; one or two 8-px lines
+    (Pixel Operator 8, split at the space that balances them best); one or two lines in the narrow 8-px font.
+    ValueError when none fits (the lint reports it)."""
     if font_en.text_px(text) <= px:
         return text
-    if font_en.text_px(text, small=True) <= px:
-        return "{small}" + text
-    words = text.split(" ")
-    best = None
-    for k in range(1, len(words)):
-        a, b = " ".join(words[:k]), " ".join(words[k:])
-        wa, wb = font_en.text_px(a, True), font_en.text_px(b, True)
-        if wa <= px and wb <= px and (best is None or max(wa, wb) < best[0]):
-            best = (max(wa, wb), a, b)
-    if best is None:
-        raise ValueError("%r fits neither one 16-px line nor two 8-px lines of %d px" % (text, px))
-    return "{small}%s{sbr}%s" % best[1:]
+    for code, font in (("{small}", True), ("{narrow}", "narrow")):
+        if font_en.text_px(text, font) <= px:
+            return code + text
+        words = text.split(" ")
+        best = None
+        for k in range(1, len(words)):
+            a, b = " ".join(words[:k]), " ".join(words[k:])
+            wa, wb = font_en.text_px(a, font), font_en.text_px(b, font)
+            if wa <= px and wb <= px and (best is None or max(wa, wb) < best[0]):
+                best = (max(wa, wb), a, b)
+        if best is not None:
+            return "%s%s{sbr}%s" % (code, best[1], best[2])
+    raise ValueError("%r fits no 16-px line or two 8-px lines of %d px" % (text, px))
 
 
 def small_lines(tag, width=FIELD_PX):
@@ -142,6 +157,8 @@ def strings(mode="build", script_dir=None, qa=None):
             elif r["kind"] == "data":
                 out.append((ids_of(r), None, r))
             elif r["en"]:
+                if any(PARTY_IDS[0] <= i <= PARTY_IDS[1] for i in ids_of(r)) and party_fits(r["en"]):
+                    raise ValueError("%s %s" % (r["id"], party_fits(r["en"])))
                 en = fit_field(r["en"], field_px(r)) if is_field(r) and "{" not in r["en"] else r["en"]
                 out.append((ids_of(r), kss_script.encode(en_t, en), r))
             elif mode == "marker":

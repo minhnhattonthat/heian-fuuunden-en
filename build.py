@@ -9,7 +9,8 @@
 Steps (docs/re/text.md, docs/re/compression.md):
   1. check the dump against rom.sha1;
   2. dialogue banks C3/C6 + pointer table: tools/kss_text.py (no English yet: phase 4-7);
-  3. compressed graphics/tilemap blocks in gfx/blocks.tsv: tools/gfx_blocks.py (no edits yet: phase 8);
+  3. compressed graphics/tilemap blocks in gfx/blocks.tsv: tools/gfx_blocks.py; build/marker apply
+     tools/gfx_edits.py after the 2 MB expansion (party-list tilemaps; a block that grows moves to $DF:8000+);
   4. header checksum (mirrored sum for 1.5 MB).
 Phase 3 state: no edits exist, so the build is byte-identical to the original (tests/test_identity.py).
 """
@@ -29,6 +30,7 @@ import bps  # noqa: E402
 import check_rom  # noqa: E402
 import font_en  # noqa: E402
 import gfx_blocks  # noqa: E402
+import gfx_edits  # noqa: E402
 import insert  # noqa: E402
 import kss_text  # noqa: E402
 
@@ -86,7 +88,9 @@ def build(mode="build", qa=None, path=None):
     with tempfile.TemporaryDirectory() as tmp:
         unpack(rom, tmp)
         out, _ = repack(rom, tmp)
-    out, stats = insert.insert(out, mode, qa=qa)
+        out, stats = insert.insert(out, mode, qa=qa)
+        gfx_edits.apply(Path(tmp) / "gfx")     # after the 2 MB expansion: grown blocks move to $DF:8000+
+        out, _ = gfx_blocks.pack(out, Path(tmp) / "gfx")
     path = Path(path) if path else (OUT if mode == "build" else MARKER)
     path.parent.mkdir(exist_ok=True)
     path.unlink(missing_ok=True)

@@ -9,6 +9,28 @@ LINE_PX = 176           ; dialogue line buffer: 22 tiles (0x160 bytes per half-r
 MENU_PX = 128           ; renderer 2: the bottom half-row sits 16 tiles (0x100 bytes) after the top in VRAM
 SMALL = $0401           ; {small}: the rest of the string is two 8-px lines (renderer 2; ignored by the dialogue)
 SBR = $040A             ; {sbr}: second small line (renderer 2); a space in the dialogue
+NARROW = $0402          ; {narrow}: like {small}, in the narrow 8-px font (3-px letters); ignored by the dialogue
+; Free WRAM (never written non-zero in 18 warp scenes: tools/lua/wramuse.lua, $7E:1B25-1CFF unused)
+PARTY = $7E1CF0         ; 1 while PartyName draws a party-list name
+NARROWF = $7E1CF2       ; 1 after {narrow} in the current renderer-2 string (MenuPtr clears it)
+PARTY_PX = 40           ; party-list slot: 5 tiles on one 8-px row (tools/gfx_edits.py)
+
+; ---- party list: 8 slots of 5 tiles (was 3), names in the narrow font on one row --------------------------
+org $C12C04             ; JSL $C1753B (party panel, all 8 slots)
+    jsl PartyName
+org $C132AE             ; JSL $C1753B (squad panels)
+    jsl PartyName
+org $C13327             ; JSL $C1753B (two slots redrawn after an exchange)
+    jsl PartyName
+org $C12C0D             ; ADC #$0030: buffer step per slot
+    dw $0050
+org $C132B7
+    dw $0050
+org $C13360
+    dw $0050
+org $C1A3CB             ; slot VRAM addresses, panel A ($C1A3DB: panel B = +$200)
+    dw $7200,$7228,$7250,$7278,$72A0,$72C8,$72F0,$7318
+    dw $7400,$7428,$7450,$7478,$74A0,$74C8,$74F0,$7518
 
 ; ---- string pointers: 24-bit table instead of the C3/C6 16-bit table --------------------------------------
 org $C17270             ; LDA $C30000,x / bank select by id (dialogue reader); X = id*2
@@ -60,7 +82,35 @@ MenuPtr:
     lda.l PTRS+2,x
     sta $10
     stz $1426           ; VWF pixel x for this string
+    lda #$0000
+    sta.l NARROWF
     jml $C17558
+
+; Party list: JSL'd instead of C1:753B by the three party-list callers (A = VRAM, [$00] = the slot's buffer).
+; Paper over the slot's 5 tiles, then draw with PARTY set: VwfMenu uses the narrow font on the top half-row only
+; and MenuEnd uploads exactly those 5 tiles (no bottom half-row: the tilemap shows one row).
+PartyName:
+    pha
+    lda #$FF00
+    ldy #$0000
+-   sta [$00],y
+    iny
+    iny
+    cpy.w #PARTY_PX*2
+    bcc -
+    lda #$0001
+    sta.l PARTY
+    pla
+    jsl $C1753B
+    lda #$0000
+    sta.l PARTY
+    rtl
+
+; Z clear (BNE taken) when the 8-px glyphs come from the narrow font.
+IsNarrow:
+    lda.l PARTY
+    ora.l NARROWF
+    rts
 
 ; A = code*2 (X too). Returns A = glyph index 0..$5E in the English font.
 GlyphIndex:
@@ -84,9 +134,11 @@ VwfMain:
     lda.l JPFONT,x
     jml $C173A9
 .en:
-    cpx.w #SMALL*2              ; {small} (a two-line menu name inserted with {name}): draw nothing
+    cpx.w #SMALL*2              ; {small} / {narrow} (a menu name inserted with {name}): draw nothing
+    beq ++
+    cpx.w #NARROW*2
     bne +
-    inc $142C
+++  inc $142C
     jml $C17491
 +                               ; {sbr} falls through GlyphIndex as a space
     jsr GlyphIndex
@@ -150,13 +202,19 @@ VwfMenu:
     sta $00
     lda $22
     sta $02
-    cpx.w #SMALL*2
+    lda.l PARTY
+    beq +
+    jmp .party
++   cpx.w #SMALL*2
     beq .small
+    cpx.w #NARROW*2
+    beq .narrow
     cpx.w #SBR*2
     beq .sbr
     lda $1426
-    bmi .smallglyph
-    jsr GlyphIndex
+    bpl +
+    jmp .smallglyph
++   jsr GlyphIndex
     pha
     lda $20
     sta $00
@@ -190,7 +248,10 @@ VwfMenu:
 
 ; Small mode: {small} first, then line 1, {sbr}, line 2 in the 8-px font: line 1 in the top half-row, line 2 in
 ; the bottom one, so a 6-tile field holds two 48-px lines. $1426 = $8000 | x (line 1),
-; $C000 | (line-1 width << 8) | x (line 2).
+; $C000 | (line-1 width << 8) | x (line 2). {narrow} starts the same mode with the narrow font (NARROWF).
+.narrow:
+    lda #$0001
+    sta.l NARROWF
 .small:
     lda #$FF00                  ; paper on both half-rows, 16 tiles each (no stale pixels under short lines)
     ldy #$0000
@@ -236,7 +297,29 @@ VwfMenu:
     inc $142C
     jml $C17558
 
+; Party list (PartyName): narrow font, top half-row only, glyphs past PARTY_PX dropped; control codes draw nothing.
+.party:
+    cpx.w #$0420*2
+    bcc .ctl
+    jsr GlyphIndex
+    pha
+    tax
+    jsr Width8
+    clc
+    adc $1426
+    cmp.w #PARTY_PX+2           ; advance includes the 1-px gap after the last glyph
+    bcs +
+    stz $04                     ; top half-row
+    lda $01,s
+    jsr VwfDraw8
++   pla
+.ctl:
+    inc $142C
+    jml $C17558
+
 MenuEnd:
+    lda.l PARTY
+    bne .party
     lda $1426
     beq .jp
     bpl .big
@@ -277,6 +360,22 @@ MenuEnd:
     sta $04
 +
     jml $C17581
+.party:                         ; C1:7581 without its bottom half-row DMA: the slot's 5 top tiles only
+    lda.w #PARTY_PX*2
+    sta $06
+    lda $0C
+    sta $00
+    lda $20
+    sta $02
+    lda $22
+    sta $04
+    jsl $C100C6
+    lda #$0000
+    sta $142C
+    sta $1422
+    stz $1416
+    stz $1426
+    rtl
 
 ; Draw English glyph A at pixel x = $1426 into the line at [$00] (tile 0, top half); $04 = offset of the bottom
 ; half-row. Ink = colour 3 (bp0 set), paper = colour 2 (bp1 set). Then $1426 += advance.
@@ -311,10 +410,11 @@ VwfDraw:
     rts
 
 ; Same for the 8-px font: one 8-row pass into the half-row at [$00] + $04.
+; Font: FONT8 (Pixel Operator 8) or FONTN when IsNarrow.
 VwfDraw8:
     pha                         ; [glyph]
     tax
-    lda.l WIDTHS8,x
+    jsr Width8
     jsr VwfSetup
     tya
     clc
@@ -324,17 +424,35 @@ VwfDraw8:
     asl
     asl
     asl
+    pha
+    jsr IsNarrow
+    beq +
+    pla
+    clc
+    adc.w #FONTN-FONT
+    bra ++
++   pla
     clc
     adc.w #FONT8-FONT
-    tax                         ; X = $600 + glyph * 8
+++  tax                         ; X = $600 (or $900) + glyph * 8
     jsr VwfRows8
     pla
     tax
-    lda.l WIDTHS8,x
-    and #$00FF
+    jsr Width8
     clc
     adc $1426
     sta $1426
+    rts
+
+; X = glyph -> A = its 8-px advance (narrow font when IsNarrow). Keeps X.
+Width8:
+    jsr IsNarrow
+    beq +
+    lda.l WIDTHSN,x
+    and #$00FF
+    rts
++   lda.l WIDTHS8,x
+    and #$00FF
     rts
 
 ; A = glyph width (low byte). Sets $06 = s (x & 7), $07 = 1 if the glyph spills into the next tile;
@@ -427,8 +545,12 @@ FONT:
     incbin "../build/gen/font_en.bin"
 FONT8:                          ; must follow FONT: VwfRows8 reads FONT+X with X = FONT8-FONT + glyph*8
     incbin "../build/gen/font_en8.bin"
+FONTN:                          ; narrow 8-px font, same layout (tools/font_narrow.py)
+    incbin "../build/gen/font_enn.bin"
 WIDTHS:
     incbin "../build/gen/font_en_w.bin"
 WIDTHS8:
     incbin "../build/gen/font_en8_w.bin"
+WIDTHSN:
+    incbin "../build/gen/font_enn_w.bin"
 warnpc $DF8000

@@ -77,10 +77,18 @@ def test_fit_field():
         assert out.startswith("{small}")
         for line in out[len("{small}"):].split("{sbr}"):
             assert font_en.text_px(line, small=True) <= insert.FIELD_PX
+    assert insert.fit_field("Sadamitsu") == "{narrow}Sadamitsu"     # one word, too wide for both other fonts
+    assert insert.fit_field("Fire Seal of Agni").startswith("{narrow}")
     with pytest.raises(ValueError):
-        insert.fit_field("Fire Seal of Agni")
-    with pytest.raises(ValueError):
-        insert.fit_field("Hiroyuki", 24)     # party list (3 tiles): needs the widening in docs/status.md
+        insert.fit_field("Fire Seal of the Burning Agni")
+
+
+def test_party_fits():
+    """Party list: narrow font, 40 px (5 tiles), letters only."""
+    for name in ("Sadamitsu", "Yasumasa", "Semimaru", "Kagura"):
+        assert insert.party_fits(name) is None, name
+    assert insert.party_fits("Kagura!") is not None
+    assert insert.party_fits("Sadamitsu Minamoto") is not None
 
 
 def test_font_table_agree():
@@ -92,7 +100,12 @@ def test_font_table_agree():
         assert t.encode(ch) == struct.pack("<H", 0x400 + ord(ch))
     assert max(w.values()) <= 8, "a glyph wider than one tile breaks VwfDraw's two-tile spill"
     assert max(font_en.widths(small=True).values()) <= 9   # ink <= 8 px (the cell); advance 9 spills one tile
+    assert max(font_en.widths(small="narrow").values()) <= 9
     assert t.encode("{small}") == struct.pack("<H", 0x401) and t.encode("{sbr}") == struct.pack("<H", 0x40A)
+    assert t.encode("{narrow}") == struct.pack("<H", 0x402)
+    narrow = font_en.glyphs("narrow")
+    for ch in insert.NARROW_CHARS - {" "}:
+        assert any(narrow[ord(ch) - 0x20][0]), "narrow font has no %r" % ch
 
 
 def test_hooks_assembled():
@@ -103,3 +116,20 @@ def test_hooks_assembled():
     for addr in (0x17270, 0x174F1, 0x1754D, 0x173A5, 0x175B8, 0x17564):
         assert d[addr] == 0x5C and d[addr + 3] == 0xDF, hex(addr)  # JML $DFxxxx
     assert d[0x17537:0x1753A] == bytes([0x69, 0x30, 0x04])
+    for addr in (0x12C04, 0x132AE, 0x13327):              # party list -> PartyName (JSL $DFxxxx)
+        assert d[addr] == 0x22 and d[addr + 3] == 0xDF, hex(addr)
+    assert d[0x1A3CB:0x1A3CF] == bytes([0x00, 0x72, 0x28, 0x72])   # 5-tile slots
+
+
+def test_party_tilemaps():
+    """The two party panels get 5-tile one-row slots matching the asm slot table ($7200 + n * $28)."""
+    import gfx_edits
+    import kss_comp
+    rom = (ROOT / "rom" / "Heian Fuuunden (Japan).sfc").read_bytes()
+    for name, base in gfx_edits.PARTY_PANELS.items():
+        data, _ = kss_comp.decode(rom, int(name[:6], 16))
+        new = gfx_edits.widen_party(data, base)
+        w = struct.unpack("<%dH" % (len(new) // 2), new)
+        assert [x & 0x3FF for x in w[4 * 32 + 4:4 * 32 + 9]] == [base + k for k in range(5)]
+        assert [x & 0x3FF for x in w[8 * 32 + 25:8 * 32 + 30]] == [base + 35 + k for k in range(5)]
+        assert not any(x & 0x3FF for x in w[5 * 32:6 * 32])        # the row under the names is blank
