@@ -42,17 +42,23 @@ field. Then the same one or two lines in the narrow 8-px font (`{narrow}`, 3-px 
 big, 61 small, 35 narrow). None fits = build error. Field budgets per id range: `insert.FIELDS`. The dialogue ignores `{small}` and
 draws `{sbr}` as a space, so `{name}` in dialogue reads normally (verified: `marker_warp/battle_turn_msg`).
 
-## Not measured yet (next session)
+## Measured last (2026-11-22); only the ending/credits are left, as graphics (phase 8)
 - Squad exchange screen (`C0:B9A5` -> `C1:32C8`, `C0:EF6F` -> `C1:3267`: two panels, panel B = tiles $280-$2BF,
-  VRAM $7400): same `PartyName` slots, so 40 px; not reached by any warp scene (needs two squads), panel B's
-  tilemap checked by `tests/test_insert.py::test_party_tilemaps` only. Province card `{name}の闘い` (id 1B9,
-  dialogue path, linted at 176 px; the `card_p*` hold shot comes after the card is gone: shoot it mid-card with
-  `SHOTS_AFTER`), ending/credits (graphics, phase 8).
-- Opening palace scene, ids 29B-2A5: a speaker line + 3 lines per page (6 pages have 4 `{br}`-lines). Not reached by
-  mashing from the prologue (scene `opening` goes prologue -> 2A7 town); find its trigger. Linted as dialogue
-  (3 lines): the speaker line needs handling before phase 6 translates those rows.
-- Renderer-2 callers resolved from the code before each `JSL $C1753B` (static, not shot). Budgets live in
-  `insert.FIELDS` / `tools/lint.py POPUPS`; "(guess)" in the `max` column until shot.
+  VRAM $7400): **measured 40 px narrow** (2026-11-22): mode 0E (`C0:835B` -> `C0:EC48`) asks 部隊へんせいしますか？,
+  Yes draws both panels (scene `squad_xchg`); a 10-name `--qa` stress build shows every name whole in both panels.
+- Province card `{name}の闘い` (id 1B9): **measured 176 px** (2026-11-22, marker `card_p00` with hold 420 and
+  `SHOTS_AFTER=10`, `work/qa/card_cmp3.png`): one dialogue line in the top box (x 26-229, text x 41-217), the same
+  box as the save prompt 229 that follows; the full 176-px marker line ([1B9] filler + {name} marker) ends inside the
+  frame. The card shows ~f2260-2390 after the `card_p*` warp, past the scene's 180-frame hold.
+- Palace scene, ids 297-2A5 (+ 2A6 "...長保二年 紀州熊野"): a speaker line + up to 3 lines per page. **Unreferenced
+  (cut scene), 2026-11-22**: no `LDA/LDX/LDY/CMP/CPX/CPY/ADC #id` in the ROM, no event-script entry (3-byte
+  `id, byte` records as at `C1:E4DC`, flag bit 15) in the ROM or in any unpacked block; the title demo loops 290-296
+  only (`C0:8D59` stops at 297; idle 20000 frames logged at `C1:7233`), New Game goes scrolling prologue
+  (tilemap text) -> banner 101 -> 2A7. Forced into the real box (execpoke `$1416=29B` at `C1:7233`,
+  `work/qa/palace29B_b`): the box shows 3 rows of 176 px and drops the 4th line. Translated anyway, linted as
+  speaker line + 3 lines of 176/160 (`lint.SPEAKER`).
+- Renderer-2 callers, resolved from the code before each `JSL $C1753B`, each now shot (no "(guess)" left in the
+  `max` column). Budgets live in `insert.FIELDS` / `tools/lint.py POPUPS`.
   | Caller | id | VRAM | Budget |
   |---|---|---|---|
   | `C1:6011` | `$101E` + $54 (party names) | table `C1:E6CE` | squad formation screen: D11 remedy applied (`PartyName`, 40 px narrow, one row; slots 0-3 panel C8:939E, 4-11 C8:9450, 12-19 C8:9506) |

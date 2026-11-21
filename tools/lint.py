@@ -7,6 +7,7 @@
 Budgets (px = English VWF pixels, tools/font_en.text_px):
 - dialogue (every row that is not a field or popup): 176 px per line, 160 on the line before `{page}` when it is the
   page's 3rd line (the ▼ arrow), 3 lines per page; `{name}` counts as the widest name, `{num}` as "99999".
+  Palace ids 297-2A5 (`SPEAKER`): a speaker line first, not counted in the 3.
 - renderer-2 fields (insert.FIELDS): fit_field must succeed (one 16-px line or two 8-px lines).
 - party names (insert.PARTY_IDS): insert.party_fits (40 px, narrow font, letters only).
 - popups (POPUPS): one line of the window's width.
@@ -34,6 +35,9 @@ POPUPS = [
     (0x1C8, 0x1C9, 128, "measured"),
     (0x28D, 0x28E, 112, "measured"),
 ]
+# Palace scene (windows.md): every page starts with the speaker's name on its own line, then up to 3 lines. No code
+# or script reaches these ids (cut scene); the normal box shows 3 rows, so they are linted as speaker + 3.
+SPEAKER = (0x297, 0x2A5)
 BREAKS = {"{br}", "{page}"}
 LAYOUT = {"{small}", "{sbr}", "{narrow}"}
 CTRL = re.compile(r"\{\w+\}")
@@ -64,7 +68,11 @@ def budget(row):
     p = popup(row)
     if p:
         return "%d popup%s" % (p[0], "" if p[1] == "measured" else " (guess)")
-    return "%d/%d x%d" % (LINE_PX, LAST_PX, LINES)
+    return "%s%d/%d x%d" % ("speaker + " if speaker(row) else "", LINE_PX, LAST_PX, LINES)
+
+
+def speaker(row):
+    return any(SPEAKER[0] <= i <= SPEAKER[1] for i in insert.ids_of(row))
 
 
 def line_px(line, npx):
@@ -103,6 +111,10 @@ def check_row(row, npx, en_t):
     pages = en.split("{page}")
     for pi, page in enumerate(pages):
         lines = page.split("{br}")
+        if speaker(row):
+            if line_px(lines[0], npx) > LINE_PX:
+                err.append("page %d speaker line: %d px > %d" % (pi + 1, line_px(lines[0], npx), LINE_PX))
+            lines = lines[1:]
         if len(lines) > LINES:
             err.append("page %d has %d lines (max %d)" % (pi + 1, len(lines), LINES))
         for k, line in enumerate(lines):

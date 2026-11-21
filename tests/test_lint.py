@@ -37,6 +37,15 @@ def test_dialogue_widths(en_t):
     assert lint.check_row(row("300", "あ", "a{br}b{br}c{br}d words"), 64, en_t)   # 4 lines
 
 
+def test_speaker_pages(en_t):
+    # palace ids 297-2A5: a speaker line, then up to 3 text lines
+    jp = "女官{br}あ{br}い"
+    assert lint.check_row(row("29B", jp, "Lady-in-waiting{br}Words of a line{br}More of them{br}And the end."),
+                          64, en_t) == []
+    assert lint.check_row(row("29B", jp, "Lady{br}Words here{br}More words{br}Third line{br}Fourth one"), 64, en_t)
+    assert lint.budget(row("29B", jp, "")) == "speaker + 176/160 x3"
+
+
 def test_codes_names_and_style(en_t):
     assert lint.check_row(row("205", "{name}のばんです", "It is your turn."), 64, en_t)        # {name} lost
     assert lint.check_row(row("205", "{name}のばんです", "{name}'s turn."), 64, en_t) == []
