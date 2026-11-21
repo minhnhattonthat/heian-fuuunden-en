@@ -238,80 +238,80 @@ id	kind	jp	en	max	notes
 3EC	text	なんだ？　おっさん　神楽の{br}知り合いかい？　そう言えば{br}にてる気もするな・・{page}・・・・・・・・・！！！！！{br}いっ・・いや・・あの・・その{br}まさか・・法皇様が・・	What? You know Kagura, old{br}man? Come to think of it,{br}you kinda look like him...{page}.........!!!!!{br}Wh... I mean... er... uh...{br}it can't be...{page}Retired Emperor-sama...	176/160 x3	
 3ED	text	よいよい　おっさんか・・{br}そのとおりだ　気にするな・・{page}神楽はよい友人をもったな・・{br}神楽の事、たのむぞ・・	No matter. "Old man," is it...{br}Quite right. Think nothing{br}of it...{page}Kagura has good friends...{br}Look after Kagura for me...	176/160 x3	
 3EE	text	神楽か？　きょろきょろするな{br}検非違使にでも見つかると{br}しまつがわるい・・{page}そなたらにわたしたいものが{br}あってここにいたのだ・・{page}道長だけにまかせておるのも{br}気がひけてな・・{br}持って行ってくれ・・{page}それから　ここにおることは{br}ないしょだぞ・・よいな・・	Kagura? Stop looking around.{br}If the Kebiishi find me, it{br}would be awkward...{page}I was here because there is{br}something I wish to give you...{page}It does not sit right to leave{br}it all to Michinaga...{br}Take this with you.{page}And my being here is a{br}secret... Understood?	176/160 x3	
-3EF	text	こえをたてるな晴明。{br}すぐ帰る、すぐ帰る。{br}神楽に会いたいだけのことだ。		176/160 x3	
-3F0	text	こえをたてるな広行。{br}すぐ帰る、すぐ帰る。{br}神楽に会いたいだけのことだ。		176/160 x3	
-3F1	text	神楽の知り合いか？　神楽は{br}どこだ？　会いたいのだが・・		176/160 x3	
-3F2	text	私はもう行かねばならん。{br}神楽、元気でな・・		176/160 x3	
-3F3	text	さて　もう戻るとしようか・・{br}神楽、元気でな・・		176/160 x3	
-3F4+3F5+3F6+3F7+3F8+3F9+3FA+3FB+3FC+3FD+3FE+3FF+500	text	このあたりは　よく賊が{br}出る所です。		176/160 x3	
-501	text	きゃあーっ		176/160 x3	
-502	text	ひっひっひっ、久しぶりに{br}物もちらしいのが来やがったぜ{br}ひっひっひっひっひっ。{page}さあ命まではとらねえから{br}さっさと　もってる物{br}全部　出しやがれ！		176/160 x3	
-503	text	ちょっと　藤太。何とか{br}しなさいよ、男でしょ？		176/160 x3	
-504	text	姉ちゃんの方がおれより強いと{br}思うんだけどな・・		176/160 x3	
-505	text	あんた女の子に戦わせるつもり{br}なの？　信じられない！そんな{br}子に育てた賞えはないわよ！		176/160 x3	
-506	text	はっはっはっ、まあまあ{br}けんかができるなら大丈夫・{br}私のそばをはなれんで下され。		176/160 x3	
-507	text	なんだあ？　やろうってのか！{br}おもしれえじゃねえか！{br}死んでも　恨むんじゃねえぜ！{page}恨むんなら、こんな世の中に{br}しやがった奴を恨みな！		176/160 x3	
-508	text	ふーっ　何とかなったみたいね{br}神楽けがしなかった？		176/160 x3	
-509	text	姉ちゃんおれは？		176/160 x3	
-50A	text	あんたは大丈夫よ。		176/160 x3	
-50B	text	ちぇっ！		176/160 x3	
-50C	text	皆ぶじのようですな{br}さあ　先を急ぎましょう。		176/160 x3	
-50D	text	神楽殿　先を急ぎましょう。		176/160 x3	
-50E	text	急ぎましょう、神楽。{br}ほら　藤太も・・		176/160 x3	
-50F	text	なんだい　あんたら{br}へんなかっこうしてさあ？{page}おーっと、ここは通せないよ。{br}通りたいなら　出すもの{br}出してもらおうじゃないか。		176/160 x3	
-510	text	ほう・おぬしのような女{br}まで　賊をしておるのか。		176/160 x3	
-511	text	おい神楽　あれひょっと{br}すると女じゃないか？		176/160 x3	
-512	text	女だからってばかにしてると{br}いたい目にあう事になるよ！		176/160 x3	
-513	text	そうだね・・すこしばかり{br}いためつけてやんな！{page}途中で　気が変わるかも{br}知れないからねえ・		176/160 x3	
-514	text	ちくしょう！{br}賞えておきなよ！		176/160 x3	
-515	text	全く　女ならばもう少し{br}おしとやかにならぬものかな{br}なあ、雀殿。		176/160 x3	
-516	text	それはどういう意味かしら？{br}景時様。		176/160 x3	
-517	text	もう少しおしとやかにしろって{br}意味じゃないの？		176/160 x3	
-518	text	あんたが言わなくていいの。		176/160 x3	
-519	text	ははははは、おお　神楽殿{br}あれが京の都のようですな{br}急ぎましょう。		176/160 x3	
-51A	text	何だ？　おまえは？{page}はっはっはっ！おまえが熊野の{br}神楽か？ただのがきではないか{br}晴明はどうした？{page}おれにおそれをなしたか？{page}まあいい・・退屈しのぎだ{br}少しあそんでやろう！		176/160 x3	
-51B	text	これは晴明様　お久しぶりに{br}ございます。{page}ですが　八十をこえての旅は{br}年よりの冷や水・・{br}というものでしょう。		176/160 x3	
-51C	text	はて？　誰であったか・・{br}とんと賞えぬが・・		176/160 x3	
-51D	text	老いるとは　いやなもの・・{page}ご自分が破門になさった{br}弟子の顔すら思い出せないの{br}ですか・・		176/160 x3	
-51E	text	そう言えば　小野政光（おの{br}まさみつ）という尻の青い若造{br}がおったが・・{page}尻の青いのは　とれたか？		176/160 x3	
-51F	text	ぬうう・・ゆるせん！{br}このおいぼれが！{page}五年前　私を破門にした恨み{br}今こそはらしてくれる！		176/160 x3	
-520	text	晴明の手の者か？{page}晴明は何をしておるのだ？{br}ここをとおるはずだが・・{br}さては　おじけづいたか！{page}自分で破門にした弟子をおそれ{br}て　並ぶ者なき陰陽師とは・・{br}よく言ったものよ！{page}おまえには何の恨みもないが・{br}死んでもらうぞ！		176/160 x3	
-521	text	まっ・・まさか、こんながきに{br}敗れるとは・・		176/160 x3	
-522	text	くそっ！晴明！　のろってやる{br}おまえの一族全てを{br}のろってやるぞー！		176/160 x3	
-523	text	陰陽道はまじないにあらず。{page}存在するものの　意味を知り{br}災いを予測し防ぐ事にある。{page}それを忘れた者に　おしえる事{br}などわしは知らぬ。{page}それゆえの破門なのだ。{page}それを恨みに思い、あまつさえ{br}わしに戦いをいどむとは・・{br}あわれな男よな・・		176/160 x3	
-524	text	くっ、なぜだ！　なぜ負ける！{br}晴明以外の者になぜ負ける！{page}お・・おれ・・が・負ける・・{br}なんて！・・ぐふっ！		176/160 x3	
-525	text	おぬしが神楽か・・何じゃ{br}ただのこぞうではないか。{page}道摩様も　気の小さい事よ、{br}こぞうがおそろしいとは・・{page}まあよいわ　わしがその心配を{br}なくしてやるとしよう・・		176/160 x3	
-526	text	晴明　おぬしか？　やはりな・{br}もう朝廷側で使える者はおぬし{br}と賀茂の若造だけであろう。{page}天海の息子　神楽とか言う者も{br}おるそうだが、十六のがきでは{br}何もできまい・・{page}ここで　おぬしを倒せれば{br}勝ちは決まったも同じ。{page}死ぬがよい　晴明！！		176/160 x3	
-527	text	むだな事を・・おぬしでは{br}このわしは倒せぬわ。{page}あの世でゆっくり自分の{br}おろかさをくやむがよい。		176/160 x3	
-528	text	霞陰鬼（かいんき）様{br}やめて下さい。{page}あなたがたは利用されている{br}だけなのです・・		176/160 x3	
-529	text	おっ・おぬしは・・蝉丸か？{br}なぜおぬしがそこにおる・・{page}じゃまをするなら　おぬしと{br}いえど殺さねばならぬぞ！		176/160 x3	
-52A	text	戦っても何も変わりません・{br}むだな血が流れるだけです。{page}霞陰鬼様がそう言ったのでは{br}ありませんか！		176/160 x3	
-52B	text	もう遅いのだ・・{page}一族の全ての者が　道摩の味方{br}になってしまった。{br}長の守屋様もふくめてな・・{page}蝉丸、おぬしと長老は一族の{br}うらぎり者よ！{page}戦うとなった以上　わしは{br}守屋様のために戦うだけだ。{page}おぬしを殺すのはしのびぬ・・{br}だまって去ればよい・・{page}だがじゃまをするなら　それも{br}よかろう・・・おぬしもともに{br}殺すまでよ！		176/160 x3	
-52C	text	なるほど、あの天海の息子だけ{br}あって強いわ・・{page}だが　わしの分身を倒しただけ{br}でいい気になるな・・{page}おぬしらはこの立向盤がほしい{br}のであろう？{page}わしは周防の国におる　勇気が{br}あるなら来るがよい。{page}それまでに　せいぜい成長して{br}おくがよいぞ　神楽。{br}周防でまた会おう。		176/160 x3	
-52D	text	やはり分身ごときでは　晴明に{br}勝てはせぬようだな・・{page}晴明、立向盤はわたさぬぞ。{br}これがほしくば周防に来るが{br}よい・・{page}その時こそ、わしみずから{br}おぬしを　殺してくれる！{br}さらばじゃ晴明。		176/160 x3	
-52E	text	分身といえど・・晴明以外の者{br}におくれをとるとは・・{br}おぬしの面　賞えておく・・{page}立向盤がほしければ　周防に{br}来るがよい、そこでわしは{br}まっておる・・さらばじゃ・		176/160 x3	
-52F	text	何だい？　じいさん。{page}あんたみたいなのが　こんな所{br}うろうろしてると、山賊に{br}おそわれちまうよ・・{page}気をつけなよ・・		176/160 x3	
-530	text	何だい　あんた？{br}よわそうな男だねえ？{page}何か用かい？　悪いけど今度に{br}しておくれ。{br}考え事してんだからさ。		176/160 x3	
-531	text	あっ・・あんたは！　都の南で{br}会った・・神楽・だったね。		176/160 x3	
-532	text	あーってめー　あの時の盗賊！{br}おい神楽　やっちまおう！		176/160 x3	
-533	text	あの時の女ではないか！{br}まだ賊をやっているのか？{br}今度はゆるさんぞ！		176/160 x3	
-534	text	あの時は悪かったよ・・{br}ほんとに　そう思ってるんだ{br}ゆるしておくれよ・・{page}それより　あんたらを見込んで{br}話があるんだよ。{page}もう賊から　足を洗うからさあ{br}人だすけだと思って{br}引き受けてくれないかい？{end2}		176/160 x3	
-535	text	そんな事　言わずにさあ！{br}おねがい、たすけておくれよ。{end2}		176/160 x3	
-536	text	え？引き受けてくれるのかい？{br}えらいよ　神楽ちゃん！{page}実は　賊から足を洗うつもりで{br}故郷に　帰ろうとしたのさ。{page}ところが　世話になった大親分{br}がゆるしをくれなくってね・{page}逃げる途中で　おそわれて・・{br}妹はさらわれちまって・・{br}奴らにつれて行かれたのさ。{page}たすけに行くにも　一人で{br}どうしようかと　思ってたん{br}だよ・・{page}これから　あんないするからさ{br}いっしょに行っておくれよ・{page}こっちだよ・・		176/160 x3	
-537	text	なんだあ　てめえら！{br}あっ！てめえっ！楓じゃねえか{br}何しに来やがった！		176/160 x3	
-538	text	うるさいねえあつ苦しい顔して{br}どなるんじゃないよ！{page}妹を返してもらう事の{br}何が悪いっていうのさ！		176/160 x3	
-539	text	何だとお！　口のへらねえ・・{br}その口の悪さがなきゃ　いい女{br}なのによう！{page}てめえの妹はなあ、この調伏丸{br}様の嫁になるんだよ！{br}わかったらとっとと帰んな！		176/160 x3	
-53A	text	誰があんたみたいな奴の嫁に{br}なるってんだ！{page}あんたみたいなとうへんぼくに{br}嫁にいこうなんて女は、国中を{br}さがしても　いやしないよ！		176/160 x3	
-53B	text	もうかんべんならねえ！{br}妹をおいていきゃあ　{br}見のがしてやったものを・・{page}野郎ども！一人も生かして{br}この山から出すんじゃねえぞ！		176/160 x3	
-53C	text	じゃあ　後はたのんだよ。{br}あんたらが　戦ってるすきに{br}妹をたすけるから・・{page}がんばってね　神楽ちゃん！		176/160 x3	
-53D	text	ちょっとまて！おい！あーあ{br}行っちまった。{page}神楽　どうすんだ？		176/160 x3	
-53E	text	仕方ない　神楽殿とりあえず{br}戦いましょう。{page}あいては山賊です。{br}えんりょはいりますまい・・		176/160 x3	
-53F	text	くそーっ！楓の野郎！{page}・・・けっ、一度もつかまった{br}事のない　このおれさまが・{page}こんな所で、しかもこんながき{br}にやられるなんてよぉ・・		176/160 x3	
-540	text	世話かけたね　ありがとうよ。{br}おかげで　妹をたすける事が{br}できたよ。{page}ほら！あんたも礼をいいな・・		176/160 x3	
-541	text	葵（あおい）ともうします{br}ありがとうございました。{page}姉が強引にたのんだみたいで・{br}本当にすみませんでした。		176/160 x3	
-542	text	へえ・・姉妹でも　性格が{br}ぜんぜんちがう事って{br}やっぱり　あるんだ。{page}こういう場合　年が下の方が{br}やさしいんだよな。{page}いてっ！{br}何すんだよ！　姉ちゃん！		176/160 x3	
-543	text	あら　ごめんなさい　藤太{br}蚊が止まってたみたい。		176/160 x3	
-544	text	あたしたちの故郷は　信濃の{br}戸隠って所にあるのさ。{page}近くに来たら　よっておくれ{br}かんげいするからさ。{page}じゃあ　またね神楽ちゃん！		176/160 x3	
+3EF	text	こえをたてるな晴明。{br}すぐ帰る、すぐ帰る。{br}神楽に会いたいだけのことだ。	Hush, Seimei. I will go back{br}soon, very soon. I only{br}wish to see Kagura.	176/160 x3	
+3F0	text	こえをたてるな広行。{br}すぐ帰る、すぐ帰る。{br}神楽に会いたいだけのことだ。	Hush, Hiroyuki. I will go back{br}soon, very soon. I only{br}wish to see Kagura.	176/160 x3	
+3F1	text	神楽の知り合いか？　神楽は{br}どこだ？　会いたいのだが・・	You know Kagura? Where is{br}Kagura? I wish to see him...	176/160 x3	
+3F2	text	私はもう行かねばならん。{br}神楽、元気でな・・	I must be going now.{br}Kagura, be well...	176/160 x3	
+3F3	text	さて　もう戻るとしようか・・{br}神楽、元気でな・・	Well, I suppose I should{br}go back... Kagura, be well...	176/160 x3	
+3F4+3F5+3F6+3F7+3F8+3F9+3FA+3FB+3FC+3FD+3FE+3FF+500	text	このあたりは　よく賊が{br}出る所です。	Bandits often show up{br}around here.	176/160 x3	
+501	text	きゃあーっ	Eeeek!	176/160 x3	
+502	text	ひっひっひっ、久しぶりに{br}物もちらしいのが来やがったぜ{br}ひっひっひっひっひっ。{page}さあ命まではとらねえから{br}さっさと　もってる物{br}全部　出しやがれ！	Heh heh heh, been a while since{br}somebody loaded came along.{br}Heh heh heh heh heh.{page}Now, we won't take your lives,{br}so hurry up and hand over{br}everything you got!	176/160 x3	
+503	text	ちょっと　藤太。何とか{br}しなさいよ、男でしょ？	Hey, Tota. Do something{br}about it. You're a man,{br}aren't you?	176/160 x3	
+504	text	姉ちゃんの方がおれより強いと{br}思うんだけどな・・	I think you're stronger{br}than me, Sis...	176/160 x3	
+505	text	あんた女の子に戦わせるつもり{br}なの？　信じられない！そんな{br}子に育てた賞えはないわよ！	You'd let a girl do the{br}fighting? Unbelievable! I{br}didn't raise you to be like that!	176/160 x3	
+506	text	はっはっはっ、まあまあ{br}けんかができるなら大丈夫・{br}私のそばをはなれんで下され。	Ha ha ha, now, now. If you can{br}squabble, you are fine.{br}Stay close by me.	176/160 x3	
+507	text	なんだあ？　やろうってのか！{br}おもしれえじゃねえか！{br}死んでも　恨むんじゃねえぜ！{page}恨むんなら、こんな世の中に{br}しやがった奴を恨みな！	What's this? Wanna fight?!{br}That's a laugh! Die, and{br}don't come crying to me!{page}If you wanna blame somebody,{br}blame whoever made the{br}world like this!	176/160 x3	
+508	text	ふーっ　何とかなったみたいね{br}神楽けがしなかった？	Phew, looks like we made it.{br}Kagura, are you hurt?	176/160 x3	
+509	text	姉ちゃんおれは？	Sis, what about me?	176/160 x3	
+50A	text	あんたは大丈夫よ。	You're fine.	176/160 x3	
+50B	text	ちぇっ！	Tch!	176/160 x3	
+50C	text	皆ぶじのようですな{br}さあ　先を急ぎましょう。	Everyone seems unharmed.{br}Come, let us hurry on.	176/160 x3	
+50D	text	神楽殿　先を急ぎましょう。	Kagura-dono, let us hurry on.	176/160 x3	
+50E	text	急ぎましょう、神楽。{br}ほら　藤太も・・	Let's hurry, Kagura.{br}Come on, Tota, you too...	176/160 x3	
+50F	text	なんだい　あんたら{br}へんなかっこうしてさあ？{page}おーっと、ここは通せないよ。{br}通りたいなら　出すもの{br}出してもらおうじゃないか。	What's with you lot, dressed{br}up so funny?{page}Whoa there, nobody passes here.{br}If you wanna pass, you'd{br}better pay up.	176/160 x3	
+510	text	ほう・おぬしのような女{br}まで　賊をしておるのか。	Oho... so even women like{br}you turn bandit now.	176/160 x3	
+511	text	おい神楽　あれひょっと{br}すると女じゃないか？	Hey, Kagura, could that be{br}a woman?	176/160 x3	
+512	text	女だからってばかにしてると{br}いたい目にあう事になるよ！	Look down on me 'cause I'm a{br}woman, and you'll get hurt!	176/160 x3	
+513	text	そうだね・・すこしばかり{br}いためつけてやんな！{page}途中で　気が変わるかも{br}知れないからねえ・	All right... rough 'em up{br}a little!{page}They might change their{br}minds along the way...	176/160 x3	
+514	text	ちくしょう！{br}賞えておきなよ！	Damn it!{br}You'll pay for this!	176/160 x3	
+515	text	全く　女ならばもう少し{br}おしとやかにならぬものかな{br}なあ、雀殿。	Honestly, a woman ought to be{br}a little more ladylike, do{br}you not think, Suzume-dono?	176/160 x3	
+516	text	それはどういう意味かしら？{br}景時様。	And what is that supposed{br}to mean, Kagetoki-sama?	176/160 x3	
+517	text	もう少しおしとやかにしろって{br}意味じゃないの？	That you oughta be a bit{br}more ladylike, right?	176/160 x3	
+518	text	あんたが言わなくていいの。	Nobody asked you.	176/160 x3	
+519	text	ははははは、おお　神楽殿{br}あれが京の都のようですな{br}急ぎましょう。	Ha ha ha ha! Ah, Kagura-dono,{br}that looks to be Kyoto.{br}Let us hurry.	176/160 x3	
+51A	text	何だ？　おまえは？{page}はっはっはっ！おまえが熊野の{br}神楽か？ただのがきではないか{br}晴明はどうした？{page}おれにおそれをなしたか？{page}まあいい・・退屈しのぎだ{br}少しあそんでやろう！	What? Who are you?{page}Ha ha ha! You're Kagura of{br}Kumano? You're just a brat!{br}What happened to Seimei?{page}Is he too scared of me?{page}No matter... To pass the time,{br}I'll play with you a little!	176/160 x3	
+51B	text	これは晴明様　お久しぶりに{br}ございます。{page}ですが　八十をこえての旅は{br}年よりの冷や水・・{br}というものでしょう。	Ah, Seimei-sama, it has been{br}a long time.{page}But travelling past eighty{br}is a foolish old man's folly,{br}as they say.	176/160 x3	
+51C	text	はて？　誰であったか・・{br}とんと賞えぬが・・	Hm? Who might you be...{br}I do not recall at all...	176/160 x3	
+51D	text	老いるとは　いやなもの・・{page}ご自分が破門になさった{br}弟子の顔すら思い出せないの{br}ですか・・	Growing old is a sad thing...{page}You cannot even remember the{br}face of the disciple you{br}yourself expelled?	176/160 x3	
+51E	text	そう言えば　小野政光（おの{br}まさみつ）という尻の青い若造{br}がおったが・・{page}尻の青いのは　とれたか？	Come to think of it, there was{br}a wet-behind-the-ears pup{br}named Ono no Masamitsu...{page}Are you dry behind the{br}ears yet?	176/160 x3	
+51F	text	ぬうう・・ゆるせん！{br}このおいぼれが！{page}五年前　私を破門にした恨み{br}今こそはらしてくれる！	Grrr... Unforgivable!{br}You old dotard!{page}Five years ago you expelled me.{br}Now I will have my revenge!	176/160 x3	
+520	text	晴明の手の者か？{page}晴明は何をしておるのだ？{br}ここをとおるはずだが・・{br}さては　おじけづいたか！{page}自分で破門にした弟子をおそれ{br}て　並ぶ者なき陰陽師とは・・{br}よく言ったものよ！{page}おまえには何の恨みもないが・{br}死んでもらうぞ！	One of Seimei's people?{page}What is Seimei doing?{br}He should have come this way...{br}Has he lost his nerve?!{page}Afraid of the disciple he{br}himself expelled... and they{br}call him the peerless onmyoji!{page}I have no grudge against you,{br}but you must die!	176/160 x3	
+521	text	まっ・・まさか、こんながきに{br}敗れるとは・・	Wh-what... beaten by a brat{br}like this...	176/160 x3	
+522	text	くそっ！晴明！　のろってやる{br}おまえの一族全てを{br}のろってやるぞー！	Damn you, Seimei! A curse on{br}you! A curse on your whole{br}house!	176/160 x3	
+523	text	陰陽道はまじないにあらず。{page}存在するものの　意味を知り{br}災いを予測し防ぐ事にある。{page}それを忘れた者に　おしえる事{br}などわしは知らぬ。{page}それゆえの破門なのだ。{page}それを恨みに思い、あまつさえ{br}わしに戦いをいどむとは・・{br}あわれな男よな・・	Onmyodo is not spells.{page}It is knowing the meaning of{br}all that exists, foreseeing{br}calamity and preventing it.{page}One who forgets that has{br}nothing I care to teach.{page}That is why he was expelled.{page}To bear a grudge for it, and{br}even challenge me to battle...{br}A pitiful man...	176/160 x3	
+524	text	くっ、なぜだ！　なぜ負ける！{br}晴明以外の者になぜ負ける！{page}お・・おれ・・が・負ける・・{br}なんて！・・ぐふっ！	Ugh, why?! Why do I lose?!{br}Why lose to anyone but Seimei?!{page}Me... I... lose...?{br}No...! ...Urgh!	176/160 x3	
+525	text	おぬしが神楽か・・何じゃ{br}ただのこぞうではないか。{page}道摩様も　気の小さい事よ、{br}こぞうがおそろしいとは・・{page}まあよいわ　わしがその心配を{br}なくしてやるとしよう・・	So you are Kagura... Why,{br}you are only a little boy.{page}Doma-sama has a timid heart,{br}to fear a mere boy...{page}No matter. I shall rid{br}him of that worry...	176/160 x3	
+526	text	晴明　おぬしか？　やはりな・{br}もう朝廷側で使える者はおぬし{br}と賀茂の若造だけであろう。{page}天海の息子　神楽とか言う者も{br}おるそうだが、十六のがきでは{br}何もできまい・・{page}ここで　おぬしを倒せれば{br}勝ちは決まったも同じ。{page}死ぬがよい　晴明！！	Seimei, is that you? I thought{br}so... You and that pup of Kamo{br}are all the court has left.{page}They say Tenkai's son, this{br}Kagura, is about too, but a{br}brat of sixteen is nothing...{page}If I defeat you here, the{br}victory is as good as ours.{page}Die, Seimei!!	176/160 x3	
+527	text	むだな事を・・おぬしでは{br}このわしは倒せぬわ。{page}あの世でゆっくり自分の{br}おろかさをくやむがよい。	Wasted effort... You cannot{br}defeat me.{page}Go and regret your folly at{br}your leisure in the next world.	176/160 x3	
+528	text	霞陰鬼（かいんき）様{br}やめて下さい。{page}あなたがたは利用されている{br}だけなのです・・	Kainki-sama, please stop.{page}Your people are only being{br}used...	176/160 x3	
+529	text	おっ・おぬしは・・蝉丸か？{br}なぜおぬしがそこにおる・・{page}じゃまをするなら　おぬしと{br}いえど殺さねばならぬぞ！	Y-you... Semimaru? Why are{br}you there...{page}If you stand in my way, then{br}even you must die!	176/160 x3	
+52A	text	戦っても何も変わりません・{br}むだな血が流れるだけです。{page}霞陰鬼様がそう言ったのでは{br}ありませんか！	Fighting will change nothing.{br}Only needless blood will flow.{page}Was it not you who said so,{br}Kainki-sama?	176/160 x3	
+52B	text	もう遅いのだ・・{page}一族の全ての者が　道摩の味方{br}になってしまった。{br}長の守屋様もふくめてな・・{page}蝉丸、おぬしと長老は一族の{br}うらぎり者よ！{page}戦うとなった以上　わしは{br}守屋様のために戦うだけだ。{page}おぬしを殺すのはしのびぬ・・{br}だまって去ればよい・・{page}だがじゃまをするなら　それも{br}よかろう・・・おぬしもともに{br}殺すまでよ！	It is too late...{page}Every one of our clan has{br}gone over to Doma, even our{br}chief, Moriya-sama...{page}Semimaru, you and the Elder{br}are traitors to the clan!{page}Now that it has come to war,{br}I fight only for Moriya-sama.{page}I cannot bear to kill you...{br}Leave quietly, and go...{page}But if you stand in my way,{br}so be it... I will kill{br}you along with them!	176/160 x3	
+52C	text	なるほど、あの天海の息子だけ{br}あって強いわ・・{page}だが　わしの分身を倒しただけ{br}でいい気になるな・・{page}おぬしらはこの立向盤がほしい{br}のであろう？{page}わしは周防の国におる　勇気が{br}あるなら来るがよい。{page}それまでに　せいぜい成長して{br}おくがよいぞ　神楽。{br}周防でまた会おう。	I see, as strong as you would{br}expect of Tenkai's son...{page}But do not get proud just for{br}beating my double...{page}You want this Tatemuki Board,{br}do you not?{page}I am in Suo Province. Come,{br}if you have the courage.{page}Grow as much as you can{br}until then, Kagura.{br}We meet again in Suo.	176/160 x3	
+52D	text	やはり分身ごときでは　晴明に{br}勝てはせぬようだな・・{page}晴明、立向盤はわたさぬぞ。{br}これがほしくば周防に来るが{br}よい・・{page}その時こそ、わしみずから{br}おぬしを　殺してくれる！{br}さらばじゃ晴明。	As I thought, a mere double{br}cannot defeat Seimei...{page}Seimei, I will not give you{br}the Tatemuki Board. If you{br}want it, come to Suo...{page}Then I will kill you{br}with my own hands!{br}Farewell, Seimei.	176/160 x3	
+52E	text	分身といえど・・晴明以外の者{br}におくれをとるとは・・{br}おぬしの面　賞えておく・・{page}立向盤がほしければ　周防に{br}来るがよい、そこでわしは{br}まっておる・・さらばじゃ・	Even as a double... to fall{br}behind anyone but Seimei...{br}I will remember your face...{page}If you want the Tatemuki Board,{br}come to Suo. I will be{br}waiting there... Farewell...	176/160 x3	
+52F	text	何だい？　じいさん。{page}あんたみたいなのが　こんな所{br}うろうろしてると、山賊に{br}おそわれちまうよ・・{page}気をつけなよ・・	What is it, old man?{page}Wander around a place like{br}this, and the mountain bandits{br}will get you...{page}Be careful...	176/160 x3	
+530	text	何だい　あんた？{br}よわそうな男だねえ？{page}何か用かい？　悪いけど今度に{br}しておくれ。{br}考え事してんだからさ。	Who are you? What a{br}feeble-looking man.{page}Want something? Sorry, but{br}some other time.{br}I'm thinking.	176/160 x3	
+531	text	あっ・・あんたは！　都の南で{br}会った・・神楽・だったね。	Ah... you! The one I met{br}south of the capital... Kagura,{br}wasn't it?	176/160 x3	
+532	text	あーってめー　あの時の盗賊！{br}おい神楽　やっちまおう！	Aah, you! The bandit from{br}before! Hey Kagura, let's{br}get her!	176/160 x3	
+533	text	あの時の女ではないか！{br}まだ賊をやっているのか？{br}今度はゆるさんぞ！	Why, it is the woman from{br}before! Still a bandit?{br}This time I will not forgive you!	176/160 x3	
+534	text	あの時は悪かったよ・・{br}ほんとに　そう思ってるんだ{br}ゆるしておくれよ・・{page}それより　あんたらを見込んで{br}話があるんだよ。{page}もう賊から　足を洗うからさあ{br}人だすけだと思って{br}引き受けてくれないかい？{end2}	I'm sorry about that time...{br}I really mean it. Forgive{br}me, won't you...{page}Anyway, I've got a favor to{br}ask, and you're the ones{br}I'm counting on.{page}I'm quitting the bandit life,{br}so please take this on, as{br}a good deed, won't you?{end2}	176/160 x3	
+535	text	そんな事　言わずにさあ！{br}おねがい、たすけておくれよ。{end2}	Don't say that!{br}Please, help me out.{end2}	176/160 x3	
+536	text	え？引き受けてくれるのかい？{br}えらいよ　神楽ちゃん！{page}実は　賊から足を洗うつもりで{br}故郷に　帰ろうとしたのさ。{page}ところが　世話になった大親分{br}がゆるしをくれなくってね・{page}逃げる途中で　おそわれて・・{br}妹はさらわれちまって・・{br}奴らにつれて行かれたのさ。{page}たすけに行くにも　一人で{br}どうしようかと　思ってたん{br}だよ・・{page}これから　あんないするからさ{br}いっしょに行っておくれよ・{page}こっちだよ・・	Huh? You'll do it?{br}You're a gem, Kagura-chan!{page}Truth is, I meant to quit the{br}bandit life and go back home.{page}But the big boss who took{br}me in wouldn't let me go...{page}They jumped us while we fled...{br}My little sister got grabbed...{br}they carried her off.{page}I wanted to save her, but I{br}was all alone and didn't{br}know what to do...{page}I'll show you the way,{br}so come with me...{page}It's this way...	176/160 x3	
+537	text	なんだあ　てめえら！{br}あっ！てめえっ！楓じゃねえか{br}何しに来やがった！	What the hell are you lot?!{br}Ah! You! Kaede, ain't it?{br}What're you doin' here?!	176/160 x3	
+538	text	うるさいねえあつ苦しい顔して{br}どなるんじゃないよ！{page}妹を返してもらう事の{br}何が悪いっていうのさ！	Pipe down! Don't go yelling{br}with that stuffy face of yours!{page}What's wrong with wanting{br}my sister back?!	176/160 x3	
+539	text	何だとお！　口のへらねえ・・{br}その口の悪さがなきゃ　いい女{br}なのによう！{page}てめえの妹はなあ、この調伏丸{br}様の嫁になるんだよ！{br}わかったらとっとと帰んな！	What?! You and that mouth...{br}If it weren't for that mouth,{br}you'd be a fine woman!{page}Your sister's gonna be the{br}bride of Chobukumaru-sama{br}himself! Now get lost!	176/160 x3	
+53A	text	誰があんたみたいな奴の嫁に{br}なるってんだ！{page}あんたみたいなとうへんぼくに{br}嫁にいこうなんて女は、国中を{br}さがしても　いやしないよ！	Who'd ever marry the{br}likes of you?!{page}You won't find a woman in the{br}whole land who'd marry a{br}blockhead like you!	176/160 x3	
+53B	text	もうかんべんならねえ！{br}妹をおいていきゃあ　{br}見のがしてやったものを・・{page}野郎ども！一人も生かして{br}この山から出すんじゃねえぞ！	That does it! I'd have let ya{br}go if you left the sister{br}behind...{page}Boys! Don't let a single one{br}of 'em off this mountain alive!	176/160 x3	
+53C	text	じゃあ　後はたのんだよ。{br}あんたらが　戦ってるすきに{br}妹をたすけるから・・{page}がんばってね　神楽ちゃん！	Then I'll leave the rest to{br}you. While you're fighting,{br}I'll go save my sister...{page}Good luck, Kagura-chan!	176/160 x3	
+53D	text	ちょっとまて！おい！あーあ{br}行っちまった。{page}神楽　どうすんだ？	Hey, wait! Hey! Aw, man...{br}she's gone.{page}Kagura, what now?	176/160 x3	
+53E	text	仕方ない　神楽殿とりあえず{br}戦いましょう。{page}あいては山賊です。{br}えんりょはいりますまい・・	There is nothing for it,{br}Kagura-dono. Let us fight{br}for now.{page}They are mountain bandits.{br}We need not hold back...	176/160 x3	
+53F	text	くそーっ！楓の野郎！{page}・・・けっ、一度もつかまった{br}事のない　このおれさまが・{page}こんな所で、しかもこんながき{br}にやられるなんてよぉ・・	Damn it! That Kaede!{page}...Tch, me, the great one{br}who's never once been caught...{page}beaten in a place like this,{br}and by a brat, no less...	176/160 x3	
+540	text	世話かけたね　ありがとうよ。{br}おかげで　妹をたすける事が{br}できたよ。{page}ほら！あんたも礼をいいな・・	Sorry for the trouble, and{br}thanks. Thanks to you, I{br}got my sister back.{page}Come on! Say thank you too...	176/160 x3	
+541	text	葵（あおい）ともうします{br}ありがとうございました。{page}姉が強引にたのんだみたいで・{br}本当にすみませんでした。	My name is Aoi.{br}Thank you very much.{page}My sister seems to have pushed{br}you into this... I'm so sorry.	176/160 x3	
+542	text	へえ・・姉妹でも　性格が{br}ぜんぜんちがう事って{br}やっぱり　あるんだ。{page}こういう場合　年が下の方が{br}やさしいんだよな。{page}いてっ！{br}何すんだよ！　姉ちゃん！	Huh... so sisters can be{br}totally different in{br}personality after all.{page}In cases like this, the{br}younger one's always nicer.{page}Ow! What was that for, Sis?!	176/160 x3	
+543	text	あら　ごめんなさい　藤太{br}蚊が止まってたみたい。	Oh, sorry, Tota. I thought{br}there was a mosquito on you.	176/160 x3	
+544	text	あたしたちの故郷は　信濃の{br}戸隠って所にあるのさ。{page}近くに来たら　よっておくれ{br}かんげいするからさ。{page}じゃあ　またね神楽ちゃん！	Our home's in a place called{br}Togakushi, in Shinano.{page}If you come by, drop in.{br}You'll be welcome.{page}See you, Kagura-chan!	176/160 x3	
 545	text	何じゃおぬしは？{page}そうか・・おぬしが熊野の天海{br}の息子か・・{br}名はたしか、神楽だったか・{page}わしを倒しに来たか・・ふん！{br}晴明ほどの術者でなければ{br}このわしは倒せぬわ！{page}世の中は広い、おぬしていどの{br}力では　かなわぬ者のいる事を{br}その身にきざんでやるわ！		176/160 x3	
 546	text	よう来たな　安倍晴明・・{br}待っておったぞ・・{page}おぬしとは　いちど戦って{br}みたかったのよ。・・{page}さあ　えんりょは無用だ。{br}かかってまいれ！		176/160 x3	
 547	text	ほう　朝廷側の陰陽師か？{br}晴明以外にまじないを使う者が{br}おるとは思わなかったが・・{page}わしを倒しに来たのだろう{br}えんりょはいらん　かかって{br}まいれ！		176/160 x3	
