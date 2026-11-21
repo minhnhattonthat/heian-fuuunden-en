@@ -842,60 +842,60 @@ id	kind	jp	en	max	notes
 484	text	なによ藤太？　文句あるの？	What, Tota? Got a problem{br}with that?	176/160 x3	
 485	text	いえ　ありません。	No, ma'am. None at all.	176/160 x3	
 486	text	だいたい　あんたがいるから{br}私も行く事になったのよ・・{page}あんたがいると　何するか{br}わからないんだから・・{page}じゃあ　行きましょう。	It's because you're here that{br}I have to go in the first place...{page}With you around, who knows{br}what might happen...{page}Well, let's get going.	176/160 x3	
-487	text	旅に出るのに諸秀殿にあいさつ{br}なしとは・・つれないでは{br}ありませんか。{page}ははははは・・・そんなことを{br}気にする諸秀殿ではありません{br}心配なさるな・・{page}私は諸秀殿より、神楽殿の供を{br}おおせつかりました。{br}田辺景時ともうします。{page}よろしく　おねがいしまする。		176/160 x3	
-488	text	神楽様ですね・・お待ちして{br}おりました・・{page}私は　あなたがたの言う山童の{br}一族の者、蝉丸ともうします。{page}いえ　敵ではありません。{page}私の役目は　神楽様を出雲へ{br}おつれする事と、神楽様を{br}守る事です{page}たとえ　そのために　一族を{br}うらぎる事に　なったとしても{br}私は　神楽様を守ります。{page}出雲の国に　私たちの里があり{br}そこで　長老が　神楽様を{br}お待ちしています。{page}そこへ行けば、私があなたを{br}守る理由が　わかります。{page}どうか　私と出雲の国へ{br}行って下さい・・{page}そのためにここでまっていたの{br}です・・私をおつれ下さい。		176/160 x3	
-489	text	あなたは？・・もしや・・{br}安倍晴明様ですか・・{page}私は　蝉丸ともうします・・{br}おじい様から名をうけついで{br}そう名のっています・{page}私は　神楽様を　お守りする{br}ように、おじい様から{br}言われました・・{page}晴明様について行っても同じ{br}事なのですが・・{page}神楽様に　お会いするように{br}言われましたので・・{br}神楽様を　お待ちいたします。		176/160 x3	
-48A	text	旅の方ですか・・？{br}・・ちがうようですね・・{page}ここでお会いしたのも　何かの{br}縁でしょう、ひとつ琵琶を{br}おきかせ　いたしましょう。		176/160 x3	
-48B	text	何者！　名をなのれ！{br}ここを　伊勢斎宮様のおわす{br}所と知っての事か！{page}へんとうしだいでは{br}ようしゃせぬぞ！		176/160 x3	
-48C	text	やめなさい　葉月（はづき）{page}その方々は　朝廷の人たちです{br}敵ではありませんよ。{page}えっ・・と、あなたは？{br}神楽様・・ですか？{page}私が伊勢斎宮、卯月です・・{page}神楽様・・私もつれて行っては{br}もらえませんか？{page}本来ならば　斎宮が宮をはなれ{br}るなど、あってはならない事{br}ですが・・{page}今度の戦いは　この国の未来が{br}かかっています・・{page}伊勢斎宮である　この私が{br}何もしないわけには{br}まいりません・・{page}戦いは　あまり好みませんが{br}あなたがたを　守るぐらいは{br}できましょう・・{page}葉月　後はたのみますよ・・		176/160 x3	
-48D	text	そんなぁ・・・・{br}私も行きます！！{page}卯月様が　いなくなったら{br}私が　宮司様に　しかられる{br}じゃないですか・・{page}そんなの　いやですぅ・・		176/160 x3	
-48E	text	せ・・晴明様！{br}あー・・よかった・・{br}また式鬼神かと思いました。		176/160 x3	
-48F	text	おう葉月（はづき）。{br}卯月（うづき）殿は？		176/160 x3	
-490	text	晴明様ですか　ありがとう{br}ございました。{page}晴明様も　お元気そうで{br}なによりです。{page}それから　私も共に行きます{br}多分　これから私の力が必要に{br}なりましょう・・		176/160 x3	
-491	text	しかし　卯月殿・・{br}斎宮が宮をはなれては・・		176/160 x3	
-492	text	それは　藤原道長様が何とか{br}なさいますわ。{page}それに・・本音を言うと{br}外に出てみたいのです・・{br}いいでしょう　晴明様。{page}葉月　後はたのみますよ。		176/160 x3	
-493	text	朝廷につかえる人ですよね？{br}あーよかった、敵かと{br}思っちゃった。		176/160 x3	
-494	text	何とか　間にあったようですね{br}よかった、よかった。{page}ところで　おじょうちゃん{br}卯月（うづき）様は　どこに{br}いるのかな？		176/160 x3	
-495	text	おじょうちゃんですって！{br}子供あつかいしないでよね！{page}私は伊勢斎宮卯月（うづき）様{br}に仕える巫女で　名前だって{br}ちゃんと・・・・		176/160 x3	
-496	text	やめなさい葉月（はづき）。{br}賀茂様　お久しぶりです。{page}東へ向かうのでしょう？{br}私もつれて行って下さい。{br}よろしいでしょう？		176/160 x3	
-497	text	卯月殿・・しかし　斎宮が宮{br}をはなれてよいはずが　ないで{br}しょう。{page}公になれば　道長様にまた何と{br}言われるか・・{page}これ以上　心配のたねを{br}ふやして下さいますな・・		176/160 x3	
-498	text	そうですか・・では一人で{br}まいる事にしますわ。{br}賀茂様　お元気で・・{page}葉月、あなたも行くわよね？		176/160 x3	
-499	text	はい！　卯月様となら{br}どこへでも　行きます！{page}このような　冷たいお方は{br}ほうっておいて、二人で{br}行きましょう　卯月様。		176/160 x3	
-49A	text	ちょっとまって下さい・・{br}・・・わかりましたよ。{page}つれて行きます・・いや{br}どうか　ついてきて下さい。{page}ですが、危ない事はしないで{br}下さいよ・・本当に・・{br}おねがいしますよ・・		176/160 x3	
-49B	text	もしかして・・斎宮様・・？{br}（うそだろ、ただのがきじゃ{br}ないかよ？）		176/160 x3	
-49C	text	危ない所　ありがとう{br}ございました・・私が伊勢{br}斎宮卯月（うづき）です。		176/160 x3	
-49D	text	そうでしょう、そうでしょう{br}伊勢斎宮とも　あろう方が{br}こんながき・・いやいや{page}おじょうさんではないだろうと{br}思っていたんですよ。		176/160 x3	
-49E	text	・・・・・・・・		176/160 x3	
-49F	text	それよりも　藤原盛高様・・{br}でしたっけ？{page}私で　何かお役に立てる事が{br}あるかも　知れません。{br}私もおつれ下さい・・		176/160 x3	
-4A0	text	それは　かまいませんが・・{br}斎宮が　宮をはなれても{br}いいのですか？		176/160 x3	
-4A1	text	大丈夫です。{br}藤原道長様が、{br}何とかなさって下さいます。		176/160 x3	
-4A2	text	まあ　あのおっさん・・いや{br}道長様には　政治ぐらいしか{br}とりえはありませんからね。{page}私はかまいませんよ。		176/160 x3	
-4A3	text	卯月様！　私も行きます！{page}大事な斎宮様を　こんな男と{br}いっしょに行かせるわけには{br}いきません！		176/160 x3	
-4A4	text	おやめなさい　葉月（はづき）{br}あなたは・・・・{br}・・・・・まさか！		176/160 x3	
-4A5	text	斎宮様　私は神楽殿に力を{br}かしている　上宮という{br}ただの、はぐれ陰陽師です。		176/160 x3	
-4A6	text	・・・・・・・・そうですか。{br}危ない所　どうもありがとう{br}ございました。{page}ところで　私もついて行きたい{br}のですが、かまいませんか？		176/160 x3	
-4A7	text	私は　ただのはぐれ陰陽師です{br}斎宮であらせられる　卯月様に{br}命令はできません・・		176/160 x3	
-4A8	text	卯月様・・このお方は？{br}お知り合いですか？		176/160 x3	
-4A9	text	・・・・・・・いいえ、{br}初めてお会いしたわ。{page}このお方は　はぐれ陰陽師の{br}一人です・・葉月も{br}そう　きこえたでしょう。{page}それより　ついて行っても{br}かまわないのですね・・{br}上宮様・・ありがとう。{page}葉月、後はたのみますよ。		176/160 x3	
-4AA	text	君が　熊野の神楽か・・・{br}もの好きな男だなあ君は・・{page}君は道摩と戦うつもりだろう？{br}むだな事はやめとけよ、と{br}言うつもりだったんだが・・{page}・・・・やめとくよ、{br}君を見て気が変わった・・{page}おれは　二年前・・道摩と戦い{br}負けた男だ・・だが・・{page}晴明のじいさんに力をかす気は{br}なかったけど・・君のために{br}おれも戦う事にしよう・・{page}君の天分は　晴明のじいさん{br}以上かも知れない・・けど{br}今の君じゃ道摩に勝てない・{page}君が道摩と戦えるようになる{br}まで、おれは君のための力に{br}なろう・・		176/160 x3	
-4AB	text	晴明のじいさんか？{br}おれはまだ死にたくないんでね{br}力はかせないな・・{page}道摩と戦うのは　やめたほうが{br}いいと思うよ。{page}まあ　あんたの立場じゃ{br}それはむりだろうけど・・		176/160 x3	
-4AC	text	賀茂さんか？　あんたも朝廷に{br}つかえてるばかりに　えらい{br}役目をおしつけられるね。{page}おれなら　あの道摩と戦うより{br}どこかに逃げるがね・・		176/160 x3	
-4AD	text	そなたは？・・・神楽殿か？{br}いや　失礼・・私は上宮、君を{br}さがしていたのだ・・{page}ここに　花山法皇からもらった{br}印がある、これさえあれば・{page}高野か比叡のどちらかが、味方{br}になってくれるはずだ・・{page}そなたと　晴明殿がいれば{br}私は　必要でないだろうが・{page}手伝える事があるかも知れない{br}私も行こう・・		176/160 x3	
-4AE	text	・・・・・・・・・・・・。{br}（何か考え込んでいる）		176/160 x3	
-4AF	text	えっ？　熊野から来たの？{br}熊野で　私の縁者が巫女を{br}してるんだけど・・{page}熊野は　広いからなあ{br}知らないよね・・		176/160 x3	
-4B0	text	都から来られた　お人ですか？{br}まあ　遠い所をようこそ{br}ゆっくりしていって下さい。		176/160 x3	
-4B1	text	えっ？　わたしを仲間に？{page}・・そうなの・・わかった・{br}でも　役に立たないかもよ・・		176/160 x3	
-4B2	text	山童と朝廷が戦っている話は{br}知っています・・{page}きずをなおすぐらいの法術しか{br}知りませんが・・それでもよけ{br}れば　お供しましょう・・		176/160 x3	
-4B3	text	うーん　もとはいいんだけど、{br}あなた十六ぐらいよね・・{br}もう少し　大人だったらね・{page}えっ？私？　私は飛騨（ひだ）{br}見ての通り　巫女よ。{page}今は　巫女をやめて　故郷に{br}帰る所、あーどっかに　いい男{br}いないかなあ・・		176/160 x3	
-4B4	text	なーに　よぼよぼのじいさん{br}じゃない、枯れた男に{br}ようはねーわよ。{page}五十年若ければ　相手して{br}あげたんだけどね・・{page}えっ？晴明？　誰それ？{br}知らないわ？　有名なの？		176/160 x3	
-4B5	text	何よ、あなた？　女じゃない。{br}私はそのしゅみはないわよ。		176/160 x3	
-4B6	text	あなた　誰？　陰陽師？{br}すすむ道をまちがえたわね{br}坊主の方が似合ってるわ。		176/160 x3	
-4B7	text	あら　いい男じゃない。{br}こんな所で何してるの？{page}場合によっては　つきあって{br}あげてもいいわよ。{page}えっ？私？　私は飛騨（ひだ）{br}見ての通り巫女よ。{page}今は　巫女をやめて、故郷に{br}帰る所だけどね・・		176/160 x3	
-4B8	text	飛騨というのか君は、{br}どこの巫女だい？		176/160 x3	
-4B9	text	諏訪の斎宮様に　お仕えして{br}いたんだけど、斎宮様から{br}おひまを出されてね・・{page}実をいうと　故郷に帰りたいん{br}だけど・・それも出来ないの{br}もう　帰る家もないし・・		176/160 x3	
-4BA	text	諏訪か？　・・・わかった。{br}私でよければ力になるよ。{page}帰る家がないのなら、都に賀茂{br}という家がある。{page}そこに行って広行が・・・{br}いや文の方が・・・		176/160 x3	
-4BB	text	くすくすくす・・あはははは{br}う・そ・よ。{page}あなたが道摩と戦っているのは{br}知っているわ　賀茂様。{page}誤解しないで、あなたが{br}気に入ったわ　私もついてって{br}あ・げ・る。{page}そのかわり　私の夫になってね{br}賀・茂・さ・ま。		176/160 x3	
-4BC	text	いっ・・いや、しかし・・{br}私は・・		176/160 x3	
+487	text	旅に出るのに諸秀殿にあいさつ{br}なしとは・・つれないでは{br}ありませんか。{page}ははははは・・・そんなことを{br}気にする諸秀殿ではありません{br}心配なさるな・・{page}私は諸秀殿より、神楽殿の供を{br}おおせつかりました。{br}田辺景時ともうします。{page}よろしく　おねがいしまする。	Setting out on a journey with no{br}word to Morohide-dono? Is that{br}not rather cold of you?{page}Ha ha ha ha... Morohide-dono{br}would never mind such a thing.{br}Do not worry...{page}Morohide-dono has charged me{br}to go with you, Kagura-dono.{br}I am Tanabe Kagetoki.{page}I am at your service.	176/160 x3	
+488	text	神楽様ですね・・お待ちして{br}おりました・・{page}私は　あなたがたの言う山童の{br}一族の者、蝉丸ともうします。{page}いえ　敵ではありません。{page}私の役目は　神楽様を出雲へ{br}おつれする事と、神楽様を{br}守る事です{page}たとえ　そのために　一族を{br}うらぎる事に　なったとしても{br}私は　神楽様を守ります。{page}出雲の国に　私たちの里があり{br}そこで　長老が　神楽様を{br}お待ちしています。{page}そこへ行けば、私があなたを{br}守る理由が　わかります。{page}どうか　私と出雲の国へ{br}行って下さい・・{page}そのためにここでまっていたの{br}です・・私をおつれ下さい。	You are Kagura-sama... I have{br}been waiting for you...{page}I am of the clan you call{br}the Yamawaro. My name is{br}Semimaru.{page}No, I am not your enemy.{page}My task is to bring you to{br}Izumo, Kagura-sama, and to{br}protect you.{page}Even if it means betraying{br}my clan, I will protect{br}you, Kagura-sama.{page}Our village is in Izumo, and{br}there our elder awaits you,{br}Kagura-sama.{page}Go there, and you will learn{br}why I protect you.{page}Please, come with me{br}to Izumo...{page}That is why I waited here...{br}Please take me with you.	176/160 x3	
+489	text	あなたは？・・もしや・・{br}安倍晴明様ですか・・{page}私は　蝉丸ともうします・・{br}おじい様から名をうけついで{br}そう名のっています・{page}私は　神楽様を　お守りする{br}ように、おじい様から{br}言われました・・{page}晴明様について行っても同じ{br}事なのですが・・{page}神楽様に　お会いするように{br}言われましたので・・{br}神楽様を　お待ちいたします。	And you are...? Could you be...{br}Abe no Seimei-sama...?{page}My name is Semimaru... I took{br}the name from my grandfather{br}and go by it now...{page}My grandfather told me to{br}protect Kagura-sama...{page}Going with you would come{br}to the same thing, but...{page}I was told to meet{br}Kagura-sama... So I will{br}wait for Kagura-sama.	176/160 x3	
+48A	text	旅の方ですか・・？{br}・・ちがうようですね・・{page}ここでお会いしたのも　何かの{br}縁でしょう、ひとつ琵琶を{br}おきかせ　いたしましょう。	A traveler...?{br}...No, it seems not...{page}Our meeting here must be{br}fate. Let me play the{br}biwa for you a while.	176/160 x3	
+48B	text	何者！　名をなのれ！{br}ここを　伊勢斎宮様のおわす{br}所と知っての事か！{page}へんとうしだいでは{br}ようしゃせぬぞ！	Who goes there? Your name!{br}Do you know whose home this{br}is? The Ise Priestess-sama's!{page}Answer me wrong and{br}I'll show no mercy!	176/160 x3	
+48C	text	やめなさい　葉月（はづき）{page}その方々は　朝廷の人たちです{br}敵ではありませんよ。{page}えっ・・と、あなたは？{br}神楽様・・ですか？{page}私が伊勢斎宮、卯月です・・{page}神楽様・・私もつれて行っては{br}もらえませんか？{page}本来ならば　斎宮が宮をはなれ{br}るなど、あってはならない事{br}ですが・・{page}今度の戦いは　この国の未来が{br}かかっています・・{page}伊勢斎宮である　この私が{br}何もしないわけには{br}まいりません・・{page}戦いは　あまり好みませんが{br}あなたがたを　守るぐらいは{br}できましょう・・{page}葉月　後はたのみますよ・・	Stop it, Hazuki.{page}These people are from the{br}court. They are not enemies.{page}Um... and you are...?{br}Kagura-sama, is it?{page}I am the Ise Priestess, Uzuki...{page}Kagura-sama... Would you{br}take me with you?{page}By rights, the Priestess must{br}never leave her shrine,{br}but...{page}the future of this land{br}rests on this battle...{page}As the Ise Priestess, I{br}cannot simply do nothing...{page}I do not much like fighting,{br}but I can at least{br}protect you all...{page}Hazuki, I leave the rest{br}to you...	176/160 x3	
+48D	text	そんなぁ・・・・{br}私も行きます！！{page}卯月様が　いなくなったら{br}私が　宮司様に　しかられる{br}じゃないですか・・{page}そんなの　いやですぅ・・	No fair...{br}I'm coming too!!{page}If you go missing, Uzuki-sama,{br}it's me the Chief Priest-sama{br}will scold, isn't it...{page}I don't want thaaat...	176/160 x3	
+48E	text	せ・・晴明様！{br}あー・・よかった・・{br}また式鬼神かと思いました。	S... Seimei-sama!{br}Ahh... thank goodness...{br}I thought it was a shikigami.	176/160 x3	
+48F	text	おう葉月（はづき）。{br}卯月（うづき）殿は？	Ah, Hazuki.{br}Where is Uzuki-dono?	176/160 x3	
+490	text	晴明様ですか　ありがとう{br}ございました。{page}晴明様も　お元気そうで{br}なによりです。{page}それから　私も共に行きます{br}多分　これから私の力が必要に{br}なりましょう・・	Seimei-sama, is it? Thank{br}you very much.{page}I am glad to see you{br}looking so well.{page}And I am coming with you.{br}I daresay you will need my{br}power from here on...	176/160 x3	
+491	text	しかし　卯月殿・・{br}斎宮が宮をはなれては・・	But Uzuki-dono...{br}the Priestess may not{br}leave her shrine...	176/160 x3	
+492	text	それは　藤原道長様が何とか{br}なさいますわ。{page}それに・・本音を言うと{br}外に出てみたいのです・・{br}いいでしょう　晴明様。{page}葉月　後はたのみますよ。	Michinaga-sama will see{br}to that somehow.{page}Besides... to be honest,{br}I want to see the world...{br}You don't mind, Seimei-sama?{page}Hazuki, I leave the rest{br}to you.	176/160 x3	
+493	text	朝廷につかえる人ですよね？{br}あーよかった、敵かと{br}思っちゃった。	You serve the court, right?{br}Phew, what a relief. I thought{br}you were the enemy.	176/160 x3	
+494	text	何とか　間にあったようですね{br}よかった、よかった。{page}ところで　おじょうちゃん{br}卯月（うづき）様は　どこに{br}いるのかな？	Looks like we made it in time.{br}Good, good.{page}Now then, little girl, where{br}might Uzuki-sama be?	176/160 x3	
+495	text	おじょうちゃんですって！{br}子供あつかいしないでよね！{page}私は伊勢斎宮卯月（うづき）様{br}に仕える巫女で　名前だって{br}ちゃんと・・・・	"Little girl"?!{br}Don't treat me like a child!{page}I'm a shrine maiden serving{br}the Ise Priestess, Uzuki-sama,{br}and I have a name too...	176/160 x3	
+496	text	やめなさい葉月（はづき）。{br}賀茂様　お久しぶりです。{page}東へ向かうのでしょう？{br}私もつれて行って下さい。{br}よろしいでしょう？	Stop it, Hazuki.{br}Kamo-sama, it has been a while.{page}You are heading east, are you{br}not? Take me with you.{br}You don't mind, do you?	176/160 x3	
+497	text	卯月殿・・しかし　斎宮が宮{br}をはなれてよいはずが　ないで{br}しょう。{page}公になれば　道長様にまた何と{br}言われるか・・{page}これ以上　心配のたねを{br}ふやして下さいますな・・	Uzuki-dono... But surely the{br}Priestess cannot leave{br}her shrine.{page}If it comes out, what will{br}Michinaga-sama say to me now...{page}Please do not give me{br}more to worry about...	176/160 x3	
+498	text	そうですか・・では一人で{br}まいる事にしますわ。{br}賀茂様　お元気で・・{page}葉月、あなたも行くわよね？	I see... Then I will go{br}on my own.{br}Farewell, Kamo-sama...{page}Hazuki, you're coming too,{br}aren't you?	176/160 x3	
+499	text	はい！　卯月様となら{br}どこへでも　行きます！{page}このような　冷たいお方は{br}ほうっておいて、二人で{br}行きましょう　卯月様。	Yes! With you, Uzuki-sama,{br}I'll go anywhere!{page}Let's leave this cold man{br}behind and go on our own,{br}Uzuki-sama.	176/160 x3	
+49A	text	ちょっとまって下さい・・{br}・・・わかりましたよ。{page}つれて行きます・・いや{br}どうか　ついてきて下さい。{page}ですが、危ない事はしないで{br}下さいよ・・本当に・・{br}おねがいしますよ・・	W-wait a moment...{br}...All right, you win.{page}I will take you... No, please,{br}do come with me.{page}But please, nothing{br}dangerous... Truly...{br}I beg you...	176/160 x3	
+49B	text	もしかして・・斎宮様・・？{br}（うそだろ、ただのがきじゃ{br}ないかよ？）	Are you... Priestess-sama...?{br}(You're kidding. She's{br}just a kid, isn't she?)	176/160 x3	
+49C	text	危ない所　ありがとう{br}ございました・・私が伊勢{br}斎宮卯月（うづき）です。	Thank you for helping us{br}in our danger... I am the{br}Ise Priestess, Uzuki.	176/160 x3	
+49D	text	そうでしょう、そうでしょう{br}伊勢斎宮とも　あろう方が{br}こんながき・・いやいや{page}おじょうさんではないだろうと{br}思っていたんですよ。	Of course, of course. I knew{br}the great Ise Priestess{br}couldn't be some brat...{page}...I mean, this young lady.{br}That's what I was thinking.	176/160 x3	
+49E	text	・・・・・・・・	........	176/160 x3	
+49F	text	それよりも　藤原盛高様・・{br}でしたっけ？{page}私で　何かお役に立てる事が{br}あるかも　知れません。{br}私もおつれ下さい・・	More to the point, it was{br}Fujiwara no Moritaka-sama...{br}wasn't it?{page}There may be something{br}I can do to help.{br}Please take me with you...	176/160 x3	
+4A0	text	それは　かまいませんが・・{br}斎宮が　宮をはなれても{br}いいのですか？	I don't mind, but...{br}can the Priestess just leave{br}her shrine like that?	176/160 x3	
+4A1	text	大丈夫です。{br}藤原道長様が、{br}何とかなさって下さいます。	It is fine.{br}Fujiwara no Michinaga-sama{br}will take care of it for me.	176/160 x3	
+4A2	text	まあ　あのおっさん・・いや{br}道長様には　政治ぐらいしか{br}とりえはありませんからね。{page}私はかまいませんよ。	Well, that old geezer... I mean,{br}Michinaga-sama's only talent{br}is politics anyway.{page}Fine by me.	176/160 x3	
+4A3	text	卯月様！　私も行きます！{page}大事な斎宮様を　こんな男と{br}いっしょに行かせるわけには{br}いきません！	Uzuki-sama! I'm coming too!{page}I can't let our precious{br}Priestess go off with{br}a man like this!	176/160 x3	
+4A4	text	おやめなさい　葉月（はづき）{br}あなたは・・・・{br}・・・・・まさか！	Stop it, Hazuki.{br}You are...{br}......It cannot be!	176/160 x3	
+4A5	text	斎宮様　私は神楽殿に力を{br}かしている　上宮という{br}ただの、はぐれ陰陽師です。	Priestess-sama, I am Jogu,{br}a mere stray onmyoji who{br}lends Kagura-dono his aid.	176/160 x3	
+4A6	text	・・・・・・・・そうですか。{br}危ない所　どうもありがとう{br}ございました。{page}ところで　私もついて行きたい{br}のですが、かまいませんか？	............I see.{br}Thank you very much for{br}helping us in our danger.{page}By the way, I would like to{br}come along too.{br}Would you mind?	176/160 x3	
+4A7	text	私は　ただのはぐれ陰陽師です{br}斎宮であらせられる　卯月様に{br}命令はできません・・	I am only a stray onmyoji.{br}I cannot give orders to{br}Uzuki-sama, the Priestess...	176/160 x3	
+4A8	text	卯月様・・このお方は？{br}お知り合いですか？	Uzuki-sama... Who is he?{br}Someone you know?	176/160 x3	
+4A9	text	・・・・・・・いいえ、{br}初めてお会いしたわ。{page}このお方は　はぐれ陰陽師の{br}一人です・・葉月も{br}そう　きこえたでしょう。{page}それより　ついて行っても{br}かまわないのですね・・{br}上宮様・・ありがとう。{page}葉月、後はたのみますよ。	.......No.{br}I have never met him before.{page}He is a stray onmyoji, one{br}of many... Surely you heard{br}him say so, Hazuki.{page}More to the point, I may come{br}along, then... Jogu-sama...{br}Thank you.{page}Hazuki, I leave the rest{br}to you.	176/160 x3	
+4AA	text	君が　熊野の神楽か・・・{br}もの好きな男だなあ君は・・{page}君は道摩と戦うつもりだろう？{br}むだな事はやめとけよ、と{br}言うつもりだったんだが・・{page}・・・・やめとくよ、{br}君を見て気が変わった・・{page}おれは　二年前・・道摩と戦い{br}負けた男だ・・だが・・{page}晴明のじいさんに力をかす気は{br}なかったけど・・君のために{br}おれも戦う事にしよう・・{page}君の天分は　晴明のじいさん{br}以上かも知れない・・けど{br}今の君じゃ道摩に勝てない・{page}君が道摩と戦えるようになる{br}まで、おれは君のための力に{br}なろう・・	So you're Kagura of Kumano...{br}You're an odd one, you know...{page}You mean to fight Doma, right?{br}I was going to tell you{br}to drop the useless fight...{page}...but I won't. Seeing you{br}changed my mind...{page}Two years ago... I fought Doma{br}and lost. But...{page}I had no mind to help old man{br}Seimei... But for you, I'll{br}fight too...{page}Your gift may be greater than{br}old man Seimei's... But as{br}you are, you can't beat Doma.{page}Until you can face Doma,{br}I'll lend you my strength...	176/160 x3	
+4AB	text	晴明のじいさんか？{br}おれはまだ死にたくないんでね{br}力はかせないな・・{page}道摩と戦うのは　やめたほうが{br}いいと思うよ。{page}まあ　あんたの立場じゃ{br}それはむりだろうけど・・	Old man Seimei, is it?{br}I don't plan on dying just yet.{br}I won't lend you a hand...{page}I think you'd better not{br}fight Doma.{page}Well, in your position,{br}I guess you have no choice...	176/160 x3	
+4AC	text	賀茂さんか？　あんたも朝廷に{br}つかえてるばかりに　えらい{br}役目をおしつけられるね。{page}おれなら　あの道摩と戦うより{br}どこかに逃げるがね・・	Kamo-san, is it? Serving the{br}court sure lands you with{br}some heavy jobs, huh.{page}Me, I'd run off somewhere{br}before I'd fight that Doma...	176/160 x3	
+4AD	text	そなたは？・・・神楽殿か？{br}いや　失礼・・私は上宮、君を{br}さがしていたのだ・・{page}ここに　花山法皇からもらった{br}印がある、これさえあれば・{page}高野か比叡のどちらかが、味方{br}になってくれるはずだ・・{page}そなたと　晴明殿がいれば{br}私は　必要でないだろうが・{page}手伝える事があるかも知れない{br}私も行こう・・	And you are...? Kagura-dono?{br}Forgive me... I am Jogu. I have{br}been looking for you...{page}I have a seal here from{br}the Retired Emperor Kazan.{br}With this...{page}either Koya or Hiei{br}should take our side...{page}With you and Seimei-dono,{br}you may not need me, but...{page}there may be something I can{br}do to help. I will come too...	176/160 x3	
+4AE	text	・・・・・・・・・・・・。{br}（何か考え込んでいる）	............{br}(He seems lost in thought.)	176/160 x3	
+4AF	text	えっ？　熊野から来たの？{br}熊野で　私の縁者が巫女を{br}してるんだけど・・{page}熊野は　広いからなあ{br}知らないよね・・	Huh? You came from Kumano?{br}A relative of mine is a{br}shrine maiden at Kumano...{page}But Kumano's a big place...{br}You wouldn't know her...	176/160 x3	
+4B0	text	都から来られた　お人ですか？{br}まあ　遠い所をようこそ{br}ゆっくりしていって下さい。	Have you come from the{br}capital? My, such a long way.{br}Do make yourselves at home.	176/160 x3	
+4B1	text	えっ？　わたしを仲間に？{page}・・そうなの・・わかった・{br}でも　役に立たないかもよ・・	What? You want me to join?{page}...Is that so... All right...{br}But I may not be much use...	176/160 x3	
+4B2	text	山童と朝廷が戦っている話は{br}知っています・・{page}きずをなおすぐらいの法術しか{br}知りませんが・・それでもよけ{br}れば　お供しましょう・・	I know the Yamawaro and{br}the court are at war...{page}The only art I know is one{br}to heal wounds... But if that{br}will do, I will go with you...	176/160 x3	
+4B3	text	うーん　もとはいいんだけど、{br}あなた十六ぐらいよね・・{br}もう少し　大人だったらね・{page}えっ？私？　私は飛騨（ひだ）{br}見ての通り　巫女よ。{page}今は　巫女をやめて　故郷に{br}帰る所、あーどっかに　いい男{br}いないかなあ・・	Hmm, you've got the looks,{br}but you're what, sixteen?{br}If only you were older...{page}Huh? Me? I'm Hida. A shrine{br}maiden, as you can see.{page}I'm quitting and heading home.{br}Ahh, isn't there a nice man{br}around somewhere...	176/160 x3	
+4B4	text	なーに　よぼよぼのじいさん{br}じゃない、枯れた男に{br}ようはねーわよ。{page}五十年若ければ　相手して{br}あげたんだけどね・・{page}えっ？晴明？　誰それ？{br}知らないわ？　有名なの？	Ugh, a doddering old man.{br}I've got no use for a{br}dried-up old stick.{page}Fifty years younger, and{br}I'd have given you a go...{page}Huh? Seimei? Who's that?{br}Never heard of him. Famous?	176/160 x3	
+4B5	text	何よ、あなた？　女じゃない。{br}私はそのしゅみはないわよ。	What do you want? You're a{br}woman. I'm not into that.	176/160 x3	
+4B6	text	あなた　誰？　陰陽師？{br}すすむ道をまちがえたわね{br}坊主の方が似合ってるわ。	Who are you? An onmyoji?{br}You took the wrong path.{br}You'd suit a monk's robe better.	176/160 x3	
+4B7	text	あら　いい男じゃない。{br}こんな所で何してるの？{page}場合によっては　つきあって{br}あげてもいいわよ。{page}えっ？私？　私は飛騨（ひだ）{br}見ての通り巫女よ。{page}今は　巫女をやめて、故郷に{br}帰る所だけどね・・	Oh my, aren't you handsome.{br}What are you doing here?{page}If you play your cards right,{br}I might keep you company.{page}Huh? Me? I'm Hida. A shrine{br}maiden, as you can see.{page}Though I'm quitting and{br}heading home now...	176/160 x3	
+4B8	text	飛騨というのか君は、{br}どこの巫女だい？	Hida, is it? Which shrine{br}do you serve?	176/160 x3	
+4B9	text	諏訪の斎宮様に　お仕えして{br}いたんだけど、斎宮様から{br}おひまを出されてね・・{page}実をいうと　故郷に帰りたいん{br}だけど・・それも出来ないの{br}もう　帰る家もないし・・	I served Suwa Priestess-sama,{br}but she let me go...{page}To tell the truth, I want to go{br}home... but I can't. I don't{br}have a home to go back to...	176/160 x3	
+4BA	text	諏訪か？　・・・わかった。{br}私でよければ力になるよ。{page}帰る家がないのなら、都に賀茂{br}という家がある。{page}そこに行って広行が・・・{br}いや文の方が・・・	Suwa? ...I understand.{br}If I can be of help, I will.{page}If you have no home, there is{br}a house in the capital,{br}the Kamo house.{page}Go there, and Hiroyuki...{br}No, perhaps a letter...	176/160 x3	
+4BB	text	くすくすくす・・あはははは{br}う・そ・よ。{page}あなたが道摩と戦っているのは{br}知っているわ　賀茂様。{page}誤解しないで、あなたが{br}気に入ったわ　私もついてって{br}あ・げ・る。{page}そのかわり　私の夫になってね{br}賀・茂・さ・ま。	Tee hee hee... Ah ha ha ha!{br}Just kid-ding.{page}I know you're fighting Doma,{br}Kamo-sama.{page}Don't get the wrong idea. I like{br}you, so I'll come a-long.{page}But in return, you'll be my{br}husband, Ka-mo-sa-ma.	176/160 x3	
+4BC	text	いっ・・いや、しかし・・{br}私は・・	Wh... Wait, but...{br}I, er...	176/160 x3	
 4BD	text	あはははは、じょうだんよ。{br}本当は　盛高に会いたかった{br}んだけど・・{page}あなたでもいいわ　賀茂様。{br}行きましょう。		176/160 x3	
 4BE	text	盛高じゃない　久しぶりね。{br}あなたが　晴明についたって{br}うわさは本当だったのね。		176/160 x3	
 4BF	text	言っておくが　おれは晴明に{br}ついたわけじゃない。{page}死なせたくない奴がいるんだ。{br}まだ十五、六の　がきだがね。{br}そいつのためさ・・{page}それより　なぜここにいる？{br}諏訪にいると思っていたが・・{page}できれば　おまえとは{br}戦いたくない・・{br}引いてはくれないか・・		176/160 x3	
