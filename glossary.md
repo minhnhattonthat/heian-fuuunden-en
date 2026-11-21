@@ -169,3 +169,9 @@ verbatim when dialogue names one (`build/terms_bNNN.txt` lists the ones a batch 
   "{name}: no effect", "{name} paralyzed"). 227 uses a `{br}` ("Shikigami sealed:{br}{name}"): check it in battle
   in phase 8. Years: 永観二年（９８４） -> "Eikan 2 (984)". 伊予守 -> Governor of Iyo, 河内の国守 -> Governor of Kawachi.
 - b002: 藤太 -> Tota (Kagura's companion from Kumano). Tenkai calls Kagura "my boy".
+- b003-b007: 法術 -> the arts (法術使い = sorcerer); 護法童子 -> Goho Doji; 式鬼神 -> shikigami; 戸隠山の鬼女 ->
+  the Ogress of Togakushi; 日振島 -> Hiburi Island; 鬼門遁甲の陣 -> Kimon Tonko Formation; 輪廻の法 -> Rite of
+  Rebirth; 上宮太子 -> Prince Jogu; れんさ結界 -> Chain Barrier; 守屋 -> Moriya (Yamawaro chief); 佐伯 -> Saeki;
+  桂川の姫 -> the princess of Katsuragawa (Uzuki); provinces 下野 Shimotsuke, 信濃 Shinano, 安芸 Aki, 備後 Bingo,
+  周防 Suo; 右大臣 -> Minister of the Right; 姉ちゃん -> Sis; 陰陽師殿 -> Onmyoji-dono. The dev placeholder まさだ
+  (and its stub ま) -> "Not yet." 愛深 is Aizen (furigana あいぜん in 4CA), not Aimi.
