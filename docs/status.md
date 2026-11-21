@@ -2,33 +2,26 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 9. Release in progress (worker 6, 2026-11-22): story pass 4/16 chapters done; tooling done.
-- **Phase 9 so far:** `tools/release.py` written (every gate of pipeline.md §Release; `--help` safe; checksum fixed in
-  the release step, playable image `build/Heian_Fuuunden_EN_vX.Y.sfc`); `tools/jp_slots.py` + `jp_left.py --tbl
-  tbl/jp.tbl --slots build/jp_slots.txt` = 0 runs (positive control on an original string finds it); README.md
-  filled (no placeholders), zip README `docs/release-readme.txt`; polish.md all ticked except 5B3 (judge it in
-  chapter 13's story read); 421 "Kagurazuki" and 562 Moritaka register fixed. D22: the story pass by the worker
-  itself stands in for D13's Codex re-read (Codex out of quota until 2026-11-26).
-- **Next (worker 7):** story pass chapters 05-16: `qa_gate.py todo work/qa/story/manifest.tsv work/qa/story/verdicts
-  --size 1`; read each `work/qa/story/chapters/NN_*.txt` with Read offset/limit (context-mode stubs whole-file
-  reads) against `$SKILL/assets/story-reviewer-brief.md`, `docs/synopsis.md`, `docs/style-reference.md`; write
-  `work/qa/story/verdicts/<chapter>.tsv` (`chapter<TAB>ok|issue<TAB>note`). Fix Critical/Important at once; Minors
-  to polish.md and fix them. After any script edit: `tools/pairs.py --chapters work/qa/story/chapters`, `qa_gate.py
-  init work/qa/story/manifest.tsv work/qa/story/chapters --glob "*.txt"` (changed chapters need a new verdict).
-  Then, because the text changed since phase 8's tour (421, 562 and any story fixes): rebuild, re-tour
-  (`warp_all.py --rom build/heian_en.sfc --out work/qa/en_warp --no-states --jobs 6`), `tools/qa_sheets.py`,
-  `qa_gate.py init work/qa/manifest.tsv ... --build build/heian_en.sfc`, verdict only the changed sheets (new
-  `work/qa/verdicts/final_2.tsv`), textcover re-run if needed, then `python -X utf8 tools/release.py`. Worker 6 hit
-  the context limit at chapter 05 (each chapter is 7-15k tokens: budget ~6 chapters per worker).
+- **Phase:** 9. Release built and verified (worker 7, 2026-11-22): `release/Heian_Fuuunden_EN_v1.0.zip` ready; publishing is the user's call.
+- **Phase 9 done (worker 7):** story pass 16/16 chapters ok (`qa_gate.py check work/qa/story/manifest.tsv
+  work/qa/story/verdicts` exit 0; verdicts by the worker itself, D22). Minors fixed and ticked in polish.md: 3CA
+  "plague (smallpox)" gloss, 56D and 2EC stray contractions (Doma double, Kazan); 5B3 closed (pacing and yin/yang
+  checked in the story read). Rebuilt (sha1 7b61cd2550a6), re-toured 139/139; 7 sheets changed by typing timing only:
+  `work/qa/verdicts/final_2.tsv` 7/7 ok, visual gate exit 0. `tools/release.py` passed every gate: 52 tests, lint,
+  smoke, jp_left 0 runs, both QA gates, textcover 1556/1556, polish all ticked, README, debug off, patch re-apply ==
+  build. Zip 82169 B; patch `Heian_Fuuunden_EN_v1.0.bps` sha1 0916ee05f53a; base CRC32 4640D1A2; result CRC32
+  47208D73 sha1 7b61cd2550a6 (`build/Heian_Fuuunden_EN_v1.0.sfc`).
+- **Next:** publish only when the user asks (`$SKILL/references/pipeline.md` §Publish; never `gh release create`
+  unprompted). Optional: D13's Codex re-read of the batches once its quota returns (2026-11-26); any fix then means
+  rebuild, re-tour, re-verdict the changed sheets and `release.py --force`.
+- **Phase 9 tooling (worker 6):** `tools/release.py` (every gate of pipeline.md §Release; `--help` safe; checksum
+  fixed in the release step); `tools/jp_slots.py` + `jp_left.py --tbl tbl/jp.tbl --slots build/jp_slots.txt`;
+  README.md filled, zip README `docs/release-readme.txt`; 421 "Kagurazuki" and 562 Moritaka register fixed.
 - Phase 8 met 2026-11-22 (worker 5): visual-QA verdicts
   `work/qa/verdicts/final_1.tsv` 18/18 ok (fresh read-only pass by the worker itself, no reviewer available),
   `qa_gate.py check work/qa/manifest.tsv work/qa/verdicts` exit 0 on build sha1 92f0225dc7e1; smoke ok, check.py 52
   passed, textcover 1556/1556. Verdict notes: 205 "Kagura's turn." sits ~35 px left (fixed indent sized for enemy full
   names, as the Japanese indent): new `docs/polish.md` line; shop plate "Mer/chant" is D17's syllable split.
-- **Next (phase 9):** read `$SKILL/references/pipeline.md` §Release and `references/translation.md` §Review. Story
-  pass per chapter (`work/qa/story/manifest.tsv`); the Codex re-read of every batch (D13) is due when its quota returns
-  (2026-11-26); clear every unticked `docs/polish.md` line (fix or `waived: reason`); `jp_left.py`, debug tool off in
-  the release build, README hashes, `tools/release.py`. Never `gh release create`.
 - **Phase 8 record (2026-11-22, worker 4):** Done:
   - **Text coverage 1556/1556, no waivers** (`textcover.py work/qa/cover build/strings.tsv`): `tools/lua/textids.lua`
     logs the id each reader opens; `tools/debug/msgview.py --uncovered work/qa/cover/warp` forces every other id into
@@ -124,4 +117,4 @@ Updated at the end of every session. Keep it to what the next session needs; his
      (`--qa ID=...` stands in). Which unit opens the 音楽 battle menu (`$1516=6`) is not mapped.
 - **Open bugs:** none. Untranslated (Japanese) party names show only their top half in the party/squad slots until
   phase 6 fills `en` (by design of the one-row slots).
-- **Waiting on the user:** GUI keyboard input in `tools/mesen/Mesen.exe` not checked (headless session); not blocking. Title logo 平安風雲伝 kept Japanese under D5 (no official English logo); say if an English subtitle is wanted.
+- **Waiting on the user:** GUI keyboard input in `tools/mesen/Mesen.exe` not checked (headless session); not blocking. Title logo 平安風雲伝 kept Japanese under D5 (no official English logo); say if an English subtitle is wanted. Release v1.0 zip is built and verified locally; publishing (repo, GitHub release) waits for the user; not blocking.
