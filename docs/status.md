@@ -2,7 +2,7 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 6. Translate in progress: wave 0 (terms) + pilot + b001-b013 merged; 140 rows left (b014-b017).
+- **Phase:** 6. Translate in progress: wave 0 (terms) + pilot + b001-b014 merged; 98 rows left (b015-b017).
   Last build: `build/heian_en.sfc` 2026-11-22 sha1 7eb7f27372c6 (2 MB, smoke ok); marker `build/heian_marker.sfc`
   2026-11-22 sha1 6a70b2581615 (135/135 warp scenes ok, shots in `work/qa/marker_warp/`). No build since English.
 - **Phase 6 so far (2026-11-22):**
@@ -26,10 +26,12 @@ Updated at the end of every session. Keep it to what the next session needs; his
     Yamawaro birth 3DC, the Retired Emperor incognito 3E8-3F3, road bandits, Masamitsu, Kainki, Kaede/Aoi vs
     Chobukumaru, Doma's doubles, Usagino, Kuji Hogen, Boke Tengu) merged 2026-11-22; terms in `glossary.md`
     "Decisions" (b009-b013). Honorific skip now also has 有り様 and る様.
+  - b014 (56D-596: Doma's doubles, Sumitomo, Tenkai controlled by Doma and his death 584-586, Akana, the Suwa
+    hidden village, Moriya; Tenkai was born a Yamawaro) merged. 反魂宝珠 (variant of 反魂法珠) -> Hangon Jewel.
   - Codex CLI is out of quota until 2026-11-26 (no codex translators/reviewers before then).
 - **Next (phase 6):** `python -X utf8 tools/batches.py split` was run; `work/tl/` is gitignored, so in a fresh
   clone run `split` again (it batches only rows still without `en`; batch names may then differ from
-the ones here, so go by ids). Translate b014-b017 (ids 56D onward; each: write
+the ones here, so go by ids). Translate b015-b017 (ids 597 onward; each: write
   `work/tl/bNNN.out.tsv`, `batches.py check bNNN` until OK, `batches.py merge bNNN`, commit). Then
   `script/tilemaps.tsv` (16 rows, graphics text), then a reviewer pass per batch (fresh read-only pass, or
   `codex exec` after 2026-11-26) with Minors to `docs/polish.md`. Translating ~3 batches per worker session fits
