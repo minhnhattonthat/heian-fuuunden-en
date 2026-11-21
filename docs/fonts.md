@@ -5,5 +5,4 @@ per file; a font with no known licence doesn't go into a release.
 
 | File | Source (URL, version) | Licence | Redistributable in a patch | Used for | Changes made |
 |---|---|---|---|---|---|
-| <fonts/vwf_8px.png> | <drawn for this project> | <MIT, same as repo> | yes | <dialogue VWF> | <-> |
-| <fonts/Title.ttf> | <url, v1.2> | <OFL 1.1> | <yes, as rendered glyphs> | <typeset.py title cards> | <-> |
+| fonts/en16.png | Pixel Operator (PixelOperator.ttf) by Jayvee Enaguas, https://www.dafont.com/pixel-operator.font (2018 zip), rendered at 16 px by `tools/font_en.py render` | CC0 1.0 | yes | dialogue + menu VWF (8x16 cells, ASCII) | rendered 1 px left, thresholded to 1bpp; advance = ink + 1 px, space 4 px |

@@ -3,7 +3,7 @@
 Skill: translate-retro-game (Claude Code: plugin, enabled in .claude/settings.json; other agents: `<SKILL_DIR>/SKILL.md`; `$SKILL` = the directory holding its SKILL.md, printed by `python tools/skill.py`). Read it before ROM, text or QA work.
 
 ## Commands (run from repo root)
-- Build:    `python -X utf8 build.py` -> build/heian_en.sfc (checks the dump against `rom.sha1` first); `build.py identity [--recompress]` = unpack to `work/unpack/`, repack, compare (must say IDENTICAL)
+- Build:    `python -X utf8 build.py` -> build/heian_en.sfc (checks the dump against `rom.sha1` first; needs asar 1.91 in `tools/asar/`); `build.py marker [--qa ID=TEXT] [--out F]` = `[id]` filler build; `build.py identity [--recompress]` = unpack to `work/unpack/`, repack, compare (must say IDENTICAL)
 - Dump:     `python -X utf8 tools/kss_script.py dump [--force]` (script/C3.tsv, C6.tsv from the ROM; --force keeps en) and `tools/tilemap_text.py dump` (script/tilemaps.tsv)
 - Check:    `python -X utf8 tools/check.py`  (tests + lint; the pre-commit hook runs this; `git config core.hooksPath tools/hooks` once per clone)
 - Smoke:    `python -X utf8 $SKILL/scripts/emu.py build/heian_en.sfc --out work/qa/smoke --route tools/routes/boot.txt --smoke`

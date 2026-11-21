@@ -1,0 +1,31 @@
+# Cold boot -> New Game -> opening; then one A press every 400 frames to step through the first pages
+# (string 0x2A7 and on): the route for `build.py marker --qa 2A7=...` stress lines.
+700 -
+6 start
+120 -
+6 start
+120 -
+6 a
+120 -
+6 a
+120 -
+6 a
+120 -
+6 a
+2700 -
+6 a
+400 -
+6 a
+400 -
+6 a
+400 -
+6 a
+400 -
+6 a
+400 -
+6 a
+400 -
+6 a
+400 -
+6 a
+400 -

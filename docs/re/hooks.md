@@ -1,0 +1,28 @@
+# Engine hooks (asm/main.asm)
+
+Assembled by `build.py` with `tools/asar/asar.exe` (asar 1.91, github.com/RPGHacker/asar, gitignored; `--fix-checksum=off
+--no-title-check`, the title is half-width katakana). Code, font and widths live in `$DF:0000-7FFF`; strings and
+`PTRS` in `$D8-$DE` (`tools/insert.py`). All hooks enter with M=16, X=16 and leave DB alone. Checked by
+`tests/test_insert.py::test_hooks_assembled`.
+
+| Hook | Original | New | Why |
+|---|---|---|---|
+| `C1:7270` | `LDA $C30000,x` + C3/C6 bank pick by id | `TextPtr`: `PTRS[id]` -> `$00/$02`, back to `C1:728F` | dialogue reader, 24-bit pointers |
+| `C1:74F1` | `LDA $C30000,x` / `LDA #$C3` | `NamePtr` -> `$04/$06`, back to `C1:74FC` | `{name}` reader |
+| `C1:754D` | `LDA $C30000,x` / `LDA #$C3` | `MenuPtr` -> `$0E/$10`, zero `$1426`, back to `C1:7558` | renderer 2 (menu strings) |
+| `C1:7537` | `ADC #$02E1` | `ADC #$0430` | `{num}` digits as English codes |
+| `C1:73A5` | `LDA $C1F2F4,x` (glyph address) | `VwfMain`: code >= $400 -> VWF into `$7F:A000`, then the original upload at `C1:7491` | dialogue VWF |
+| `C1:75B8` | `LDA $C1F2F4,x` | `VwfMenu`: code >= $400 -> VWF into `[$20]`, back to `C1:7558` | renderer 2 VWF |
+| `C1:7564` | upload size = glyph count x 12 px | `MenuEnd`: size from the VWF pixel width (Japanese strings keep the old formula) | renderer 2 |
+
+## VWF (verified in-game: marker build, `work/qa/marker_newgame`)
+- English code = `0x400 + ASCII` (`tbl/en.tbl`); font `fonts/en16.png` (8x16 cells, 1bpp, advance = ink + 1 px,
+  space 4 px; `tools/font_en.py`), ink colour 3 on the game's colour-2 paper (bp1 = `FF` in every row).
+- Dialogue line buffer: 22 tiles (176 px) per line, top half-row at line base, bottom half-row +`0x160`; lines at
+  `$1422` = 0, `0x2C0`, `0x580`; the page-wait arrow is a Japanese glyph drawn at `0x6C0` (line 3, x 160-175).
+  `$1426` now holds the pixel x in the line (the original kept a glyph count there for its 12-px pairs; every line
+  start zeroes it). `$1422` = line base + tile of x.
+- Renderer 2 (one call draws a whole string into `[$20]`, bottom half-row +`0x400`, then two DMAs, the bottom one
+  0x100 bytes after the top in VRAM): at most 16 tiles (128 px) before the bottom row is overwritten.
+- A glyph whose end passes the line end is dropped, not drawn (no wrap in the engine; the lint keeps lines inside).
+- Japanese codes (< $400) still take the original 12-px path, so untranslated lines keep working.

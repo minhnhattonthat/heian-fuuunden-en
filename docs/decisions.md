@@ -14,3 +14,4 @@ decision replaces one, mark the old one "replaced by D<n>" instead of deleting i
 | D6 | 2026-11-21 | Specs and plans | need approval, pre-approved | Pre-approved: keep going through every checkpoint without asking, report at the end. |
 | D7 | 2026-11-21 | Existing saves / savestates | user supplies, none | None provided; build the debug tool as usual. |
 | D8 | 2026-11-21 | Publishing | user publishes, agent publishes | Agent never runs `gh release create` and never changes repo visibility; the run ends at a built and verified release zip. |
+| D9 | 2026-11-22 | Dialogue font path (agent call under D6) | 8x16 half-width fixed; VWF; tiny 2-per-tile | VWF with Pixel Operator (CC0) on both glyph paths: 176 px per line fits ~30 letters vs 22 half-width (D4, engine first). |

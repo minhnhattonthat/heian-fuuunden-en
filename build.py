@@ -3,6 +3,8 @@
     python -X utf8 build.py                      unpack the original, repack with the edits in the repo -> build/heian_en.sfc
     python -X utf8 build.py identity             unpack to work/unpack/, repack from those files, compare with the original
     python -X utf8 build.py identity --recompress   same, and re-encode every graphics block (encoder check)
+    python -X utf8 build.py marker [--qa ID=TEXT].. [--out F]   `[id]` filler for every untranslated line
+                                                 -> build/heian_marker.sfc (phase 5 width gate)
 
 Steps (docs/re/text.md, docs/re/compression.md):
   1. check the dump against rom.sha1;
@@ -15,6 +17,7 @@ import argparse
 import hashlib
 import json
 import shutil
+import subprocess
 import sys
 import tempfile
 from pathlib import Path
@@ -24,11 +27,15 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 import bps  # noqa: E402
 import check_rom  # noqa: E402
+import font_en  # noqa: E402
 import gfx_blocks  # noqa: E402
+import insert  # noqa: E402
 import kss_text  # noqa: E402
 
 ROM = ROOT / "rom" / "Heian Fuuunden (Japan).sfc"
 OUT = ROOT / "build" / "heian_en.sfc"
+MARKER = ROOT / "build" / "heian_marker.sfc"
+ASAR = ROOT / "tools" / "asar" / "asar.exe"
 UNPACK = ROOT / "work" / "unpack"
 
 
@@ -62,20 +69,41 @@ def identity(recompress=False, workdir=None):
     return out, rom, stats
 
 
-def build():
+def assemble(path):
+    """Apply asm/main.asm to the ROM file at `path` with the repo's asar (tools/asar/, gitignored)."""
+    font_en.build()
+    r = subprocess.run([str(ASAR), "--fix-checksum=off", "--no-title-check",str(ROOT / "asm" / "main.asm"), str(path)],
+                       capture_output=True, text=True, errors="replace")
+    if r.returncode:
+        path.unlink(missing_ok=True)
+        raise SystemExit("asar failed:\n" + r.stdout + r.stderr)
+
+
+def build(mode="build", qa=None, path=None):
+    """mode build: English where `en` is filled, Japanese elsewhere; marker: `[id]` filler where `en` is empty.
+    qa: {id: text} overrides for one-off stress builds (`marker --qa 2A7="..." --out build/x.sfc`)."""
     rom = ROM.read_bytes()
     with tempfile.TemporaryDirectory() as tmp:
         unpack(rom, tmp)
         out, _ = repack(rom, tmp)
-    OUT.parent.mkdir(exist_ok=True)
-    OUT.write_bytes(out)
-    return out
+    out, stats = insert.insert(out, mode, qa=qa)
+    path = Path(path) if path else (OUT if mode == "build" else MARKER)
+    path.parent.mkdir(exist_ok=True)
+    path.unlink(missing_ok=True)
+    path.write_bytes(out)
+    assemble(path)
+    out, _ = bps.snes_checksum(path.read_bytes())
+    path.write_bytes(out)
+    return path, out, stats
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("cmd", nargs="?", default="build", choices=["build", "identity"])
+    ap.add_argument("cmd", nargs="?", default="build", choices=["build", "identity", "marker"])
     ap.add_argument("--recompress", action="store_true")
+    ap.add_argument("--qa", action="append", default=[], metavar="ID=TEXT",
+                    help="override one string (first id, hex) with English text; repeatable")
+    ap.add_argument("--out", help="output ROM path (default build/heian_en.sfc or build/heian_marker.sfc)")
     a = ap.parse_args()
     check_rom.check()
     if a.cmd == "identity":
@@ -84,8 +112,9 @@ def main():
         diff = sum(1 for x, y in zip(out, rom) if x != y)
         print("identity: %s (%d bytes differ); blocks %s" % ("IDENTICAL" if same else "DIFFERENT", diff, stats))
         sys.exit(0 if same else 1)
-    out = build()
-    print("%s  %s  sha1 %s" % (OUT.relative_to(ROOT), len(out), hashlib.sha1(out).hexdigest()))
+    qa = dict(q.split("=", 1) for q in a.qa)
+    path, out, stats = build(a.cmd, qa, a.out)
+    print("%s  %s  sha1 %s  text %s" % (path, len(out), hashlib.sha1(out).hexdigest(), stats))
 
 
 if __name__ == "__main__":
