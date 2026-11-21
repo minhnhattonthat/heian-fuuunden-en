@@ -1,0 +1,26 @@
+# Bytes the English build may change in the original 1.5 MB ROM (file offsets, inclusive, hex), one range per line
+# with its reason. build.py checks every build against this with tools/romdiff.py; any other changed byte fails it.
+# Sources: asm/main.asm (hooks), tools/insert.py (banners, PTRS, strings), tools/gfx_edits.py (party tilemaps).
+00FFDC-00FFDF   header checksum + complement (bps.snes_checksum)
+012C04-012C07   jsl PartyName (party panel, 8 slots)
+012C0D-012C0E   dw $0050 buffer step per slot
+0132AE-0132B1   jsl PartyName (squad panels)
+0132B7-0132B8   dw $0050
+013327-01332A   jsl PartyName (slots redrawn after an exchange)
+013360-013361   dw $0050
+01364D-013666   place/port banner centring offsets, 0x1A entries (insert.BANNERS)
+016011-016014   jsl PartyName (squad formation slot)
+016869-01687E   map-exit banner centring offsets, 0x16 entries (insert.BANNERS)
+017270-017273   jml TextPtr (dialogue reader)
+0173A5-0173A8   jml VwfMain (dialogue glyph lookup)
+0174F1-0174F4   jml NamePtr ({name} reader)
+017537-017539   adc #$0430 ({num} digits in English codes)
+01754D-017550   jml MenuPtr (renderer 2)
+017564-017567   jml MenuEnd (renderer 2 upload size)
+0175B8-0175BB   jml VwfMenu (renderer 2 glyph lookup)
+01A3CB-01A3EA   party slot VRAM addresses, panels A/B (16 words)
+01E6CE-01E6F5   squad formation slot VRAM addresses (20 words)
+08939E-0895BB   party panel tilemaps C8:939E, C8:9450, C8:9506 (LZ blocks repacked in place, gfx_edits)
+180000-1EFFFF   expansion $D8-$DE: PTRS (24-bit string pointers) + relocated strings (insert.TEXT_END)
+1F0000-1F7FFF   expansion $DF:0000-7FFF: hook code + VWF fonts (asm/main.asm, warnpc $DF8000)
+1F8000-1FFFFF   expansion $DF:8000-FFFF: graphics blocks that grew (gfx_blocks.RELOC_AREA)

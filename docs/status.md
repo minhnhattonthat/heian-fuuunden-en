@@ -2,15 +2,25 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 7. Insert, fit, check: in progress. Phase 6 met except the independent review (D13): every row
-  translated, lint 0 errors/0 warnings (tilemaps now linted), `batches.py check` 0 problems; the harness review's
-  Important findings fixed (先の帝 = "the former Emperor", not "late"; tilemap cell check; D13 recorded); full Codex
-  re-read of every batch due when its quota returns (2026-11-26).
-  Last build: `build/heian_en.sfc` 2026-11-22 sha1 7eb7f27372c6 (2 MB, smoke ok); marker `build/heian_marker.sfc`
-  2026-11-22 sha1 6a70b2581615 (135/135 warp scenes ok, shots in `work/qa/marker_warp/`). No build since English.
-- **Next (phase 7):** build the English ROM (`build.py`), `lint.py --strict`, `romdiff.py` (no writes outside the
-  allowed ranges), smoke + `warp_all.py --rom build/heian_en.sfc` and look at the shots for overflow/garble.
-  Minors left for phase 9 are in `docs/polish.md`.
+- **Phase:** 8. QA in the emulator: not started. Phase 7 met 2026-11-22: `build.py` green with English,
+  `lint.py --strict` 0 errors / 0 warnings / 0 untranslated (control codes matched; tilemaps linted), romdiff clean
+  (build.py now fails on any byte outside `tools/romdiff_ranges.txt`; `tests/test_romdiff.py` builds en + marker),
+  smoke ok, `warp_all.py --rom build/heian_en.sfc --out work/qa/en_warp` 135/135 scenes ok (sheets in
+  `work/qa/en_warp_sheets/`: no overflow or garble seen in dialogue, menus, shop, status, squad screens).
+  Phase 6 met except the independent review (D13): full Codex re-read of every batch due when its quota returns
+  (2026-11-26), before the phase 9 story pass.
+  Last build: `build/heian_en.sfc` 2026-11-22 sha1 65ee69c609fe (2 MB, smoke ok); marker `build/heian_marker.sfc`
+  2026-11-22 sha1 6a70b2581615.
+- **Next (phase 8):** graphics text and visual QA. Japanese still on screen in the English warp shots (all in
+  `docs/re/graphics.md` except the first two; confirm their source first):
+  - portrait name plates (晴明, 広行, 商人, 道長 under dialogue portraits): text.md says plates use the table, but
+    the en build shows kanji; trace whether they are portrait art (CA raw) or a table string;
+  - はい/いいえ choice after "Read the help?" / "Save your progress?" (FB-ended prompts 229-22E);
+  - field command icons' kana tags (こうげき/じゅつ/しきがみ/たいき, G6), help panel (G7/T8), status kanji (T6),
+    New Game prologue (G8/T7), save/quit tilemaps T2-T5 (English in `script/tilemaps.tsv`, not inserted yet),
+    title logo (D5: stays Japanese).
+  Chapter cards (`card_p*`) were shot mid-typing: shoot later frames when checking them. The place_banner shot is
+  empty in the marker build too (shot before the text draws). Minors left for phase 9 are in `docs/polish.md`.
 - **Phase 6 record (2026-11-22):**
   - Review pass finished: b003-b017 ok, terms/pilot fixed (Important: pilot 139 called Kagura "her"). Minor fixes
     (American spelling, sentences re-flowed off `{page}` breaks, 丹波 = Tanba, まじない = spells) are now style

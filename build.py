@@ -11,8 +11,9 @@ Steps (docs/re/text.md, docs/re/compression.md):
   2. dialogue banks C3/C6 + pointer table: tools/kss_text.py (no English yet: phase 4-7);
   3. compressed graphics/tilemap blocks in gfx/blocks.tsv: tools/gfx_blocks.py; build/marker apply
      tools/gfx_edits.py after the 2 MB expansion (party-list tilemaps; a block that grows moves to $DF:8000+);
-  4. header checksum (mirrored sum for 1.5 MB).
-Phase 3 state: no edits exist, so the build is byte-identical to the original (tests/test_identity.py).
+  4. header checksum (mirrored sum for 1.5 MB);
+  5. romdiff (tools/romdiff.py): every byte that differs from the original must sit in tools/romdiff_ranges.txt,
+     or the build fails (phase 7 check; tests/test_romdiff.py builds its own ROM and runs it too).
 """
 import argparse
 import hashlib
@@ -33,12 +34,14 @@ import gfx_blocks  # noqa: E402
 import gfx_edits  # noqa: E402
 import insert  # noqa: E402
 import kss_text  # noqa: E402
+import romdiff  # noqa: E402
 
 ROM = ROOT / "rom" / "Heian Fuuunden (Japan).sfc"
 OUT = ROOT / "build" / "heian_en.sfc"
 MARKER = ROOT / "build" / "heian_marker.sfc"
 ASAR = ROOT / "tools" / "asar" / "asar.exe"
 UNPACK = ROOT / "work" / "unpack"
+RANGES = ROOT / "tools" / "romdiff_ranges.txt"
 
 
 def unpack(rom, outdir):
@@ -98,7 +101,26 @@ def build(mode="build", qa=None, path=None):
     assemble(path)
     out, _ = bps.snes_checksum(path.read_bytes())
     path.write_bytes(out)
+    errs = romdiff_errors(rom, out)
+    if errs:
+        raise SystemExit("romdiff: bytes changed outside tools/romdiff_ranges.txt:\n" + "\n".join(errs[:20]))
     return path, out, stats
+
+
+def allowed_ranges(path=RANGES):
+    """tools/romdiff_ranges.txt -> [range]: `LO-HI  reason` lines (hex, inclusive), `#` comments."""
+    out = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.strip() and not line.startswith("#"):
+            lo, _, hi = line.split()[0].partition("-")
+            out.append(range(int(lo, 16), int(hi or lo, 16) + 1))
+    return out
+
+
+def romdiff_errors(orig, new):
+    """romdiff.py's range check of a build against the original: [] when every changed byte is allowed."""
+    errs, _ = romdiff.check(orig, new, allowed_ranges(), [])
+    return errs
 
 
 def main():
