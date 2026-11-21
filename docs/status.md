@@ -2,7 +2,9 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 9. Release built and verified (worker 7, 2026-11-22): `release/Heian_Fuuunden_EN_v1.0.zip` ready (rebuilt with the English title logo, D23; sums below under "after the release"); publishing is the user's call.
+- **Phase:** 9. **Published 2026-11-22** at the user's request: repo public, release v1.0 (tag on 8ef501c,
+  https://github.com/minhnhattonthat/heian-fuuunden-en/releases/tag/v1.0, asset `Heian_Fuuunden_EN_v1.0.zip` 86776 B,
+  with the English title logo D23; sums below under "after the release"). From now on: bug reports via GitHub issues.
 - **Phase 9 done (worker 7):** story pass 16/16 chapters ok (`qa_gate.py check work/qa/story/manifest.tsv
   work/qa/story/verdicts` exit 0; verdicts by the worker itself, D22). Minors fixed and ticked in polish.md: 3CA
   "plague (smallpox)" gloss, 56D and 2EC stray contractions (Doma double, Kazan); 5B3 closed (pacing and yin/yang
@@ -125,4 +127,4 @@ Updated at the end of every session. Keep it to what the next session needs; his
      (`--qa ID=...` stands in). Which unit opens the 音楽 battle menu (`$1516=6`) is not mapped.
 - **Open bugs:** none. Untranslated (Japanese) party names show only their top half in the party/squad slots until
   phase 6 fills `en` (by design of the one-row slots).
-- **Waiting on the user:** GUI keyboard input in `tools/mesen/Mesen.exe` not checked (headless session); not blocking. Release v1.0 zip rebuilt with the English logo (D23); publishing (repo, GitHub release) waits for the user; not blocking.
+- **Waiting on the user:** GUI keyboard input in `tools/mesen/Mesen.exe` not checked (headless session); not blocking. Release v1.0 zip rebuilt with the English logo (D23) and published as v1.0 (2026-11-22).
