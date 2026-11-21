@@ -17,6 +17,7 @@ Addresses are for the dump in `rom.sha1` unless a note says otherwise.
 | graphics.md | graphics-text survey (tour + static sweep) | done; in-game shots of some rows in phase 2 |
 | compression.md | decompressor C1:05CF (3 types), block banks, load tables A/B | verified (decoder) |
 | prior-work.md | earlier patches and community info | done |
+| save.md | SRAM slots + checksum, live-state fields, main modes `$34`, warp notes | verified (fields partly guess) |
 
 Recon helpers: `tools/fontview.py` (glyph sheets), `tools/fontmatch.py` (first-guess kanji), `tools/textmap.py`
 (decode table, coverage), `tools/lua/readhist.lua` (ROM read histogram by PC), `tools/kss_comp.py` (decode a

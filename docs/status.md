@@ -2,16 +2,28 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 2. Debug tool not started (phase 1 recon done 2026-11-21). Last build: none yet.
+- **Phase:** 2. Debug tool in progress (warp + save editor work; battle, game over and name entry not reached yet). Last build: none yet.
 - **Done:**
-  - Step 0 setup: MesenCE qa-1 in `tools/mesen/`, original ROM smoke-boots (`tools/routes/boot.txt`), Start input and Lua `L.log` checked, guard hook blocks the `sed -i` canary, pre-commit rejects a failing test, owner rulings D1-D8.
-  - Phase 1 text recon (`docs/re/text.md`, verified): 16-bit codes = glyph index, control codes, 0x614-entry pointer table with the C3/C6 split, menu captions at `C1:9E7F`.
-  - Phase 1 graphics recon: decompressor `C1:05CF` (raw / LZ / word-RLE) decoded by `tools/kss_comp.py`; every block chain enumerated (`tools/kss_blocks.py`); load tables A `C1:EDFD` and B `C1:EFA1` (`docs/re/compression.md`). Small font found at `C8:8954`. Static sweep of all compressed and raw banks plus menu tour: survey in `docs/re/graphics.md` (G1-G12 tile art, T1-T7 small-font tilemap text). ROM map updated.
-  - Savestates: `work/states/opening_4500.mss` (opening dialogue), `work/states/play3_end.mss` (first free roam, a town; X opens the menu). Not in git; recreate with `tools/routes/newgame.txt` + `--mash 90 --mash-key a`.
-- **Next (phase 2, `references/emulator-qa.md` §Debug tool):**
-  1. Find story flags / map id / party data in RAM (`ramsearch.py`, `watch.lua`) and build `tools/debug/warp.lua` + `tools/debug/scenes.tsv`.
-  2. Scenes the survey still needs shots of (graphics.md "phase 2" rows): first battle (G6 command buttons `C8:B282`, table B id 8 loaded at `C0:62CA`), the G7/G8 screens (table B ids 33-36 and 43; probably name entry / kana list; code `C1:E747` loads id 43), ending + credits (G9, table B id 12 from bank CB code), save messages T4/T5, any chapter card or game over.
-  3. A forced-battle hook is the quickest way into battle: no encounter was reached by walking in the first town.
-  4. `save.py` (SRAM editor) if the save format is simple; check the SRAM checksum.
+  - Step 0 setup and phase 1 recon (text, compression, graphics survey): see `docs/re/`.
+  - Phase 2 so far (`docs/re/save.md`): SRAM slot layout and checksum, live-state fields (map/x/y per squad), main
+    mode table `$34`. `tools/debug/warp.lua` warps from a cold boot (New Game -> edit slot 1 + checksum -> soft
+    reset -> Continue -> scene pokes/route steps `N btn`, `wait MM.SS`, `poke`, `mash N`). `tools/debug/warp_all.py`
+    runs every scene in parallel: **36/36 ok** (`work/qa/warp/index.tsv`, sheets `work/qa/warp/_all/sheet.png`,
+    `menus.png`): 25 field maps 01-19, start town, 6 field menus (T1 captions, T2 save menu, T3 settings, T6 status),
+    save message (T5), prologue (G8 ruby text), ending -> credits (vertical staff kanji, G9 screen). States in
+    `work/states/<scene>.mss`.
+  - `tools/debug/save.py` show/edit/scene with checksum fix; an edited save loads via Continue into the edited map
+    (`tools/routes/continue.txt`, `work/qa/savetest`). Test `tests/test_save.py`.
+  - Recon helpers: `tools/lua/poke.lua`, `slotpoke.lua`, `modelog.lua` (mode/sub/`$0A00` change log).
+- **Next (phase 2 still open):**
+  1. **Battle** (G6 command buttons): mode 7 needs the overworld. Get there for real: find an exit tile on map 02
+     (walk with `modelog.lua`; mode 5 -> 4 marks the exit), put that x/y in the slot (`138=`, `144=`), then in the
+     scene route `wait 04.05;poke 7E0036=0019;wait 07`. Or trace `C1:501D` (enemy group -> `$12AC`). Then add a
+     `GOD` option (find party HP; per-squad data near `$30:6180`?) and scenes battle_win / battle_lose / game over.
+  2. Overworld scene (mode 4, kanji place-name labels: a graphics-text row to add to `graphics.md`).
+  3. Shikigami creation / name entry (G7 kana grid?): `menu_shikigami` shows a refusal message on a new game;
+     needs items or a story flag. T4 おつかれさまでした (save + quit).
+  4. Chapter structure: find the story progress variable (event flags `$30:6240+`) so chapter starts can be scenes.
+  5. Ending scene is a forced `$34=9` from the field; confirm the full credits roll (longer `mash`, shots every 120).
 - **Open bugs:** none.
 - **Waiting on the user:** GUI keyboard input in `tools/mesen/Mesen.exe` not checked (headless session); not blocking. Title logo 平安風雲伝 kept Japanese under D5 (no official English logo); say if an English subtitle is wanted.

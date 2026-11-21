@@ -1,0 +1,37 @@
+# name	slot (live offset=hex, little-endian)	ram (cpu addr=hex)	route after arrival	hold	notes
+start_town				120	map 03, new-game start, unedited slot 1
+map01	132=01			90	field map 01 at the slot's position (0770,0890)
+map02	132=02			90	field map 02 at the slot's position (0770,0890)
+map03	132=03			90	field map 03 at the slot's position (0770,0890)
+map04	132=04			90	field map 04 at the slot's position (0770,0890)
+map05	132=05			90	field map 05 at the slot's position (0770,0890)
+map06	132=06			90	field map 06 at the slot's position (0770,0890)
+map07	132=07			90	field map 07 at the slot's position (0770,0890)
+map08	132=08			90	field map 08 at the slot's position (0770,0890)
+map09	132=09			90	field map 09 at the slot's position (0770,0890)
+map0A	132=0A			90	field map 0A at the slot's position (0770,0890)
+map0B	132=0B			90	field map 0B at the slot's position (0770,0890)
+map0C	132=0C			90	field map 0C at the slot's position (0770,0890)
+map0D	132=0D			90	field map 0D at the slot's position (0770,0890)
+map0E	132=0E			90	field map 0E at the slot's position (0770,0890)
+map0F	132=0F			90	field map 0F at the slot's position (0770,0890)
+map10	132=10			90	field map 10 at the slot's position (0770,0890)
+map11	132=11			90	field map 11 at the slot's position (0770,0890)
+map12	132=12			90	field map 12 at the slot's position (0770,0890)
+map13	132=13			90	field map 13 at the slot's position (0770,0890)
+map14	132=14			90	field map 14 at the slot's position (0770,0890)
+map15	132=15			90	field map 15 at the slot's position (0770,0890)
+map16	132=16			90	field map 16 at the slot's position (0770,0890)
+map17	132=17			90	field map 17 at the slot's position (0770,0890)
+map18	132=18			90	field map 18 at the slot's position (0770,0890)
+map19	132=19			90	field map 19 at the slot's position (0770,0890)
+menu_items	132=01		6 x;60 -;6 a;90 -	60	field menu icon 1 entered (T1 caption 1); map 01, start town fires a dialogue
+menu_status	132=01		6 x;60 -;6 right;40 -;6 a;90 -	60	field menu icon 2 entered (T1 caption 2); map 01, start town fires a dialogue
+menu_save	132=01		6 x;60 -;6 right;40 -;6 right;40 -;6 a;90 -	60	field menu icon 3 entered (T1 caption 3); map 01, start town fires a dialogue
+menu_settings	132=01		6 x;60 -;6 right;40 -;6 right;40 -;6 right;40 -;6 a;90 -	60	field menu icon 4 entered (T1 caption 4); map 01, start town fires a dialogue
+menu_squad	132=01		6 x;60 -;6 right;40 -;6 right;40 -;6 right;40 -;6 right;40 -;6 a;90 -	60	field menu icon 5 entered (T1 caption 5); map 01, start town fires a dialogue
+menu_shikigami	132=01		6 x;60 -;6 right;40 -;6 right;40 -;6 right;40 -;6 right;40 -;6 right;40 -;6 a;90 -	60	field menu icon 6 entered (T1 caption 6); map 01, start town fires a dialogue
+menu_captions	132=01		6 x;60 -	30	field menu open, caption 1 (T1)
+save_message	132=01		6 x;60 -;6 right;40 -;6 right;40 -;6 a;90 -;6 a;20 -	20	save, first option; save message (T5)
+prologue		7E0034=000A,7E0036=0000,7E0038=0000	mash 600	60	prologue ruby text (G8), forced mode 0A
+ending		7E0034=0009,7E0036=0000,7E0038=0000	mash 3000	60	ending event, forced mode 09 (credits G9 not yet confirmed)
