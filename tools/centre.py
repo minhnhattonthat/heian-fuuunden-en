@@ -65,8 +65,10 @@ def centre_line(line, box, typ, widest):
     line = line.lstrip(" ")
     if not line:
         return line
-    free = min((box - lint.line_px(line, typ)) / 2, box - lint.line_px(line, widest))
-    return " " * max(0, int(free // SPACE_PX)) + line
+    # nearest whole space to the centre (floor left text up to 4 px left: inkbox 34/40 on 221), but never so far
+    # that the widest name would run past the box
+    n = min(round((box - lint.line_px(line, typ)) / 2 / SPACE_PX), (box - lint.line_px(line, widest)) // SPACE_PX)
+    return " " * max(0, int(n)) + line
 
 
 def layout(row, rows):

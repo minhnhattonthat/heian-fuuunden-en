@@ -418,7 +418,7 @@ id	kind	jp	en	max	notes
 1C2	text	御野津舟場	Minotsu Ferry	48 field	
 1C3	text	坂出舟場	Sakaide Ferry	48 field	
 1C4	text	伊予舟場	Iyo Ferry	48 field	
-1C5	text	　　　敵とそうぐうした！　　	       Enemies encountered! 	176/160 x3	
+1C5	text	　　　敵とそうぐうした！　　	        Enemies encountered! 	176/160 x3	
 1C6	text	警告！{br}敵が平安京に近づいています！	Warning!{br}The enemy is nearing Heian-kyo!	176/160 x3	
 1C7	text	最終通告！{br}平安京に敵部隊が{br}突入しました！	Final warning!{br}An enemy squad has broken{br}into Heian-kyo!	176/160 x3	
 1C8	text	どうぐがいっぱいです	Your bag is full.          	128 popup	
@@ -483,23 +483,23 @@ id	kind	jp	en	max	notes
 204	text	　　　{name}はれべるあっぷ	{name}: Level up!	176/160 x3	
 205	text	　　　{name}のばんです	    {name}'s turn.	176/160 x3	
 206	text	　　　体力があがった	             Vitality rose!	176/160 x3	
-207	text	　　　攻撃力があがった	             Attack rose!	176/160 x3	
+207	text	　　　攻撃力があがった	              Attack rose!	176/160 x3	
 208	text	　　　防御力があがった	             Defense rose!	176/160 x3	
 209	text	　　　技量があがった	               Skill rose!	176/160 x3	
 20A	text	　　　術力があがった	          Jutsu power rose!	176/160 x3	
 20B	text	　　　速さがあがった	              Speed rose!	176/160 x3	
-20C	text	　　　術の回数がふえた	       Jutsu uses increased!	176/160 x3	
+20C	text	　　　術の回数がふえた	        Jutsu uses increased!	176/160 x3	
 20D	text	　　{name}は攻撃をよけた	   {name} dodged!	176/160 x3	
 20E	text	　　{name}はまひしている	{name} paralyzed	176/160 x3	
-20F	text	　　　　動けない！	             Cannot move!	176/160 x3	
+20F	text	　　　　動けない！	              Cannot move!	176/160 x3	
 210	text	{name}は術を封じられている	{name} is sealed.	176/160 x3	
 211	text	　　　術はつかえない！	          Cannot use jutsu!	176/160 x3	
-212	text	　つかえる術はありません	       No jutsu can be used.	176/160 x3	
-213	text	　攻撃するあいてがいません	          No one to attack.	176/160 x3	
+212	text	　つかえる術はありません	        No jutsu can be used.	176/160 x3	
+213	text	　攻撃するあいてがいません	           No one to attack.	176/160 x3	
 214	text	　　{name}を召喚します	     Summoning {name}.	176/160 x3	
 215	text	　{name}にはきかなかった	{name}: no effect	176/160 x3	
 216	text	　{name}は死んでしまった	 {name} has died.	176/160 x3	
-217	text	　　　{num}経験がふえた	     Gained {num} experience.	176/160 x3	
+217	text	　　　{num}経験がふえた	      Gained {num} experience.	176/160 x3	
 218	text	　　　{name}をつかった	          Used {name}.	176/160 x3	
 219	text	　　　体力がかいふく	          Vitality restored.	176/160 x3	
 21A	text	　　　まひがなおった	           Paralysis cured.	176/160 x3	
@@ -508,15 +508,15 @@ id	kind	jp	en	max	notes
 21D	text	　{name}は術をつかえます	{name} may cast.	176/160 x3	
 21E	text	　　{name}をてにいれた	     Obtained {name}.	176/160 x3	
 21F	text	　　　　敵をたおした	           Enemy defeated.	176/160 x3	
-220	text	　　　敵の頭を倒した！	      Enemy leader defeated!	176/160 x3	
-221	text	　　敵の部隊は全滅した！	      Enemy squad wiped out!	176/160 x3	
-222	text	　　　{name}部隊の勝利！	         {name} Squad wins!	176/160 x3	
+220	text	　　　敵の頭を倒した！	       Enemy leader defeated!	176/160 x3	
+221	text	　　敵の部隊は全滅した！	       Enemy squad wiped out!	176/160 x3	
+222	text	　　　{name}部隊の勝利！	          {name} Squad wins!	176/160 x3	
 223	text	　　{name}が倒された！	       {name} fell!	176/160 x3	
 224	text	　　{name}部隊は負けた！	          {name} Squad lost!	176/160 x3	
 225	text	　　{name}部隊は全滅した！	     {name} Squad wiped out!	176/160 x3	
 226	text	{name}によわい	Weak to {name}	176/160 x3	
 227	text	　{name}の式神を封じた	           Shikigami sealed:{br}              {name}	176/160 x3	
-228	text	　　術防御力があがった	        Jutsu defense rose!	176/160 x3	
+228	text	　　術防御力があがった	         Jutsu defense rose!	176/160 x3	
 229+22A+22B+22C+22D+22E	text	　　　きろくしますか？{end2}	        Save your progress?{end2}	176/160 x3	
 22F+230	text	注意！{br}{name}部隊が敵とそうぐう！{br}戦闘になります。	Caution! {name} Squad{br}has met the enemy!{br}A battle begins.	176/160 x3	
 231	text	若造どもが、わしとたたかう{br}など　五十年はやいわ！	You whelps, fighting me?{br}You're fifty years too early!	176/160 x3	
@@ -537,7 +537,7 @@ id	kind	jp	en	max	notes
 240	text	えれえ　気前のいい人だねえ{br}まいった、あんたにゃあ{br}これをやるよ。	Well, ain't you generous!{br}You got me. Here, this{br}one's yours.	176/160 x3	
 241	text	と思ったけど、それ以上は{br}もてそうにないな、わるいけど{br}あきらめな。	Then again, looks like you{br}can't carry any more. Sorry,{br}but forget it.	176/160 x3	
 242	text	薬がほしいなら　いつでも{br}きがるにこえを　かけてくれ{br}よな。　まってるぜ。	Whenever ya want medicine,{br}just give me a holler.{br}I'll be waitin'.	176/160 x3	
-243	text	　きろくしました。　	          Saved.           	120 popup	
+243	text	　きろくしました。　	           Saved.          	120 popup	
 244	text	おつかれさまでした。	Thanks for playing!    	120 popup	
 245	text	　よろしいですか？　	    Is that all right? 	176/160 x3	
 246	text	　では、さようなら。	    Well then, farewell.	176/160 x3	
@@ -607,7 +607,7 @@ id	kind	jp	en	max	notes
 286	text	加賀の国	Kaga	48 field	
 287	text	美濃の国	Mino	48 field	
 288	text	陸奥の国	Mutsu	48 field	
-289	text	　すべての能力があがった	          All abilities rose!	176/160 x3	
+289	text	　すべての能力があがった	           All abilities rose!	176/160 x3	
 28A	text	　　{name}は攻撃を防いだ	  {name} blocked!	176/160 x3	
 28B	text	道具がありません！	No items!                	112 popup	
 28C	text	おれは、薬を売りながら諸国を{br}旅してる、しがねえ薬売りさ。{page}薬がほしいのなら　こうかん{br}できるものをもって来てくれ。	Me, I'm just a humble medicine{br}peddler, roamin' the provinces.{page}If ya want medicine, bring me{br}somethin' to trade for it.	176/160 x3	
@@ -620,7 +620,7 @@ id	kind	jp	en	max	notes
 293	text	　　　　　　　　　　　　　　{br}・・・・・そして・・・・・・	{br}              ...And then...	176/160 x3	
 294	text	　　　　　　　　　　　　　　{br}　　長保二年（１０００）　　	{br}            Choho 2 (1000) 	176/160 x3	
 295	text	紀州熊野に　一人の男子あり　{br}名を神楽　この年・・十六　　	In Kumano of Kii there lives{br}a boy named Kagura. This{br}year... he turns sixteen. 	176/160 x3	
-296	text	　　　　　　　　　　　　　　{br}　　　物語が始まる・・　　　	{br}         The story begins... 	176/160 x3	
+296	text	　　　　　　　　　　　　　　{br}　　　物語が始まる・・　　　	{br}          The story begins... 	176/160 x3	
 297	text	女官{br}女御祇子様　なくなりまして{br}ございます。	Lady-in-waiting{br}Lady Kishi-sama has{br}passed away, Your Majesty.	speaker + 176/160 x3	
 298	text	花山帝{br}そうか・・・・・・・・・・・{br}・・・何か言うておったか？	Emperor Kazan{br}I see...{br}...Did she say anything?	speaker + 176/160 x3	
 299	text	女官{br}帝と大納言為光様にあてて、{br}幸せでした・・・と、そう・・	Lady-in-waiting{br}To Your Majesty and Lord{br}Tamemitsu-sama: "I was happy,"{br}she said...	speaker + 176/160 x3	

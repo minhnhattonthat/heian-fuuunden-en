@@ -2,43 +2,42 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 8. QA in the emulator: in progress. Graphics text is all English (worker 3, 2026-11-22, `tools/gfx_en.py`,
-  D18-D20): battle command labels, game-over card, staff roll + end card, file select, help panels, prologue
-  (details `docs/re/graphics.md` §Phase 8 progress; test `test_gfx_lettering`). Left for phase 8: the visual-QA gate
-  (`qa_gate.py` over a full warp tour), `inkbox.py` on choice/centred boxes, stress-save menu sheets, `textcover.py`.
-  Non-blocking for the owner: staff-name readings in the credits are Hepburn guesses except the two composers; 能 剛
-  = "Tsuyoshi No" is the least sure (D19). Earlier: Phase 7 review fixes done 2026-11-22 (f9acb91):
-  `tools/centre.py` (D15) centres the Japanese-centred messages and pads renderer-2 popups to the window width
-  (this also fixed a see-through hole after short popup text); lint `blank_errors`; tests build their own ROMs
-  (`tests/conftest.py` `built_rom`); build.py deletes a ROM that fails romdiff. Review Minors left: #2 write log
-  for romdiff (`--writes`) + asar `assert read`s; #3 reader/branch-target scan as a standing test.
-  Phase 8 so far: small font + T1-T6 English (`tools/smallfont_en.py`, D16; `docs/re/graphics.md` §Phase 8
-  progress lists what is left). warp.lua now re-presses A when the file-select scroll stalls (mode 3 sub 4).
-  Session 2026-11-22 (worker 2): はい/いいえ box after 229 = small-font map `C8:BBEE` -> "Yes No" (tilemaps.tsv
-  yesno0, `tilemap_text.SPAN`; `gfx_blocks.RELOC_PTRS` now also takes code operands (lo16, bank) for blocks named by
-  `LDA #` pairs; scene `battle_save_no` checks the cursor on No). Portrait name plates (G15) = 94 raw images at
-  `C7:A1FF` -> English (`tools/plates.py`, D17; test `test_name_plates`). 蘆太 (font code 0x9B) is a variant 藤:
-  name 05C/0CB and line 480 now say Tota (glossary). `tilemap_text.py dump --force` keeps notes now.
-  Last build `build/heian_en.sfc` sha1 849e2f78cab2 (2026-11-22, worker 3). Phase 7 met 2026-11-22: `build.py` green with English,
-  `lint.py --strict` 0 errors / 0 warnings / 0 untranslated (control codes matched; tilemaps linted), romdiff clean
-  (build.py now fails on any byte outside `tools/romdiff_ranges.txt`; `tests/test_romdiff.py` builds en + marker),
-  smoke ok, `warp_all.py --rom build/heian_en.sfc --out work/qa/en_warp` 135/135 scenes ok (sheets in
-  `work/qa/en_warp_sheets/`: no overflow or garble seen in dialogue, menus, shop, status, squad screens).
-  Phase 6 met except the independent review (D13): full Codex re-read of every batch due when its quota returns
-  (2026-11-26), before the phase 9 story pass.
-- **Next (phase 8):** (1) a fresh full warp tour of the current build (`warp_all.py --rom build/heian_en.sfc --out
-  work/qa/en_warp`), sheets into `qa_gate.py init`, verdicts from a fresh read-only pass (no reviewer agents: Orca
-  refuses nested workers; write the verdicts yourself or with `codex exec`), `qa_gate.py check` exit 0; zoomed shots
-  of every former graphics-text scene (`battle_cmd_*`, `game_over`, `credits`/`credits_end` with SHOTS_AFTER,
-  `prologue` late frames, `battle_help`, `help_menu`, file select = `boot.txt` final frame) and every chapter card
-  `card_p*` at a late frame. (2) `inkbox.py` on choice/centred boxes (Yes/No 229, squad confirm 28E, centred
-  popups D15). (3) stress saves (`tools/debug/save.py`: longest names, full lists, max numbers) with menu sheets.
-  (4) `textcover.py` over the tour logs (textcover.lua probe), waive what is unreachable (D12 palace ids 297-2A6).
-  - Tools for this: `warp.lua --var DUMP_PPU=1` (VRAM/CGRAM/OAM with the shot); `--var SHOTS_AFTER=N`; a scenes
-    file of your own via `warp_all.py --scenes F` (e.g. a longer hold for the staff roll: credits hold 11500).
+- **Phase:** 8. QA in the emulator: in progress, one gate item left: **visual-QA verdicts** on the 18 sheets of
+  `work/qa/tour` (manifest `work/qa/manifest.tsv`, build sha1 92f0225dc7e1, 2026-11-22 worker 4). Done this session:
+  - **Text coverage 1556/1556, no waivers** (`textcover.py work/qa/cover build/strings.tsv`): `tools/lua/textids.lua`
+    logs the id each reader opens; `tools/debug/msgview.py --uncovered work/qa/cover/warp` forces every other id into
+    the new-game opening's dialogue box (cold boots, ~25 ids each, page shots `work/qa/cover/view/*/msg_*.png`).
+    build.py writes `build/strings.tsv` (ids). Re-run: coverage warp tour `warp_all.py --out work/qa/cover/warp
+    --no-states -- --script tools/lua/textids.lua`, then msgview.
+  - **inkbox 5/5** (`tools/inkbox_check.py` over `work/qa/en_warp`): Yes/No 229 box, 229, 0B8, 221, 243. Not centred by
+    design (Japanese fills from the left or cursor-fixed): 244, 28B, 1C8/1C9, 28D/28E (D21).
+  - Fixes (D21): save popup 243 / quit 244 padded to the 120 px the Japanese uploads (a see-through tile showed);
+    overworld squad/province labels padded to 6 tiles in the engine (`LabelName`/`PadLabel`, hooks.md; "Kii" showed
+    stale tiles or a hole); 0B8 battle help prompt was inside an item-name field range (now a centred message);
+    `centre.py` rounds to the nearest space (14 battle messages moved ≤4 px); narrow font got a comma (place 10E).
+  - Scenes: card_p* hold 245 (cards shot complete: all 63 checked); `title_slots` route fixed (it never reached the
+    slot list); stress scenes `stress_items` (every unit's 4 slots = 8 widest item names x99; items live at slot
+    offset 08A + unit*8, id + count), `stress_status`, `stress_slots` (map 0E = widest place). All look right.
+  - Smoke ok; `warp_all` 139/139 on en and on the original (`work/qa/tour_jp`).
+- **Next (phase 8):** (1) Read every sheet in `work/qa/tour/sheet_*.png` (English left, Japanese right; scene list
+  `work/qa/tour/sheets.tsv`) with `docs/visual-qa-brief.md` as a fresh read-only pass, write
+  `work/qa/verdicts/final_1.tsv` (`sheet_NNN<TAB>ok|issue<TAB>note`), then `qa_gate.py check work/qa/manifest.tsv
+  work/qa/verdicts` must exit 0. The previous session already read an older tour of the same scenes and fixed what it
+  found; known ok: EN/JP shot timing differs in battle_enemy_attack, shop, ending, ending_win (mid-typing). Any fix
+  means rebuild, re-tour (`warp_all.py --rom build/heian_en.sfc --out work/qa/en_warp --no-states --jobs 6`),
+  `tools/qa_sheets.py`, `qa_gate.py init ... --build build/heian_en.sfc`, `tools/inkbox_check.py`. Then phase 8 is
+  met: move Phase to 9.
+  - Not mapped (optional stress, add when found): levels/HP/exp/money fields, learned jutsu lists. Polish candidate
+    for phase 9: `{name}` messages (205 turn, 1B9 cards) are centred for a typical name, not each name (no runtime
+    centring); mixed small/narrow fonts in two-line lists (D10).
+  - Tools: `warp.lua --var DUMP_PPU=1`, `--var SHOTS_AFTER=N`, `warp_all.py --scenes F`; `tools/boxedges.py SHOT x,y`
+    finds a window's inner rect; `tools/lua/namelog.lua` logs which `{name}` ids a message takes.
   - Small-font text is monospace (one 8-px cell per letter); "Messages" fills its 8 cells and touches the arrow.
-  Chapter cards (`card_p*`) were shot mid-typing: shoot later frames when checking them. The place_banner shot is
-  empty in the marker build too (shot before the text draws). Minors left for phase 9 are in `docs/polish.md`.
+    The place_banner shot is empty in the marker build too. Minors left for phase 9 are in `docs/polish.md`.
+- **Earlier:** Phase 7 met 2026-11-22 (lint --strict clean, romdiff gate in build.py). Phase 6 met except the
+  independent review (D13): a full Codex re-read of every batch is due when its quota returns (2026-11-26),
+  before the phase 9 story pass. Review Minors left: romdiff `--writes` log + asar `assert read`s; a standing
+  reader/branch-target scan test.
 - **Phase 6 record (2026-11-22):**
   - Review pass finished: b003-b017 ok, terms/pilot fixed (Important: pilot 139 called Kagura "her"). Minor fixes
     (American spelling, sentences re-flowed off `{page}` breaks, 丹波 = Tanba, まじない = spells) are now style
