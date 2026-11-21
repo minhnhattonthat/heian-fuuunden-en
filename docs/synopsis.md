@@ -16,5 +16,11 @@
 - Allies are recruited province by province (party names 054-083); many endings (epilogues per ally group).
 - Key items: Hetsu Mirror (map), Tatemuki Board (entry to Iyo), Hangon Jewel (breaks Masakado's barrier). Shikoku is
   sealed by a triple barrier held by the brothers Akana, Midorina and Aona (Akana's wife Usagino).
+- Lady Kishi was born a Yamawaro: her parents were killed by villagers, a temple elder raised her, and Tamemitsu
+  adopted her (3DC-3DD). The Retired Emperor Kazan visits Kagura in disguise (3E8-3F3) and gives Jogu a sealed
+  letter that wins Hiei or Koya over. A noble friend of Seimei guesses Kagura is the late Emperor's child (3CB).
+- Doma's doubles (54B-555) tell Kagura he is not Tenkai's child and could be emperor. Sumitomo's revival in Shikoku
+  is a decoy to draw Seimei west while Masakado rises (56C). Usagino holds the Shikoku barrier (556-559); Kuji Hogen
+  was Moritaka's travelling friend (561-569). Ono no Masamitsu, Seimei's expelled pupil, seeks revenge (51A-524).
 - Foes: Doma (and a False Doma), Taira no Masakado, Fujiwara no Sumitomo, the Yamawaro and their captains, bandits,
   oni and tengu. Retired Emperor Kazan and the Kebiishi appear in the capital.

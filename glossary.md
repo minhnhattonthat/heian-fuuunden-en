@@ -178,3 +178,10 @@ verbatim when dialogue names one (`build/terms_bNNN.txt` lists the ones a batch 
 - b008: 夷 is Natsume (furigana なつめ in 315), not Ebisu; 雀 Suzume is Tota's elder sister; 国分寺 -> Kokubunji;
   丹後 Tango. Seimei's apprentice (324-328) speaks Kansai dialect: folksy "ya", "yer", dropped g's.
   Furigana in the script outrank wave-0 guesses: check a name's first appearance with furigana.
+- b009-b013: 長老様 -> the Elder-sama; 法皇様 alone -> Retired Emperor-sama; 神楽ちゃん -> Kagura-chan (Kaede);
+  兄弟子 -> my senior; 厩戸大兄皇子 -> Prince Umayado; 斎宮 alone -> the Saigu; 伊勢神宮 -> Ise Shrine; 四天王寺 ->
+  Shitennoji; 頼光と四天王 -> Yorimitsu and his Four Guardians; しゅてんどうじ -> Shuten Doji; 二上山天狗 -> tengu of
+  Mount Futakami; 歩危天狗 -> the Boke Tengu; 奇門遁甲 -> Kimon Tonko; 分身 -> double; 封鬼呪法 -> Oni-Sealing Curse;
+  roads 山陽道 San'yodo, 北陸道 Hokurikudo, 東山道 Tosando, 東海道 Tokaido; 朱雀大路 Suzaku Avenue, 一条大路 Ichijo
+  Avenue; provinces 越中 Etchu, 丹波 Tamba, 備中 Bitchu, 尾張 Owari, 駿河 Suruga; 神坂峠 Misaka Pass. 小野政光 (one
+  spelling in 51E) = Ono no Masamitsu. Court nobles with まろ/おじゃる speak as royal "We".
