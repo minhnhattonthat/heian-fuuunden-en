@@ -28,10 +28,63 @@ LINE_PX = 176                 # dialogue line buffer (asm/main.asm LINE_PX)
 NAME_PX = 128                 # renderer 2 limit (asm/main.asm MENU_PX)
 CTRL = re.compile(r"(\{\w+\})")
 BREAKS = ("{br}", "{page}", "{end2}")
+# Renderer-2 name fields (docs/re/windows.md, measured from tools/lua/r2log.lua + shots). A name wider than its
+# field in the 16-px font goes in as `{small}line 1{sbr}line 2` in the 8-px font, each line <= the field
+# (asm/main.asm VwfMenu small mode). A string shown in several fields takes the smallest.
+FIELD_PX = 48
+FIELDS = [   # (first id, last id, px)
+    (0x001, 0x0FE, 48),    # items, equipment, names: item grid / status (6 tiles; C1:2D13, C1:29D9)
+    (0x054, 0x083, 24),    # party list under the portraits (3 tiles; C1:2C04, VRAM table C1:A3CB)
+    (0x13C, 0x1B8, 48),    # jutsu / shikigami lists, squad label (6-8 tiles; C5:0D03.., C5:226F.., C1:4FF3)
+    (0x24A, 0x288, 48),    # provinces: overworld label (6 tiles; C1:5018)
+]
 
 
 def ids_of(row):
     return [int(x, 16) for x in row["id"].split("+")]
+
+
+def field_px(row):
+    """Smallest measured field among the row's ids, or None for text that is not a renderer-2 field."""
+    px = [p for i in ids_of(row) for lo, hi, p in FIELDS if lo <= i <= hi]
+    return min(px) if px else None
+
+
+def is_field(row):
+    return field_px(row) is not None
+
+
+def fit_field(text, px=FIELD_PX):
+    """Plain English name -> what goes in the ROM: as is when it fits the 16-px field, else two small lines split
+    at the space that balances them best. ValueError when neither fits (the lint reports it)."""
+    if font_en.text_px(text) <= px:
+        return text
+    if font_en.text_px(text, small=True) <= px:
+        return "{small}" + text
+    words = text.split(" ")
+    best = None
+    for k in range(1, len(words)):
+        a, b = " ".join(words[:k]), " ".join(words[k:])
+        wa, wb = font_en.text_px(a, True), font_en.text_px(b, True)
+        if wa <= px and wb <= px and (best is None or max(wa, wb) < best[0]):
+            best = (max(wa, wb), a, b)
+    if best is None:
+        raise ValueError("%r fits neither one 16-px line nor two 8-px lines of %d px" % (text, px))
+    return "{small}%s{sbr}%s" % best[1:]
+
+
+def small_lines(tag, width=FIELD_PX):
+    """Marker for a name field: `[id]` + filler words over two full small lines."""
+    lines, text = [tag + " "], FILLER
+    for c in text:
+        if font_en.text_px(lines[-1] + c, True) > width:
+            if len(lines) == 2:
+                break
+            lines.append("")
+            if c == " ":
+                continue
+        lines[-1] += c
+    return "{small}" + "{sbr}".join(s.strip() for s in lines)
 
 
 def fill(prefix, width):
@@ -47,6 +100,8 @@ def marker(row):
     """`[id]` + filler at full width for every line; control codes kept where the Japanese has them."""
     jp = row["jp"]
     tag = "[%s]" % row["id"].split("+")[0]
+    if is_field(row) and "{" not in jp:
+        return small_lines(tag, max(field_px(row), FIELD_PX))   # the tag needs 48; narrower fields overflow
     parts = CTRL.split(jp)
     namelike = not any(p.startswith("{") for p in parts if p) and len(jp) <= 8
     width = NAME_PX if namelike else LINE_PX
@@ -87,7 +142,8 @@ def strings(mode="build", script_dir=None, qa=None):
             elif r["kind"] == "data":
                 out.append((ids_of(r), None, r))
             elif r["en"]:
-                out.append((ids_of(r), kss_script.encode(en_t, r["en"]), r))
+                en = fit_field(r["en"], field_px(r)) if is_field(r) and "{" not in r["en"] else r["en"]
+                out.append((ids_of(r), kss_script.encode(en_t, en), r))
             elif mode == "marker":
                 out.append((ids_of(r), kss_script.encode(en_t, marker(r)), r))
             else:

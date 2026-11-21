@@ -12,8 +12,14 @@ Assembled by `build.py` with `tools/asar/asar.exe` (asar 1.91, github.com/RPGHac
 | `C1:754D` | `LDA $C30000,x` / `LDA #$C3` | `MenuPtr` -> `$0E/$10`, zero `$1426`, back to `C1:7558` | renderer 2 (menu strings) |
 | `C1:7537` | `ADC #$02E1` | `ADC #$0430` | `{num}` digits as English codes |
 | `C1:73A5` | `LDA $C1F2F4,x` (glyph address) | `VwfMain`: code >= $400 -> VWF into `$7F:A000`, then the original upload at `C1:7491` | dialogue VWF |
-| `C1:75B8` | `LDA $C1F2F4,x` | `VwfMenu`: code >= $400 -> VWF into `[$20]`, back to `C1:7558` | renderer 2 VWF |
-| `C1:7564` | upload size = glyph count x 12 px | `MenuEnd`: size from the VWF pixel width (Japanese strings keep the old formula) | renderer 2 |
+| `C1:75B8` | `LDA $C1F2F4,x` | `VwfMenu`: code >= $400 -> VWF into `[$20]`, back to `C1:7558`; `{small}` ($401) / `{sbr}` ($40A) switch to two 8-px lines | renderer 2 VWF |
+| `C1:7564` | upload size = glyph count x 12 px | `MenuEnd`: size from the VWF pixel width (small mode: the wider line; Japanese strings keep the old formula) | renderer 2 |
+
+## Small mode (renderer 2, verified: `work/qa/stress_small`, `marker_warp/menu_status`)
+- `{small}` clears both half-rows of `[$20]` (16 tiles each) to paper and sets `$1426 = $8000`; glyphs then come
+  from `FONT8` (8 rows, `VwfDraw8`) into the top half-row; `{sbr}` keeps line 1's width in bits 8-13 and sets bit
+  14, so line 2 goes into the bottom half-row (`+$400`). `MenuEnd` uploads max(line 1, line 2) tiles.
+- The dialogue (`VwfMain`) skips `{small}` and draws `{sbr}` as a space (GlyphIndex maps codes < $420 to glyph 0).
 
 ## VWF (verified in-game: marker build, `work/qa/marker_newgame`)
 - English code = `0x400 + ASCII` (`tbl/en.tbl`); font `fonts/en16.png` (8x16 cells, 1bpp, advance = ink + 1 px,

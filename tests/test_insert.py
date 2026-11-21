@@ -59,8 +59,28 @@ def test_marker_lines_fit():
         if b not in kss_text.BANKS:
             continue
         for r in rows:
-            for line in insert.CTRL.sub("\n", insert.marker(r)).split("\n"):
+            m = insert.marker(r)
+            if m.startswith("{small}"):
+                for line in m[len("{small}"):].split("{sbr}"):
+                    assert font_en.text_px(line, small=True) <= max(insert.field_px(r), insert.FIELD_PX), r["id"]
+                continue
+            for line in insert.CTRL.sub("\n", m).split("\n"):
                 assert font_en.text_px(line) <= insert.LINE_PX, r["id"]
+
+
+def test_fit_field():
+    """Names: 16-px when they fit the field, else two balanced 8-px lines, else an error (never cut)."""
+    assert insert.fit_field("Kagura") == "Kagura"
+    assert insert.fit_field("Bronze Sword") == "{small}Bronze{sbr}Sword"
+    for text in ("Suzaku Armor", "Healing Herb"):
+        out = insert.fit_field(text)
+        assert out.startswith("{small}")
+        for line in out[len("{small}"):].split("{sbr}"):
+            assert font_en.text_px(line, small=True) <= insert.FIELD_PX
+    with pytest.raises(ValueError):
+        insert.fit_field("Fire Seal of Agni")
+    with pytest.raises(ValueError):
+        insert.fit_field("Hiroyuki", 24)     # party list (3 tiles): needs the widening in docs/status.md
 
 
 def test_font_table_agree():
@@ -71,6 +91,8 @@ def test_font_table_agree():
             continue
         assert t.encode(ch) == struct.pack("<H", 0x400 + ord(ch))
     assert max(w.values()) <= 8, "a glyph wider than one tile breaks VwfDraw's two-tile spill"
+    assert max(font_en.widths(small=True).values()) <= 9   # ink <= 8 px (the cell); advance 9 spills one tile
+    assert t.encode("{small}") == struct.pack("<H", 0x401) and t.encode("{sbr}") == struct.pack("<H", 0x40A)
 
 
 def test_hooks_assembled():
