@@ -40,82 +40,82 @@ id	kind	jp	en	max	notes
 326	text	ま	Not yet.	176/160 x3	
 327	text	出発でっか、けがせんように{br}気をつけとくんなはれ。{page}わてらは　ここにいてますから{br}気がるにこえかけてや。	Off you go, then. Mind you{br}don't get hurt, now.{page}We'll be right here, so{br}just give us a holler.	176/160 x3	
 328	text	お師匠はんも　年かんがえて{br}老体に　むちうつようまねは{br}やめたほうが　よろしいで。	Master, you oughta think of{br}yer age and quit pushin'{br}them old bones so hard.	176/160 x3	
-329	text	ちょっと前言うても　五年ほど{br}前の事なんやけどな。{page}小野正光（おののまさみつ）{br}いう　ぼんぼんそだちの兄弟子{br}がおったんや。{page}その兄弟子が　わがままでな{br}どうしても　まじないをおし{br}えてくれと　きかんのや。{page}その兄弟子が　とうとう{br}まじないの本を盗みよって。{br}お師匠はん　怒りましたで。{page}わては　兄弟子が殺されるんや{br}ないかと　思いましたわ。{page}なんやかやで　破門だけで{br}すんだんやけど、兄弟子は{br}納得してませんでしたな・・		176/160 x3	
-32A	text	お師匠はん　体は大丈夫でっか{br}わてそれだけが心配ですねん。		176/160 x3	
-32B	text	ひまやなあ・・{br}何か役に立つんやったら{br}ついていくんやけど・・{page}わてなんか　何の役にもたち{br}まへんしなあ・・		176/160 x3	
-32C	text	えらいこっちゃ。　なにがて、{br}そんな事説明できませんて。{page}くわしい事は　兄弟子に{br}きいとくんなはれ。		176/160 x3	
-32D	text	わてにも　あんたくらいの{br}力があったら　お師匠はんに{br}楽してもらえるんやけどな。		176/160 x3	
-32E	text	熊野の神楽殿ですね、晴明様が{br}おまちです、お入り下さい。		176/160 x3	
-32F	text	道摩は　晴明様の一番弟子で{br}ただ一人、晴明様に　まじない{br}を　おしえられた男です。{page}ただ、十五年ほど前に晴明様の{br}元を出て　それっきりです。{page}二年ほど前　藤原盛高という{br}もぐり陰陽師と　戦ったらしい{br}のですが・・{page}それも　はっきりとした事は{br}わかりません・・。		176/160 x3	
-330	text	我らは陰陽道をおさめています{br}が、晴明様のようにまじないは{br}使えないのです。{page}晴明様は、まぎれもなく最高の{br}陰陽師ですが、八十の老人には{br}かわりありません。{page}あなたをたよりにしています{br}がんばって下さい・・		176/160 x3	
-331	text	我々は　都でのしごとが{br}あるので　都へ戻ります。{page}このやかたは　何かあった時{br}自由にお使い下さい。		176/160 x3	
-332	text	晴明様、そろそろ我々は{br}都へ戻りますので・・{page}くれぐれも　お体には{br}お気をつけ下さい。		176/160 x3	
-333	text	おまちしていました。{br}どうぞお入り下さい。		176/160 x3	
-334	text	移転の法とは　字をかいたかみ{br}の上に　もういちまい　かみを{br}のせるようなものです・・{page}そうすると　下の字は見えなく{br}なるでしょう・・それが{br}移転の法というものです・・{page}他に　場所だけを移動する術も{br}あったと思いますが・・{page}せつめいはできますけど{br}使えませんよ・・私は。		176/160 x3	
-335	text	ま		176/160 x3	
-336	text	晴明様、体には充分に{br}気をつけて下さい。		176/160 x3	
-337	text	山童一族は　封鬼呪法を使い{br}はなれた場所にいる式神を{br}封じる事が出来ます。{page}つまり　敵の式神を封じておき{br}それから　自分の式神をとばす{br}事もできるのです・・{page}気をつけて下さい。		176/160 x3	
-338	text	まじないは　人があつかえる力{br}ではないと言いますが{br}本当にそうなのでしょうか・{page}もし　晴明様や賀茂様がいない{br}時に、今度の戦いがおこれば{br}どうすればよいのか・・		176/160 x3	
-339	text	四天王寺にまいられたのか？{br}せっかく　おこしいただいて{br}もうしわけないが・・{page}花山法皇（はなやまほうおう）{br}が　こもっておられる・・{page}その間は　誰も中に入れるな{br}との事でな・・		176/160 x3	
-33A	text	ま		176/160 x3	
-33B	text	式神は　召喚するのに　体力が{br}いると　きいている・・{page}病で　へろへろになっても{br}式神を　あやつれるのか？		176/160 x3	
-33C	text	陰陽道にくわしい者は多いが{br}安部晴明様ほどの人となると{br}なかなかおらん・・{page}この寺をつくった厩戸大兄皇子{br}も、すぐれた力をもつ陰陽師{br}だったそうだ。{page}安倍晴明様とどちらが上か・・{br}おぬしどう思う？		176/160 x3	
-33D	text	これは　安倍晴明様・{br}花山法皇様は　こもったままで{br}おられますが・・{page}例年にはなかった法会ですな・{br}何か意味があるのですか？		176/160 x3	
-33E	text	賀茂広行殿か？なつかしい。{br}元気でおられるか。		176/160 x3	
-33F	text	先日より　晴明様のやかたが{br}さわがしかったが・{br}何かあったのか・・		176/160 x3	
-340	text	先日より　晴明様のやかたが{br}さわがしかったのですが、{br}何かありましたか？{page}私で力になれる事があれば{br}お手伝いいたしますぞ。		176/160 x3	
-341	text	天照大御神をまつる　伊勢神宮{br}には、神の嫁たる斎宮がいる。{page}神の嫁と言うからには　よほど{br}美人でもあるのだろうな{br}一目　見たいものだ。		176/160 x3	
-342	text	晴明様、近頃　色々な所へ{br}出かけておるようですが・・{br}あまりむりをなさいますな。		176/160 x3	
-343	text	十年ほど前に　伊勢神宮に{br}行った者の話では、斎宮は{br}確かに美人だったそうだ。{page}ただ　斎宮が二十年ほど{br}若かったらという、条件が{br}つくそうだが・・{page}まあ　今は　新しい斎宮が{br}つかえているらしいが・・		176/160 x3	
-344	text	京の都は　凶作の後に{br}えきびょうが　はやって{br}ひどい有り様だそうな・・		176/160 x3	
-345	text	この所　うちつづく凶作で{br}民が　どんどん田をはなれて{br}おるそうじゃ。{page}世も末じゃて・・		176/160 x3	
-346	text	おぬしら　最近よく見かけるが{br}このあたりの者ではないな。{page}田をはなれた者なら　故郷へ{br}帰ったほうがよいぞ。		176/160 x3	
-347	text	ここ安部野はな、それは{br}ゆたかな　土地であった。{page}だが　ここ数年の凶作で{br}田を捨てる者がふえ、{br}土地は荒れてしまった・・{page}悲しい事じゃて。		176/160 x3	
-348	text	そうさなあ　今年はなんとか{br}よいさくもつができるかも{br}しれんなあ。		176/160 x3	
-349	text	ほほう　べっぴんじゃな。{br}どこの娘さんか　知らんが{br}息子の嫁にならんか。{page}息子は　少し前のはやり病で{br}嫁をなくしてな、それから{br}一人でがんばっとるんじゃ。		176/160 x3	
-34A	text	先日　東から南にむかって{br}火の玉がとんでいった。{page}あれは　何だったんじゃろ。{br}きいた事はないかの。		176/160 x3	
-34B	text	もの知りの者の話では、{br}人のたましいが　火の玉に{br}にとるそうじゃ。{page}前に空の上をとんどったやつは{br}人のたましいじゃろう。		176/160 x3	
-34C	text	よい　天気よなあ・・{br}もう　いつ　おむかえが{br}来てもええわい。		176/160 x3	
-34D	text	よい　天気よなあ・・{br}もう　いつ　おむかえが{br}来てもええわい。{page}じゃが　後に残される{br}息子に　嫁がおらん事だけが{br}心残りじゃのう。		176/160 x3	
-34E	text	京の都は北へ行けばすぐだ・・{br}が　あんたら都へ何か用かね。		176/160 x3	
-34F	text	うちのおやじは　いつもあそこ{br}で　ぼーっとしとる。{page}おやじも年じゃで、手伝わせる{br}わけにもいかんでな・・		176/160 x3	
-350	text	今年は何とか　ええさくもつが{br}できるかもしれんなあ。		176/160 x3	
-351	text	おやじが　火の玉がどうとか{br}言うとるが・もう年じゃで・{page}とうとう　おむかえが{br}来たのかも知れんなあ。		176/160 x3	
-352	text	わしには　これでも嫁がおった{br}んじゃ、五年ほど前のはやり病{br}にやられての・・{page}この頃になれば　ついつい{br}思い出すわい・・・		176/160 x3	
-353	text	見かけん人だな・・・{br}旅の人だね　このあたりに{br}来るのは　はじめてかい？		176/160 x3	
-354	text	京の都も　凶作の後に{br}えきびょうだからな・・{br}ずいぶん人がへったらしい。		176/160 x3	
-355	text	ま		176/160 x3	
-356	text	ここから西は　山陽道と言って{br}須磨・明石から、御野　吉備を{br}へて　はるか遠く・・{page}九州へつうじている、そして{br}海をわたれば　唐の国にも{br}行く事ができる。{page}どうだい、もの知りだろ。		176/160 x3	
-357	text	今は大路だの　中路だのが{br}あって　どこへ行くにも{br}道があるが・・{page}昔はいったい　どうしたんだ{br}ろうな・・		176/160 x3	
-358	text	北辺のおやじが　何か言って{br}たな・・えっ北辺のおやじ？{page}ほら　あそこでぼーっとしてる{br}じいさんの事さ。		176/160 x3	
-359	text	おれのじいさんの、じいさんの{br}そのまたじいさんぐらいの・・{br}つまり、ごせんぞだな。{page}その人が　坂上何とかって人に{br}ついて　東国に行ったんだ。{page}その時の話じゃあ　東国の者は{br}頭に角が生えてたそうだ。{page}東国はそんな所だよ。		176/160 x3	
-35A	text	今年はめずらしくええ日が{br}つづきますなあ・・		176/160 x3	
-35B	text	紀伊の国の方で　何かあったん{br}ですかね。{page}いや　この家の北にすんでる{br}じいさまが、なにか見たとか{br}言ってたものでね・・		176/160 x3	
-35C	text	あんた　ここらの人じゃないね{br}どこから　来たんだい？		176/160 x3	
-35D	text	ま		176/160 x3	
-35E	text	ひと昔まえはねえ　熊野もうで{br}といってさ、貴族の行列が南に{br}ながーくつづいたもんさ。{page}その行列がきれいでねえ、{br}よく見にいったもんだよ。{page}でも　最近は　とんと{br}見かけなくなっちまったねえ。		176/160 x3	
-35F	text	西の海じゃあ　しおの流れが{br}おかしくて　舟が出せない{br}らしいねえ・・{page}何かのまえぶれじゃなきゃ{br}いいんだけどねえ・・		176/160 x3	
-360	text	西の海に舟が出せないなんて{br}私が生まれてから　一度も{br}なかった事だねえ・・		176/160 x3	
-361	text	やっと舟が出せるようになった{br}らしいねえ。		176/160 x3	
-362	text	昔　源頼光様が国司だった{br}時があったんだけど。{page}その時は　海賊どころか{br}山賊のうわさも　きかなかった{br}のにねえ。		176/160 x3	
-363	text	ねえ　空とぶ火の玉って{br}きいた事があるかい？{br}やっぱり　知らないよねえ。		176/160 x3	
-364	text	子供はいい気なもんだよ。{br}一日　はしりまわってりゃ{br}いいんだからさ。		176/160 x3	
-365	text	あんた　きれいだねえ。{br}若いって事は　いい事さ。{br}はやくいい人見つけなよ。		176/160 x3	
-366	text	おにいちゃん　だれ？		176/160 x3	
-367	text	わーい　わーい		176/160 x3	
-368	text	おじさん　だれ？		176/160 x3	
-369	text	おねえちゃん　だれ？		176/160 x3	
-36A	text	ここは　右大臣藤原道長（ふじ{br}わらのみちなが）様のやかた。{page}おぬしのような者は通せぬ。{br}おひきとりねがおう。		176/160 x3	
-36B	text	なんだ　おぬしらは？{page}ここを　右大臣藤原道長様の{br}やかたと知っての事か？{page}なんと！神楽殿とな！！{br}それは失礼いたした！{page}右大臣様は　奥におられる{br}ささ　入られよ。		176/160 x3	
-36C	text	まさか　神楽殿がこんな子供{br}・・いやいや・・お若いとは{br}思いませなんだ。{page}先ほどは失礼いたした。{br}ゆるして下され。		176/160 x3	
-36D	text	これは　神楽殿。{br}どうぞ奥へ入られよ。		176/160 x3	
-36E	text	これは安倍晴明様！{br}どっ・・・どうぞ奥へ。		176/160 x3	
-36F	text	賀茂殿も　大変でございます{br}な。ささっ・・奥へどうぞ。		176/160 x3	
-370	text	どうぞ　お通りくだされ。		176/160 x3	
-371	text	これこれ、女人は・・・！{br}もしや　紅葉殿か？{page}話はうかがっております。{br}どうぞ奥へ・・・		176/160 x3	
-372	text	どうぞ　お通りくだされ。		176/160 x3	
-373	text	これは紅葉殿　いやあもう{br}お顔は賞えました。{page}それにしても、いつ見ても{br}きれいなお方ですなあ・・		176/160 x3	
-374	text	ま		176/160 x3	
+329	text	ちょっと前言うても　五年ほど{br}前の事なんやけどな。{page}小野正光（おののまさみつ）{br}いう　ぼんぼんそだちの兄弟子{br}がおったんや。{page}その兄弟子が　わがままでな{br}どうしても　まじないをおし{br}えてくれと　きかんのや。{page}その兄弟子が　とうとう{br}まじないの本を盗みよって。{br}お師匠はん　怒りましたで。{page}わては　兄弟子が殺されるんや{br}ないかと　思いましたわ。{page}なんやかやで　破門だけで{br}すんだんやけど、兄弟子は{br}納得してませんでしたな・・	Not so long ago, mind, about{br}five years back, it was.{page}There was this senior of mine,{br}Ono no Masamitsu, a spoiled{br}rich boy, ya know.{page}Real selfish, he was. Kept{br}on at the master to teach him{br}the spells, wouldn't let up.{page}In the end, that senior{br}went and stole the master's{br}book of spells. Was he mad!{page}I was sure he was gonna{br}get himself killed.{page}One way or another, he only{br}got expelled, but my senior{br}never did accept it...	176/160 x3	
+32A	text	お師匠はん　体は大丈夫でっか{br}わてそれだけが心配ですねん。	Master, ya feelin' all right?{br}That's all I worry about.	176/160 x3	
+32B	text	ひまやなあ・・{br}何か役に立つんやったら{br}ついていくんやけど・・{page}わてなんか　何の役にもたち{br}まへんしなあ・・	Ain't much to do...{br}If I could be of use, I'd{br}tag along with ya, but...{page}Ain't like I'm any use{br}to anybody...	176/160 x3	
+32C	text	えらいこっちゃ。　なにがて、{br}そんな事説明できませんて。{page}くわしい事は　兄弟子に{br}きいとくんなはれ。	What a fine mess. What mess?{br}Can't explain that, I can't.{page}For the details, go ask{br}my senior.	176/160 x3	
+32D	text	わてにも　あんたくらいの{br}力があったら　お師匠はんに{br}楽してもらえるんやけどな。	If I had half yer power,{br}I could let my master{br}take it easy, ya know.	176/160 x3	
+32E	text	熊野の神楽殿ですね、晴明様が{br}おまちです、お入り下さい。	Kagura-dono of Kumano?{br}Seimei-sama is expecting you.{br}Please, come in.	176/160 x3	
+32F	text	道摩は　晴明様の一番弟子で{br}ただ一人、晴明様に　まじない{br}を　おしえられた男です。{page}ただ、十五年ほど前に晴明様の{br}元を出て　それっきりです。{page}二年ほど前　藤原盛高という{br}もぐり陰陽師と　戦ったらしい{br}のですが・・{page}それも　はっきりとした事は{br}わかりません・・。	Doma was Seimei-sama's first{br}disciple, the only man he{br}ever taught his spells.{page}But some fifteen years ago he{br}left Seimei-sama's side, and{br}that was the last of him.{page}About two years ago, they say{br}he fought a stray onmyoji{br}named Fujiwara no Moritaka...{page}But even that is not{br}known for certain...	176/160 x3	
+330	text	我らは陰陽道をおさめています{br}が、晴明様のようにまじないは{br}使えないのです。{page}晴明様は、まぎれもなく最高の{br}陰陽師ですが、八十の老人には{br}かわりありません。{page}あなたをたよりにしています{br}がんばって下さい・・	We have studied Onmyodo, but{br}we cannot work spells the way{br}Seimei-sama does.{page}Seimei-sama is beyond doubt{br}the greatest onmyoji, but he{br}is still a man of eighty.{page}We are counting on you.{br}Please, do your best...	176/160 x3	
+331	text	我々は　都でのしごとが{br}あるので　都へ戻ります。{page}このやかたは　何かあった時{br}自由にお使い下さい。	We have duties in the capital,{br}so we will return there.{page}Use this mansion freely{br}should anything happen.	176/160 x3	
+332	text	晴明様、そろそろ我々は{br}都へ戻りますので・・{page}くれぐれも　お体には{br}お気をつけ下さい。	Seimei-sama, we must soon{br}return to the capital...{page}Please, take good care{br}of yourself.	176/160 x3	
+333	text	おまちしていました。{br}どうぞお入り下さい。	We have been expecting you.{br}Please, come in.	176/160 x3	
+334	text	移転の法とは　字をかいたかみ{br}の上に　もういちまい　かみを{br}のせるようなものです・・{page}そうすると　下の字は見えなく{br}なるでしょう・・それが{br}移転の法というものです・・{page}他に　場所だけを移動する術も{br}あったと思いますが・・{page}せつめいはできますけど{br}使えませんよ・・私は。	The Rite of Transference is{br}like laying a second sheet of{br}paper over a written one...{page}The writing underneath can{br}no longer be seen... That is{br}the Rite of Transference...{page}I believe there was also an art{br}that moves only a place...{page}I can explain it, but I{br}cannot use it, mind you.	176/160 x3	
+335	text	ま	Not yet.	176/160 x3	
+336	text	晴明様、体には充分に{br}気をつけて下さい。	Seimei-sama, please take{br}good care of yourself.	176/160 x3	
+337	text	山童一族は　封鬼呪法を使い{br}はなれた場所にいる式神を{br}封じる事が出来ます。{page}つまり　敵の式神を封じておき{br}それから　自分の式神をとばす{br}事もできるのです・・{page}気をつけて下さい。	The Yamawaro clan can use the{br}Oni-Sealing Curse to seal{br}shikigami far away.{page}So they can seal the enemy's{br}shikigami first, then send{br}out their own...{page}Please be careful.	176/160 x3	
+338	text	まじないは　人があつかえる力{br}ではないと言いますが{br}本当にそうなのでしょうか・{page}もし　晴明様や賀茂様がいない{br}時に、今度の戦いがおこれば{br}どうすればよいのか・・	They say spells are a power no{br}mortal can handle, but is{br}that really so...{page}If this battle comes when{br}Seimei-sama and Kamo-sama{br}are gone, what are we to do...	176/160 x3	
+339	text	四天王寺にまいられたのか？{br}せっかく　おこしいただいて{br}もうしわけないが・・{page}花山法皇（はなやまほうおう）{br}が　こもっておられる・・{page}その間は　誰も中に入れるな{br}との事でな・・	You have come to Shitennoji?{br}I am sorry, when you have{br}come all this way, but...{page}the Retired Emperor Kazan{br}is in seclusion within...{page}and has ordered that no one{br}be let in meanwhile...	176/160 x3	
+33A	text	ま	Not yet.	176/160 x3	
+33B	text	式神は　召喚するのに　体力が{br}いると　きいている・・{page}病で　へろへろになっても{br}式神を　あやつれるのか？	I have heard that summoning{br}shikigami takes stamina...{page}Can you still command shikigami{br}when sickness has worn you out?	176/160 x3	
+33C	text	陰陽道にくわしい者は多いが{br}安部晴明様ほどの人となると{br}なかなかおらん・・{page}この寺をつくった厩戸大兄皇子{br}も、すぐれた力をもつ陰陽師{br}だったそうだ。{page}安倍晴明様とどちらが上か・・{br}おぬしどう思う？	Many know Onmyodo well, but{br}one the equal of Abe no{br}Seimei-sama is hard to find...{page}Prince Umayado, who built{br}this temple, was a fine{br}onmyoji too, they say.{page}Who is greater, he or Abe no{br}Seimei-sama... What do{br}you think?	176/160 x3	
+33D	text	これは　安倍晴明様・{br}花山法皇様は　こもったままで{br}おられますが・・{page}例年にはなかった法会ですな・{br}何か意味があるのですか？	Ah, Abe no Seimei-sama.{br}The Retired Emperor Kazan{br}is still in seclusion...{page}This service is not one{br}held in other years.{br}Does it mean something?	176/160 x3	
+33E	text	賀茂広行殿か？なつかしい。{br}元気でおられるか。	Kamo no Hiroyuki-dono, you say?{br}How long it has been.{br}Is he well?	176/160 x3	
+33F	text	先日より　晴明様のやかたが{br}さわがしかったが・{br}何かあったのか・・	Seimei-sama's mansion has been{br}in an uproar of late...{br}Has something happened...	176/160 x3	
+340	text	先日より　晴明様のやかたが{br}さわがしかったのですが、{br}何かありましたか？{page}私で力になれる事があれば{br}お手伝いいたしますぞ。	Seimei-sama's mansion has been{br}in an uproar of late.{br}Has something happened?{page}If there is anything I can do,{br}I will gladly lend a hand.	176/160 x3	
+341	text	天照大御神をまつる　伊勢神宮{br}には、神の嫁たる斎宮がいる。{page}神の嫁と言うからには　よほど{br}美人でもあるのだろうな{br}一目　見たいものだ。	At Ise Shrine, where Amaterasu{br}is worshipped, there is a{br}Saigu, a bride of the god.{page}A bride of the god must be{br}a rare beauty indeed.{br}I should like to see her once.	176/160 x3	
+342	text	晴明様、近頃　色々な所へ{br}出かけておるようですが・・{br}あまりむりをなさいますな。	Seimei-sama, you seem to go{br}out to all sorts of places{br}lately... Do not overdo it.	176/160 x3	
+343	text	十年ほど前に　伊勢神宮に{br}行った者の話では、斎宮は{br}確かに美人だったそうだ。{page}ただ　斎宮が二十年ほど{br}若かったらという、条件が{br}つくそうだが・・{page}まあ　今は　新しい斎宮が{br}つかえているらしいが・・	A man who went to Ise Shrine{br}ten years ago says the Saigu{br}was beautiful indeed.{page}Only, he adds, if she had{br}been some twenty years{br}younger...{page}Well, they say a new Saigu{br}serves there now...	176/160 x3	
+344	text	京の都は　凶作の後に{br}えきびょうが　はやって{br}ひどい有り様だそうな・・	In Kyoto, plague broke out{br}after the famine, and they{br}say it is in a terrible way...	176/160 x3	
+345	text	この所　うちつづく凶作で{br}民が　どんどん田をはなれて{br}おるそうじゃ。{page}世も末じゃて・・	Famine after famine of late,{br}and they say the people keep{br}leaving their fields.{page}It's the end of the world,{br}I tell you...	176/160 x3	
+346	text	おぬしら　最近よく見かけるが{br}このあたりの者ではないな。{page}田をはなれた者なら　故郷へ{br}帰ったほうがよいぞ。	I've been seeing you folks a{br}lot lately. You're not from{br}around here, are you?{page}If you've left your fields,{br}you'd best go home again.	176/160 x3	
+347	text	ここ安部野はな、それは{br}ゆたかな　土地であった。{page}だが　ここ数年の凶作で{br}田を捨てる者がふえ、{br}土地は荒れてしまった・・{page}悲しい事じゃて。	Here in Abeno, you know,{br}the land used to be rich.{page}But these years of famine{br}drove more and more off their{br}fields, and the land went wild.{page}A sad thing, it is.	176/160 x3	
+348	text	そうさなあ　今年はなんとか{br}よいさくもつができるかも{br}しれんなあ。	Well now, maybe this year{br}we'll get a good crop{br}somehow.	176/160 x3	
+349	text	ほほう　べっぴんじゃな。{br}どこの娘さんか　知らんが{br}息子の嫁にならんか。{page}息子は　少し前のはやり病で{br}嫁をなくしてな、それから{br}一人でがんばっとるんじゃ。	Oho, what a pretty one.{br}I don't know whose girl you{br}are, but marry my son, eh?{page}He lost his wife to that{br}sickness a while back, and{br}he's been on his own since.	176/160 x3	
+34A	text	先日　東から南にむかって{br}火の玉がとんでいった。{page}あれは　何だったんじゃろ。{br}きいた事はないかの。	The other day, a fireball{br}flew from the east toward{br}the south.{page}What could it have been?{br}Heard anything about it?	176/160 x3	
+34B	text	もの知りの者の話では、{br}人のたましいが　火の玉に{br}にとるそうじゃ。{page}前に空の上をとんどったやつは{br}人のたましいじゃろう。	A learned fellow told me that{br}a man's soul can take the{br}shape of a fireball.{page}That one flying across the sky{br}must have been someone's soul.	176/160 x3	
+34C	text	よい　天気よなあ・・{br}もう　いつ　おむかえが{br}来てもええわい。	Fine weather, isn't it...{br}They can come for me any{br}day now, I don't mind.	176/160 x3	
+34D	text	よい　天気よなあ・・{br}もう　いつ　おむかえが{br}来てもええわい。{page}じゃが　後に残される{br}息子に　嫁がおらん事だけが{br}心残りじゃのう。	Fine weather, isn't it...{br}They can come for me any{br}day now, I don't mind.{page}Only, it weighs on me that{br}the son I leave behind{br}has no wife.	176/160 x3	
+34E	text	京の都は北へ行けばすぐだ・・{br}が　あんたら都へ何か用かね。	Kyoto is just to the north...{br}But what business have you{br}folks in the capital?	176/160 x3	
+34F	text	うちのおやじは　いつもあそこ{br}で　ぼーっとしとる。{page}おやじも年じゃで、手伝わせる{br}わけにもいかんでな・・	My old man always sits{br}over there, staring at nothing.{page}He's getting on, so I can't{br}very well have him help out...	176/160 x3	
+350	text	今年は何とか　ええさくもつが{br}できるかもしれんなあ。	Maybe this year we'll get{br}a good crop somehow.	176/160 x3	
+351	text	おやじが　火の玉がどうとか{br}言うとるが・もう年じゃで・{page}とうとう　おむかえが{br}来たのかも知れんなあ。	My old man keeps going on{br}about fireballs... He's old...{page}Maybe they've finally{br}come for him.	176/160 x3	
+352	text	わしには　これでも嫁がおった{br}んじゃ、五年ほど前のはやり病{br}にやられての・・{page}この頃になれば　ついつい{br}思い出すわい・・・	I had a wife too, you know.{br}That sickness took her{br}five years ago...{page}This time of year, I can't{br}help thinking of her...	176/160 x3	
+353	text	見かけん人だな・・・{br}旅の人だね　このあたりに{br}来るのは　はじめてかい？	Don't know your face...{br}Travellers, eh? First time{br}you've come this way?	176/160 x3	
+354	text	京の都も　凶作の後に{br}えきびょうだからな・・{br}ずいぶん人がへったらしい。	Kyoto had plague after the{br}famine too, you know...{br}They say lots of folk died.	176/160 x3	
+355	text	ま	Not yet.	176/160 x3	
+356	text	ここから西は　山陽道と言って{br}須磨・明石から、御野　吉備を{br}へて　はるか遠く・・{page}九州へつうじている、そして{br}海をわたれば　唐の国にも{br}行く事ができる。{page}どうだい、もの知りだろ。	West of here is the San'yodo,{br}by Suma and Akashi, on through{br}Mino and Kibi, far away...{page}all the way to Kyushu. And{br}if you cross the sea, you can{br}even reach the land of Tang.{page}How's that? I know a thing{br}or two, eh?	176/160 x3	
+357	text	今は大路だの　中路だのが{br}あって　どこへ行くにも{br}道があるが・・{page}昔はいったい　どうしたんだ{br}ろうな・・	These days there are main{br}roads and middle roads, a road{br}to wherever you want to go...{page}But how did folks get{br}around in the old days...	176/160 x3	
+358	text	北辺のおやじが　何か言って{br}たな・・えっ北辺のおやじ？{page}ほら　あそこでぼーっとしてる{br}じいさんの事さ。	The old man of the north side{br}said something... Eh? The old{br}man of the north side?{page}You know, that old fella{br}staring at nothing over there.	176/160 x3	
+359	text	おれのじいさんの、じいさんの{br}そのまたじいさんぐらいの・・{br}つまり、ごせんぞだな。{page}その人が　坂上何とかって人に{br}ついて　東国に行ったんだ。{page}その時の話じゃあ　東国の者は{br}頭に角が生えてたそうだ。{page}東国はそんな所だよ。	My grandpa's grandpa's{br}grandpa, or around then...{br}an ancestor, anyway.{page}He went east with a man named{br}Sakanoue something-or-other.{page}By his tale, the folk in the{br}east had horns on their heads.{page}That's the east for you.	176/160 x3	
+35A	text	今年はめずらしくええ日が{br}つづきますなあ・・	We've had an unusual run of{br}fine days this year...	176/160 x3	
+35B	text	紀伊の国の方で　何かあったん{br}ですかね。{page}いや　この家の北にすんでる{br}じいさまが、なにか見たとか{br}言ってたものでね・・	Did something happen over{br}Kii Province way?{page}See, the old man living north{br}of this house said he saw{br}something or other...	176/160 x3	
+35C	text	あんた　ここらの人じゃないね{br}どこから　来たんだい？	You're not from around here,{br}are you? Where you from?	176/160 x3	
+35D	text	ま	Not yet.	176/160 x3	
+35E	text	ひと昔まえはねえ　熊野もうで{br}といってさ、貴族の行列が南に{br}ながーくつづいたもんさ。{page}その行列がきれいでねえ、{br}よく見にいったもんだよ。{page}でも　最近は　とんと{br}見かけなくなっちまったねえ。	Not so long ago, they had the{br}Kumano pilgrimage, see. Lines{br}of nobles stretched south.{page}Those processions were so{br}lovely, I'd often go to see.{page}But lately you hardly{br}see them anymore.	176/160 x3	
+35F	text	西の海じゃあ　しおの流れが{br}おかしくて　舟が出せない{br}らしいねえ・・{page}何かのまえぶれじゃなきゃ{br}いいんだけどねえ・・	Out on the western sea, the{br}currents have gone strange{br}and boats can't put out...{page}I hope it isn't an omen{br}of something...	176/160 x3	
+360	text	西の海に舟が出せないなんて{br}私が生まれてから　一度も{br}なかった事だねえ・・	Boats can't put out on the{br}western sea? Never once has{br}that happened in my life...	176/160 x3	
+361	text	やっと舟が出せるようになった{br}らしいねえ。	Seems boats can finally{br}put out again.	176/160 x3	
+362	text	昔　源頼光様が国司だった{br}時があったんだけど。{page}その時は　海賊どころか{br}山賊のうわさも　きかなかった{br}のにねえ。	Back when Minamoto no{br}Yorimitsu-sama was governor...{page}you never even heard rumors{br}of bandits, let alone pirates.	176/160 x3	
+363	text	ねえ　空とぶ火の玉って{br}きいた事があるかい？{br}やっぱり　知らないよねえ。	Say, have you ever heard of{br}a fireball that flies through{br}the sky? No, didn't think so.	176/160 x3	
+364	text	子供はいい気なもんだよ。{br}一日　はしりまわってりゃ{br}いいんだからさ。	Kids have it easy. Just run{br}around all day, that's all{br}they have to do.	176/160 x3	
+365	text	あんた　きれいだねえ。{br}若いって事は　いい事さ。{br}はやくいい人見つけなよ。	Aren't you a pretty one.{br}It's a fine thing to be young.{br}Go find yourself a good man.	176/160 x3	
+366	text	おにいちゃん　だれ？	Mister, who are you?	176/160 x3	
+367	text	わーい　わーい	Yaaay! Yaaay!	176/160 x3	
+368	text	おじさん　だれ？	Mister, who are you?	176/160 x3	
+369	text	おねえちゃん　だれ？	Miss, who are you?	176/160 x3	
+36A	text	ここは　右大臣藤原道長（ふじ{br}わらのみちなが）様のやかた。{page}おぬしのような者は通せぬ。{br}おひきとりねがおう。	This is the mansion of Fujiwara{br}no Michinaga-sama, Minister{br}of the Right.{page}Your sort may not pass.{br}Kindly take your leave.	176/160 x3	
+36B	text	なんだ　おぬしらは？{page}ここを　右大臣藤原道長様の{br}やかたと知っての事か？{page}なんと！神楽殿とな！！{br}それは失礼いたした！{page}右大臣様は　奥におられる{br}ささ　入られよ。	What's this? Who are you?{page}Do you know this is the mansion{br}of the Minister of the Right,{br}Fujiwara no Michinaga-sama?{page}What! Kagura-dono, you say?!{br}Forgive my rudeness!{page}The Minister is within.{br}Come, come, go on in.	176/160 x3	
+36C	text	まさか　神楽殿がこんな子供{br}・・いやいや・・お若いとは{br}思いませなんだ。{page}先ほどは失礼いたした。{br}ゆるして下され。	I never imagined Kagura-dono{br}would be such a child... I mean,{br}er, so young.{page}Forgive my rudeness{br}earlier. Please pardon me.	176/160 x3	
+36D	text	これは　神楽殿。{br}どうぞ奥へ入られよ。	Ah, Kagura-dono.{br}Please, go on inside.	176/160 x3	
+36E	text	これは安倍晴明様！{br}どっ・・・どうぞ奥へ。	Ah, Abe no Seimei-sama!{br}P-please, go on inside.	176/160 x3	
+36F	text	賀茂殿も　大変でございます{br}な。ささっ・・奥へどうぞ。	This must be hard on you too,{br}Kamo-dono. Come, come, go in.	176/160 x3	
+370	text	どうぞ　お通りくだされ。	Please, go on through.	176/160 x3	
+371	text	これこれ、女人は・・・！{br}もしや　紅葉殿か？{page}話はうかがっております。{br}どうぞ奥へ・・・	Here, now, no women... Wait!{br}Could you be Momiji-dono?{page}I have heard all about you.{br}Please, go on inside...	176/160 x3	
+372	text	どうぞ　お通りくだされ。	Please, go on through.	176/160 x3	
+373	text	これは紅葉殿　いやあもう{br}お顔は賞えました。{page}それにしても、いつ見ても{br}きれいなお方ですなあ・・	Ah, Momiji-dono. Oh, I know{br}your face well by now.{page}Still, you are always{br}such a lovely lady...	176/160 x3	
+374	text	ま	Not yet.	176/160 x3	
 375	text	おい　知ってるか？　蝉丸って{br}琵琶法師の話を・・{page}その琵琶法師の琵琶をきいて{br}みたくて　おれは逢坂峠に{br}行ったんだよ・・{page}どうだったと思う？{page}なんと・・琵琶法師は{br}女だったんだよ！{page}・・本当だぜ。		176/160 x3	
 376	text	西に行くのなら　大江山には{br}気をつけなよ、あのあたりは{br}賊が多いぜ。{page}調伏丸とかって名前で、一度も{br}つかまった事がないんだとさ。		176/160 x3	
 377	text	おれたちはその日をすごすのも{br}やっとだっていうのに。{page}貴族の野郎どもは　毎日歌会だ{br}奏会だと　あそんでやがる、{br}やってられねえよな。		176/160 x3	

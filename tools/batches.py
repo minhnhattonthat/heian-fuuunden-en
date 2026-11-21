@@ -31,7 +31,7 @@ FREE = {"{br}", "{page}", "{small}", "{sbr}", "{narrow}"}  # layout codes the En
 VARIABLE = r"\{(?:num|name)\}"  # a number or name the game draws: "1st" comes out as "1th"
 # JP honorific -> ruled English form (glossary D1). HONORIFIC_SKIP: words that contain the kanji but are no honorific.
 HONORIFICS = {"殿": "-dono", "様": "-sama"}
-HONORIFIC_SKIP = re.compile(r"宮殿|御殿|本殿|殿上|殿中|様子|様々|皆様|神様|仏様|人様|同様|奥様|仕様|模様|有様|如何様|貴様|左様|この様|その様|あの様|どの様|様な|様に")
+HONORIFIC_SKIP = re.compile(r"宮殿|御殿|本殿|殿上|殿中|様子|様々|皆様|神様|仏様|人様|同様|奥様|仕様|模様|有様|有り様|如何様|貴様|左様|この様|その様|あの様|どの様|様な|様に")
 SUFFIXES = set("殿様姫達公")  # a name followed by these still counts as the name (晴明様 holds 晴明)
 _STATE = {}
 
