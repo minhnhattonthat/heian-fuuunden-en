@@ -1,9 +1,10 @@
--- Cold-boot warp for Heian Fuuunden (docs/re/save.md, tools/debug/README.md).
+-- Cold-boot warp for Heian Fuuunden (docs/re/save.md; scene list tools/debug/scenes.tsv).
 --   emu.py ROM --out DIR --script tools/debug/warp.lua --var "SCENE='palace'" --frames 3000 --sheet
 -- Flow: title -> New Game, slot 1 (the game writes slot 1 at once) -> write the scene's slot edits and fix the
--- checksum -> soft reset (L+R+Start+Select) -> title -> Continue, slot 1 -> field ($34 == 4) -> scene RAM pokes
+-- checksum -> soft reset (L+R+Start+Select) -> title -> Continue, slot 1 -> field ($34 == 5) -> scene RAM pokes
 -- and route -> hold -> shot "warp_<scene>.png", log "WARP_OK <scene>", optional WARP_STATE savestate.
--- Opt-in globals: GOD=1 (refill every party member's HP each frame), SCENES_TSV (path; default ../debug/scenes.tsv,
+-- God mode is a separate probe: add `--script tools/lua/god.lua` (pins our side's battle HP).
+-- Opt-in globals: SCENES_TSV (path; default ../debug/scenes.tsv,
 -- relative to tools/mesen, the emulator's working folder), WARP_STATE (absolute path), SHOTS_AFTER (extra shot
 -- every N frames after arrival).
 local MEM = emu.memType.snesMemory
@@ -89,18 +90,19 @@ L.on_frame(function(f)
       end
     end
   elseif stage == "arrived" then
-    -- route steps: "N buttons" (hold for N frames), "wait MM" / "wait MM.SS" (until $34 == MM [and $36 == SS],
-    -- hex; gives up after 3000 frames), "poke ADDR=VAL,..." (CPU addresses, as in the ram column),
+    -- route steps: "N buttons" (hold for N frames), "wait MM" / "wait MM.SS" / "wait MM.SS.TT" (until $34 == MM
+    -- [and $36 == SS [and $38 == TT]], hex; gives up after 3000 frames, logging "wait timed out"), "poke ADDR=VAL,..." (CPU addresses, as in the ram column),
     -- "mash N" (press A every 30 frames for N frames)
     if not L.route_done() then return end
     local step = steps[1]
     if not step then stage = "hold"; arrived = f; return end
     local n, b = step:match("^(%d+)%s+(%S+)$")
-    local wm, ws = step:match("^wait%s+(%x+)%.?(%x*)$")
+    local wm, ws, wt = step:match("^wait%s+(%x+)%.?(%x*)%.?(%x*)$")
     if n then L.press(b, tonumber(n)); table.remove(steps, 1)
     elseif wm then
       waited = waited + 1
-      if (mode == tonumber(wm, 16) and (ws == "" or sub == tonumber(ws, 16))) or waited > 3000 then
+      if (mode == tonumber(wm, 16) and (ws == "" or sub == tonumber(ws, 16))
+          and (wt == "" or rdw(0x7E0038) == tonumber(wt, 16))) or waited > 3000 then
         if waited > 3000 then L.log("wait timed out: " .. step) end
         waited = 0; table.remove(steps, 1)
       end

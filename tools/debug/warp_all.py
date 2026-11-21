@@ -51,7 +51,7 @@ def main():
     ap.add_argument("--out", default=str(REPO / "work/qa/warp"))
     ap.add_argument("--only", default="")
     ap.add_argument("--jobs", type=int, default=3)
-    ap.add_argument("--frames", type=int, default=9000)
+    ap.add_argument("--frames", type=int, default=24000)  # runs end at WARP_OK; credits_end needs ~17000
     ap.add_argument("--no-states", action="store_true")
     ap.add_argument("extra", nargs="*", help="extra emu.py args after --")
     args = ap.parse_args()

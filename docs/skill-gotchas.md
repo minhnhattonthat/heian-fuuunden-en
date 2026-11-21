@@ -10,3 +10,5 @@
 - references/emulator-qa.md §emu.py: `STATE_OUT` is a driver global, so a `--var STATE_OUT=` for a warp script is rejected ("use NAME=LUA with a non-driver global name"); name the warp's own savestate var something else (`WARP_STATE` here).
 - references/emulator-qa.md §Hooks: Mesen's Lua working folder was not `tools/mesen` here (`../debug/scenes.tsv` failed to open); derive repo paths from `OUT` or pass them absolute.
 - references/emulator-qa.md §Debug tool: this game keeps its live state in SRAM and New Game writes slot 1 at once, so a warp = New Game -> edit slot 1 + checksum in Lua -> soft reset -> Continue; ~3 s per scene, no playthrough.
+- scripts/dis65816.py: defaults to LoROM and prints nothing at all (exit 0) for a HiROM address like C0CB90; pass `--map hirom` (an empty-output warning would help).
+- references/emulator-qa.md §Debug tool: a strategy-RPG battle here has its own state word (`$38`) under mode 7; route waits on the mode alone fired during the intro, before the player turn. Wait on the battle state word too (warp.lua `wait MM.SS.TT`).
