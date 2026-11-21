@@ -185,3 +185,7 @@ verbatim when dialogue names one (`build/terms_bNNN.txt` lists the ones a batch 
   roads 山陽道 San'yodo, 北陸道 Hokurikudo, 東山道 Tosando, 東海道 Tokaido; 朱雀大路 Suzaku Avenue, 一条大路 Ichijo
   Avenue; provinces 越中 Etchu, 丹波 Tamba, 備中 Bitchu, 尾張 Owari, 駿河 Suruga; 神坂峠 Misaka Pass. 小野政光 (one
   spelling in 51E) = Ono no Masamitsu. Court nobles with まろ/おじゃる speak as royal "We".
+- b014-b017: 反魂宝珠 (variant of 反魂法珠) -> Hangon Jewel; 新皇 -> the New Emperor (Masakado); 関東 -> Kanto;
+  越後西の海岸 -> the West Echigo coast; 佐渡 -> Sado; 物部の一族 -> the Mononobe clan; 皇子 -> prince; 死霊 -> dead
+  spirit; 天太祝詞移転法呪 -> Heavenly Norito, Curse of Transference. Akoya calls Kagura "Brother"; Isogami and
+  Semimaru say Kagura-sama.

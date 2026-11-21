@@ -22,5 +22,13 @@
 - Doma's doubles (54B-555) tell Kagura he is not Tenkai's child and could be emperor. Sumitomo's revival in Shikoku
   is a decoy to draw Seimei west while Masakado rises (56C). Usagino holds the Shikoku barrier (556-559); Kuji Hogen
   was Moritaka's travelling friend (561-569). Ono no Masamitsu, Seimei's expelled pupil, seeks revenge (51A-524).
+- Endgame (597-613): Moriya dies giving Kagura the Hangon Jewel to bury with the sealed Masakado; Masakado, sealed,
+  thanks Kagura. The "Doma" met so far were doubles. The real Doma waits on Sado (his daughter Isogami ferries
+  Kagura from the West Echigo coast and dies doing it). Doma's story (5B3): he revived the dead twin, Akoya, out
+  of pity for the Emperor, fled Seimei and raised him; Akoya carries a second, dead spirit's soul that made the
+  doubles and united the Yamawaro, so Doma sealed him on Sado. Doma dies an "unworthy disciple"; Akoya (Kagura's
+  younger twin) offers to make Kagura emperor, is defeated and thanks his brother. Three months later the dead
+  spirit (made long ago by the Yamawaro, once the Mononobe) appears; Semimaru seals it with the Rite of
+  Transference at the cost of himself. Sumitomo's body crumbles on its own (5E5) and the west is settled.
 - Foes: Doma (and a False Doma), Taira no Masakado, Fujiwara no Sumitomo, the Yamawaro and their captains, bandits,
   oni and tengu. Retired Emperor Kazan and the Kebiishi appear in the capital.

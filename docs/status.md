@@ -2,7 +2,8 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 6. Translate in progress: wave 0 (terms) + pilot + b001-b014 merged; 98 rows left (b015-b017).
+- **Phase:** 6. Translate in progress: every row translated (lint: 0 untranslated) and `script/tilemaps.tsv` done;
+  reviewer pass under way (b001 ok, b002 fixed, b003 partial; b003 from 424 and b004-b017 left: `docs/review.md`).
   Last build: `build/heian_en.sfc` 2026-11-22 sha1 7eb7f27372c6 (2 MB, smoke ok); marker `build/heian_marker.sfc`
   2026-11-22 sha1 6a70b2581615 (135/135 warp scenes ok, shots in `work/qa/marker_warp/`). No build since English.
 - **Phase 6 so far (2026-11-22):**
@@ -29,13 +30,17 @@ Updated at the end of every session. Keep it to what the next session needs; his
   - b014 (56D-596: Doma's doubles, Sumitomo, Tenkai controlled by Doma and his death 584-586, Akana, the Suwa
     hidden village, Moriya; Tenkai was born a Yamawaro) merged. 反魂宝珠 (variant of 反魂法珠) -> Hangon Jewel.
   - Codex CLI is out of quota until 2026-11-26 (no codex translators/reviewers before then).
-- **Next (phase 6):** `python -X utf8 tools/batches.py split` was run; `work/tl/` is gitignored, so in a fresh
-  clone run `split` again (it batches only rows still without `en`; batch names may then differ from
-the ones here, so go by ids). Translate b015-b017 (ids 597 onward; each: write
-  `work/tl/bNNN.out.tsv`, `batches.py check bNNN` until OK, `batches.py merge bNNN`, commit). Then
-  `script/tilemaps.tsv` (16 rows, graphics text), then a reviewer pass per batch (fresh read-only pass, or
-  `codex exec` after 2026-11-26) with Minors to `docs/polish.md`. Translating ~3 batches per worker session fits
-  the context budget.
+  - b015-b017 (597-613: Moriya's death, Doma's doubles, Masakado sealed, Isogami, Doma's truth about Akoya, Momiji,
+    boatmen, field notes, Sumitomo crumbles, Semimaru's sacrifice) merged; terms in `glossary.md` "b014-b017".
+    `script/tilemaps.tsv` en filled (cell budgets in `max`; option labels 10 cells vs 8: `docs/polish.md`).
+  - Review: `tools/pairs.py bNNN.. --out work/qa/review` writes `>> id | JP` / EN pairs (English from `script/`).
+    Verdicts in `docs/review.md`, Minors in `docs/polish.md`. 2D6 (Kaede, meaning reversed) fixed.
+- **Next (phase 6):** reviewer pass per batch, from b003 id 424 on through b017 (fresh read-only pass, or
+  `codex exec -s read-only` after 2026-11-26 with the pairs file and `docs/translator-brief.md` in the prompt).
+  `work/tl/` is gitignored: in a fresh clone the batch files are gone, so review by id range from `script/`
+  (b003 = 410-435, b017 ends at 613; `batches.py split` only batches untranslated rows). Fix Critical/Important in
+  `script/*.tsv` (Edit tool, then `tools/lint.py`), mark the batch in `docs/review.md`. About 3-4 batches per
+  worker session fit the context budget. Phase 6 is done when every batch is ok/fixed; then phase 7.
 - **Done:**
   - **Phase 5 met** (engine spike + marker build + width gate): every box variant is measured in-game
     (`docs/re/windows.md`; every row's budget is in the `max` column of `script/*.tsv`, no "(guess)" left).
