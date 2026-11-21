@@ -1,0 +1,6 @@
+# Cold boot: KSS logo, copyright, title; Start reaches the New/Continue menu.
+700 -
+6 start
+120 -
+6 start
+300 -

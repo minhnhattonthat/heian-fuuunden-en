@@ -1,0 +1,17 @@
+{
+  "Preferences": {
+    "OverrideSaveDataFolder": true,
+    "SaveDataFolder": "C:\\Users\\nathan\\Documents\\translation\\heian-fuuunden-en\\work\\qa\\probe\\saves-zft678bk"
+  },
+  "Debug": {
+    "ScriptWindow": {
+      "AllowIoOsAccess": true
+    }
+  },
+  "Snes": {
+    "Port1": {
+      "Type": "SnesController"
+    }
+  },
+  "ConfigUpgrade": 1
+}

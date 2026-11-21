@@ -1,2 +1,2 @@
 # SHA-1 of the supported dump, in sha1sum format (`sha1sum -c rom.sha1` works too). One line per file for discs.
-<sha1>  rom/<file>
+3b0ca4a24a02c683f8ad140242f6dff96d0d8339  rom/Heian Fuuunden (Japan).sfc
