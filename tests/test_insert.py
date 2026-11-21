@@ -227,3 +227,10 @@ def test_gfx_lettering(built_rom, rom):
     assert d[gfx_en.PAGE_TABLE:gfx_en.PAGE_TABLE + len(table)] == table
     assert struct.unpack_from("<H", d, gfx_en.UPLOAD_SIZE)[0] == len(tiles) <= gfx_en.MAX_TILES * 16
     assert max(w & 0x3FF for w in struct.unpack("<2048H", cmap)) * 16 < len(tiles)
+    font, pmap = decode(d, ptr(0x01F14F))[0], decode(d, ptr(0x01EF8D))[0]
+    assert (font, pmap) == gfx_en.prologue(decode(rom, 0x08D140)[0], decode(rom, 0x08D861)[0])
+    # help maps are addressed by lo16 in bank C8 (C1:478F): rewritten in place, so read them where they were
+    assert decode(d, 0x08ABF2)[0] == gfx_en.redraw_help_font(decode(rom, 0x08ABF2)[0])
+    for name in [*gfx_en.HELP_TITLES, *gfx_en.HELP_LABELS, *gfx_en.HELP_NOTES]:
+        off = int(name[:6], 16)
+        assert decode(d, off)[0] == gfx_en.redraw_help_map(name, decode(rom, off)[0]), name

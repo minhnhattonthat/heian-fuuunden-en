@@ -67,7 +67,15 @@ C7:1053/57A6/73D9, D2, D7:6C5D+, all type-2 blocks except those decoded above.
   table `C1:8265` (src lo16, rows, columns, VRAM), title = map rows 32-33, end card = rows 40-49 cols 0-23 (終 at
   rows 44-49 cols 16-21). All rebuilt in English (D19). G10 (dialogue-font credit kanji 0x380-0x3B6) is not drawn
   by the roll: unused. `warp.lua --var DUMP_PPU=1` dumps VRAM/CGRAM/OAM with the scene shot.
-- **Left:** G3/G4 file select scroll, G7/T8 help panels (own small kana in `C8:ABF2`), G8/T7 prologue font + map.
+- **Also done (same session):** G3/G4 file select (`C8:3E4F` is 4bpp BG1 tiles from 0: labels $40-$48/$50-$58,
+  $60-$68/$70-$78, 記録 $49-$4B/$59-$5B before digit tiles; "New Game", "Continue", "File 1-3"). G7/T8 help
+  panels: `C8:ABF2` is 4bpp (BG1 tiles $10+, 8x8 kana $4D-$94); pages are small maps addressed by the lo16 table
+  `C1:478F` (bank C8 fixed, so they are rewritten in place and must not grow): titles `A6CF A6E9 A706 A724`, labels
+  `A796 A7BE A7F6 A824` (7x8), notes `A861 A8EF A973 A9E7` (22x8); `AA6E` = the status page pre-built. Only page 0
+  (battle, C0:6A3A..) and page 1 (status, `C1:47AF` with A=1 from C0:A20E) are ever shown; pages 2/3 (field
+  movement, squads) are unused but translated. G8/T7 prologue: map `C8:D861` (5 bands of 4 rows) is on screen whole;
+  an HDMA window on BG3 types it out, up to each Japanese line's end (x 224, last line 168).
+- **Left:** nothing in the graphics survey (G1 logo kept, D5; G10/G11 unused).
 
 ## Still open
 - The T6 variants' screens; the field-menu help panel's map source (T8).

@@ -55,7 +55,10 @@ RELOC_PTRS = {
     0x088954: [0x01F037, 0x01F0C3],            # small font (G5, smallfont_en)
     0x08B282: [0x01EFF1],                      # battle command labels (G6, gfx_en)
     0x089BAF: [0x01F091],                      # game-over card (G13, gfx_en)
+    0x083E4F: [0x01EFDD],                      # file select scrolls (G3/G4, gfx_en)
     0x08C2F8: [0x01F019],                      # credits tiles (G9, gfx_en)
+    0x08D140: [0x01F14F],                      # prologue font (G8, gfx_en)
+    0x08D861: [0x01EF8D],                      # prologue map (T7, gfx_en)
     0x08CD4E: [(0x0BE547, 0x0BE54C)],          # credits map (CB:E546 LDA #$CD4E / LDA #$00C8, gfx_en)
     # (lo, bank): named by code as LDA #$lo16 / LDA #$00bank: file offsets of the two operands
     0x08BBEE: [(0x05265B, 0x052660)],          # Yes/No box map (C5:265A, tilemap_text "yesno")

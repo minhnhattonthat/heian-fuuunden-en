@@ -287,6 +287,8 @@ def apply_blocks(gfxdir):
     new_tiles, new_map, _ = credits((gfxdir / CREDITS_TILES).read_bytes(), (gfxdir / CREDITS_MAP).read_bytes())
     (gfxdir / CREDITS_TILES).write_bytes(new_tiles)
     (gfxdir / CREDITS_MAP).write_bytes(new_map)
+    apply_help(gfxdir)
+    apply_prologue(gfxdir)
 
 
 def writes(rom):
@@ -299,7 +301,234 @@ def writes(rom):
     return [(PAGE_TABLE, table), (UPLOAD_SIZE, struct.pack("<H", len(new_tiles)))]
 
 
-EDITS = {CMD_BLOCK: redraw_cmd, GAMEOVER_BLOCK: redraw_gameover}
+# --- G3/G4 file select, block C8:3E4F (4bpp BG1 tiles from 0; scroll labels on the title's New/Continue menu and
+# the three file scrolls). A label is 16 px tall: row 0 is the scroll's colour-2 top line, rows 1-15 paper colour 3,
+# kana in ink 1. はじめから = tiles $40-$48 over $50-$58, つづきから = $60-$68 over $70-$78 (72 px), 記録 =
+# $49-$4B over $59-$5B (24 px) before the digit tiles $4C-$4E / $5C-$5E (kept). English in the dialogue font, ink 1,
+# glyph rows from y 2 (caps on rows 5-13 where the kana sat on 3-14).
+FILE_BLOCK = "083E4F.bin"
+FILE_LABELS = [   # (top tiles, bottom tiles, English, align)
+    (list(range(0x40, 0x49)), list(range(0x50, 0x59)), "New Game", "centre"),   # はじめから
+    (list(range(0x60, 0x69)), list(range(0x70, 0x79)), "Continue", "centre"),   # つづきから
+    ([0x49, 0x4A, 0x4B], [0x59, 0x5A, 0x5B], "File", "right"),                  # 記録 (then the digit)
+]
+FILE_PAPER, FILE_INK, FILE_TOP = 3, 1, 2
+
+
+def redraw_file(data):
+    out = bytearray(data)
+    for top, bottom, text, align in FILE_LABELS:
+        rows = [sum((tile4_px(data, t)[y] for t in half), []) for half in (top, bottom) for y in range(8)]
+        w = len(rows[0])
+        if set(rows[0]) != {2} or any(c not in (1, 2, 3) for r in rows[1:] for c in r):
+            raise ValueError("file-select label %r: not the expected scroll colours" % text)
+        px = [rows[0]] + [[FILE_PAPER] * w for _ in range(15)]
+        lw, gl = line_ink(text, "dialogue")
+        left = (w - lw) // 2 if align == "centre" else w - 4 - lw
+        if left < 1:
+            raise ValueError("file-select label %r: %d px does not fit %d" % (text, lw, w))
+        for x, y in gl:
+            px[FILE_TOP + y][left + x] = FILE_INK
+        for r, half in enumerate((top, bottom)):
+            for k, t in enumerate(half):
+                out[32 * t:32 * t + 32] = tile4_bytes([px[8 * r + y][8 * k:8 * k + 8] for y in range(8)])
+    return bytes(out)
+
+
+# --- G7/T8 help panels (the "PUSH KEY" pages). Font block C8:ABF2 = 4bpp BG1 tiles $10+ (block tile k = tile
+# $10 + k): frame, pad drawing, PUSH KEY, and one 8x8 kana per tile ($4D-$94, paper colour 2, ink 3; ゛ $7E and ゜
+# $7F sit on the row above; $95 is an underline with a ゛). The pages are built from small LZ maps (words $20tt):
+# titles 8x2 (row 0 marks, row 1 text), button labels 7x8 (text on rows 0/2/4/6 = Y/X/A/B, underline on the odd
+# rows), notes 22x8 (marks on even rows, text on odd rows); C8:AA6E is the status page pre-built as one 32-wide
+# map. English: Pixel Operator 8 glyphs (fonts, D10) in the kana cells, one letter per cell; the mark rows go blank.
+HELP_FONT = "08ABF2.bin"
+HELP_BASE = 0x10
+HELP_FREE = [t for t in range(0x4D, 0x95) if t not in range(0x8B, 0x90)]  # 8B-8F = Y X A B … stay
+HELP_BLANK, HELP_LINE, HELP_LINE_MARK = 0x18, 0x19, 0x95
+HELP_TITLES = {"08A6CF.bin": "Battle", "08A6E9.bin": "Status", "08A706.bin": "Field", "08A724.bin": "Squads"}
+# Y, X, A, B. These maps are addressed by a lo16 table at C1:478F (bank C8 fixed in code), so they cannot move to
+# bank DF and must re-encode within their original size: けってい is "OK" (fewer literals than "Confirm").
+HELP_LABELS = {
+    "08A796.bin": ["OK", "", "", "Cancel"],
+    "08A7BE.bin": ["OK", "Field", "", "Cancel"],
+    "08A7F6.bin": ["Talk", "Status", "Run", ""],      # ダッシュ
+    "08A824.bin": ["OK", "Field", "Switch", "Cancel"],
+}
+HELP_NOTES = {       # 4 lines of 22 cells; the 4th ends by cell 13 (PUSH KEY is drawn on cells 14-21 of that row)
+    "08A861.bin": ["* While moving a unit,", "  B frees the cursor.", "  Y on a unit shows", "  its status."],
+    "08A8EF.bin": ["* On the status screen", "  Y switches to the", "  unit's usable jutsu", "  and skills."],
+    "08A973.bin": ["* Hold A while moving", "  to move faster."],
+    "08A9E7.bin": ["* Press A to view the", "  status of the unit", "  under the cursor."],
+}
+HELP_LAST_LINE = 13
+HELP_PANEL = "08AA6E.bin"          # status page as one 32-wide map: its title, labels and notes are the blocks
+HELP_PANEL_PARTS = ["08A6E9.bin", "08A7BE.bin", "08A8EF.bin"]   # above, found in it by content
+
+
+def help_charset():
+    chars = set("".join(HELP_TITLES.values()))
+    for v in list(HELP_LABELS.values()) + list(HELP_NOTES.values()):
+        chars |= set("".join(v))
+    chars.discard(" ")
+    chars = sorted(chars)
+    if len(chars) > len(HELP_FREE):
+        raise ValueError("help font: %d characters > %d cells" % (len(chars), len(HELP_FREE)))
+    return dict(zip(chars, HELP_FREE))
+
+
+def redraw_help_font(data):
+    out = bytearray(data)
+    gl = font_en.glyphs(True)
+    for ch, t in help_charset().items():
+        rows = gl[ord(ch) - font_en.FIRST][0]
+        px = [[3 if r & (0x80 >> x) else 2 for x in range(8)] for r in rows]
+        k = t - HELP_BASE
+        if {c for r in tile4_px(data, k) for c in r} - {2, 3}:
+            raise ValueError("help font cell %02X is not a kana cell" % t)
+        out[32 * k:32 * k + 32] = tile4_bytes(px)
+    # the underline-with-゛ tile also becomes a plain underline, for any map that still uses it
+    k, line = HELP_LINE_MARK - HELP_BASE, HELP_LINE - HELP_BASE
+    out[32 * k:32 * k + 32] = data[32 * line:32 * line + 32]
+    return bytes(out)
+
+
+def _help_words(data):
+    return list(struct.unpack("<%dH" % (len(data) // 2), data))
+
+
+def _help_text_row(words, row, w, text, cmap):
+    if len(text) > w:
+        raise ValueError("help text %r: %d cells > %d" % (text, len(text), w))
+    for c in range(w):
+        i = row * w + c
+        ch = text[c] if c < len(text) else " "
+        words[i] = (words[i] & 0xFC00) | (HELP_BLANK if ch == " " else cmap[ch])
+
+
+def redraw_help_map(name, data):
+    cmap, words = help_charset(), _help_words(data)
+    if name in HELP_TITLES:
+        w = 8
+        _help_text_row(words, 0, w, "", cmap)
+        _help_text_row(words, 1, w, HELP_TITLES[name], cmap)
+    elif name in HELP_LABELS:
+        w = 7
+        for k, text in enumerate(HELP_LABELS[name]):
+            _help_text_row(words, 2 * k, w, text, cmap)
+            for c in range(w):
+                i = (2 * k + 1) * w + c
+                if words[i] & 0x3FF == HELP_LINE_MARK:
+                    words[i] = (words[i] & 0xFC00) | HELP_LINE
+    else:
+        w, lines = 22, HELP_NOTES[name]
+        if len(lines) > 4 or (len(lines) == 4 and len(lines[3]) > HELP_LAST_LINE):
+            raise ValueError("help notes %s: more than 4 lines, or the 4th runs into PUSH KEY" % name)
+        for r in range(8):
+            _help_text_row(words, r, w, lines[r // 2] if r % 2 and r // 2 < len(lines) else "", cmap)
+    if len(words) % w:
+        raise ValueError("help map %s: %d words is not %d wide" % (name, len(words), w))
+    return struct.pack("<%dH" % len(words), *words)
+
+
+def redraw_help_panel(data, parts_old, parts_new):
+    """Replace each part (old map -> new map, widths from the part kind) where its old content sits in the panel:
+    matched on the part's non-blank cells, written only over the panel's blank and kana cells (the status page
+    has PUSH KEY on the notes' last row)."""
+    words = _help_words(data)
+
+    def text_cell(t):
+        return t in (HELP_BLANK, HELP_LINE) or (0x4D <= t <= HELP_LINE_MARK and t not in range(0x8B, 0x90))
+
+    for name, old, new in zip(HELP_PANEL_PARTS, parts_old, parts_new):
+        w = 8 if name in HELP_TITLES else 7 if name in HELP_LABELS else 22
+        o, n = _help_words(old), _help_words(new)
+        h = len(o) // w
+        need = [(y, x) for y in range(h) for x in range(w)      # the panel drops one ゛ the notes block has
+                if o[y * w + x] & 0x3FF not in (HELP_BLANK, 0x7E, 0x7F)]
+        hits = [(r, c) for r in range(len(words) // 32 - h + 1) for c in range(32 - w + 1)
+                if all(words[(r + y) * 32 + c + x] & 0x3FF == o[y * w + x] & 0x3FF for y, x in need)]
+        if len(hits) != 1:
+            raise ValueError("help panel: part %s found %d times" % (name, len(hits)))
+        r, c = hits[0]
+        for y in range(h):
+            for x in range(w):
+                i = (r + y) * 32 + c + x
+                if text_cell(words[i] & 0x3FF):
+                    words[i] = (words[i] & 0xFC00) | (n[y * w + x] & 0x3FF)
+                elif n[y * w + x] & 0x3FF != HELP_BLANK:
+                    raise ValueError("help panel: %s text over a non-text cell at row %d col %d" % (name, r + y, c + x))
+    return struct.pack("<%dH" % len(words), *words)
+
+
+def apply_help(gfxdir):
+    gfxdir = Path(gfxdir)
+    p = gfxdir / HELP_FONT
+    p.write_bytes(redraw_help_font(p.read_bytes()))
+    old = {}
+    for name in [*HELP_TITLES, *HELP_LABELS, *HELP_NOTES]:
+        p = gfxdir / name
+        old[name] = p.read_bytes()
+        p.write_bytes(redraw_help_map(name, old[name]))
+    p = gfxdir / HELP_PANEL
+    p.write_bytes(redraw_help_panel(p.read_bytes(), [old[n] for n in HELP_PANEL_PARTS],
+                                    [(gfxdir / n).read_bytes() for n in HELP_PANEL_PARTS]))
+
+
+# --- G8/T7 New Game prologue (mode 0A): font C8:D140 (2bpp, $F00 bytes -> BG3 tiles 0-$EF at VRAM $6000) and map
+# C8:D861 (32x32, words $20tt). Five bands of 4 tile rows from row 4: furigana on the first two, text (16 px) on the
+# last two, x 32 to the line's end. The whole map is on screen from the start; an HDMA window on BG3 reveals each
+# band left to right up to where its Japanese ended (x 224 for lines 1-4, x 168 for line 5), so an English line
+# must end by then. Colour 3 is the text, colour 1 the highlighted names (山童, 鬼).
+PRO_FONT, PRO_MAP = "08D140.bin", "08D861.bin"
+PRO_LINES = [         # (text, highlighted words)
+    ("Long ago there lived a people", []),
+    ("called the Yamawaro, whom the", ["Yamawaro"]),
+    ("villagers named oni. Despised,", ["oni"]),
+    ("they made their living by spells,", []),
+    ("roaming the provinces...", []),
+]
+PRO_END = [224, 224, 224, 224, 168]
+PRO_LEFT, PRO_TEXT, PRO_HI, PRO_BLANK = 32, 3, 1, 0x2000
+
+
+def prologue(font, pmap):
+    px = [[0] * 256 for _ in range(256)]
+    for k, ((text, hi), end) in enumerate(zip(PRO_LINES, PRO_END)):
+        lw, gl = line_ink(text, "dialogue")
+        if PRO_LEFT + lw > end:
+            raise ValueError("prologue line %d: ends at x %d, revealed only to %d" % (k + 1, PRO_LEFT + lw, end))
+        adv = font_en.glyphs(False)
+        pen = [0]
+        for ch in text:
+            pen.append(pen[-1] + adv[ord(ch) - font_en.FIRST][1])
+        spans = [(pen[text.index(w)], pen[text.index(w) + len(w)]) for w in hi]
+        top = 8 * (4 * k + 6)
+        for x, y in gl:
+            colour = PRO_HI if any(a <= x < b for a, b in spans) else PRO_TEXT
+            px[top + y][PRO_LEFT + x] = colour
+    tiles, index = [bytes(16)], {bytes(16): 0}
+    words = []
+    for r in range(32):
+        for c in range(32):
+            data = tile_bytes([px[8 * r + y][8 * c:8 * c + 8] for y in range(8)])
+            if data not in index:
+                index[data] = len(tiles)
+                tiles.append(data)
+            words.append(PRO_BLANK | index[data])
+    if len(tiles) * 16 > len(font):
+        raise ValueError("prologue: %d tiles > %d" % (len(tiles), len(font) // 16))
+    out = b"".join(tiles)
+    return out + bytes(len(font) - len(out)), struct.pack("<1024H", *words)
+
+
+def apply_prologue(gfxdir):
+    gfxdir = Path(gfxdir)
+    font, pmap = prologue((gfxdir / PRO_FONT).read_bytes(), (gfxdir / PRO_MAP).read_bytes())
+    (gfxdir / PRO_FONT).write_bytes(font)
+    (gfxdir / PRO_MAP).write_bytes(pmap)
+
+
+EDITS = {CMD_BLOCK: redraw_cmd, GAMEOVER_BLOCK: redraw_gameover, FILE_BLOCK: redraw_file}
 
 
 def preview(out, zoom=4, gfxdir=ROOT / "work" / "unpack" / "gfx"):
