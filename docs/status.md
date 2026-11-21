@@ -2,23 +2,30 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 8. QA in the emulator: not started. Phase 7 met 2026-11-22: `build.py` green with English,
+- **Phase:** 8. QA in the emulator: in progress (graphics text). Phase 7 review fixes done 2026-11-22 (f9acb91):
+  `tools/centre.py` (D15) centres the Japanese-centred messages and pads renderer-2 popups to the window width
+  (this also fixed a see-through hole after short popup text); lint `blank_errors`; tests build their own ROMs
+  (`tests/conftest.py` `built_rom`); build.py deletes a ROM that fails romdiff. Review Minors left: #2 write log
+  for romdiff (`--writes`) + asar `assert read`s; #3 reader/branch-target scan as a standing test.
+  Phase 8 so far: small font + T1-T6 English (`tools/smallfont_en.py`, D16; `docs/re/graphics.md` §Phase 8
+  progress lists what is left). warp.lua now re-presses A when the file-select scroll stalls (mode 3 sub 4).
+  Last build `build/heian_en.sfc` sha1 e80b81037ed8 (2026-11-22). Phase 7 met 2026-11-22: `build.py` green with English,
   `lint.py --strict` 0 errors / 0 warnings / 0 untranslated (control codes matched; tilemaps linted), romdiff clean
   (build.py now fails on any byte outside `tools/romdiff_ranges.txt`; `tests/test_romdiff.py` builds en + marker),
   smoke ok, `warp_all.py --rom build/heian_en.sfc --out work/qa/en_warp` 135/135 scenes ok (sheets in
   `work/qa/en_warp_sheets/`: no overflow or garble seen in dialogue, menus, shop, status, squad screens).
   Phase 6 met except the independent review (D13): full Codex re-read of every batch due when its quota returns
   (2026-11-26), before the phase 9 story pass.
-  Last build: `build/heian_en.sfc` 2026-11-22 sha1 65ee69c609fe (2 MB, smoke ok); marker `build/heian_marker.sfc`
-  2026-11-22 sha1 6a70b2581615.
-- **Next (phase 8):** graphics text and visual QA. Japanese still on screen in the English warp shots (all in
-  `docs/re/graphics.md` except the first two; confirm their source first):
-  - portrait name plates (晴明, 広行, 商人, 道長 under dialogue portraits): text.md says plates use the table, but
-    the en build shows kanji; trace whether they are portrait art (CA raw) or a table string;
-  - はい/いいえ choice after "Read the help?" / "Save your progress?" (FB-ended prompts 229-22E);
-  - field command icons' kana tags (こうげき/じゅつ/しきがみ/たいき, G6), help panel (G7/T8), status kanji (T6),
-    New Game prologue (G8/T7), save/quit tilemaps T2-T5 (English in `script/tilemaps.tsv`, not inserted yet),
-    title logo (D5: stays Japanese).
+- **Next (phase 8):** graphics text, then the visual-QA gate (`qa_gate.py`), inkbox on choice/centred boxes, stress
+  saves, `textcover.py`. Japanese still on screen in the English warp shots:
+  - portrait name plates (晴明, 広行, 商人, 道長 under dialogue portraits, e.g. scene `title_slots`): text.md says
+    plates use the table, but the en build shows kanji; trace whether they are portrait art (CA raw) or a string;
+  - はい/いいえ choice after "Read the help?" / "Save your progress?" (FB-ended prompts 229-22E, scene
+    `battle_save_prompt`);
+  - battle command buttons (G6), help panels (G7/T8: own small kana font `C8:ABF2`, map `C8:AA6E`; the field
+    panel's map is not traced), New Game prologue (G8/T7), file select scroll (G3/G4), game over (G13), credits
+    and ending card (G9/G10/G14); title logo stays Japanese (D5).
+  - Small-font text is monospace (one 8-px cell per letter); "Messages" fills its 8 cells and touches the arrow.
   Chapter cards (`card_p*`) were shot mid-typing: shoot later frames when checking them. The place_banner shot is
   empty in the marker build too (shot before the text draws). Minors left for phase 9 are in `docs/polish.md`.
 - **Phase 6 record (2026-11-22):**

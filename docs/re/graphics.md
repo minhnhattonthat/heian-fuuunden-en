@@ -53,5 +53,13 @@ C7:1053/57A6/73D9, D2, D7:6C5D+, all type-2 blocks except those decoded above.
 - Overworld labels (紀伊の国 top right, 神楽部隊 bottom left): scene `overworld`; drawn with the dialogue font, source
   not traced yet (phase 4: confirm they come from the table).
 
+## Phase 8 progress
+- **Done (English in a zoomed cold-boot shot):** G5 small font (kana cells -> English letters, `tools/smallfont_en.py`),
+  T1 captions, T2 save menu, T3 options, T4/T5 maps (the quit/saved popups seen in `quit_nosave`/`save_message` are
+  dialogue rows 243/244), T6 status labels in all three status maps (D16).
+- **Left:** G3/G4 file select scroll, G6 battle command buttons, G7/T8 help panels (own small kana in `C8:ABF2`),
+  G8/T7 prologue font + map, G9/G10/G14 credits and ending card, G13 game-over card, portrait name plates (道長 etc.
+  under dialogue portraits: source not traced), はい/いいえ after 229 (battle_save_prompt; source not traced).
+
 ## Still open
 - G14 source; the T6 variants' screens; the field-menu help panel's map source (T8).

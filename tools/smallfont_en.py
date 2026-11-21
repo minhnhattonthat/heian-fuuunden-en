@@ -52,12 +52,81 @@ def tile_2bpp(rows8):
 
 
 def redraw_font(data):
-    """The font block with English glyphs in CELLS."""
+    """The font block with English glyphs in CELLS and the status labels in LABELS."""
     out = bytearray(data)
     for ch in CHARSET:
         t, rows = CELL[ch], glyph_rows(ch)
         out[t * 16:t * 16 + 16] = tile_2bpp(rows[:8])
         out[(t + 0x10) * 16:(t + 0x10) * 16 + 16] = tile_2bpp(rows[8:])
+    for top, bottom, text in LABELS:
+        px = label_pixels(text, 8 * len(top))
+        for k, (t, b) in enumerate(zip(top, bottom)):
+            out[t * 16:t * 16 + 16] = tile_4col([row[8 * k:8 * k + 8] for row in px[:8]])
+            out[b * 16:b * 16 + 16] = tile_4col([row[8 * k:8 * k + 8] for row in px[8:]])
+    return bytes(out)
+
+
+# Status-screen labels (graphics.md T6, decision D16): 16x16 kanji cells, ink 3 with a colour-1 shadow on paper 2,
+# as the kanji. (top tiles, bottom tiles, English). 体力 経験 装備 are two cells (32 px), the rest one (16 px).
+def _pair(t, below):
+    return [t, t + 1], [t + below, t + below + 1]
+
+
+LABELS = [
+    ([0xD0, 0xD1, 0xD2, 0xD3], [0xE0, 0xE1, 0xE2, 0xE3], "Vit."),   # 体力
+    ([0xD4, 0xD5, 0xD6, 0xD7], [0xE4, 0xE5, 0xE6, 0xE7], "Exp."),   # 経験
+    ([0xD8, 0xD9, 0xDA, 0xDB], [0xE8, 0xE9, 0xEA, 0xEB], "Equip"),  # 装備
+    (*_pair(0xDC, 0x10), "Atk"),                                    # 攻
+    (*_pair(0xDE, 0x10), "Def"),                                    # 防
+    (*_pair(0xF0, 2), "Skl"),                                       # 技
+    (*_pair(0xF4, 2), "Jut"),                                       # 術
+    (*_pair(0xF8, 2), "Spd"),                                       # 速
+]
+
+
+def label_pixels(text, width):
+    """16 rows x `width` colour indices: the dialogue-font text centred (letter gaps squeezed if it is too wide),
+    ink 3, shadow 1 right and below, paper 2."""
+    gl = [font_en.glyphs()[ord(c) - font_en.FIRST][0] for c in text]
+    cols = []                       # per letter: list of 16-bit column masks (bit y = row y)
+    for rows in gl:
+        ink = [x for x in range(8) if any(r & (0x80 >> x) for r in rows)]
+        cols.append([sum(1 << y for y in range(16) if rows[y] & (0x80 >> x)) for x in range(ink[0], ink[-1] + 1)]
+                    if ink else [0, 0, 0])
+    gaps = [1] * (len(cols) - 1)
+    total = lambda: sum(map(len, cols)) + sum(gaps) + 1    # noqa: E731 - + 1 for the shadow
+    k = 0
+    while total() > width and k < len(gaps):
+        gaps[k], k = 0, k + 1
+    if total() > width:
+        raise ValueError("label %r: %d px > %d" % (text, total(), width))
+    x = (width - total()) // 2
+    mask = [0] * width
+    for i, c in enumerate(cols):
+        for m in c:
+            mask[x] = m
+            x += 1
+        x += gaps[i] if i < len(gaps) else 0
+    px = [[PAPER] * width for _ in range(16)]
+    for x in range(width):
+        for y in range(16):
+            yy = y - 1                       # one row down: capitals on rows 4-12, descenders to 14
+            if 0 <= yy < 16 and mask[x] >> yy & 1:
+                px[y][x] = INK
+    for y in range(15, -1, -1):
+        for x in range(width - 1, -1, -1):
+            if px[y][x] == PAPER and ((x and px[y][x - 1] == INK) or (y and px[y - 1][x] == INK)):
+                px[y][x] = 1
+    return px
+
+
+def tile_4col(rows8):
+    """8 rows of 8 colour indices (0-3) -> 16 bytes of 2bpp."""
+    out = bytearray()
+    for row in rows8:
+        lo = sum(((c & 1) << (7 - x)) for x, c in enumerate(row))
+        hi = sum((((c >> 1) & 1) << (7 - x)) for x, c in enumerate(row))
+        out += bytes([lo, hi])
     return bytes(out)
 
 

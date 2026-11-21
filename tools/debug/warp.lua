@@ -79,10 +79,13 @@ L.on_frame(function(f)
       if stage == "cont" then press("down", 30) end
       L.press("a", 6); L.press("-", 60); busy = busy + 66
     elseif mode == 3 and sub == 5 then press("a", 60) -- slot 1
+    elseif mode == 3 and sub == 4 then -- scroll opening: if it sits here, the A was eaten (timing); press again
+      waited = waited + 1
+      if waited >= 120 then waited = 0; press("a", 60) end
     elseif mode == ARRIVE_MODE and stage == "cont" then
       field_frames = field_frames + 1
       if field_frames >= 90 then
-        stage = "arrived"; arrived = f
+        stage = "arrived"; arrived = f; waited = 0
         pokes(scene.ram, 0)
         for step in (scene.route or ""):gmatch("[^;]+") do steps[#steps + 1] = step:match("^%s*(.-)%s*$") end
         L.log(string.format("arrived f%d map %02X x %04X y %04X", f, rd(0x306132 + rd(0x306001) - 1),
