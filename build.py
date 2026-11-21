@@ -119,7 +119,14 @@ def build(mode="build", qa=None, path=None):
     if errs:
         path.unlink(missing_ok=True)       # never leave a ROM that failed the gate for QA to pick up
         raise SystemExit("romdiff: bytes changed outside tools/romdiff_ranges.txt:\n" + "\n".join(errs[:20]))
+    write_strings(path.with_name("strings.tsv"))
     return path, out, stats
+
+
+def write_strings(path):
+    """build/strings.tsv for textcover.py: one `id<TAB>key` per string id. tools/lua/textids.lua logs the id the
+    readers enter with (`TEXT <hex id>`), so the key is the id itself and stays valid across relocations."""
+    path.write_text("".join("%03X\t%X\n" % (i, i) for i in range(kss_text.COUNT)), encoding="utf-8")
 
 
 def allowed_ranges(path=RANGES):

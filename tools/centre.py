@@ -31,14 +31,17 @@ DIALOGUE = 176
 # id -> box px. Battle messages and the province card share the battle box (VWF buffer 176 px, centred in the
 # ~200-px frame: windows.md); 243 is the 112-px save popup.
 CENTRE = {
-    **{i: DIALOGUE for i in (0x1B9, 0x1C5, 0x227, 0x228, 0x229, 0x248, 0x249, 0x289, 0x28A, 0x293, 0x294, 0x296)},
+    **{i: DIALOGUE for i in (0x0B8, 0x1B9, 0x1C5, 0x227, 0x228, 0x229, 0x248, 0x249, 0x289, 0x28A, 0x293, 0x294, 0x296)},
     **{i: DIALOGUE for i in range(0x204, 0x226) if i != 0x210},
-    0x243: 112,
+    # 243: the save-menu popup at VRAM 7000 uploads 15 tiles in the Japanese (10 glyphs x 12 px), so its text area
+    # is 120 px (phase 8 inkbox, D21). 244 shares the window but its Japanese fills it from the left: not centred.
+    0x243: 120,
 }
 INDENT = {0x245, 0x246}
 # 28E yes/no (windows.md): the cursor sits at +10..16 and +58..64 px, so Yes starts at +24 and No at +72.
 FIXED = {0x28E: " " * 6 + "Yes" + " " * ((72 - 24 - font_en.text_px("Yes")) // SPACE_PX) + "No"}
 LINE = re.compile(r"(\{br\}|\{page\})")
+CTRL = re.compile(r"\{\w+\}")
 END = re.compile(r"(\{end2?\})+$")
 
 
@@ -90,8 +93,11 @@ def layout(row, rows):
         body = "".join(p if LINE.fullmatch(p) else centre_line(p, CENTRE[rid], typ, widest) for p in parts)
     if pop and "{" not in body:
         # renderer-2 popup: MenuEnd uploads only the tiles the text covers, so pad to the window width or the rest
-        # of the window shows through as a hole (the Japanese fills it with blanks)
-        return body + " " * ((pop[0] - font_en.text_px(body)) // SPACE_PX) + end
+        # of the window shows through as a hole (the Japanese fills it with blanks). Pad to whole tiles of the
+        # Japanese upload (12 px a glyph) when that is wider than the budget: 243/244 left one 8-px hole at 109 px.
+        jp_px = -(-len(CTRL.sub("", ends(row["jp"])[0])) * 12 // 8) * 8
+        want = max(pop[0], jp_px)
+        return body + " " * ((want - font_en.text_px(body)) // SPACE_PX) + end
     return body + (" " if trail else "") + end
 
 

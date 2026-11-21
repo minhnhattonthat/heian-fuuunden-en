@@ -13,7 +13,8 @@ Assembled by `build.py` with `tools/asar/asar.exe` (asar 1.91, github.com/RPGHac
 | `C1:7537` | `ADC #$02E1` | `ADC #$0430` | `{num}` digits as English codes |
 | `C1:73A5` | `LDA $C1F2F4,x` (glyph address) | `VwfMain`: code >= $400 -> VWF into `$7F:A000`, then the original upload at `C1:7491` | dialogue VWF |
 | `C1:75B8` | `LDA $C1F2F4,x` | `VwfMenu`: code >= $400 -> VWF into `[$20]`, back to `C1:7558`; `{small}` ($401) / `{sbr}` ($40A) switch to two 8-px lines | renderer 2 VWF |
-| `C1:7564` | upload size = glyph count x 12 px | `MenuEnd`: size from the VWF pixel width (small mode: the wider line; Japanese strings keep the old formula) | renderer 2 |
+| `C1:7564` | upload size = glyph count x 12 px | `MenuEnd`: size from the VWF pixel width (small mode: the wider line; Japanese strings keep the old formula); with `PADPX` set, `PadLabel` first paper-fills whole tiles up to it | renderer 2 |
+| `C1:4FF3`, `C1:5018` | `JSL $C1753B` (overworld squad / province label, VRAM 6B00 / 6B30) | `JSL LabelName`: `PADPX` = 48 around the call, so all 6 label tiles are drawn and uploaded | a short name ("Kii") left stale tiles or a see-through hole in the label (phase 8, D21) |
 
 ## Party list (verified: `work/qa/party/menu_items`, `menu_squad`, `menu_status`)
 | Site | Original | New |

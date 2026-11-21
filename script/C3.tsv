@@ -168,7 +168,7 @@ id	kind	jp	en	max	notes
 0B1+0B5	text	　賊	Brigand	48 field	
 0B6	text	　巫女	Shrine Maiden	48 field	
 0B7	text	八十物部	Yaso Mononobe	48 field	
-0B8	text	　　　説明を見ますか？{end2}	Read the help?{end2}	48 field	
+0B8	text	　　　説明を見ますか？{end2}	            Read the help?{end2}	176/160 x3	
 0B9+0BA+0BB+0BC+0BD+0BE+0BF+0C0+0C1+0C2+0C3	text	　神楽	Kagura	48 field	
 0C4	text	安部晴明	Abe no Seimei	48 field	
 0C5	text	賀茂広行	Kamo no Hiroyuki	48 field	
@@ -537,8 +537,8 @@ id	kind	jp	en	max	notes
 240	text	えれえ　気前のいい人だねえ{br}まいった、あんたにゃあ{br}これをやるよ。	Well, ain't you generous!{br}You got me. Here, this{br}one's yours.	176/160 x3	
 241	text	と思ったけど、それ以上は{br}もてそうにないな、わるいけど{br}あきらめな。	Then again, looks like you{br}can't carry any more. Sorry,{br}but forget it.	176/160 x3	
 242	text	薬がほしいなら　いつでも{br}きがるにこえを　かけてくれ{br}よな。　まってるぜ。	Whenever ya want medicine,{br}just give me a holler.{br}I'll be waitin'.	176/160 x3	
-243	text	　きろくしました。　	         Saved.          	112 popup	
-244	text	おつかれさまでした。	Thanks for playing!  	112 popup	
+243	text	　きろくしました。　	          Saved.           	120 popup	
+244	text	おつかれさまでした。	Thanks for playing!    	120 popup	
 245	text	　よろしいですか？　	    Is that all right? 	176/160 x3	
 246	text	　では、さようなら。	    Well then, farewell.	176/160 x3	
 247	text	術をかけるあいてがいません	No one to cast jutsu on.	176/160 x3	

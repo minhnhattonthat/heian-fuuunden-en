@@ -14,6 +14,8 @@ NARROW = $0402          ; {narrow}: like {small}, in the narrow 8-px font (3-px 
 PARTY = $7E1CF0         ; 1 while PartyName draws a party-list name
 NARROWF = $7E1CF2       ; 1 after {narrow} in the current renderer-2 string (MenuPtr clears it)
 PARTY_PX = 40           ; party-list slot: 5 tiles on one 8-px row (tools/gfx_edits.py)
+PADPX = $7E1CF4         ; renderer 2: when non-zero, MenuEnd paper-fills whole tiles up to this x (LabelName)
+LABEL_PX = 48           ; overworld squad/province label: 6 tiles (the Japanese uploads 4 glyphs x 12 px)
 
 ; ---- party list: 8 slots of 5 tiles (was 3), names in the narrow font on one row --------------------------
 org $C12C04             ; JSL $C1753B (party panel, all 8 slots)
@@ -59,6 +61,12 @@ org $C175B8             ; LDA $C1F2F4,x (renderer 2 glyph lookup); X = code*2
     jml VwfMenu
 org $C17564             ; renderer 2 upload size from the glyph count -> from the VWF pixel width
     jml MenuEnd
+
+; ---- overworld labels: squad name (VRAM 6B00) and province (6B30), 6 tiles each; pad short English to all 6 ----
+org $C14FF3             ; JSL $C1753B (squad label)
+    jsl LabelName
+org $C15018             ; JSL $C1753B (province label)
+    jsl LabelName
 
 org $DF0000
 TextPtr:
@@ -340,6 +348,7 @@ MenuEnd:
     bcs .big
     lda $04
 .big:
+    jsr PadLabel
     clc
     adc #$0007
     lsr
@@ -384,6 +393,58 @@ MenuEnd:
     stz $1416
     stz $1426
     rtl
+
+; Overworld labels (C1:4FF3 squad, C1:5018 province): renderer 2 with PADPX = LABEL_PX, so MenuEnd fills and
+; uploads all 6 tiles. Without it a short name ("Kii") uploads 2 tiles and the rest of the label shows stale tiles
+; from an earlier string or a see-through hole (phase 8, scene overworld / battle_win_overworld).
+LabelName:
+    pha
+    lda.w #LABEL_PX
+    sta.l PADPX
+    pla
+    jsl $C1753B
+    lda #$0000
+    sta.l PADPX
+    rtl
+
+; MenuEnd helper: A = drawn px -> A = px to upload. With PADPX set and wider than the text, draws a space at the
+; left edge of every whole tile from the text's end to PADPX: a glyph at s = 0 stores its tile (both half-rows),
+; so each is paper over stale pixels.
+PadLabel:
+    pha
+    lda.l PADPX
+    beq .keep
+    cmp $01,s
+    beq .keep
+    bcc .keep
+    lda $01,s
+    clc
+    adc #$0007
+    and #$FFF8
+.tile:
+    cmp.l PADPX
+    bcs .done
+    sta $1426
+    lda $20
+    sta $00
+    lda $22
+    sta $02
+    lda #$0400
+    sta $04
+    lda #$0000                  ; glyph 0 = space (code $420)
+    jsr VwfDraw
+    lda $1426
+    clc
+    adc #$0007
+    and #$FFF8
+    bra .tile
+.done:
+    pla
+    lda.l PADPX
+    rts
+.keep:
+    pla
+    rts
 
 ; Draw English glyph A at pixel x = $1426 into the line at [$00] (tile 0, top half); $04 = offset of the bottom
 ; half-row. Ink = colour 3 (bp0 set), paper = colour 2 (bp1 set). Then $1426 += advance.

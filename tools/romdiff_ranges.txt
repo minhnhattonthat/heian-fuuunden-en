@@ -9,6 +9,8 @@
 013327-01332A   jsl PartyName (slots redrawn after an exchange)
 013360-013361   dw $0050
 01364D-013666   place/port banner centring offsets, 0x1A entries (insert.BANNERS)
+014FF3-014FF6   jsl LabelName (overworld squad label)
+015018-01501B   jsl LabelName (overworld province label)
 016011-016014   jsl PartyName (squad formation slot)
 016869-01687E   map-exit banner centring offsets, 0x16 entries (insert.BANNERS)
 017270-017273   jml TextPtr (dialogue reader)

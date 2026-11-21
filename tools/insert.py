@@ -33,7 +33,8 @@ BREAKS = ("{br}", "{page}", "{end2}")
 # (asm/main.asm VwfMenu small mode). A string shown in several fields takes the smallest.
 FIELD_PX = 48
 FIELDS = [   # (first id, last id, px)
-    (0x001, 0x0FE, 48),    # items, equipment, names: item grid / status (6 tiles; C1:2D13, C1:29D9)
+    (0x001, 0x0B7, 48),    # items, equipment, names: item grid / status (6 tiles; C1:2D13, C1:29D9)
+    (0x0B9, 0x0FE, 48),    # (0B8 between them is the battle help prompt, a dialogue-box message)
     (0x13C, 0x1B8, 48),    # jutsu / shikigami lists, squad label (6-8 tiles; C5:0D03.., C5:226F.., C1:4FF3)
     (0x24A, 0x288, 48),    # provinces: overworld label (6 tiles; C1:5018), title slot list (C0:93CA)
     (0x101, 0x111, 48),    # places: title slot list (6 tiles; C0:93A1) < place banner (72 px; C1:3667)

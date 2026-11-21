@@ -35,8 +35,10 @@ KEEP = ROOT / "script" / "keep_jp.txt"
 LINE_PX, LAST_PX, LINES = 176, 160, 3
 # (first id, last id, px, state): single-line renderer-2 popups (windows.md)
 POPUPS = [
-    (0x28B, 0x28B, 112, "measured"), (0x243, 0x243, 112, "measured"),
-    (0x244, 0x244, 112, "measured"),
+    (0x28B, 0x28B, 112, "measured"),
+    # 243/244: the save-menu window shows 15 tiles (the Japanese uploads 10 x 12 px); a 109-px pad left tile 15 as a
+    # see-through hole (phase 8, work/qa/qa_pad, D21)
+    (0x243, 0x243, 120, "measured"), (0x244, 0x244, 120, "measured"),
     (0x1C8, 0x1C9, 128, "measured"),
     (0x28D, 0x28E, 112, "measured"),
 ]
