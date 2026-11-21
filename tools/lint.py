@@ -12,7 +12,8 @@ Budgets (px = English VWF pixels, tools/font_en.text_px):
 - party names (insert.PARTY_IDS): insert.party_fits (40 px, narrow font, letters only).
 - popups (POPUPS): one line of the window's width.
 Plus: control codes other than line/page breaks match the Japanese as a multiset; text encodes with tbl/en.tbl; no
-Japanese left in `en`; no ordinal suffix glued to a variable; no stub last line (< 6 chars) in a multi-line page.
+Japanese left in `en`; no ordinal suffix glued to a variable; no stub last line (< 6 chars) in a multi-line page;
+leading/trailing blanks kept where the Japanese has them, centred rows match tools/centre.py (blank_errors, D15).
 - tilemap text (script/tilemaps.tsv, check_tilemap): one 8-px cell per character within the `max` cell budget.
 Warnings (printed, not errors): a page that ends mid-clause before a `{page}` (page_warnings; PAGE_WAIVED skips).
 """
@@ -22,6 +23,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import centre  # noqa: E402
 import font_en  # noqa: E402
 import insert  # noqa: E402
 import kss_script  # noqa: E402
@@ -171,6 +173,25 @@ def page_warnings(en):
             if a and b and (a[-1] in ",;" or a[-1].isalpha()) and b[0].islower()]
 
 
+def blank_errors(row, rows):
+    """Leading/trailing blanks (pipeline §Checks): a centred, indented or fixed layout row (tools/centre.py, D15)
+    must match its computed layout; any other non-field row keeps a leading/trailing blank where the Japanese has
+    one (a leading `{br}`, an empty first line, counts as a leading blank). Field rows are exempt: fit_field lays
+    them out."""
+    if insert.is_field(row) or row["kind"] == "data":
+        return []
+    want = centre.layout(row, rows)
+    if want is not None:
+        return [] if want == row["en"] else ["layout %r != %r (run tools/centre.py)" % (row["en"], want)]
+    jp, en = centre.ends(row["jp"])[0], centre.ends(row["en"])[0]
+    err = []
+    if jp[:1] in tuple(centre.BLANKS) and not (en[:1] == " " or en.startswith("{br}")):
+        err.append("Japanese starts with a blank, English does not (add the row to tools/centre.py)")
+    if jp[-1:] in tuple(centre.BLANKS) and en[-1:] != " ":
+        err.append("Japanese ends with a blank, English does not")
+    return err
+
+
 def run(strict=False, write_max=False, script_dir=None, warnings=None):
     """(errors, untranslated count); errors = ["<file> <id>: <message>"]. Page-break warnings go to `warnings`."""
     script = kss_script.load_script(script_dir or kss_script.SCRIPT)
@@ -202,7 +223,7 @@ def run(strict=False, write_max=False, script_dir=None, warnings=None):
                         errors.append("%s %s: untranslated" % (bank, r["id"]))
                 continue
             rpx = name_px(rows, r) if "{name}" in r["en"] else npx
-            errors += ["%s %s: %s" % (bank, r["id"], e) for e in check_row(r, rpx, en_t)]
+            errors += ["%s %s: %s" % (bank, r["id"], e) for e in check_row(r, rpx, en_t) + blank_errors(r, rows)]
             if warnings is not None and r["id"] not in PAGE_WAIVED:
                 warnings += ["%s %s: %s" % (bank, r["id"], w) for w in page_warnings(r["en"])]
         if write_max:

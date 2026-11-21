@@ -70,6 +70,18 @@ def test_tilemap_cells():
     assert lint.check_tilemap(tile("記録", "9 cells"))                             # Japanese left
 
 
+def test_blanks():
+    # D15: a Japanese leading/trailing blank needs one in the English; centred rows must match tools/centre.py
+    assert lint.blank_errors(row("300", "　あ", "Words"), [])                       # indent dropped
+    assert lint.blank_errors(row("300", "　あ", " Words"), []) == []
+    assert lint.blank_errors(row("300", "あ　{end2}", "Words{end2}"), [])          # trailing blank dropped
+    assert lint.blank_errors(row("300", "あ　{end2}", "Words {end2}"), []) == []
+    assert lint.blank_errors(row("300", "　　{br}あ", "{br}Words"), []) == []  # blank first line
+    assert lint.blank_errors(row("206", "　　　体力", "Vitality rose!"), [])  # not centred
+    assert lint.blank_errors(row("206", "　　　体力", " " * 13 + "Vitality rose!"), []) == []
+    assert lint.blank_errors(row("001", "　小刀", "Short Sword"), []) == []        # field: fit_field lays out
+
+
 def test_page_break_warnings():
     assert lint.page_warnings("We do our best,{page}but the Kebiishi fail.")
     assert lint.page_warnings("I will tell you now...{page}Fifteen years ago.") == []

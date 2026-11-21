@@ -130,16 +130,16 @@ def test_font_table_agree():
         assert any(narrow[ord(ch) - 0x20][0]), "narrow font has no %r" % ch
 
 
-def test_hooks_assembled():
-    built = ROOT / "build" / "heian_marker.sfc"
-    if not built.exists():
-        pytest.skip("no marker build")
-    d = built.read_bytes()
+def test_hooks_assembled(built_rom):
+    d = built_rom("marker")                               # built from the current sources (tests/conftest.py)
     for addr in (0x17270, 0x174F1, 0x1754D, 0x173A5, 0x175B8, 0x17564):
         assert d[addr] == 0x5C and d[addr + 3] == 0xDF, hex(addr)  # JML $DFxxxx
     assert d[0x17537:0x1753A] == bytes([0x69, 0x30, 0x04])
-    for addr in (0x12C04, 0x132AE, 0x13327):              # party list -> PartyName (JSL $DFxxxx)
+    for addr in (0x12C04, 0x132AE, 0x13327, 0x16011):     # party list, squad panels, name slot -> PartyName
         assert d[addr] == 0x22 and d[addr + 3] == 0xDF, hex(addr)
+        assert d[addr + 1:addr + 4] == d[0x12C05:0x12C08], hex(addr)   # all the same JSL target
+    for addr in (0x12C0D, 0x132B7, 0x13360):              # buffer step per slot: dw $0050
+        assert d[addr:addr + 2] == bytes([0x50, 0x00]), hex(addr)
     assert d[0x1A3CB:0x1A3CF] == bytes([0x00, 0x72, 0x28, 0x72])   # 5-tile slots
 
 

@@ -16,8 +16,8 @@ pytestmark = pytest.mark.skipif(not (build.ROM.exists() and build.ASAR.exists())
 
 
 @pytest.mark.parametrize("mode", ["build", "marker"])
-def test_build_writes_only_allowed_ranges(tmp_path, mode):
-    _, out, _ = build.build(mode, path=tmp_path / ("%s.sfc" % mode))   # build() itself fails on a romdiff error
+def test_build_writes_only_allowed_ranges(built_rom, mode):
+    out = built_rom(mode)                                    # build() itself fails on a romdiff error
     assert build.romdiff_errors(build.ROM.read_bytes(), out) == []
 
 

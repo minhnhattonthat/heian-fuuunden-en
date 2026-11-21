@@ -8,7 +8,8 @@
 
 Steps (docs/re/text.md, docs/re/compression.md):
   1. check the dump against rom.sha1;
-  2. dialogue banks C3/C6 + pointer table: tools/kss_text.py (no English yet: phase 4-7);
+  2. dialogue banks C3/C6: tools/kss_text.py repack, then tools/insert.py: English (or marker) strings relocated
+     to $D8-$DE with 24-bit PTRS, banner offsets; asm/main.asm (asar) hooks the readers and the VWF;
   3. compressed graphics/tilemap blocks in gfx/blocks.tsv: tools/gfx_blocks.py; build/marker apply
      tools/gfx_edits.py after the 2 MB expansion (party-list tilemaps; a block that grows moves to $DF:8000+);
   4. header checksum (mirrored sum for 1.5 MB);
@@ -103,6 +104,7 @@ def build(mode="build", qa=None, path=None):
     path.write_bytes(out)
     errs = romdiff_errors(rom, out)
     if errs:
+        path.unlink(missing_ok=True)       # never leave a ROM that failed the gate for QA to pick up
         raise SystemExit("romdiff: bytes changed outside tools/romdiff_ranges.txt:\n" + "\n".join(errs[:20]))
     return path, out, stats
 
