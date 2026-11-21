@@ -32,9 +32,7 @@ POPUPS = [
     (0x28B, 0x28B, 112, "measured"), (0x243, 0x243, 112, "measured"),
     (0x244, 0x244, 112, "measured"),
     (0x1C8, 0x1C9, 128, "measured"),
-    (0x28D, 0x28E, 112, "guess: confirm prompt C5:A4B5, VRAM 7800/7900"),
-    (0x0FF, 0x0FF, 48, "guess: label C0:D938, VRAM 6700"),
-    (0x203, 0x203, 48, "guess: label C5:183B, VRAM 6D40"),
+    (0x28D, 0x28E, 112, "measured"),
 ]
 BREAKS = {"{br}", "{page}"}
 LAYOUT = {"{small}", "{sbr}", "{narrow}"}

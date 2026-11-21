@@ -39,6 +39,8 @@ FIELDS = [   # (first id, last id, px)
     (0x101, 0x111, 48),    # places: title slot list (6 tiles; C0:93A1) < place banner (72 px; C1:3667)
     (0x1BD, 0x1C4, 48),    # ports: same two screens as the places (id = place + $AB)
     (0x115, 0x12C, 72),    # map-exit banner (9 tiles from VRAM 6910, x 88-160; C1:687F)
+    (0x0FF, 0x0FF, 24),    # shop label 価値 under each panel (3 tiles from VRAM 6700, x 64-88; C0:D938)
+    (0x203, 0x203, 24),    # battle 音楽 window title (3 tiles from VRAM 6D40, x 144-168; C5:183B, C5:1AE2)
 ]
 # The place and exit banners (window C8:A28E, text from VRAM 6910 = x 88, 9 tiles = 72 px) centre each name by a
 # per-entry tile offset. The build rewrites it for every entry whose string it replaces: (table file offset,

@@ -14,6 +14,10 @@ pixels in emulator shots, not from the Japanese length. px = English VWF pixels 
 | Menu popup (id 28B in items/shikigami, id 243 save message) | renderer 2 (`C0:A93A`, VRAM 7000) | 112 px (14 tiles) | 1 | measured: `marker_warp/menu_items`, `save_message` (`n` after "brow" cut at x 112) |
 | Quit popup (id 244, save menu このままおわる) | renderer 2 `C0:AF62`, VRAM 7000 (as 243) | 112 px | 1 | measured: `marker_warp/quit_nosave` ("[244] The quick brown" cut like 243) |
 | Item-menu two-line popup (1C8 inventory full over 1C9 can't equip, both drawn by step `$3A=12`, `C0:A8CB`) | renderer 2 `C0:A8DE`/`A8F5`, VRAM 7E00/7F00, window `C1:1699` #0D | **128 px** (16 tiles) per line | 2 (one id each) | measured: `marker_warp/item_full` (scene pokes `$3A=12` in the item menu; "[1C9] The quick brown f" whole = 125 px, the `o` at 126+ cut; ink x 66-190, frame at 196) |
+| Squad confirm popup (28D これでいいですか？ over 28E はい/いいえ; event command 0 step $1F `C5:A4A2`, window #12 at step $20) | renderer 2 `C5:A4B5`/`A4CC`, VRAM 7800/7900 | **112 px** per line | 2 (one id each) | measured: `marker_warp/confirm_prompt` (scene `confirm_prompt`; "[28D] The quick brow" ink x 74-183, cut at 184; frame x 66-189 = window #12, 16 tiles). 28E is a choice line: the BG cursor (`C5:FB6E`, `$1228`) sits at about +8..16 px and +58..64 px from the line start; the Japanese puts はい at +24 and いいえ at +72 (original shot `work/qa/probe/p28jp`), so English keeps Yes at +24 and No at +72 px (row note) |
+| Shop label 価値 (id FF) under both panels, value digits to its right | renderer 2 `C0:D938` (mode 0C sub 3), VRAM 6700 | **24 px** (3 tiles, x 64-88 / 168-192) | 1 big or 2 small | measured: `marker_warp/shop` (scene `shop`: `$122E=1` poked after sub 0 loads the shop; JP marker "[0FF" ink x 66-86, `]` cut at 88; small marker's 2nd line "he q" whole); digits start at x 113 |
+| Battle music window title 音楽 (id 203; battle menu state `$1516=6`, also state 7) | renderer 2 `C5:183B`, `C5:1AE2`, VRAM 6D40 | **24 px** (3 tiles, x 144-168; window x 130-181) | 1 big or 2 small | measured: `marker_warp/battle_music` (scene pokes `$1516=6,$1518=0` at the command column; "[203" ink x 146-166, cut at 168) |
+| Squad formation screen names (ids 054-083, 100 = empty slot; event command 0 steps $10-$18, `C1:5FBC`) | renderer 2 `C1:6011`, VRAM table `C1:E6CE` (slots $18 words apart: 7200/7218/7230/7248, 7400.., 7500..) | **24 px (3 tiles) of 16-px text** in the original; slot pitch 56 px on screen | 1 | measured: original `work/qa/probe/psqjp` (神楽 x 40-64 under its Lv); marker `marker_warp/squad_form` shows the D11 problem again (one-row names cut). Needs the party-list remedy (D11: narrow font, wider slots) before party names are translated; see Not measured yet |
 | Item grid (ids 001-053 + 000 blank) | renderer 2 `C1:2D13`, VRAM 7600/7650/7700.. | 48 px (6 tiles) | 1 big or 2 small | measured: `stress_small/menu_items` (`--qa 000=...`: "0123456" / "abcdefg" in 8 px show whole, 48 px) |
 | Status screen class / name / equipment (0F3.., 0B9-0F2, items) | renderer 2 `C1:29D9`, VRAM 7000/7050/7100/7150 | 48 px (6 tiles) | 1 big or 2 small | measured: `marker_warp/menu_status` (small two-line markers whole) |
 | Party list names under the portraits (ids 054-083) | renderer 2 via `PartyName` (callers `C1:2C04`, `C1:32AE`, `C1:3327`), VRAM table `C1:A3CB` (`C1:A3DB` = +$200 when `$10CC`) | **40 px (5 tiles), narrow 8-px font, always** | 1 | measured: `work/qa/party/menu_items`, `menu_squad`, `menu_status` (`build.py marker --qa 054=Sadamitsu --qa 100=Yasumasa`: all 8 slots whole). Room per slot: x 32-71 (own portrait ends x 32, next starts x 72). Original: 3 tiles (24 px) of 16-px text; widened in the engine (D11, hooks.md §Party list) |
@@ -49,25 +53,25 @@ draws `{sbr}` as a space, so `{name}` in dialogue reads normally (verified: `mar
   `insert.FIELDS` / `tools/lint.py POPUPS`; "(guess)" in the `max` column until shot.
   | Caller | id | VRAM | Budget |
   |---|---|---|---|
-  | `C1:6011` | `$101E` + $54 (party names) | table `C1:E6CE` | 48 field (names fall back to `{narrow}`); screen unknown, shoot it |
+  | `C1:6011` | `$101E` + $54 (party names) | table `C1:E6CE` | squad formation screen (shot, table above): 3 tiles, needs the D11 remedy |
   | `C1:2E0E` / `C1:57C0` | + $13F jutsu / + $181 shikigami | table `C1:A3EB` | 48 field (guess) |
   | `C5:1281` / `C5:206A` | `$09EE,x` + $C2 or $12D / + $53 | 6E00 / 6D40 | ids in 001-0FE: 48 field |
   | `C5:12FF`, `C5:132A` | `C1:8785` + $1A7 (shikigami) | 6E40 / 6F00 | 48 field |
   | `C5:0064` / `0093` | fixed 101 / 102-103 | 6D40 / 6E00 | place names: 48 field |
-  | `C5:A4B5` / `A4CC` | fixed 28D / 28E (confirm, yes/no) | 7800 / 7900 | 112 popup (guess; same 0x100-word line slots as 1C8/1C9, so the buffer is 128) |
-  | `C0:D938` / `C5:183B`,`1AE2` | fixed FF (価値) / 203 (音楽) | 6700 / 6D40 | 48 (guess) |
+  | `C5:A4B5` / `A4CC` | fixed 28D / 28E (confirm, yes/no) | 7800 / 7900 | 112 popup (measured, table above) |
+  | `C0:D938` / `C5:183B`,`1AE2` | fixed FF (価値) / 203 (音楽) | 6700 / 6D40 | 24 field each (measured, table above) |
 
-  Triggers found so far (2026-11-22, probes in `work/qa/probe/`):
-  - 28D/28E: event-command interpreter `C5:99E4` (run by mode 0A prologue and mode 0B; command `$1244`, table
-    `C5:9A07`; command 0 = `C5:9C29`, a script at `[$12A6]` in bank C1, step `$129E`, table `C5:9C31`). Step $18
-    (`C5:A156`) is a squad pick (L/R cycles `$12C2` over 4 units, A/B advance); **Start jumps to step $1F** =
-    the confirm prompt; $20 opens window #12. Poking `$1242=1,$1244=0,$129E=1F` in the field renders both strings
-    (r2log) but no window shows. Not reached in the opening (mode 0A, mashed to the field, with `execpoke` forcing
-    Start at `C5:A156`): find the event script that uses step $18.
-  - FF 価値: mode 0C (`C0:D7A7`, sub table `C0:D7AE`) is the **shop** (`$122E = $1446` shop type; 0 = medicine
-    seller 28C, merchant 商人 portrait); sub 3 (`C0:D8ED`) draws 価値. Forcing `$34=0C,$36=0` from the field shows
-    the merchant's dialogue, then sub $12 without sub 3: needs a real shop NPC (or the shop setup at sub 0/1).
-  - 203 音楽: `C5:1801` state machine on `$1518` (no direct JSL; dispatched indirectly). Unknown screen.
+  Triggers (2026-11-22, probes in `work/qa/probe/`; `tools/lua/steplog.lua` logs `$1244`/`$129E`/`$12A6`):
+  - Event interpreter `C5:99E4` runs only from **mode 0A sub $0D** (`C0:E9B5`; mode table `C0:833F` entry 0B is a
+    bare RTS, so poking `$34=0B` freezes). Command `$1244` (table `C5:9A07`); command 0 = `C5:9C29`, script at
+    `[$12A6]` in bank C1 (set by `C0:EBFB`), step `$129E` (table `C5:9C31`; steps 4-$0F read the script and show
+    dialogue, $10-$17 build the squad formation screen, $18 = pick, Start -> $1F confirm, $20 window #12).
+    Poking `$34=0A,$36=0D,$1244=0,$129E=10` from the field reaches it (scenes `squad_form`, `confirm_prompt`).
+  - FF 価値: mode 0C (`C0:D7A7`, sub table `C0:D7AE`) is the **shop**. Sub 0 copies the shop record from SRAM
+    `$30:608A` (`C5:8CEE`), so a poked `$1446` is overwritten: poke `$122E` (shop type; 0 = medicine seller 28C)
+    one frame after `$34=0C,$36=0` instead (scene `shop`). Sub 3 (`C0:D8ED`) draws 価値.
+  - 203 音楽: battle menu state `$1516` (jump table `C5:000A`): 6 = `C5:1801`, 7 = `C5:1AAA` both draw it; poke
+    `$1516=6,$1518=0` at the command column (scene `battle_music`). Which unit's command opens it is not mapped.
   - Mode 2 (`C0:8B34`, title idle ~f3380) is the history demo: ids 290-296, two lines over the city; the marker
     fills each line to the Japanese 14 glyphs so no cut is visible (dialogue renderer, linted at 176).
     Palace ids 297-2A5 are not in the demo, nor in New Game (mode 0A goes prologue -> 2A7 town).

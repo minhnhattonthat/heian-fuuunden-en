@@ -229,7 +229,7 @@ id	kind	jp	en	max	notes
 0FC	text	密教僧		48 field	
 0FD	text	　僧兵		48 field	
 0FE	text	　武士		48 field	
-0FF	text	価値		48 popup (guess)	
+0FF	text	価値		24 field	shop label under each panel (price column)
 100	text	　　		176/160 x3	
 101	text	京の都		48 field	
 102	text	安部野		48 field	
@@ -479,7 +479,7 @@ id	kind	jp	en	max	notes
 200	text	くっそぉ・・{br}死にたくねえ・・・。		176/160 x3	
 201	text	ちっ、目がかすんで{br}きやがった・・。		176/160 x3	
 202	text	やるな・・おぬし・・。{br}気に入ったぞ・・。		176/160 x3	
-203	text	音楽		48 popup (guess)	
+203	text	音楽		24 field	battle window title over the music list
 204	text	　　　{name}はれべるあっぷ		176/160 x3	
 205	text	　　　{name}のばんです		176/160 x3	
 206	text	　　　体力があがった		176/160 x3	
@@ -611,8 +611,8 @@ id	kind	jp	en	max	notes
 28A	text	　　{name}は攻撃を防いだ		176/160 x3	
 28B	text	道具がありません！		112 popup	
 28C	text	おれは、薬を売りながら諸国を{br}旅してる、しがねえ薬売りさ。{page}薬がほしいのなら　こうかん{br}できるものをもって来てくれ。		176/160 x3	
-28D	text	これでいいですか？		112 popup (guess)	
-28E	text	　　はい　　いいえ		112 popup (guess)	
+28D	text	これでいいですか？		112 popup	
+28E	text	　　はい　　いいえ		112 popup	yes/no line: the cursor sits at +10..16 px (option 1) and +58..64 px (option 2) from the line start; put Yes at +24 px and No at +72 px like the Japanese (spaces are 4 px)
 28F	text	きろく{num}が消えてしまいます。{br}よろしいのですか？{end2}		176/160 x3	
 290	text	・・・・永観二年（９８４）　{br}師貞親王即位　花山天皇と称す		176/160 x3	
 291	text	同年　大納言　藤原為光の娘　{br}祇子（女御祇子）入内す・・　		176/160 x3	
