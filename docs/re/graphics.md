@@ -23,6 +23,7 @@ and still need an in-game shot via the debug tool.
 | G11 | Tiny kanji strip in the last portrait slot | raw `CA:FE00`-ish (`work/qa/caend2.png`) | not seen in game | Probably unused; check if any portrait id reaches it (phase 2) |
 | G12 | Map screen (field menu icon 3) | - | `menu_tour.txt` | Shows no Japanese in the tour shot; re-check once place names are known |
 | G13 | Game-over 終 card (32×32-ish brush kanji over the burnt capital) | `C8:9BAF` LZ 4bpp 0x300 (24 tiles; decoded at mode 8 start, `work/qa/exp/m8dec`) | scene `game_over` | Redraw ("The End" / "Game Over"; decide in phase 5) |
+| G15 | Portrait name plates (神楽 … 道長, generic 男 娘 僧 …) under dialogue portraits | raw 2bpp, 94 × 0x80 at `C7:A1FF` (C5:1C6B: plate = table `C1:E78A` byte 0; BG3 tiles $340/$348) | scene `title_slots` | **Done**: `tools/plates.py` (D17) |
 | G14 | Ending 終 card after the staff roll (white kanji on black) | not traced yet (bank CB ending code; check G9/G10 cells) | scene `credits_end` | Same wording as G13 |
 
 ## Small-font tilemap text (text work, not art)
@@ -56,10 +57,11 @@ C7:1053/57A6/73D9, D2, D7:6C5D+, all type-2 blocks except those decoded above.
 ## Phase 8 progress
 - **Done (English in a zoomed cold-boot shot):** G5 small font (kana cells -> English letters, `tools/smallfont_en.py`),
   T1 captions, T2 save menu, T3 options, T4/T5 maps (the quit/saved popups seen in `quit_nosave`/`save_message` are
-  dialogue rows 243/244), T6 status labels in all three status maps (D16).
+  dialogue rows 243/244), T6 status labels in all three status maps (D16), G15 name plates (D17), the はい/いいえ box
+  after 229 (small-font map `C8:BBEE`, named by code `C5:265A`: `tilemaps.tsv` row yesno0; scenes
+  `battle_save_prompt`, `battle_save_no`).
 - **Left:** G3/G4 file select scroll, G6 battle command buttons, G7/T8 help panels (own small kana in `C8:ABF2`),
-  G8/T7 prologue font + map, G9/G10/G14 credits and ending card, G13 game-over card, portrait name plates (道長 etc.
-  under dialogue portraits: source not traced), はい/いいえ after 229 (battle_save_prompt; source not traced).
+  G8/T7 prologue font + map, G9/G10/G14 credits and ending card, G13 game-over card.
 
 ## Still open
 - G14 source; the T6 variants' screens; the field-menu help panel's map source (T8).

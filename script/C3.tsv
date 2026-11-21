@@ -87,7 +87,7 @@ id	kind	jp	en	max	notes
 059	text	紅葉	Momiji	40 narrow	
 05A	text	蝉丸	Semimaru	40 narrow	
 05B	text	卯月	Uzuki	40 narrow	
-05C	text	蘆太	Ashita	40 narrow	
+05C	text	蘆太	Tota	40 narrow	
 05D	text	桔梗	Kikyo	40 narrow	
 05E	text	楓　	Kaede	40 narrow	
 05F	text	葵　	Aoi	40 narrow	
@@ -177,7 +177,7 @@ id	kind	jp	en	max	notes
 0C8	text	　紅葉	Momiji	48 field	
 0C9	text	　蝉丸	Semimaru	48 field	
 0CA	text	　卯月	Uzuki	48 field	
-0CB	text	　蘆太	Ashita	48 field	
+0CB	text	　蘆太	Tota	48 field	
 0CC	text	　桔梗	Kikyo	48 field	
 0CD	text	　楓	Kaede	48 field	
 0CE	text	　葵	Aoi	48 field	
@@ -835,7 +835,7 @@ id	kind	jp	en	max	notes
 47D	text	どこにいたの？　さがしたわよ{br}神楽、でもよかった。{page}私もあなたたちといっしょに{br}行くから、よろしくね。	Where were you? I looked all{br}over for you, Kagura. But{br}I'm glad I found you.{page}I'm coming with you all,{br}so look after me, okay?	176/160 x3	
 47E	text	えっ？　姉ちゃんも？	What? You too, Sis?	176/160 x3	
 47F	text	宮司様から　お話があって、{br}私も　お供するようにって・{page}神楽はともかく　藤太が{br}いっしょじゃ、何するか{br}わからないもの。{page}だから　私があなたたちの{br}お目つけ役ってわけ・・{br}じゃあ　行きましょうか。	Chief Priest-sama told me{br}to go along with you.{page}Kagura's one thing, but with{br}Tota along, who knows what{br}might happen?{page}So I'm here to keep an eye{br}on you two... Well, shall{br}we go?	176/160 x3	
-480	text	神楽ーっ、蘆太ーっ{br}ちょっと待ってよーっ。	Kaguraaa! Ashitaaa!{br}Wait for meee!	176/160 x3	
+480	text	神楽ーっ、蘆太ーっ{br}ちょっと待ってよーっ。	Kaguraaa! Totaaa!{br}Wait for meee!	176/160 x3	
 481	text	姉ちゃんじゃないか？{br}どうしたんだよ。	Isn't that Sis?{br}What's going on?	176/160 x3	
 482	text	私も　神楽のお手伝いをする{br}ように　言われたの。{br}だから　いっしょに行くわ。	I've been told to help Kagura{br}too. So I'm coming with you.	176/160 x3	
 483	text	えーっ？　姉ちゃんも？	Whaaat? You too, Sis?	176/160 x3	

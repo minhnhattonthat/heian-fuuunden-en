@@ -47,7 +47,7 @@ Binding for every translator and reviewer. Agents propose additions in reports; 
 | 紅葉 | Momiji | | Togakushi | |
 | 蝉丸 | Semimaru | | biwa priest | |
 | 卯月 | Uzuki | | Ise Saigu priestess (斎宮卯月 = Saigu Uzuki) | |
-| 蘆太 | Ashita | | | |
+| 蘆太 | Tota | | same person as 藤太: font glyph 0x9B (tabled 蘆) is a variant 藤 (name 05C/0CB, line 480, name plate 8) | Ashita |
 | 桔梗 | Kikyo | | | |
 | 楓 | Kaede | | | |
 | 葵 | Aoi | | | |

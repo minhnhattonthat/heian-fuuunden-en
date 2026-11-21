@@ -29,6 +29,7 @@
 01F24C-01F24E   save menu map pointer (T2)
 05265B-05265C   Yes/No box map address, lo16 operand of LDA at C5:265A (gfx_blocks.RELOC_PTRS)
 052660-052660   Yes/No box map bank operand
+07A1FF-07D0FE   portrait name plates C7:A1FF, 94 x 0x80 raw (tools/plates.py, in place)
 0871C2-087359   small-font maps C8:71C2, 723A, 72B5, 72E0 (rewritten in place when they still fit)
 088954-0892E3   small font C8:8954 (smallfont_en; in place when it still fits)
 08939E-0895BB   party panel tilemaps C8:939E, C8:9450, C8:9506 (LZ blocks repacked in place, gfx_edits)

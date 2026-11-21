@@ -192,3 +192,15 @@ def test_small_font_tilemaps_written(built_rom):
             assert got[:smallfont_en.budget(row)].rstrip() == row["en"], row["id"]
             seen.add(row["id"])
     assert seen == {i for i, r in rows.items() if r["en"]}
+
+
+def test_name_plates(built_rom):
+    """Every portrait plate is English in the build (tools/plates.py): framed, ink inside the 30x15 inner area."""
+    import plates
+    d = built_rom("build")
+    assert len(plates.NAMES) == (0x7D07F - plates.BASE) // plates.PLATE + 1
+    for off, data in plates.writes():
+        assert d[off:off + plates.PLATE] == data
+        px = plates.plate_px(data)
+        assert all(px[15][x] == plates.INK for x in range(32)) and all(r[0] == r[31] == plates.INK for r in px)
+        assert any(plates.INK in r[1:31] for r in px[:15])
