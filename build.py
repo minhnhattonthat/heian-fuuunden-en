@@ -12,7 +12,9 @@ Steps (docs/re/text.md, docs/re/compression.md):
      to $D8-$DE with 24-bit PTRS, banner offsets; asm/main.asm (asar) hooks the readers and the VWF;
   3. compressed graphics/tilemap blocks in gfx/blocks.tsv: tools/gfx_blocks.py; build/marker apply
      tools/gfx_edits.py after the 2 MB expansion (party-list tilemaps; a block that grows moves to $DF:8000+) and
-     tools/smallfont_en.py (English small font + T2-T5 and Yes/No maps; the T1 caption words in bank C1), and
+     tools/smallfont_en.py (English small font + T2-T5 and Yes/No maps; the T1 caption words in bank C1),
+     tools/gfx_en.py (lettering redrawn in graphics blocks: battle command labels, game-over card, credits tiles
+     and map, plus the credits page table and tile upload size), and
      tools/plates.py (raw portrait name plates in bank C7, rewritten in place);
   4. header checksum (mirrored sum for 1.5 MB);
   5. romdiff (tools/romdiff.py): every byte that differs from the original must sit in tools/romdiff_ranges.txt,
@@ -35,6 +37,7 @@ import check_rom  # noqa: E402
 import font_en  # noqa: E402
 import gfx_blocks  # noqa: E402
 import gfx_edits  # noqa: E402
+import gfx_en  # noqa: E402
 import insert  # noqa: E402
 import kss_text  # noqa: E402
 import plates  # noqa: E402
@@ -99,9 +102,10 @@ def build(mode="build", qa=None, path=None):
         out, stats = insert.insert(out, mode, qa=qa)
         gfx_edits.apply(Path(tmp) / "gfx")     # after the 2 MB expansion: grown blocks move to $DF:8000+
         smallfont_en.apply_blocks(Path(tmp) / "gfx")
+        gfx_en.apply_blocks(Path(tmp) / "gfx")
         out, _ = gfx_blocks.pack(out, Path(tmp) / "gfx")
         out = bytearray(out)
-        for off, data in smallfont_en.caption_writes(out) + plates.writes():
+        for off, data in smallfont_en.caption_writes(out) + plates.writes() + gfx_en.writes(rom):
             out[off:off + len(data)] = data
         out = bytes(out)
     path = Path(path) if path else (OUT if mode == "build" else MARKER)

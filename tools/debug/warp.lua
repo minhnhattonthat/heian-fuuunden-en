@@ -6,7 +6,7 @@
 -- God mode is a separate probe: add `--script tools/lua/god.lua` (pins our side's battle HP).
 -- Opt-in globals: SCENES_TSV (path; default ../debug/scenes.tsv,
 -- relative to tools/mesen, the emulator's working folder), WARP_STATE (absolute path), SHOTS_AFTER (extra shot
--- every N frames after arrival).
+-- every N frames after arrival), DUMP_PPU (1: also dump VRAM/CGRAM/OAM as ppu_<scene>.* with the shot).
 local MEM = emu.memType.snesMemory
 local function rd(a) return emu.read(a, MEM) end
 local function rdw(a) return rd(a) | (rd(a + 1) << 8) end
@@ -125,6 +125,7 @@ L.on_frame(function(f)
     if SHOTS_AFTER and (f - arrived) % SHOTS_AFTER == 0 then L.shot(string.format("warp_%s_%06d.png", scene.name, f)) end
     if f - arrived >= scene.hold then
       L.shot("warp_" .. scene.name .. ".png")
+      if DUMP_PPU then L.dump_ppu("ppu_" .. scene.name) end
       L.log(string.format("WARP_OK %s f%d mode %02X sub %02X", scene.name, f, mode, sub))
       stage = "done"
       if WARP_STATE then L.save_state(WARP_STATE, function() L.finish(0) end) else L.finish(0) end

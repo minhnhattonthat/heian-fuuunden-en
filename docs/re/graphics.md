@@ -60,8 +60,14 @@ C7:1053/57A6/73D9, D2, D7:6C5D+, all type-2 blocks except those decoded above.
   dialogue rows 243/244), T6 status labels in all three status maps (D16), G15 name plates (D17), the はい/いいえ box
   after 229 (small-font map `C8:BBEE`, named by code `C5:265A`: `tilemaps.tsv` row yesno0; scenes
   `battle_save_prompt`, `battle_save_no`).
-- **Left:** G3/G4 file select scroll, G6 battle command buttons, G7/T8 help panels (own small kana in `C8:ABF2`),
-  G8/T7 prologue font + map, G9/G10/G14 credits and ending card, G13 game-over card.
+- **Done 2026-11-22 (worker 3), `tools/gfx_en.py`:** G6 command labels (5 buttons of 5x2 tiles in `C8:B282`, tiles
+  read from the BG3 map in the `battle_cmd_*` scenes; D18), G13 game-over card (`C8:9BAF` = four 16x16 OBJ at
+  (112,111), OAM base $4000; "GAME / OVER"), G9/G14 credits: the staff roll is not sprites or the dialogue font but
+  BG3 pages cut from the 32x64 map `C8:CD4E` (decoded to $7E:2000) with 16x16 kanji tiles from `C8:C2F8`; page
+  table `C1:8265` (src lo16, rows, columns, VRAM), title = map rows 32-33, end card = rows 40-49 cols 0-23 (終 at
+  rows 44-49 cols 16-21). All rebuilt in English (D19). G10 (dialogue-font credit kanji 0x380-0x3B6) is not drawn
+  by the roll: unused. `warp.lua --var DUMP_PPU=1` dumps VRAM/CGRAM/OAM with the scene shot.
+- **Left:** G3/G4 file select scroll, G7/T8 help panels (own small kana in `C8:ABF2`), G8/T7 prologue font + map.
 
 ## Still open
-- G14 source; the T6 variants' screens; the field-menu help panel's map source (T8).
+- The T6 variants' screens; the field-menu help panel's map source (T8).

@@ -204,3 +204,26 @@ def test_name_plates(built_rom):
         px = plates.plate_px(data)
         assert all(px[15][x] == plates.INK for x in range(32)) and all(r[0] == r[31] == plates.INK for r in px)
         assert any(plates.INK in r[1:31] for r in px[:15])
+
+
+def test_gfx_lettering(built_rom, rom):
+    """tools/gfx_en.py: the command labels, game-over card and credits are in the build where the game loads them
+    (through the load-table pointers and the CB:E546 operands, so a relocated block counts), and the credits page
+    table and upload size match the rebuilt tiles."""
+    import gfx_en
+    from kss_comp import decode
+    d = built_rom("build")
+
+    def ptr(off):
+        return d[off] | d[off + 1] << 8 | (d[off + 2] - 0xC0) << 16
+
+    cmd, go = decode(d, ptr(0x01EFF1))[0], decode(d, ptr(0x01F091))[0]
+    assert cmd == gfx_en.redraw_cmd(decode(rom, 0x08B282)[0])
+    assert go == gfx_en.redraw_gameover(decode(rom, 0x089BAF)[0])
+    tiles = decode(d, ptr(0x01F019))[0]
+    cmap = decode(d, d[0x0BE547] | d[0x0BE548] << 8 | (d[0x0BE54C] - 0xC0) << 16)[0]
+    want_tiles, want_map, table = gfx_en.credits(decode(rom, 0x08C2F8)[0], decode(rom, 0x08CD4E)[0])
+    assert (tiles, cmap) == (want_tiles, want_map)
+    assert d[gfx_en.PAGE_TABLE:gfx_en.PAGE_TABLE + len(table)] == table
+    assert struct.unpack_from("<H", d, gfx_en.UPLOAD_SIZE)[0] == len(tiles) <= gfx_en.MAX_TILES * 16
+    assert max(w & 0x3FF for w in struct.unpack("<2048H", cmap)) * 16 < len(tiles)
