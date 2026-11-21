@@ -7,7 +7,7 @@ Binding for every translator and reviewer. Agents propose additions in reports; 
 - Honorifics: kept, hyphenated (Seimei-sama, Hiroyuki-dono). 殿 -> -dono, 様 -> -sama (after a name or title), 姫 -> -hime
   after a name, otherwise "Princess". Name order: Western (given name first); historical "no" names keep their form
   (Taira no Masakado, Abe no Seimei). The check fails a line with 〜殿/〜様 and no -dono/-sama.
-- Romanisation source: no official English exists and no earlier patch (docs/re/prior-work.md): Hepburn without
+- Romanization source: no official English exists and no earlier patch (docs/re/prior-work.md): Hepburn without
   macrons (Kumano Hongu, Ise Saigu, Shugenja). Readings from the game's own furigana where it gives them.
 - Credits: English.
 - Register / flavour: Heian period fantasy. Light archaic flavour in speech, never Ye Olde: no thee/thou, no "-eth".
@@ -35,7 +35,7 @@ Binding for every translator and reviewer. Agents propose additions in reports; 
 | 神楽 | Kagura | 40 narrow | the hero: a BOY of 16 (he/him, id 295 男子), raised by Tenkai at Kumano | |
 | 芦屋道満 | Ashiya Doman | | Seimei's disciple (prologue 2A2) | |
 | 花山帝 / 花山天皇 | Emperor Kazan | | in the prologue (984-985); later the Retired Emperor Kazan | |
-| 為光 | Tamemitsu | | Major Counselor Fujiwara no Tamemitsu, Lady Kishi's father | |
+| 為光 | Tamemitsu | | Fujiwara no Tamemitsu, Lady Kishi's father. The game gives him three titles; translate the one each line uses: 大納言 Major Counselor (291), 中納言 Middle Counselor (3DC), 前の左大臣 former Minister of the Left (41F) | |
 | 女官 | Lady-in-waiting | | | |
 | 道長 | Michinaga | | Fujiwara no Michinaga, the regent (2A8) | |
 | 宮司 | Chief Priest | | of Kumano (2E8); 宮司殿 = Chief Priest-dono | |
@@ -161,6 +161,7 @@ Echigo. 安房 = "Awa (Boso)", 阿波 = Awa.
 | 辺津の鏡 | Hetsu Mirror | | key item, shows the map | |
 | 立向盤 | Tatemuki Board | | key item, opens Iyo | |
 | 反魂法珠 | Hangon Jewel | | key item, breaks Masakado's barrier | |
+| 先の帝 / 前の帝 | the former Emperor | | Kazan abdicated and is alive (the Retired Emperor); "late" means dead | late Emperor |
 Item, jutsu, shikigami, enemy and class names: the `en` of rows 001-1C4 in `script/C3.tsv` are binding; use them
 verbatim when dialogue names one (`build/terms_bNNN.txt` lists the ones a batch needs).
 

@@ -24,3 +24,17 @@ English from `script/*.tsv`). Critical/Important are fixed in the script before 
 | b016 | ok | 2026-11-22 | 5B3-5E4; 5B5 page split (Minor, fixed) |
 | b017 | ok | 2026-11-22 | 5E5-613 |
 | terms, pilot | fixed | 2026-11-22 | 466 fields and 18 pilot rows read; Important 139 fixed (pilot called Kagura "her"; Kagura is a boy) |
+| tilemaps | fixed | 2026-11-22 | 16 rows read against the JP; option0/option1 overflowed 8 cells -> "Messages"/"Walking" (D14); now linted (`check_tilemap`) |
+
+## Harness review of phase 6 (2026-11-22, `.harness/reviews/heian-fuuunden-en-phase6.md`)
+
+An outside read-only review found one Important meaning error the pass above missed, across b003/b005/b011:
+先の帝 ("the former Emperor") was "the late Emperor" in 41F, 463 and 3CB, telling the player Kazan is dead while he
+is alive as the Retired Emperor. Fixed in all three (38C "The last emperor" -> "The former Emperor" too), glossary row
+added with "late Emperor" in Avoid, synopsis corrected. Its Minors are ticked in `docs/polish.md`.
+
+Follow-up pass by a fresh worker (not the translator; read-only over the shipped English): every use of "late",
+"Emperor", "Minister", "Counselor" and Kagura with she/her in C3/C6 read in context against the JP. No other dead/alive,
+title or pronoun error found ("late" is otherwise "too late" / "of late"). This is still not the independent
+reviewer the skill asks for (D13): a full independent re-read of every batch by `codex exec -s read-only` is due once
+its quota returns (2026-11-26), and the phase 9 story pass reads every chapter in game anyway.

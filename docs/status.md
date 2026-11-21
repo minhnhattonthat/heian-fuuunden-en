@@ -2,8 +2,10 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 7. Insert, fit, check: not started. Phase 6 met 2026-11-22 (every row translated, lint 0 errors,
-  `batches.py check` 0 problems, reviewer pass done: every batch ok/fixed in `docs/review.md`).
+- **Phase:** 7. Insert, fit, check: in progress. Phase 6 met except the independent review (D13): every row
+  translated, lint 0 errors/0 warnings (tilemaps now linted), `batches.py check` 0 problems; the harness review's
+  Important findings fixed (先の帝 = "the former Emperor", not "late"; tilemap cell check; D13 recorded); full Codex
+  re-read of every batch due when its quota returns (2026-11-26).
   Last build: `build/heian_en.sfc` 2026-11-22 sha1 7eb7f27372c6 (2 MB, smoke ok); marker `build/heian_marker.sfc`
   2026-11-22 sha1 6a70b2581615 (135/135 warp scenes ok, shots in `work/qa/marker_warp/`). No build since English.
 - **Next (phase 7):** build the English ROM (`build.py`), `lint.py --strict`, `romdiff.py` (no writes outside the

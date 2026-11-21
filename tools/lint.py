@@ -13,6 +13,8 @@ Budgets (px = English VWF pixels, tools/font_en.text_px):
 - popups (POPUPS): one line of the window's width.
 Plus: control codes other than line/page breaks match the Japanese as a multiset; text encodes with tbl/en.tbl; no
 Japanese left in `en`; no ordinal suffix glued to a variable; no stub last line (< 6 chars) in a multi-line page.
+- tilemap text (script/tilemaps.tsv, check_tilemap): one 8-px cell per character within the `max` cell budget.
+Warnings (printed, not errors): a page that ends mid-clause before a `{page}` (page_warnings; PAGE_WAIVED skips).
 """
 import collections
 import re
@@ -44,6 +46,11 @@ CTRL = re.compile(r"\{\w+\}")
 JP = re.compile(r"[　-ヿ一-鿿＀-￯]")
 ORDINAL = re.compile(r"\{(?:num|name)\}(?:st|nd|rd|th)\b")
 NUM_PX = font_en.text_px("99999")
+TILEMAPS = "tilemaps"                    # script/tilemaps.tsv: small-font tilemap text, budgets in cells
+TILE_CELLS = re.compile(r"(\d+)(?:x(\d+))? cells")
+# Rows whose sentences run across `{page}` on purpose (page_warnings skips them): the spell chants are paced one
+# phrase per box, as in the Japanese.
+PAGE_WAIVED = {"1CA", "1CB", "1D1", "1D2", "1D3"}
 
 
 def popup(row):
@@ -139,8 +146,33 @@ def check_row(row, npx, en_t):
     return err
 
 
-def run(strict=False, write_max=False, script_dir=None):
-    """(errors, untranslated count); errors = ["<file> <id>: <message>"]."""
+def check_tilemap(row):
+    """Error strings for a small-font tilemap row (script/tilemaps.tsv, graphics text drawn in phase 8): one 8-px cell
+    per character, `{br}` starts the next row pair; the budget is the `max` column ("18x2 cells" = 2 rows of 18,
+    "10 cells", "8 cells + values" = 8 before the value tiles)."""
+    m = TILE_CELLS.match(row["max"])
+    if not m:
+        return ["max %r is not a cell budget" % row["max"]]
+    width, nrows = int(m.group(1)), int(m.group(2) or 1)
+    lines, err = row["en"].split("{br}"), []
+    if JP.search(row["en"]) or any(not " " <= c <= "~" for c in row["en"]):
+        err.append("not plain ASCII")
+    if len(lines) > nrows:
+        err.append("%d rows > %d" % (len(lines), nrows))
+    err += ["row %d: %d cells > %d" % (k + 1, len(ln), width) for k, ln in enumerate(lines) if len(ln) > width]
+    return err
+
+
+def page_warnings(en):
+    """Pages that end mid-clause (`,` `;` or a bare word) where the next page goes on in lower case (glossary style
+    rule: a sentence never runs across a `{page}` break mid-clause). Warnings, not errors."""
+    plain = [CTRL.sub("", p.replace("{name}", "Name").replace("{num}", "9")).strip() for p in en.split("{page}")]
+    return ["page %d ends mid-clause: ...%s" % (k + 1, a[-24:]) for k, (a, b) in enumerate(zip(plain, plain[1:]))
+            if a and b and (a[-1] in ",;" or a[-1].isalpha()) and b[0].islower()]
+
+
+def run(strict=False, write_max=False, script_dir=None, warnings=None):
+    """(errors, untranslated count); errors = ["<file> <id>: <message>"]. Page-break warnings go to `warnings`."""
     script = kss_script.load_script(script_dir or kss_script.SCRIPT)
     rows = [r for b, rs in script.items() if b in kss_text.BANKS for r in rs]
     npx, en_t = name_px(rows), kss_script.table(insert.EN_TBL)
@@ -148,6 +180,13 @@ def run(strict=False, write_max=False, script_dir=None):
     if KEEP.exists():
         keep = {ln.split()[0] for ln in KEEP.read_text(encoding="utf-8").splitlines() if ln.strip() and ln[0] != "#"}
     errors, todo = [], 0
+    for r in script.get(TILEMAPS, []):
+        if r["en"]:
+            errors += ["%s %s: %s" % (TILEMAPS, r["id"], e) for e in check_tilemap(r)]
+        elif r["jp"].strip() and r["id"] not in keep:
+            todo += 1
+            if strict:
+                errors.append("%s %s: untranslated" % (TILEMAPS, r["id"]))
     for bank, rs in script.items():
         if bank not in kss_text.BANKS:
             continue
@@ -164,6 +203,8 @@ def run(strict=False, write_max=False, script_dir=None):
                 continue
             rpx = name_px(rows, r) if "{name}" in r["en"] else npx
             errors += ["%s %s: %s" % (bank, r["id"], e) for e in check_row(r, rpx, en_t)]
+            if warnings is not None and r["id"] not in PAGE_WAIVED:
+                warnings += ["%s %s: %s" % (bank, r["id"], w) for w in page_warnings(r["en"])]
         if write_max:
             kss_script.write_tsv(Path(script_dir or kss_script.SCRIPT) / (bank + ".tsv"), rs)
     return errors, todo
@@ -171,10 +212,14 @@ def run(strict=False, write_max=False, script_dir=None):
 
 def main():
     strict, write_max = "--strict" in sys.argv, "--max" in sys.argv
-    errors, todo = run(strict, write_max)
+    warnings = []
+    errors, todo = run(strict, write_max, warnings=warnings)
+    for w in warnings:
+        print("warn:", w)
     for e in errors:
         print(e)
-    print("lint: %d errors, %d rows untranslated%s" % (len(errors), todo, " (errors)" if strict else ""))
+    print("lint: %d errors, %d warnings, %d rows untranslated%s"
+          % (len(errors), len(warnings), todo, " (errors)" if strict else ""))
     sys.exit(1 if errors else 0)
 
 

@@ -55,6 +55,27 @@ def test_codes_names_and_style(en_t):
     assert lint.check_row(row("300", "あ{br}い", "A long enough line{br}ok."), 64, en_t)       # stub last line
 
 
+def tile(en, cells):
+    return {"id": "option0", "kind": "tilemap", "jp": "もじのはやさ", "en": en, "max": cells, "notes": ""}
+
+
+def test_tilemap_cells():
+    # small-font tilemap text: one 8-px cell per character, {br} = next row pair, budget from `max`
+    assert lint.check_tilemap(tile("Messages", "8 cells + values")) == []
+    assert lint.check_tilemap(tile("Text speed", "8 cells + values"))             # 10 cells > 8
+    assert lint.check_tilemap(tile("View your allies'{br}abilities", "18x2 cells")) == []
+    assert lint.check_tilemap(tile("A{br}B{br}C", "18x2 cells"))                  # 3 rows > 2
+    assert lint.check_tilemap(tile("Saved.", "9 cells")) == []
+    assert lint.check_tilemap(tile("Saved.", "")) != []                            # no budget
+    assert lint.check_tilemap(tile("記録", "9 cells"))                             # Japanese left
+
+
+def test_page_break_warnings():
+    assert lint.page_warnings("We do our best,{page}but the Kebiishi fail.")
+    assert lint.page_warnings("I will tell you now...{page}Fifteen years ago.") == []
+    assert lint.page_warnings("Done.{page}{name} joins.") == []
+
+
 def test_fields_popups_party(en_t):
     assert lint.check_row(row("101", "京の都", "Kyoto"), 64, en_t) == []
     assert lint.check_row(row("101", "京の都", "The Capital of Heian Kyo Long"), 64, en_t)
