@@ -4,7 +4,8 @@ from pathlib import Path
 
 SCENES = Path(__file__).resolve().parents[1] / "tools/debug/scenes.tsv"
 POKES = re.compile(r"^([0-9A-Fa-f]+=[0-9A-Fa-f]+)(,[0-9A-Fa-f]+=[0-9A-Fa-f]+)*$")
-STEP = re.compile(r"^(\d+\s+\S+|wait\s+[0-9A-Fa-f]+(\.[0-9A-Fa-f]+(\.[0-9A-Fa-f]+)?)?|poke\s+\S+|mash\s+\d+)$")
+STEP = re.compile(r"^(\d+\s+\S+|wait\s+[0-9A-Fa-f]+(\.[0-9A-Fa-f]+(\.[0-9A-Fa-f]+)?)?|poke\s+\S+|mash\s+\d+"
+                  r"|tap\s+\S+\s+until\s+[0-9A-Fa-f]+(\.[0-9A-Fa-f]+)?)$")
 
 
 def rows():

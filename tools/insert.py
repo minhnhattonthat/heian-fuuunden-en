@@ -35,8 +35,20 @@ FIELD_PX = 48
 FIELDS = [   # (first id, last id, px)
     (0x001, 0x0FE, 48),    # items, equipment, names: item grid / status (6 tiles; C1:2D13, C1:29D9)
     (0x13C, 0x1B8, 48),    # jutsu / shikigami lists, squad label (6-8 tiles; C5:0D03.., C5:226F.., C1:4FF3)
-    (0x24A, 0x288, 48),    # provinces: overworld label (6 tiles; C1:5018)
+    (0x24A, 0x288, 48),    # provinces: overworld label (6 tiles; C1:5018), title slot list (C0:93CA)
+    (0x101, 0x111, 48),    # places: title slot list (6 tiles; C0:93A1) < place banner (72 px; C1:3667)
+    (0x1BD, 0x1C4, 48),    # ports: same two screens as the places (id = place + $AB)
+    (0x115, 0x12C, 72),    # map-exit banner (9 tiles from VRAM 6910, x 88-160; C1:687F)
 ]
+# The place and exit banners (window C8:A28E, text from VRAM 6910 = x 88, 9 tiles = 72 px) centre each name by a
+# per-entry tile offset. The build rewrites it for every entry whose string it replaces: (table file offset,
+# entries, entry index -> string id). Japanese entries keep the original offsets.
+BANNER_PX = 72
+BANNERS = [
+    (0x01364D, 0x1A, lambda i: 0x101 + i + (0xAB if 0x101 + i >= 0x114 else 0)),   # C1:3667, index $1088-1
+    (0x016869, 0x16, lambda i: 0x117 + i),                                         # C1:687F, index C1:E708[..]
+]
+BANNER_SKIP = {0x112, 0x113}    # place entries 0x12-0x13 point at non-place strings: leave them alone
 # Party list (ids 054-083, also shown in the 48-px status field): asm/main.asm PartyName draws every name there in
 # the narrow 8-px font on one row of 5 tiles, whatever form the string has ({small}/{narrow}/{sbr} are skipped).
 PARTY_IDS = (0x054, 0x083)
@@ -152,19 +164,51 @@ def strings(mode="build", script_dir=None, qa=None):
         if bank not in kss_text.BANKS:
             continue                    # tilemaps.tsv: graphics text, not the table
         for r in rows:
-            if qa and r["id"].split("+")[0] in qa:
-                out.append((ids_of(r), kss_script.encode(en_t, qa[r["id"].split("+")[0]]), r))
+            text = text_of(r, mode, qa)
+            if text is not None:
+                out.append((ids_of(r), kss_script.encode(en_t, text), r))
             elif r["kind"] == "data":
                 out.append((ids_of(r), None, r))
-            elif r["en"]:
-                if any(PARTY_IDS[0] <= i <= PARTY_IDS[1] for i in ids_of(r)) and party_fits(r["en"]):
-                    raise ValueError("%s %s" % (r["id"], party_fits(r["en"])))
-                en = fit_field(r["en"], field_px(r)) if is_field(r) and "{" not in r["en"] else r["en"]
-                out.append((ids_of(r), kss_script.encode(en_t, en), r))
-            elif mode == "marker":
-                out.append((ids_of(r), kss_script.encode(en_t, marker(r)), r))
             else:
                 out.append((ids_of(r), kss_script.encode(jp_t, r["jp"]), r))
+    return out
+
+
+def text_of(r, mode="build", qa=None):
+    """The English-table text the build writes for a row (en fitted to its field, a qa override or the marker), or
+    None when the row keeps its Japanese or its original bytes."""
+    key = r["id"].split("+")[0]
+    if qa and key in qa:
+        return qa[key]
+    if r["kind"] == "data":
+        return None
+    if r["en"]:
+        if any(PARTY_IDS[0] <= i <= PARTY_IDS[1] for i in ids_of(r)) and party_fits(r["en"]):
+            raise ValueError("%s %s" % (r["id"], party_fits(r["en"])))
+        return fit_field(r["en"], field_px(r)) if is_field(r) and "{" not in r["en"] else r["en"]
+    if mode == "marker":
+        return marker(r)
+    return None
+
+
+def drawn_px(text):
+    """Pixel width renderer 2 draws for an English-table string: the wider line in {small}/{narrow} mode."""
+    for code, font in (("{small}", True), ("{narrow}", "narrow")):
+        if text.startswith(code):
+            return max(font_en.text_px(CTRL.sub("", s), font) for s in text[len(code):].split("{sbr}"))
+    return font_en.text_px(CTRL.sub("", text))
+
+
+def banner_offsets(texts):
+    """{file offset: tile offset} for the banner entries whose string the build replaces (texts: id -> text)."""
+    out = {}
+    for table, count, id_of in BANNERS:
+        for i in range(count):
+            sid = id_of(i)
+            if sid in BANNER_SKIP or sid not in texts:
+                continue
+            w = drawn_px(texts[sid])
+            out[table + i] = max(0, min((BANNER_PX - w + 8) // 16, (BANNER_PX - w) // 8))
     return out
 
 
@@ -193,6 +237,15 @@ def insert(rom, mode="build", script_dir=None, qa=None):
         raise ValueError("ids with no string: %s" % missing[:10])
     for i, (lo, bank) in enumerate(ptr):
         struct.pack_into("<HH", out, PTRS + 4 * i, lo, bank)
+    texts = {}
+    for bank, rows in kss_script.load_script(script_dir or kss_script.SCRIPT).items():
+        for r in rows if bank in kss_text.BANKS else ():
+            text = text_of(r, mode, qa)
+            if text is not None:
+                texts.update((i, text) for i in ids_of(r))
+    for off, tiles in banner_offsets(texts).items():
+        assert rom[off] <= 2, "banner offset table moved? %06X = %02X" % (off, rom[off])
+        out[off] = tiles
     return out, {"text_end": "0x%06X" % pos, "free": TEXT_END - pos}
 
 

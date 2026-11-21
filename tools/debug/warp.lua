@@ -92,13 +92,20 @@ L.on_frame(function(f)
   elseif stage == "arrived" then
     -- route steps: "N buttons" (hold for N frames), "wait MM" / "wait MM.SS" / "wait MM.SS.TT" (until $34 == MM
     -- [and $36 == SS [and $38 == TT]], hex; gives up after 3000 frames, logging "wait timed out"), "poke ADDR=VAL,..." (CPU addresses, as in the ram column),
-    -- "mash N" (press A every 30 frames for N frames)
+    -- "mash N" (press A every 30 frames for N frames), "tap BUTTON until MM[.SS]" (press every 40 frames until the mode matches)
     if not L.route_done() then return end
     local step = steps[1]
     if not step then stage = "hold"; arrived = f; return end
     local n, b = step:match("^(%d+)%s+(%S+)$")
     local wm, ws, wt = step:match("^wait%s+(%x+)%.?(%x*)%.?(%x*)$")
+    local tb, tm, ts = step:match("^tap%s+(%S+)%s+until%s+(%x+)%.?(%x*)$")
     if n then L.press(b, tonumber(n)); table.remove(steps, 1)
+    elseif tb then -- "tap BUTTON until MM[.SS]": press every 40 frames until $34 (and $36) match
+      waited = waited + 1
+      if (mode == tonumber(tm, 16) and (ts == "" or sub == tonumber(ts, 16))) or waited > 3000 then
+        if waited > 3000 then L.log("tap timed out: " .. step) end
+        waited = 0; table.remove(steps, 1)
+      else L.press(tb, 6); L.press("-", 34) end
     elseif wm then
       waited = waited + 1
       if (mode == tonumber(wm, 16) and (ws == "" or sub == tonumber(ws, 16))

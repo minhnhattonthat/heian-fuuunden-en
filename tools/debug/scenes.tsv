@@ -34,7 +34,11 @@ menu_shikigami	132=01		6 x;60 -;6 right;40 -;6 right;40 -;6 right;40 -;6 right;4
 menu_captions	132=01		6 x;60 -	30	field menu open, caption 1 (T1)
 save_message	132=01		6 x;60 -;6 right;40 -;6 right;40 -;6 a;90 -;6 a;20 -	20	save, first option; save message (T5)
 prologue		7E0034=000A,7E0036=0000,7E0038=0000	mash 600	60	prologue ruby text (G8), forced mode 0A
+opening		7E0034=000A,7E0036=0000,7E0038=0000	mash 6000	60	prologue, then the opening palace scene: speaker line + 3 lines (ids 29B-2A5)
 ending		7E0034=0009,7E0036=0000,7E0038=0000	mash 3000	60	ending event, forced mode 09 (credits G9 not yet confirmed)
+title_slots	132=02		6 l+r+start+select;wait 01.01;tap start until 03.03;200 -;6 down;30 -;6 a;wait 03.05;240 -	30	title Continue slot list: place name per slot (C0:93CA/9432/949A, id $100+place, VRAM 6C00/6D00/6E00)
+exit_banner	132=01		poke 7E10E4=0000,7E0036=0006	40	field sub 06 (C0:9B2F): map-exit banner C1:687F, id $117 + C1:E708[(map-1)*4 + $10E4] at VRAM 6910 + 8*C1:6869[i]
+place_banner	132=02		poke 7E0036=0000,7E0034=0004;wait 04.05;60 -;poke 7E0036=000E	40	overworld sub 0E (C0:D2F0): entering a place, banner C1:3667 draws place name $1088+$100 (ports +$AB) at VRAM 6910 + 8*C1:364D[x]; force $1088 with tools/lua/execpoke.lua AT=0xC136C0
 overworld	132=02		poke 7E0036=0000,7E0034=0004;wait 04.05	90	overworld (mode 4) at the slot position: province label 紀伊の国, squad label 神楽部隊
 battle_intro	132=02		poke 7E0036=0016,7E0034=0004;wait 07	180	battle title card 紀伊の国の闘い (overworld sub 16 = C0:D4AD starts the battle for the slot position)
 battle_save_prompt	132=02		poke 7E0036=0016,7E0034=0004;wait 07;330 -	30	きろくしますか? はい/いいえ before every battle

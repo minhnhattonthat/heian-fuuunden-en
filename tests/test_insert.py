@@ -32,6 +32,21 @@ def words_at(rom, addr):
             return out, j
 
 
+def test_banner_offsets(rom):
+    """Place/exit banners (72 px from x 88): the build centres replaced strings by whole tiles and never pushes one
+    past the window; Japanese entries keep the original offsets."""
+    assert rom[0x01364D:0x01364D + 4] == bytes([2, 2, 1, 1]) and rom[0x016869:0x016869 + 4] == bytes([0, 0, 1, 2])
+    off = insert.banner_offsets({0x101: "Kyoto", 0x117: "{small}Toward the{sbr}San'in Road", 0x12C: "x" * 40,
+                                 0x1BF: "Kada Port"})
+    assert set(off) == {0x01364D, 0x016869, 0x016869 + 0x15, 0x01364D + 0x13}   # $1088 = 0x14 -> id 0x1BF
+    for o, text in ((0x01364D, "Kyoto"), (0x016869, "{small}Toward the{sbr}San'in Road"), (0x01364D + 0x13, "Kada Port")):
+        w = insert.drawn_px(text)
+        assert off[o] * 8 + w <= insert.BANNER_PX and abs((insert.BANNER_PX - w) / 2 - off[o] * 8) <= 4, (text, off[o])
+    assert off[0x016869 + 0x15] == 0      # too wide: left edge, the lint reports it
+    out, _ = insert.insert(rom, "build")
+    assert out[0x01364D:0x01364D + 0x1A] == rom[0x01364D:0x01364D + 0x1A]   # no English yet: untouched
+
+
 @pytest.mark.parametrize("mode", ["build", "marker"])
 def test_pointers_reach_strings(rom, mode):
     out, stats = insert.insert(rom, mode)
