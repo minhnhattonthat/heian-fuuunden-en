@@ -9,7 +9,12 @@ Updated at the end of every session. Keep it to what the next session needs; his
   for romdiff (`--writes`) + asar `assert read`s; #3 reader/branch-target scan as a standing test.
   Phase 8 so far: small font + T1-T6 English (`tools/smallfont_en.py`, D16; `docs/re/graphics.md` §Phase 8
   progress lists what is left). warp.lua now re-presses A when the file-select scroll stalls (mode 3 sub 4).
-  Last build `build/heian_en.sfc` sha1 e80b81037ed8 (2026-11-22). Phase 7 met 2026-11-22: `build.py` green with English,
+  Session 2026-11-22 (worker 2): はい/いいえ box after 229 = small-font map `C8:BBEE` -> "Yes No" (tilemaps.tsv
+  yesno0, `tilemap_text.SPAN`; `gfx_blocks.RELOC_PTRS` now also takes code operands (lo16, bank) for blocks named by
+  `LDA #` pairs; scene `battle_save_no` checks the cursor on No). Portrait name plates (G15) = 94 raw images at
+  `C7:A1FF` -> English (`tools/plates.py`, D17; test `test_name_plates`). 蘆太 (font code 0x9B) is a variant 藤:
+  name 05C/0CB and line 480 now say Tota (glossary). `tilemap_text.py dump --force` keeps notes now.
+  Last build `build/heian_en.sfc` sha1 8bef8f0dafc5 (2026-11-22). Phase 7 met 2026-11-22: `build.py` green with English,
   `lint.py --strict` 0 errors / 0 warnings / 0 untranslated (control codes matched; tilemaps linted), romdiff clean
   (build.py now fails on any byte outside `tools/romdiff_ranges.txt`; `tests/test_romdiff.py` builds en + marker),
   smoke ok, `warp_all.py --rom build/heian_en.sfc --out work/qa/en_warp` 135/135 scenes ok (sheets in
@@ -17,14 +22,14 @@ Updated at the end of every session. Keep it to what the next session needs; his
   Phase 6 met except the independent review (D13): full Codex re-read of every batch due when its quota returns
   (2026-11-26), before the phase 9 story pass.
 - **Next (phase 8):** graphics text, then the visual-QA gate (`qa_gate.py`), inkbox on choice/centred boxes, stress
-  saves, `textcover.py`. Japanese still on screen in the English warp shots:
-  - portrait name plates (晴明, 広行, 商人, 道長 under dialogue portraits, e.g. scene `title_slots`): text.md says
-    plates use the table, but the en build shows kanji; trace whether they are portrait art (CA raw) or a string;
-  - はい/いいえ choice after "Read the help?" / "Save your progress?" (FB-ended prompts 229-22E, scene
-    `battle_save_prompt`);
-  - battle command buttons (G6), help panels (G7/T8: own small kana font `C8:ABF2`, map `C8:AA6E`; the field
-    panel's map is not traced), New Game prologue (G8/T7), file select scroll (G3/G4), game over (G13), credits
-    and ending card (G9/G10/G14); title logo stays Japanese (D5).
+  saves, `textcover.py`. Japanese still on screen in the English warp shots (`work/qa/p8/all.png` = the 9 scenes):
+  - battle command buttons (G6, `C8:B282`), help panels (G7/T8: own small kana font `C8:ABF2`, map `C8:AA6E`; the
+    field panel's map is not traced; the panel text now shows garbled letters where its kana cells were shared
+    with nothing: check), New Game prologue (G8/T7), file select scroll (G3/G4), game over 終 (G13, `C8:9BAF`),
+    credits and ending 終 card (G9/G10/G14); title logo stays Japanese (D5).
+  - Pattern for raw art: `tools/plates.py` (render + same-size writes in build.py, romdiff range, test). For LZ
+    blocks: edit in `apply_blocks`-style after unpack; a block that grows needs its pointers in
+    `gfx_blocks.RELOC_PTRS` (find them by searching the ROM for the address bytes or `A9 lo hi` immediates).
   - Small-font text is monospace (one 8-px cell per letter); "Messages" fills its 8 cells and touches the arrow.
   Chapter cards (`card_p*`) were shot mid-typing: shoot later frames when checking them. The place_banner shot is
   empty in the marker build too (shot before the text draws). Minors left for phase 9 are in `docs/polish.md`.
