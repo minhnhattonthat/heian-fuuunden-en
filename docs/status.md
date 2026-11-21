@@ -2,11 +2,17 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 6. Translate in progress: every row translated (lint: 0 untranslated) and `script/tilemaps.tsv` done;
-  reviewer pass under way (b001 ok, b002 fixed, b003 partial; b003 from 424 and b004-b017 left: `docs/review.md`).
+- **Phase:** 7. Insert, fit, check: not started. Phase 6 met 2026-11-22 (every row translated, lint 0 errors,
+  `batches.py check` 0 problems, reviewer pass done: every batch ok/fixed in `docs/review.md`).
   Last build: `build/heian_en.sfc` 2026-11-22 sha1 7eb7f27372c6 (2 MB, smoke ok); marker `build/heian_marker.sfc`
   2026-11-22 sha1 6a70b2581615 (135/135 warp scenes ok, shots in `work/qa/marker_warp/`). No build since English.
-- **Phase 6 so far (2026-11-22):**
+- **Next (phase 7):** build the English ROM (`build.py`), `lint.py --strict`, `romdiff.py` (no writes outside the
+  allowed ranges), smoke + `warp_all.py --rom build/heian_en.sfc` and look at the shots for overflow/garble.
+  Minors left for phase 9 are in `docs/polish.md`.
+- **Phase 6 record (2026-11-22):**
+  - Review pass finished: b003-b017 ok, terms/pilot fixed (Important: pilot 139 called Kagura "her"). Minor fixes
+    (American spelling, sentences re-flowed off `{page}` breaks, 丹波 = Tanba, まじない = spells) are now style
+    rules in `glossary.md`.
   - `glossary.md` (policy, style, characters, places, terms; enforced by `tools/batches.py check`, also a test),
     `docs/translator-brief.md`, `docs/style-reference.md` (pilot 131-13B), `docs/synopsis.md`.
   - Wave 0: every name/item/jutsu/shikigami/class/place/province field (466 rows) fitted with `batches.py fit`.
@@ -35,12 +41,7 @@ Updated at the end of every session. Keep it to what the next session needs; his
     `script/tilemaps.tsv` en filled (cell budgets in `max`; option labels 10 cells vs 8: `docs/polish.md`).
   - Review: `tools/pairs.py bNNN.. --out work/qa/review` writes `>> id | JP` / EN pairs (English from `script/`).
     Verdicts in `docs/review.md`, Minors in `docs/polish.md`. 2D6 (Kaede, meaning reversed) fixed.
-- **Next (phase 6):** reviewer pass per batch, from b003 id 424 on through b017 (fresh read-only pass, or
-  `codex exec -s read-only` after 2026-11-26 with the pairs file and `docs/translator-brief.md` in the prompt).
-  `work/tl/` is gitignored: in a fresh clone the batch files are gone, so review by id range from `script/`
-  (b003 = 410-435, b017 ends at 613; `batches.py split` only batches untranslated rows). Fix Critical/Important in
-  `script/*.tsv` (Edit tool, then `tools/lint.py`), mark the batch in `docs/review.md`. About 3-4 batches per
-  worker session fit the context budget. Phase 6 is done when every batch is ok/fixed; then phase 7.
+  - `work/tl/` is gitignored: in a fresh clone the batch files are gone; `docs/review.md` lists each batch's id range.
 - **Done:**
   - **Phase 5 met** (engine spike + marker build + width gate): every box variant is measured in-game
     (`docs/re/windows.md`; every row's budget is in the `max` column of `script/*.tsv`, no "(guess)" left).
@@ -58,9 +59,9 @@ Updated at the end of every session. Keep it to what the next session needs; his
     squad slots 5 tiles narrow (D11, D12).
   - Phases 1-4: recon (`docs/re/`), warp tool (135 scenes) + save editor + god mode, identity build, `tbl/jp.tbl`
     + `script/`.
-  - Check: 41 passed.
+  - Check: 43 passed.
 - **Next:**
-  1. Phase 6 batches: see "Next (phase 6)" above. Id 100 (empty squad slot, `　　`) stays blank (split skips it).
+  1. Phase 7: see "Next (phase 7)" above. Id 100 (empty squad slot, `　　`) stays blank by design.
   2. Non-table Japanese (battle command labels, status labels, captions, help screen, title logo under D5):
      graphics, phase 8.
   3. Leads kept: staff roll near `C2:CA80`, small-font tilemap text (`script/tilemaps.tsv`, incl. the New Game

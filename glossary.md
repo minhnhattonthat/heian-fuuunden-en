@@ -26,6 +26,8 @@ Binding for every translator and reviewer. Agents propose additions in reports; 
 - Furigana in the Japanese text (道摩（どうま）) is a reading aid: the English gives the name once, no parentheses.
 - Spell names, items and places inside dialogue use the table forms below, capitalised.
 - Voice: see `docs/style-reference.md`.
+- American spelling (traveler, traveled, color, armor). 丹波 is Tanba (not Tamba). まじない in dialogue -> spells.
+- A sentence never runs across a `{page}` break mid-clause; re-flow so each box ends on a pause.
 
 ## Characters (party: short form in the 40-px party slot; full form in name fields)
 | JP | EN | max | notes | Avoid |
