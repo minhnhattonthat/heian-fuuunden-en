@@ -59,7 +59,7 @@ Binding for every translator and reviewer. Agents propose additions in reports; 
 | 雀 | Suzume | | | |
 | 雉女 | Kijime | | | |
 | 葉月 | Hazuki | | | |
-| 愛深 | Aimi | | | |
+| 愛深 | Aizen | | Koya esoteric monk; game furigana あいぜん (4CA) | Aimi |
 | 珍念 | Chinnen | | | |
 | 如雲 | Joun | | | |
 | 沙摩 | Shama | | | |

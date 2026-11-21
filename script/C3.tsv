@@ -101,7 +101,7 @@ id	kind	jp	en	max	notes
 067	text	雀　	Suzume	40 narrow	
 068	text	雉女	Kijime	40 narrow	
 069	text	葉月	Hazuki	40 narrow	
-06A	text	愛深	Aimi	40 narrow	
+06A	text	愛深	Aizen	40 narrow	
 06B	text	珍念	Chinnen	40 narrow	
 06C	text	如雲	Joun	40 narrow	
 06D	text	沙摩	Shama	40 narrow	
@@ -191,7 +191,7 @@ id	kind	jp	en	max	notes
 0D6	text	　雀	Suzume	48 field	
 0D7	text	　雉女	Kijime	48 field	
 0D8	text	　葉月	Hazuki	48 field	
-0D9	text	　愛深	Aimi	48 field	
+0D9	text	　愛深	Aizen	48 field	
 0DA	text	　珍念	Chinnen	48 field	
 0DB	text	　如雲	Joun	48 field	
 0DC	text	　沙摩	Shama	48 field	
@@ -685,7 +685,7 @@ id	kind	jp	en	max	notes
 2D7	text	くすくす・・{br}無理しちゃって・・・{page}姉さん、会えるといいね・・{br}神楽様に・・・	Hee hee...{br}Putting on a brave face...{page}Sister, I hope you get to see{br}him... Kagura-sama...	176/160 x3	
 2D8	text	仁空殿、ここでお別れです・・	Ninku-dono, this is where{br}we part...	176/160 x3	
 2D9	text	おぬしもたっしゃでな・・縁が{br}あれば、また会えるじゃろ。	Keep well yourself... If fate{br}allows, we'll meet again.	176/160 x3	
-2DA	text	愛深殿、おぬしはどうするのだ{br}高野に戻るか？	Aimi-dono, what will you do?{br}Return to Koya?	176/160 x3	
+2DA	text	愛深殿、おぬしはどうするのだ{br}高野に戻るか？	Aizen-dono, what will you do?{br}Return to Koya?	176/160 x3	
 2DB	text	いや、もう戻らぬつもりだ。{page}このまま　諸国をめぐろうと{br}思う・・	No, I do not intend to return.{page}I think I will wander the{br}provinces as I am...	176/160 x3	
 2DC	text	そうか、おたがい思いは同じ{br}ようだな・・	I see. It seems we are of{br}one mind...	176/160 x3	
 2DD	text	どうだ、法蓮殿、高野と比叡の{br}ちがいはあれど、思いは同じ{br}ならば共に・・	What say you, Horen-dono? Koya{br}and Hiei may differ, but if{br}our hearts are one, together...	176/160 x3	
@@ -896,52 +896,52 @@ id	kind	jp	en	max	notes
 4BA	text	諏訪か？　・・・わかった。{br}私でよければ力になるよ。{page}帰る家がないのなら、都に賀茂{br}という家がある。{page}そこに行って広行が・・・{br}いや文の方が・・・	Suwa? ...I understand.{br}If I can be of help, I will.{page}If you have no home, there is{br}a house in the capital,{br}the Kamo house.{page}Go there, and Hiroyuki...{br}No, perhaps a letter...	176/160 x3	
 4BB	text	くすくすくす・・あはははは{br}う・そ・よ。{page}あなたが道摩と戦っているのは{br}知っているわ　賀茂様。{page}誤解しないで、あなたが{br}気に入ったわ　私もついてって{br}あ・げ・る。{page}そのかわり　私の夫になってね{br}賀・茂・さ・ま。	Tee hee hee... Ah ha ha ha!{br}Just kid-ding.{page}I know you're fighting Doma,{br}Kamo-sama.{page}Don't get the wrong idea. I like{br}you, so I'll come a-long.{page}But in return, you'll be my{br}husband, Ka-mo-sa-ma.	176/160 x3	
 4BC	text	いっ・・いや、しかし・・{br}私は・・	Wh... Wait, but...{br}I, er...	176/160 x3	
-4BD	text	あはははは、じょうだんよ。{br}本当は　盛高に会いたかった{br}んだけど・・{page}あなたでもいいわ　賀茂様。{br}行きましょう。		176/160 x3	
-4BE	text	盛高じゃない　久しぶりね。{br}あなたが　晴明についたって{br}うわさは本当だったのね。		176/160 x3	
-4BF	text	言っておくが　おれは晴明に{br}ついたわけじゃない。{page}死なせたくない奴がいるんだ。{br}まだ十五、六の　がきだがね。{br}そいつのためさ・・{page}それより　なぜここにいる？{br}諏訪にいると思っていたが・・{page}できれば　おまえとは{br}戦いたくない・・{br}引いてはくれないか・・		176/160 x3	
-4C0	text	誤解しないでほしいわね。{br}私は一人よ、あなたたちと{br}戦えるわけないじゃない・{page}ねえ盛高、私もつれて行っては{br}もらえないかしら？		176/160 x3	
-4C1	text	どういう事だ？　飛騨。{br}おまえは山童の一族だろう。{br}一族をうらぎるつもりか？{page}それとも　おれをだます気か？		176/160 x3	
-4C2	text	そうじゃないわ・・{br}私は道摩に会いたい・・いや{br}殺したいの・・{page}山童の一族は、ほとんど西国の{br}戦いで死んだのよ。{page}長の守屋様も　死ぬつもり{br}もう誰にも止められないわ。{page}だけど　一族の者をだまし{br}守屋様まで　この戦いに引き{br}ずり込んだ、道摩だけは・・{page}道摩だけは・・私はぜったいに{br}ゆるせない・・{page}今　京の都に　向かう者たちは{br}ほとんど将門があやつっている{br}死人よ・・{page}だから　別に　私が一族を{br}うらぎる事にはならないわ。{br}それが理由よ・・{page}わかった？　盛高。{br}じゃあ　行きましょう。		176/160 x3	
-4C3	text	すまぬが　ここより先は{br}高野山の領内、何人たりと{br}入れるわけに　いかぬ。		176/160 x3	
-4C4	text	私としては、あなたがたに{br}力をかしたいのですが・・{page}御山の決定には　したがうのが{br}我らのつとめなのです。{page}花山法皇の命でもあれば{br}別なのですが・・・		176/160 x3	
-4C5	text	これは・・！　まさしく{br}花山法皇の・印ではないか！{page}不動！　普賢！　じゅんびを{br}せい、出発じゃ！		176/160 x3	
-4C6	text	ここより先は　寺の領内となる{br}すまぬが　目的のない者を{br}領内には入れられぬ。		176/160 x3	
-4C7	text	道摩のしておる事、わかって{br}おるのだが・・　御山のゆるし{br}が出ないのだ・・・{page}私は　力をかしたいが・・{br}それが　できぬのだ・すまぬ。		176/160 x3	
-4C8	text	本来　寺は女人禁制なれば・・{br}・・おぬしは　女であろう？{page}ならば　言わずともわかるで{br}あろうが・・		176/160 x3	
-4C9	text	おお！　花山法皇様の印か！{br}これでうごける！{br}多聞！　六角！　出発じゃあ！		176/160 x3	
-4CA	text	私は　高野の密教僧で　愛深{br}（あいぜん）ともうす者。{page}道摩と戦う陰陽師とお見受け{br}いたしますが、まちがいは{br}ありませんか？{page}今度の事　国の大事というに{br}高野は何もしようとしない・{page}我らは　しびれをきらして{br}寺を　ぬけて来ました。{br}どうか　お加え下され。		176/160 x3	
-4CB	text	私は　比叡山の僧兵で法蓮{br}（ほうれん）ともうす。{page}道摩と戦う陰陽師と思ったの{br}ですが・・　おお　やはり{br}そうでしたか！{page}皆が力を合わせねば　ならぬ{br}時に、高野がどうしたなぞ{br}かんけいあるまいに・・{page}比叡の方々は　おわかりに{br}なっておらぬゆえ、我らは{br}山を出てまいった。{page}我らは　比叡の僧ではなく{br}ただの僧兵として、力をおかし{br}いたします。お加え下され。		176/160 x3	
-4CC	text	まさだ		176/160 x3	
-4CD	text	まさだ		176/160 x3	
-4CE	text	まさだ		176/160 x3	
-4CF	text	まさだ		176/160 x3	
-4D0	text	まさだ		176/160 x3	
-4D1	text	まさだ		176/160 x3	
-4D2	text	まさだ		176/160 x3	
-4D3	text	まさだ		176/160 x3	
-4D4	text	まさだ		176/160 x3	
-4D5	text	まさだ		176/160 x3	
-4D6	text	なんだあ、てめえは？{br}ここから先は　とおせねえぜ！{br}とっとと　かえんな！！		176/160 x3	
-4D7	text	このような所によく来られた。{br}どうぞ一晩　お泊まり下され。		176/160 x3	
-4D8	text	おお　都から来られた方か？{br}これはめずらしい・・{page}私の兄も、都で検非違使をして{br}いるのですよ・・{page}ところで　あなたがたは、{br}何のために　このような所を{br}お通りなされる・・{page}何かわけが　おありでしょう・{br}よければ　きかせては{br}もらえませぬか？{page}・・・・・・・！！{page}・・・・・・・・・{page}・・・・・・・話が大きすぎて{br}信じられませんが・・{page}まさか　そんな事がおこって{br}いるとは・・{page}私は武士ですが、何かの力に{br}なれるかも知れません・・{br}ついて行きましょう。{page}まあ　それは明日にして・・{br}今日はもうお疲れでしょう{br}どうぞ　お休み下され。		176/160 x3	
-4D9	text	このあたりには　賊がおおく{br}何かとぶっそうです。{page}訪ねてこられたのも　何かの縁{br}でしょう、わが家でよければ{br}泊まりなさいませ。		176/160 x3	
-4DA	text	それは　ありがたい・お言葉に{br}甘えさせてもらいます・・{page}失礼ですが、あなたは女では{br}ありませんか？　なぜ男の服を{br}きておられる？		176/160 x3	
-4DB	text	それは・・{page}まあ　旅のみやげ話として{br}お話ししましょうか・・{page}わが佐伯の家は　昔からこの{br}あたりを治めていました・・{page}ところが　近年のえきびょうと{br}凶作のあおりか・・このあたり{br}に山賊が出るようになり・・{page}父は近くの者をあつめて　山賊{br}討伐に出ましたが、逆に討たれ{br}てしまったのです・・{page}命からがら帰ってきた者の話で{br}は、山賊の中にまじないを使う{br}者がおり・・{page}その者に討たれたそうです・{page}この家は父と私だけがくらして{br}おりましたので、父がおらねば{br}佐伯の家はおわりです・・{page}せめて父の仇を討とうと思い{br}このようなすがたで、毎日{br}山へ出かけているのです・・{page}さあ　旅でお疲れでしょう・・{br}今日はもうお休みなさいませ。		176/160 x3	
-4DC	text	なるほど・そういう事ですか・{br}そんな事があったとは・・・{page}あなたの父上は山賊に討たれた{br}わけではありません・・それに{br}話せば長くなりますが・・{page}全ては　道摩という者が{br}おこした事が　始まりです。{page}今からお話する事は　国の大事{br}ですから　決して口外しないで{br}下さい・・{page}実は・・・・・・・		176/160 x3	
-4DD	text	・・・・・・・・・・・・・！{br}それは本当の事でしょうか？{page}そういう事ならば　私もつれて{br}行ってはもらえませんか？{page}父の仇が　あなたの言う道摩で{br}あるのならば、私は道摩と戦う{br}必要があります・・{page}女とはいえ　父のおかげで剣の{br}あつかいでは、誰にも負けぬと{br}自負しております。{page}お役にたてるかは　わかりませ{br}ぬが、あなたを守る事くらいは{br}できましょう。{page}つれていって下さい。		176/160 x3	
-4DE	text	うれしいね　ありがとう。{br}・・・・・・・・・ん？{page}あんた女だろ？{br}姿かっこうをまねても{br}においでわかるさ・・{page}何かわけが　あるんだろ？{br}よければ話してくれないか？		176/160 x3	
-4DF	text	旅の方には　かかわりのない事{br}ですが・・いいでしょう。{page}佐伯の家は　昔からこのあたり{br}をおさめていました。{page}近年の凶作のあおりで　山賊が{br}多く出るのは、旅の人なら{br}知っておりましょう。{page}この安芸の国も　例外では{br}ありません。{page}命まではうばわぬ　といえど{br}あいては山賊です。{page}せっかく出来た　作物も全て{br}とられては、里の人は生きては{br}行けませぬ。{page}父は里を守るために　山賊討伐{br}に出て行ったのですが、{page}山賊の中にまじないを使う者が{br}おり、その者に父は　討たれた{br}そうです・・{page}父がおらねば　この佐伯の家は{br}終わりです。{page}それゆえ、せめて仇を討とうと{br}このすがたで　毎日　山を{br}めぐっていたのです・・{page}剣のあつかいだけは、父から{br}おしえられましたから・・		176/160 x3	
-4E0	text	・・・・・あんた女だろう？{br}・・・・まあ、いいか。{page}どうしても　父とやらの　仇を{br}討ちたいのか・・{page}言っておくが、あんたの父は{br}山賊に討たれたんじゃない・・{br}やめた方がいい・・が{page}あんたのようすじゃ　やめそう{br}にもないな・・しかたない。{page}いっしょに来るといい・・{br}死ぬかくごがあれば・・だが{page}おれは　あんたの仇と戦って{br}いる・・{page}あんたに　その気があるなら{br}いっしょに行こう。		176/160 x3	
-4E1	text	源頼光を知らぬか？　いや名前{br}ではなく　居場所の事だ。{page}わしは弟の頼信（よりのぶ）{br}と言う者。{page}都中をさがしているのだが・・{br}どこへ行ってもおらん。		176/160 x3	
-4E2	text	おー兄者！　やっと会えたか。{br}しかし　兄者も人が悪いのう。{page}戦があるなら　戦があると{br}なぜ　わしに一言もないのじゃ{br}わしは悲しいぞ。{page}兄者をさがしている内に{br}従者とも　はぐれてしもうた。{page}杉丸というのだが　どこかで{br}見かけなんだか？		176/160 x3	
-4E3	text	頼信（よりのぶ）、おぬし何か{br}かんちがいを　しておるようだ{br}な・・{page}今度の事は　戦ではない。{br}私は　陰陽師殿の　守りを{br}しているだけだ。		176/160 x3	
-4E4	text	なーに　敵がおって味方がおる{br}これが戦と呼ばず　何と呼ぼう{br}か、わしも行くぞ。{page}いやと言っても　ついていくぞ{br}よいだろう　兄者。		176/160 x3	
-4E5	text	おぬし　従者はどうした？{br}つれてきたのだろう。		176/160 x3	
-4E6	text	あー　よいよい　杉丸（すぎま{br}る）ならば　心配ない。{br}それより　はよう行こう。		176/160 x3	
-4E7	text	頼信様のさがしていた方々{br}ですね。{page}私は杉丸（すぎまる）。{br}頼信様の従者です。{page}都をさがしてまわる内に{br}頼信様とはぐれてしまい{br}さがしていました。{page}あの方は　戦が好きなのでは{br}ありませんよ　けんかが{br}好きなのです。{page}それより　私もお加え下さい。{br}頼信様がいないと　故郷に{br}帰れないのです。		176/160 x3	
-4E8	text	陰陽師の方か？　このような{br}所に何の用が　あるのかね？{br}盛高ならば・・いないぞ。{page}先ほども　盛高をたずねて{br}誰か来ておったが。{page}あいつは　すっかりふぬけて{br}しまった・・{page}法術で敗れたらしいが・・{br}わが弟ながらなさけない。{page}せっかくだから　家で休んで{br}もらってもよいぞ。		176/160 x3	
-4E9	text	弟は　今ごろ　どこでどうして{br}いるのか・・・旅の方か？{page}休みたいなら　自由に家を{br}使ってくれ、私一人には{br}広すぎてな・・		176/160 x3	
-4EA	text	盛高か？　何の用だ？{page}おまえのような　ふぬけに{br}私は用はないぞ。{page}・・・！　盛高？・・おまえ。		176/160 x3	
+4BD	text	あはははは、じょうだんよ。{br}本当は　盛高に会いたかった{br}んだけど・・{page}あなたでもいいわ　賀茂様。{br}行きましょう。	Ah ha ha ha, I'm only joking.{br}The truth is, I wanted to see{br}Moritaka, but...{page}you'll do, Kamo-sama.{br}Let's go.	176/160 x3	
+4BE	text	盛高じゃない　久しぶりね。{br}あなたが　晴明についたって{br}うわさは本当だったのね。	Why, if it isn't Moritaka. Been{br}a while. So the rumor's true;{br}you've sided with Seimei.	176/160 x3	
+4BF	text	言っておくが　おれは晴明に{br}ついたわけじゃない。{page}死なせたくない奴がいるんだ。{br}まだ十五、六の　がきだがね。{br}そいつのためさ・・{page}それより　なぜここにいる？{br}諏訪にいると思っていたが・・{page}できれば　おまえとは{br}戦いたくない・・{br}引いてはくれないか・・	Let me be clear: I haven't{br}sided with Seimei.{page}There's someone I don't want{br}to see die. A brat of fifteen{br}or sixteen. I do it for him...{page}More to the point, why are{br}you here? I thought you were{br}in Suwa...{page}I'd rather not fight you{br}if I can help it... Won't{br}you back off...	176/160 x3	
+4C0	text	誤解しないでほしいわね。{br}私は一人よ、あなたたちと{br}戦えるわけないじゃない・{page}ねえ盛高、私もつれて行っては{br}もらえないかしら？	Don't get the wrong idea.{br}I'm alone. How could I{br}fight the lot of you?{page}Say, Moritaka, won't you{br}take me with you?	176/160 x3	
+4C1	text	どういう事だ？　飛騨。{br}おまえは山童の一族だろう。{br}一族をうらぎるつもりか？{page}それとも　おれをだます気か？	What's this about, Hida?{br}You're of the Yamawaro clan.{br}You'd betray your own clan?{page}Or are you out to trick me?	176/160 x3	
+4C2	text	そうじゃないわ・・{br}私は道摩に会いたい・・いや{br}殺したいの・・{page}山童の一族は、ほとんど西国の{br}戦いで死んだのよ。{page}長の守屋様も　死ぬつもり{br}もう誰にも止められないわ。{page}だけど　一族の者をだまし{br}守屋様まで　この戦いに引き{br}ずり込んだ、道摩だけは・・{page}道摩だけは・・私はぜったいに{br}ゆるせない・・{page}今　京の都に　向かう者たちは{br}ほとんど将門があやつっている{br}死人よ・・{page}だから　別に　私が一族を{br}うらぎる事にはならないわ。{br}それが理由よ・・{page}わかった？　盛高。{br}じゃあ　行きましょう。	It's not that...{br}I want to meet Doma... No,{br}I want to kill him...{page}Most of the Yamawaro clan died{br}in the fighting in the west.{page}Our chief, Moriya-sama, means{br}to die too. No one can stop{br}him now.{page}But Doma deceived our clan{br}and dragged even Moriya-sama{br}into this war... Doma alone...{page}Doma alone, I will never{br}forgive...{page}Those marching on Kyoto now{br}are nearly all dead men{br}under Masakado's control...{page}So it's not as if I'm{br}betraying my clan.{br}That's my reason...{page}Got it, Moritaka?{br}Then let's go.	176/160 x3	
+4C3	text	すまぬが　ここより先は{br}高野山の領内、何人たりと{br}入れるわけに　いかぬ。	Forgive me, but beyond here{br}lie the lands of Mount Koya.{br}No one may enter.	176/160 x3	
+4C4	text	私としては、あなたがたに{br}力をかしたいのですが・・{page}御山の決定には　したがうのが{br}我らのつとめなのです。{page}花山法皇の命でもあれば{br}別なのですが・・・	For my part, I would like{br}to lend you my aid...{page}But it is our duty to obey{br}the will of the mountain.{page}If we had an order from the{br}Retired Emperor Kazan,{br}it would be another matter...	176/160 x3	
+4C5	text	これは・・！　まさしく{br}花山法皇の・印ではないか！{page}不動！　普賢！　じゅんびを{br}せい、出発じゃ！	This is...! Truly the seal of{br}the Retired Emperor Kazan!{page}Fudo! Fugen! Make ready.{br}We set out!	176/160 x3	
+4C6	text	ここより先は　寺の領内となる{br}すまぬが　目的のない者を{br}領内には入れられぬ。	Beyond here lie temple lands.{br}Forgive me, but none without{br}business may enter.	176/160 x3	
+4C7	text	道摩のしておる事、わかって{br}おるのだが・・　御山のゆるし{br}が出ないのだ・・・{page}私は　力をかしたいが・・{br}それが　できぬのだ・すまぬ。	We know what Doma is doing,{br}but... the mountain will not{br}give its leave...{page}I would lend you my aid...{br}but I cannot. Forgive me.	176/160 x3	
+4C8	text	本来　寺は女人禁制なれば・・{br}・・おぬしは　女であろう？{page}ならば　言わずともわかるで{br}あろうが・・	By rights, no woman may{br}enter the temple...{br}...You are a woman, no?{page}Then I need say no more,{br}I think...	176/160 x3	
+4C9	text	おお！　花山法皇様の印か！{br}これでうごける！{br}多聞！　六角！　出発じゃあ！	Oh! The seal of Retired{br}Emperor Kazan-sama!{br}Now we can move!{page}Tamon! Rokkaku! We set out!	176/160 x3	
+4CA	text	私は　高野の密教僧で　愛深{br}（あいぜん）ともうす者。{page}道摩と戦う陰陽師とお見受け{br}いたしますが、まちがいは{br}ありませんか？{page}今度の事　国の大事というに{br}高野は何もしようとしない・{page}我らは　しびれをきらして{br}寺を　ぬけて来ました。{br}どうか　お加え下され。	I am Aizen, an esoteric{br}monk of Koya.{page}You would be the onmyoji{br}fighting Doma, I take it.{br}Am I mistaken?{page}This is a matter for the whole{br}realm, yet Koya will do{br}nothing...{page}We lost our patience and{br}left the temple. Please,{br}let us join you.	176/160 x3	
+4CB	text	私は　比叡山の僧兵で法蓮{br}（ほうれん）ともうす。{page}道摩と戦う陰陽師と思ったの{br}ですが・・　おお　やはり{br}そうでしたか！{page}皆が力を合わせねば　ならぬ{br}時に、高野がどうしたなぞ{br}かんけいあるまいに・・{page}比叡の方々は　おわかりに{br}なっておらぬゆえ、我らは{br}山を出てまいった。{page}我らは　比叡の僧ではなく{br}ただの僧兵として、力をおかし{br}いたします。お加え下され。	I am Horen, a warrior monk{br}of Mount Hiei.{page}I thought you the onmyoji{br}fighting Doma... Ah, so{br}I was right!{page}When all must join forces, what{br}does it matter what Koya{br}does or does not do...{page}The men of Hiei do not{br}understand that, so we{br}have left the mountain.{page}Not as monks of Hiei, but as{br}simple warrior monks, we{br}offer our aid. Let us join you.	176/160 x3	
+4CC	text	まさだ	Not yet.	176/160 x3	
+4CD	text	まさだ	Not yet.	176/160 x3	
+4CE	text	まさだ	Not yet.	176/160 x3	
+4CF	text	まさだ	Not yet.	176/160 x3	
+4D0	text	まさだ	Not yet.	176/160 x3	
+4D1	text	まさだ	Not yet.	176/160 x3	
+4D2	text	まさだ	Not yet.	176/160 x3	
+4D3	text	まさだ	Not yet.	176/160 x3	
+4D4	text	まさだ	Not yet.	176/160 x3	
+4D5	text	まさだ	Not yet.	176/160 x3	
+4D6	text	なんだあ、てめえは？{br}ここから先は　とおせねえぜ！{br}とっとと　かえんな！！	Who the hell are you?{br}Nobody gets past here!{br}Now beat it!!	176/160 x3	
+4D7	text	このような所によく来られた。{br}どうぞ一晩　お泊まり下され。	Welcome to such a place.{br}Please, stay the night.	176/160 x3	
+4D8	text	おお　都から来られた方か？{br}これはめずらしい・・{page}私の兄も、都で検非違使をして{br}いるのですよ・・{page}ところで　あなたがたは、{br}何のために　このような所を{br}お通りなされる・・{page}何かわけが　おありでしょう・{br}よければ　きかせては{br}もらえませぬか？{page}・・・・・・・！！{page}・・・・・・・・・{page}・・・・・・・話が大きすぎて{br}信じられませんが・・{page}まさか　そんな事がおこって{br}いるとは・・{page}私は武士ですが、何かの力に{br}なれるかも知れません・・{br}ついて行きましょう。{page}まあ　それは明日にして・・{br}今日はもうお疲れでしょう{br}どうぞ　お休み下され。	Oh, you have come from the{br}capital? How rare...{page}My elder brother serves in{br}the capital too, in the{br}Kebiishi...{page}By the way, for what reason{br}do you pass through such{br}a place as this...{page}You must have some reason...{br}If you do not mind, will{br}you tell me?{page}.......!!{page}.........{page}.......It is too much to{br}believe, but...{page}that such things should{br}be happening...{page}I am a warrior. I may be of{br}some help to you... I shall{br}go with you.{page}Well, that can wait until{br}tomorrow... You must be tired.{br}Please, rest yourselves.	176/160 x3	
+4D9	text	このあたりには　賊がおおく{br}何かとぶっそうです。{page}訪ねてこられたのも　何かの縁{br}でしょう、わが家でよければ{br}泊まりなさいませ。	There are many bandits about{br}here, and it is dangerous.{page}Your visit must be fate.{br}If my home will do, please{br}stay the night.	176/160 x3	
+4DA	text	それは　ありがたい・お言葉に{br}甘えさせてもらいます・・{page}失礼ですが、あなたは女では{br}ありませんか？　なぜ男の服を{br}きておられる？	That is most kind. I will{br}accept your offer...{page}Forgive me, but are you not{br}a woman? Why do you wear{br}men's clothes?	176/160 x3	
+4DB	text	それは・・{page}まあ　旅のみやげ話として{br}お話ししましょうか・・{page}わが佐伯の家は　昔からこの{br}あたりを治めていました・・{page}ところが　近年のえきびょうと{br}凶作のあおりか・・このあたり{br}に山賊が出るようになり・・{page}父は近くの者をあつめて　山賊{br}討伐に出ましたが、逆に討たれ{br}てしまったのです・・{page}命からがら帰ってきた者の話で{br}は、山賊の中にまじないを使う{br}者がおり・・{page}その者に討たれたそうです・{page}この家は父と私だけがくらして{br}おりましたので、父がおらねば{br}佐伯の家はおわりです・・{page}せめて父の仇を討とうと思い{br}このようなすがたで、毎日{br}山へ出かけているのです・・{page}さあ　旅でお疲れでしょう・・{br}今日はもうお休みなさいませ。	That is...{page}Well, I shall tell you, as{br}a tale for your travels...{page}My house, the Saeki, has ruled{br}these parts since of old...{page}But in recent years, in the{br}wake of plague and famine,{br}bandits began to appear...{page}My father gathered men nearby{br}and set out to put down the{br}bandits, but was slain...{page}One who barely escaped said{br}that among the bandits was{br}one who used sorcery...{page}and it was he who slew him...{page}Only my father and I lived{br}in this house. Without him,{br}the Saeki house is finished...{page}At least I would avenge my{br}father, so every day I go into{br}the hills dressed like this...{page}Now, you must be tired from{br}your journey... Please rest{br}for tonight.	176/160 x3	
+4DC	text	なるほど・そういう事ですか・{br}そんな事があったとは・・・{page}あなたの父上は山賊に討たれた{br}わけではありません・・それに{br}話せば長くなりますが・・{page}全ては　道摩という者が{br}おこした事が　始まりです。{page}今からお話する事は　国の大事{br}ですから　決して口外しないで{br}下さい・・{page}実は・・・・・・・	I see... So that is how it is...{br}That such a thing happened...{page}Your father was not slain by{br}bandits... It is a long story,{br}but...{page}it all began with what one{br}called Doma has done.{page}What I tell you now is a matter{br}for the whole realm. Never{br}speak of it to anyone...{page}The truth is.......	176/160 x3	
+4DD	text	・・・・・・・・・・・・・！{br}それは本当の事でしょうか？{page}そういう事ならば　私もつれて{br}行ってはもらえませんか？{page}父の仇が　あなたの言う道摩で{br}あるのならば、私は道摩と戦う{br}必要があります・・{page}女とはいえ　父のおかげで剣の{br}あつかいでは、誰にも負けぬと{br}自負しております。{page}お役にたてるかは　わかりませ{br}ぬが、あなたを守る事くらいは{br}できましょう。{page}つれていって下さい。	..........!{br}Can that be true?{page}If so, will you not take{br}me with you?{page}If my father's foe is this Doma{br}you speak of, then I must{br}fight Doma...{page}I may be a woman, but thanks{br}to my father, I am proud to{br}yield to no one with a sword.{page}I cannot say how useful I{br}will be, but I can at least{br}protect you.{page}Please take me with you.	176/160 x3	
+4DE	text	うれしいね　ありがとう。{br}・・・・・・・・・ん？{page}あんた女だろ？{br}姿かっこうをまねても{br}においでわかるさ・・{page}何かわけが　あるんだろ？{br}よければ話してくれないか？	Now that's kind. Thanks.{br}.........Hm?{page}You're a woman, aren't you?{br}You can copy the look,{br}but I can smell it...{page}You've got your reasons,{br}right? Mind telling me?	176/160 x3	
+4DF	text	旅の方には　かかわりのない事{br}ですが・・いいでしょう。{page}佐伯の家は　昔からこのあたり{br}をおさめていました。{page}近年の凶作のあおりで　山賊が{br}多く出るのは、旅の人なら{br}知っておりましょう。{page}この安芸の国も　例外では{br}ありません。{page}命まではうばわぬ　といえど{br}あいては山賊です。{page}せっかく出来た　作物も全て{br}とられては、里の人は生きては{br}行けませぬ。{page}父は里を守るために　山賊討伐{br}に出て行ったのですが、{page}山賊の中にまじないを使う者が{br}おり、その者に父は　討たれた{br}そうです・・{page}父がおらねば　この佐伯の家は{br}終わりです。{page}それゆえ、せめて仇を討とうと{br}このすがたで　毎日　山を{br}めぐっていたのです・・{page}剣のあつかいだけは、父から{br}おしえられましたから・・	It is no concern of a traveler's,{br}but... very well.{page}The Saeki house has ruled{br}these parts since of old.{page}As a traveler you will know{br}that with the poor harvests of{br}late, bandits have multiplied.{page}This province of Aki{br}is no exception.{page}They may not take lives,{br}but they are bandits all{br}the same.{page}If they take every crop that{br}is grown, the village folk{br}cannot live.{page}To protect the village, my{br}father set out to put down{br}the bandits, but...{page}among them was one who used{br}sorcery, and by him, they say,{br}my father was slain...{page}Without my father, the Saeki{br}house is finished.{page}So, to at least avenge him,{br}every day I roamed the hills{br}dressed like this...{page}Swordsmanship, at least,{br}my father taught me...	176/160 x3	
+4E0	text	・・・・・あんた女だろう？{br}・・・・まあ、いいか。{page}どうしても　父とやらの　仇を{br}討ちたいのか・・{page}言っておくが、あんたの父は{br}山賊に討たれたんじゃない・・{br}やめた方がいい・・が{page}あんたのようすじゃ　やめそう{br}にもないな・・しかたない。{page}いっしょに来るといい・・{br}死ぬかくごがあれば・・だが{page}おれは　あんたの仇と戦って{br}いる・・{page}あんたに　その気があるなら{br}いっしょに行こう。	.....You're a woman, right?{br}.....Well, whatever.{page}You're set on avenging{br}this father of yours...{page}Mind you, your father wasn't{br}killed by bandits...{br}Better to give it up... but{page}from the look of you, you{br}won't... Can't be helped.{page}Come along, then...{br}If you're ready to die, that is.{page}I'm fighting your foe{br}myself...{page}If you've a mind to,{br}come with us.	176/160 x3	
+4E1	text	源頼光を知らぬか？　いや名前{br}ではなく　居場所の事だ。{page}わしは弟の頼信（よりのぶ）{br}と言う者。{page}都中をさがしているのだが・・{br}どこへ行ってもおらん。	Do you know Minamoto no{br}Yorimitsu? No, not his name.{br}I mean where he is.{page}I am his younger brother,{br}Yorinobu.{page}I have searched the whole{br}capital... but he is nowhere.	176/160 x3	
+4E2	text	おー兄者！　やっと会えたか。{br}しかし　兄者も人が悪いのう。{page}戦があるなら　戦があると{br}なぜ　わしに一言もないのじゃ{br}わしは悲しいぞ。{page}兄者をさがしている内に{br}従者とも　はぐれてしもうた。{page}杉丸というのだが　どこかで{br}見かけなんだか？	Oho, brother! Found you at last.{br}But you are a cruel one,{br}brother.{page}If there is a war, why not{br}say a word to me? It{br}grieves me, it does.{page}While searching for you, I{br}lost my retainer as well.{page}His name is Sugimaru. Have{br}you seen him anywhere?	176/160 x3	
+4E3	text	頼信（よりのぶ）、おぬし何か{br}かんちがいを　しておるようだ{br}な・・{page}今度の事は　戦ではない。{br}私は　陰陽師殿の　守りを{br}しているだけだ。	Yorinobu, you seem to{br}have misunderstood...{page}This is no war. I am only{br}guarding Onmyoji-dono.	176/160 x3	
+4E4	text	なーに　敵がおって味方がおる{br}これが戦と呼ばず　何と呼ぼう{br}か、わしも行くぞ。{page}いやと言っても　ついていくぞ{br}よいだろう　兄者。	Nonsense! There are foes and{br}there are friends. What else{br}is that but war? I'm coming.{page}Say no if you like, I'm coming{br}along. All right, brother?	176/160 x3	
+4E5	text	おぬし　従者はどうした？{br}つれてきたのだろう。	What of your retainer?{br}You brought him, did you not?	176/160 x3	
+4E6	text	あー　よいよい　杉丸（すぎま{br}る）ならば　心配ない。{br}それより　はよう行こう。	Ah, never mind. Sugimaru{br}will be fine. More to the{br}point, let us be off.	176/160 x3	
+4E7	text	頼信様のさがしていた方々{br}ですね。{page}私は杉丸（すぎまる）。{br}頼信様の従者です。{page}都をさがしてまわる内に{br}頼信様とはぐれてしまい{br}さがしていました。{page}あの方は　戦が好きなのでは{br}ありませんよ　けんかが{br}好きなのです。{page}それより　私もお加え下さい。{br}頼信様がいないと　故郷に{br}帰れないのです。	You are the ones Yorinobu-sama{br}was looking for.{page}I am Sugimaru, retainer{br}to Yorinobu-sama.{page}Searching the capital, I lost{br}Yorinobu-sama, and I have{br}been looking for him.{page}It is not war he loves, you{br}know. It is a good brawl.{page}More to the point, let me{br}join you too. Without{br}Yorinobu-sama, I cannot go home.	176/160 x3	
+4E8	text	陰陽師の方か？　このような{br}所に何の用が　あるのかね？{br}盛高ならば・・いないぞ。{page}先ほども　盛高をたずねて{br}誰か来ておったが。{page}あいつは　すっかりふぬけて{br}しまった・・{page}法術で敗れたらしいが・・{br}わが弟ながらなさけない。{page}せっかくだから　家で休んで{br}もらってもよいぞ。	An onmyoji? What business{br}have you in a place like this?{br}Moritaka? He's not here.{page}Someone came asking for{br}Moritaka just a while ago.{page}He has gone completely{br}spineless...{page}Beaten by sorcery, they say...{br}My own brother, and so pitiful.{page}Since you are here, you are{br}welcome to rest at my house.	176/160 x3	
+4E9	text	弟は　今ごろ　どこでどうして{br}いるのか・・・旅の方か？{page}休みたいなら　自由に家を{br}使ってくれ、私一人には{br}広すぎてな・・	Where is my brother now, and{br}what is he doing... A traveler?{page}If you want to rest, use the{br}house as you like. It's far{br}too big for me alone...	176/160 x3	
+4EA	text	盛高か？　何の用だ？{page}おまえのような　ふぬけに{br}私は用はないぞ。{page}・・・！　盛高？・・おまえ。	Moritaka? What do you want?{page}I've no use for a spineless{br}wretch like you.{page}...! Moritaka? ...You...	176/160 x3	
 4EB	text	もう大丈夫だ・・兄さん。{page}おれは　もう一度戦う事に{br}決めた・・あの道摩と、{br}それで別れにきたのさ。{page}多分、ここには戻らない。		176/160 x3	
 4EC	text	そうか・・おまえは　自分の{br}やりたい事を　すればいい。{br}私もそうさせてもらう。		176/160 x3	
 4ED	text	兄さん・ついてくるつもりか？{br}死ぬかも知れないんだぜ。		176/160 x3	
