@@ -1,7 +1,7 @@
-# <Game title> English translation
+# Heian Fuuunden English translation
 
-Unofficial English fan translation of **<Game title>** (<platform>, <publisher>, <year>): the source text and tools
-that build the patch.
+Unofficial English fan translation of **Heian Fuuunden** (平安風雲伝; Super Famicom, KSS, 1995): the source text and
+tools that build the patch.
 
 **Just want to play?** Download the patch from [Releases](../../releases) and follow its README. This repository holds
 no game data you can play; you need your own dump of the Japanese game.
@@ -13,13 +13,15 @@ helps most.
 
 | Part | Status |
 |---|---|
-| <Dialogue / story> | <Translated> |
-| <Menus, items, skills, system messages> | <Translated> |
-| <Title screen, logos, graphics with text> | <Translated / Left in Japanese> |
-| <Name entry> | <Translated / Japanese kana only> |
-| <Songs, voiced lines, credits roll> | <Left in Japanese> |
+| Dialogue / story, epilogues | Translated (every line, 1556 strings) |
+| Menus, items, jutsu, shikigami, provinces, battle and system messages | Translated |
+| Graphics with text (battle commands, status labels, help panels, chapter and province cards, game over) | Translated |
+| Title logo 平安風雲伝 | Left in Japanese (no official English logo exists); PUSH START and the company logos were English already |
+| Name entry | None in this game |
+| Staff roll | Translated |
 
-Known issues: <none known / see [Issues](../../issues)>.
+Known issues: see [Issues](../../issues). A line that names a unit (e.g. "Kagura's turn.") is indented for the
+widest name it can take, as in the Japanese, so short names sit left of centre.
 
 ## What's here
 
@@ -37,15 +39,18 @@ Known issues: <none known / see [Issues](../../issues)>.
 
 ## Build your own patched ROM
 
-Needs Python 3.12+ and your own dump of the Japanese game.
+Needs Python 3.12+, [asar](https://github.com/RPGHacker/asar) 1.91 in `tools/asar/`, and your own dump of the
+Japanese game.
 
 ```sh
-git clone https://github.com/minhnhattonthat/<repo>
-cd <repo>
-# copy your dump to: rom/<file>
-#   (<size> bytes, SHA-1 <sha1>; the build refuses any other dump, see rom.sha1)
-python -X utf8 tools/build.py                          # -> build/<game>_en.<ext>
+git clone https://github.com/minhnhattonthat/heian-fuuunden-en
+cd heian-fuuunden-en
+# copy your dump to: rom/Heian Fuuunden (Japan).sfc
+#   (1572864 bytes, no header; CRC32 4640D1A2, MD5 1d00c833f280c50e3e015f45b9bde75f,
+#    SHA-1 3b0ca4a24a02c683f8ad140242f6dff96d0d8339; the build refuses any other dump, see rom.sha1)
+python -X utf8 build.py                                # -> build/heian_en.sfc
 python -X utf8 tools/check.py                          # tests + text lint
+python -X utf8 tools/release.py                        # every release gate, then release/Heian_Fuuunden_EN_v1.0.zip
 ```
 
 ## Support
@@ -56,8 +61,9 @@ If you enjoy this translation, you can support my work on Ko-fi:
 
 ## Licence
 
-Tools and English translation: MIT. The original Japanese text in `script/` is <publisher>'s and is included only so
-the translation can be checked against it. <Game title> is (c) <publisher>; this project is not affiliated with them.
+Tools and English translation: MIT. The original Japanese text in `script/` is KSS's and is included only so
+the translation can be checked against it. Heian Fuuunden is (c) 1995 KSS; this project is not affiliated with them.
+Fonts: Pixel Operator and Pixel Operator 8 by Jayvee Enaguas (CC0), see `docs/fonts.md`.
 Do not share patched ROMs.
 
 The translation was made with extensive AI assistance (Claude by Anthropic). Corrections are very welcome.
