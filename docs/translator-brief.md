@@ -29,7 +29,7 @@ English, no Japanese or fullwidth characters. Breaks are written as `{br}` and `
 ## Style
 - Faithful: keep the information and order of ideas; adapt idiom, not meaning. Don't add or summarise.
 - Keep the speaker audible: Seimei (old, おる/そなた/〜ぬ) formal and wry ("I had thought...", "Is that not so?");
-  Tenkai (old priest, わし/じゃ/のう) warm and gruff ("eh?", "my girl"); Kagura young, direct, lively; bandits and
+  Tenkai (old priest, わし/じゃ/のう) warm and gruff ("eh?", "my boy"); Kagura young, direct, lively; bandits and
   rough men clipped ("ya", "ain't"); court nobles stiff and polite. A line any speaker could have said is a mistake.
 - Names and terms exactly as in the glossary. Never abbreviate to fit: rephrase, or add a `{page}`.
 - Honorifics kept: 〜殿 -dono, 〜様 -sama (Seimei-sama), 〜姫 -hime. Western name order.
