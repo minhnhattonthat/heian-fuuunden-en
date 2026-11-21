@@ -1,428 +1,428 @@
 id	kind	jp	en	max	notes
 000	text	　　　　		176/160 x3	
-001	text	小刀		48 field	
-002	text	青銅刀		48 field	
-003	text	無銘刀		48 field	
-004	text	太刀		48 field	
-005	text	銘刀		48 field	
-006	text	安綱		48 field	
-007	text	火刀		48 field	
-008	text	水龍剣		48 field	
-009	text	雷神丸		48 field	
-00A	text	朱雀刀		48 field	
-00B	text	玄武刀		48 field	
-00C	text	青龍刀		48 field	
-00D	text	白虎刀		48 field	
-00E	text	鳳凰刀		48 field	
-00F	text	阿修羅		48 field	
-010+011	text	六角杖		48 field	
-012	text	天狗杖		48 field	
-013	text	龍神杖		48 field	
-014	text	玉龍杖		48 field	
-015	text	蓮華杖		48 field	
-016+017	text	法輪		48 field	
-018	text	日輪		48 field	
-019	text	月輪		48 field	
-01A	text	蓮華輪		48 field	
-01B+01C	text	独鈷杵		48 field	
-01D	text	三鈷杵		48 field	
-01E	text	五鈷杵		48 field	
-01F	text	七鈷杵		48 field	
-020+021	text	玉串		48 field	
-022	text	神鏡		48 field	
-023	text	火護符		48 field	
-024	text	水護符		48 field	
-025	text	木護符		48 field	
-026	text	金護符		48 field	
-027	text	土護符		48 field	
-028	text	五弦琵琶		48 field	
-029	text	玄象		48 field	
-02A	text	小威鎧		48 field	
-02B	text	大威鎧		48 field	
-02C	text	金糸威		48 field	
-02D	text	緋威鎧		48 field	
-02E	text	八幡鎧		48 field	
-02F	text	朱雀鎧		48 field	
-030	text	玄武鎧		48 field	
-031	text	白虎鎧		48 field	
-032	text	青龍鎧		48 field	
-033	text	鳳凰鎧		48 field	
-034	text	銀のけさ		48 field	
-035	text	金のけさ		48 field	
-036	text	護法衣		48 field	
-037	text	星辰衣		48 field	
-038	text	麒麟衣		48 field	
-039	text	降神衣		48 field	
-03A	text	聖衣		48 field	
-03B	text	神衣		48 field	
-03C	text	銅丹		48 field	
-03D	text	銀丹		48 field	
-03E	text	金丹		48 field	
-03F	text	唐人参		48 field	
-040	text	雪の下		48 field	
-041	text	赤まむし		48 field	
-042	text	鬼の角		48 field	
-043	text	醍醐		48 field	
-044	text	経典		48 field	
-045	text	伝承奥義		48 field	
-046	text	隼のはね		48 field	
-047	text	かんろ		48 field	
-048	text	ほうじゅ		48 field	
-049	text	唐のつぼ		48 field	
-04A	text	るりはい		48 field	
-04B	text	ぶつぞう		48 field	
-04C	text	火雲笛		48 field	
-04D	text	ひすい		48 field	
-04E	text	めのう		48 field	
-04F	text	かがみ		48 field	
-050	text	きぬの布		48 field	
-051	text	わたの布		48 field	
-052	text	源氏物語		48 field	
-053	text	枕草子		48 field	
-054	text	神楽		40 narrow	
-055	text	晴明		40 narrow	
-056	text	広行		40 narrow	
-057	text	盛高		40 narrow	
-058	text	上宮		40 narrow	
-059	text	紅葉		40 narrow	
-05A	text	蝉丸		40 narrow	
-05B	text	卯月		40 narrow	
-05C	text	蘆太		40 narrow	
-05D	text	桔梗		40 narrow	
-05E	text	楓　		40 narrow	
-05F	text	葵　		40 narrow	
-060	text	金剛		40 narrow	
-061	text	虚空		40 narrow	
-062	text	狗法		40 narrow	
-063	text	猿法		40 narrow	
-064	text	夷　		40 narrow	
-065	text	春菜		40 narrow	
-066	text	飛騨		40 narrow	
-067	text	雀　		40 narrow	
-068	text	雉女		40 narrow	
-069	text	葉月		40 narrow	
-06A	text	愛深		40 narrow	
-06B	text	珍念		40 narrow	
-06C	text	如雲		40 narrow	
-06D	text	沙摩		40 narrow	
-06E	text	不動		40 narrow	
-06F	text	普賢		40 narrow	
-070	text	法蓮		40 narrow	
-071	text	照雲		40 narrow	
-072	text	多聞		40 narrow	
-073	text	六角		40 narrow	
-074	text	源信		40 narrow	
-075	text	仁空		40 narrow	
-076	text	諸秀		40 narrow	
-077	text	頼光		40 narrow	
-078	text	綱　		40 narrow	
-079	text	景時		40 narrow	
-07A	text	正秀		40 narrow	
-07B	text	公時		40 narrow	
-07C	text	貞光		40 narrow	
-07D	text	為之		40 narrow	
-07E	text	保昌		40 narrow	
-07F	text	琴乃		40 narrow	
-080	text	頼信		40 narrow	
-081	text	杉丸		40 narrow	
-082	text	高遠		40 narrow	
-083	text	季武		40 narrow	
-084	text	平将門		48 field	
-085	text	藤原純友		48 field	
-086	text	阿古耶		48 field	
-087	text	　道摩		48 field	
-088	text	偽道摩		48 field	
-089	text	天海和尚		48 field	
-08A	text	調伏丸		48 field	
-08B	text	山賊頭		48 field	
-08C	text	相模入道		48 field	
-08D	text	久慈法眼		48 field	
-08E	text	日下法眼		48 field	
-08F	text	小野正光		48 field	
-090	text	真叉陀		48 field	
-091	text	霞隠鬼		48 field	
-092	text	磯目鬼		48 field	
-093	text	　兎乃		48 field	
-094	text	　葛葉		48 field	
-095	text	　赤名		48 field	
-096	text	　緑名		48 field	
-097	text	　青名		48 field	
-098	text	歩危天狗		48 field	
-099	text	耶麻天狗		48 field	
-09A	text	二上天狗		48 field	
-09B	text	　石上		48 field	
-09C	text	　守屋		48 field	
-09D+09E	text	山童隊長		48 field	
-09F+0A0	text	呪禁道師		48 field	
-0A1+0A2+0A3+0A4	text	傀儡師		48 field	
-0A5	text	炎使い		48 field	
-0A6	text	水使い		48 field	
-0A7	text	風使い		48 field	
-0A8	text	波使い		48 field	
-0A9	text	闇使い		48 field	
-0AA+0AB	text	　武士		48 field	
-0AC	text	陰陽師		48 field	
-0AD+0AE	text	女ぼす		48 field	
-0AF+0B0+0B4	text	　山賊		48 field	
-0B2+0B3	text	　妖魔		48 field	
-0B1+0B5	text	　賊		48 field	
-0B6	text	　巫女		48 field	
-0B7	text	八十物部		48 field	
-0B8	text	　　　説明を見ますか？{end2}		48 field	
-0B9+0BA+0BB+0BC+0BD+0BE+0BF+0C0+0C1+0C2+0C3	text	　神楽		48 field	
-0C4	text	安部晴明		48 field	
-0C5	text	賀茂広行		48 field	
-0C6	text	藤原盛高		48 field	
-0C7	text	　上宮		48 field	
-0C8	text	　紅葉		48 field	
-0C9	text	　蝉丸		48 field	
-0CA	text	　卯月		48 field	
-0CB	text	　蘆太		48 field	
-0CC	text	　桔梗		48 field	
-0CD	text	　楓		48 field	
-0CE	text	　葵		48 field	
-0CF	text	金剛坊		48 field	
-0D0	text	虚空坊		48 field	
-0D1	text	狗法眼		48 field	
-0D2	text	猿法眼		48 field	
-0D3	text	　夷		48 field	
-0D4	text	　春菜		48 field	
-0D5	text	　飛騨		48 field	
-0D6	text	　雀		48 field	
-0D7	text	　雉女		48 field	
-0D8	text	　葉月		48 field	
-0D9	text	　愛深		48 field	
-0DA	text	　珍念		48 field	
-0DB	text	　如雲		48 field	
-0DC	text	　沙摩		48 field	
-0DD	text	　不動		48 field	
-0DE	text	　普賢		48 field	
-0DF	text	　法蓮		48 field	
-0E0	text	　照雲		48 field	
-0E1	text	　多聞		48 field	
-0E2	text	　六角		48 field	
-0E3	text	　源信		48 field	
-0E4	text	　仁空		48 field	
-0E5	text	橘諸秀		48 field	
-0E6	text	源頼光		48 field	
-0E7	text	渡辺綱		48 field	
-0E8	text	田辺景時		48 field	
-0E9	text	越智正秀		48 field	
-0EA	text	坂田公時		48 field	
-0EB	text	碓井貞光		48 field	
-0EC	text	伴為之		48 field	
-0ED	text	藤原保昌		48 field	
-0EE	text	佐伯琴乃		48 field	
-0EF	text	源頼信		48 field	
-0F0	text	　杉丸		48 field	
-0F1	text	藤原高遠		48 field	
-0F2	text	卜部季武		48 field	
-0F3	text	式神使い		48 field	
-0F4	text	陰陽師		48 field	
-0F5	text	呪禁道師		48 field	
-0F6	text	琵琶法師		48 field	
-0F7	text	伊勢斎宮		48 field	
-0F8	text	精霊使い		48 field	
-0F9	text	　盗賊		48 field	
-0FA	text	修験道師		48 field	
-0FB	text	　巫女		48 field	
-0FC	text	密教僧		48 field	
-0FD	text	　僧兵		48 field	
-0FE	text	　武士		48 field	
-0FF	text	価値		24 field	shop label under each panel (price column)
+001	text	小刀	Short Sword	48 field	
+002	text	青銅刀	Bronze Sword	48 field	
+003	text	無銘刀	Unsigned Blade	48 field	
+004	text	太刀	Tachi	48 field	
+005	text	銘刀	Signed Blade	48 field	
+006	text	安綱	Yasutsuna	48 field	
+007	text	火刀	Fire Blade	48 field	
+008	text	水龍剣	Water Dragon Blade	48 field	
+009	text	雷神丸	Raijinmaru	48 field	
+00A	text	朱雀刀	Suzaku Blade	48 field	
+00B	text	玄武刀	Genbu Blade	48 field	
+00C	text	青龍刀	Seiryu Blade	48 field	
+00D	text	白虎刀	Byakko Blade	48 field	
+00E	text	鳳凰刀	Phoenix Blade	48 field	
+00F	text	阿修羅	Asura	48 field	
+010+011	text	六角杖	Hexagon Staff	48 field	
+012	text	天狗杖	Tengu Staff	48 field	
+013	text	龍神杖	Dragon God Staff	48 field	
+014	text	玉龍杖	Jade Dragon Staff	48 field	
+015	text	蓮華杖	Lotus Staff	48 field	
+016+017	text	法輪	Dharma Wheel	48 field	
+018	text	日輪	Sun Wheel	48 field	
+019	text	月輪	Moon Wheel	48 field	
+01A	text	蓮華輪	Lotus Wheel	48 field	
+01B+01C	text	独鈷杵	1-Prong Vajra	48 field	
+01D	text	三鈷杵	3-Prong Vajra	48 field	
+01E	text	五鈷杵	5-Prong Vajra	48 field	
+01F	text	七鈷杵	7-Prong Vajra	48 field	
+020+021	text	玉串	Tamagushi	48 field	
+022	text	神鏡	Sacred Mirror	48 field	
+023	text	火護符	Fire Talisman	48 field	
+024	text	水護符	Water Talisman	48 field	
+025	text	木護符	Wood Talisman	48 field	
+026	text	金護符	Metal Talisman	48 field	
+027	text	土護符	Earth Talisman	48 field	
+028	text	五弦琵琶	Five-String Biwa	48 field	
+029	text	玄象	Genjo	48 field	
+02A	text	小威鎧	Light Armor	48 field	
+02B	text	大威鎧	Great Armor	48 field	
+02C	text	金糸威	Gold-Laced Armor	48 field	
+02D	text	緋威鎧	Scarlet Armor	48 field	
+02E	text	八幡鎧	Hachiman Armor	48 field	
+02F	text	朱雀鎧	Suzaku Armor	48 field	
+030	text	玄武鎧	Genbu Armor	48 field	
+031	text	白虎鎧	Byakko Armor	48 field	
+032	text	青龍鎧	Seiryu Armor	48 field	
+033	text	鳳凰鎧	Phoenix Armor	48 field	
+034	text	銀のけさ	Silver Kesa	48 field	
+035	text	金のけさ	Gold Kesa	48 field	
+036	text	護法衣	Guardian Robe	48 field	
+037	text	星辰衣	Star Robe	48 field	
+038	text	麒麟衣	Kirin Robe	48 field	
+039	text	降神衣	Descent Robe	48 field	
+03A	text	聖衣	Holy Robe	48 field	
+03B	text	神衣	Divine Robe	48 field	
+03C	text	銅丹	Copper Pill	48 field	
+03D	text	銀丹	Silver Pill	48 field	
+03E	text	金丹	Gold Pill	48 field	
+03F	text	唐人参	Ginseng	48 field	
+040	text	雪の下	Saxifrage	48 field	
+041	text	赤まむし	Red Viper	48 field	
+042	text	鬼の角	Oni Horn	48 field	
+043	text	醍醐	Daigo	48 field	
+044	text	経典	Sutra	48 field	
+045	text	伝承奥義	Secret Scroll	48 field	
+046	text	隼のはね	Falcon Feather	48 field	
+047	text	かんろ	Nectar	48 field	
+048	text	ほうじゅ	Wish Jewel	48 field	
+049	text	唐のつぼ	Chinese Jar	48 field	
+04A	text	るりはい	Lapis Cup	48 field	
+04B	text	ぶつぞう	Buddha Statue	48 field	
+04C	text	火雲笛	Fire Cloud Flute	48 field	
+04D	text	ひすい	Jade	48 field	
+04E	text	めのう	Agate	48 field	
+04F	text	かがみ	Mirror	48 field	
+050	text	きぬの布	Silk Cloth	48 field	
+051	text	わたの布	Cotton Cloth	48 field	
+052	text	源氏物語	Tale of Genji	48 field	
+053	text	枕草子	Pillow Book	48 field	
+054	text	神楽	Kagura	40 narrow	
+055	text	晴明	Seimei	40 narrow	
+056	text	広行	Hiroyuki	40 narrow	
+057	text	盛高	Moritaka	40 narrow	
+058	text	上宮	Jogu	40 narrow	
+059	text	紅葉	Momiji	40 narrow	
+05A	text	蝉丸	Semimaru	40 narrow	
+05B	text	卯月	Uzuki	40 narrow	
+05C	text	蘆太	Ashita	40 narrow	
+05D	text	桔梗	Kikyo	40 narrow	
+05E	text	楓　	Kaede	40 narrow	
+05F	text	葵　	Aoi	40 narrow	
+060	text	金剛	Kongo	40 narrow	
+061	text	虚空	Koku	40 narrow	
+062	text	狗法	Kuho	40 narrow	
+063	text	猿法	Enho	40 narrow	
+064	text	夷　	Ebisu	40 narrow	
+065	text	春菜	Haruna	40 narrow	
+066	text	飛騨	Hida	40 narrow	
+067	text	雀　	Suzume	40 narrow	
+068	text	雉女	Kijime	40 narrow	
+069	text	葉月	Hazuki	40 narrow	
+06A	text	愛深	Aimi	40 narrow	
+06B	text	珍念	Chinnen	40 narrow	
+06C	text	如雲	Joun	40 narrow	
+06D	text	沙摩	Shama	40 narrow	
+06E	text	不動	Fudo	40 narrow	
+06F	text	普賢	Fugen	40 narrow	
+070	text	法蓮	Horen	40 narrow	
+071	text	照雲	Shoun	40 narrow	
+072	text	多聞	Tamon	40 narrow	
+073	text	六角	Rokkaku	40 narrow	
+074	text	源信	Genshin	40 narrow	
+075	text	仁空	Ninku	40 narrow	
+076	text	諸秀	Morohide	40 narrow	
+077	text	頼光	Yorimitsu	40 narrow	
+078	text	綱　	Tsuna	40 narrow	
+079	text	景時	Kagetoki	40 narrow	
+07A	text	正秀	Masahide	40 narrow	
+07B	text	公時	Kintoki	40 narrow	
+07C	text	貞光	Sadamitsu	40 narrow	
+07D	text	為之	Tameyuki	40 narrow	
+07E	text	保昌	Yasumasa	40 narrow	
+07F	text	琴乃	Kotono	40 narrow	
+080	text	頼信	Yorinobu	40 narrow	
+081	text	杉丸	Sugimaru	40 narrow	
+082	text	高遠	Takato	40 narrow	
+083	text	季武	Suetake	40 narrow	
+084	text	平将門	Taira no Masakado	48 field	
+085	text	藤原純友	Fujiwara no Sumitomo	48 field	
+086	text	阿古耶	Akoya	48 field	
+087	text	　道摩	Doma	48 field	
+088	text	偽道摩	False Doma	48 field	
+089	text	天海和尚	Priest Tenkai	48 field	
+08A	text	調伏丸	Chobukumaru	48 field	
+08B	text	山賊頭	Bandit Chief	48 field	
+08C	text	相模入道	Sagami Nyudo	48 field	
+08D	text	久慈法眼	Kuji Hogen	48 field	
+08E	text	日下法眼	Kusaka Hogen	48 field	
+08F	text	小野正光	Ono no Masamitsu	48 field	
+090	text	真叉陀	Shinshada	48 field	
+091	text	霞隠鬼	Kainki	48 field	
+092	text	磯目鬼	Isomeki	48 field	
+093	text	　兎乃	Usagino	48 field	
+094	text	　葛葉	Kuzunoha	48 field	
+095	text	　赤名	Akana	48 field	
+096	text	　緑名	Midorina	48 field	
+097	text	　青名	Aona	48 field	
+098	text	歩危天狗	Boke Tengu	48 field	
+099	text	耶麻天狗	Yama Tengu	48 field	
+09A	text	二上天狗	Futakami Tengu	48 field	
+09B	text	　石上	Isogami	48 field	
+09C	text	　守屋	Moriya	48 field	
+09D+09E	text	山童隊長	Yamawaro Captain	48 field	
+09F+0A0	text	呪禁道師	Jugon Master	48 field	
+0A1+0A2+0A3+0A4	text	傀儡師	Puppeteer	48 field	
+0A5	text	炎使い	Fire Adept	48 field	
+0A6	text	水使い	Water Adept	48 field	
+0A7	text	風使い	Wind Adept	48 field	
+0A8	text	波使い	Wave Adept	48 field	
+0A9	text	闇使い	Dark Adept	48 field	
+0AA+0AB	text	　武士	Samurai	48 field	
+0AC	text	陰陽師	Onmyoji	48 field	
+0AD+0AE	text	女ぼす	Lady Boss	48 field	
+0AF+0B0+0B4	text	　山賊	Bandit	48 field	
+0B2+0B3	text	　妖魔	Yokai	48 field	
+0B1+0B5	text	　賊	Brigand	48 field	
+0B6	text	　巫女	Shrine Maiden	48 field	
+0B7	text	八十物部	Yaso Mononobe	48 field	
+0B8	text	　　　説明を見ますか？{end2}	Read the help?{end2}	48 field	
+0B9+0BA+0BB+0BC+0BD+0BE+0BF+0C0+0C1+0C2+0C3	text	　神楽	Kagura	48 field	
+0C4	text	安部晴明	Abe no Seimei	48 field	
+0C5	text	賀茂広行	Kamo no Hiroyuki	48 field	
+0C6	text	藤原盛高	Fujiwara no Moritaka	48 field	
+0C7	text	　上宮	Jogu	48 field	
+0C8	text	　紅葉	Momiji	48 field	
+0C9	text	　蝉丸	Semimaru	48 field	
+0CA	text	　卯月	Uzuki	48 field	
+0CB	text	　蘆太	Ashita	48 field	
+0CC	text	　桔梗	Kikyo	48 field	
+0CD	text	　楓	Kaede	48 field	
+0CE	text	　葵	Aoi	48 field	
+0CF	text	金剛坊	Kongobo	48 field	
+0D0	text	虚空坊	Kokubo	48 field	
+0D1	text	狗法眼	Kuhogen	48 field	
+0D2	text	猿法眼	Enhogen	48 field	
+0D3	text	　夷	Ebisu	48 field	
+0D4	text	　春菜	Haruna	48 field	
+0D5	text	　飛騨	Hida	48 field	
+0D6	text	　雀	Suzume	48 field	
+0D7	text	　雉女	Kijime	48 field	
+0D8	text	　葉月	Hazuki	48 field	
+0D9	text	　愛深	Aimi	48 field	
+0DA	text	　珍念	Chinnen	48 field	
+0DB	text	　如雲	Joun	48 field	
+0DC	text	　沙摩	Shama	48 field	
+0DD	text	　不動	Fudo	48 field	
+0DE	text	　普賢	Fugen	48 field	
+0DF	text	　法蓮	Horen	48 field	
+0E0	text	　照雲	Shoun	48 field	
+0E1	text	　多聞	Tamon	48 field	
+0E2	text	　六角	Rokkaku	48 field	
+0E3	text	　源信	Genshin	48 field	
+0E4	text	　仁空	Ninku	48 field	
+0E5	text	橘諸秀	Tachibana no Morohide	48 field	
+0E6	text	源頼光	Minamoto no Yorimitsu	48 field	
+0E7	text	渡辺綱	Watanabe no Tsuna	48 field	
+0E8	text	田辺景時	Tanabe Kagetoki	48 field	
+0E9	text	越智正秀	Ochi Masahide	48 field	
+0EA	text	坂田公時	Sakata no Kintoki	48 field	
+0EB	text	碓井貞光	Usui Sadamitsu	48 field	
+0EC	text	伴為之	Tomo no Tameyuki	48 field	
+0ED	text	藤原保昌	Fujiwara no Yasumasa	48 field	
+0EE	text	佐伯琴乃	Saeki Kotono	48 field	
+0EF	text	源頼信	Minamoto no Yorinobu	48 field	
+0F0	text	　杉丸	Sugimaru	48 field	
+0F1	text	藤原高遠	Fujiwara no Takato	48 field	
+0F2	text	卜部季武	Urabe no Suetake	48 field	
+0F3	text	式神使い	Shikigami Master	48 field	
+0F4	text	陰陽師	Onmyoji	48 field	
+0F5	text	呪禁道師	Jugon Master	48 field	
+0F6	text	琵琶法師	Biwa Priest	48 field	
+0F7	text	伊勢斎宮	Ise Priestess	48 field	
+0F8	text	精霊使い	Spirit Master	48 field	
+0F9	text	　盗賊	Thief	48 field	
+0FA	text	修験道師	Shugenja	48 field	
+0FB	text	　巫女	Shrine Maiden	48 field	
+0FC	text	密教僧	Esoteric Monk	48 field	
+0FD	text	　僧兵	Warrior Monk	48 field	
+0FE	text	　武士	Samurai	48 field	
+0FF	text	価値	Price	24 field	shop label under each panel (price column)
 100	text	　　		176/160 x3	
-101	text	京の都		48 field	
-102	text	安部野		48 field	
-103	text	熊野本宮		48 field	
-104	text	伊勢斎宮		48 field	
-105	text	高野山		48 field	
-106	text	比叡山		48 field	
-107	text	丹後国分寺		48 field	
-108	text	戸隠の里		48 field	
-109	text	出雲の里		48 field	
-10A	text	逢坂峠		48 field	
-10B	text	越中越智家		48 field	
-10C	text	安芸佐伯家		48 field	
-10D	text	丹波の家		48 field	
-10E	text	淡路藤原家		48 field	
-10F	text	三野山小屋		48 field	
-110	text	伊那山小屋		48 field	
-111	text	伊和峠		48 field	
-112	text	道具がいっぱいです{br}なにか捨てて下さい{br}　もらう道具・・{name}		176/160 x3	
-113	text	本当によろしいですか？{end2}		176/160 x3	
-114	text	きろく{num}がこわれています。		176/160 x3	
-115+116+117	text	安部野方面		72 field	
-118	text	山陰道方面		72 field	
-119	text	東国方面		72 field	
-11A	text	都大路		72 field	
-11B	text	紀伊方面		72 field	
-11C	text	山陽道方面		72 field	
-11D	text	高野方面		72 field	
-11E	text	熊野参道		72 field	
-11F	text	伊勢参道		72 field	
-120	text	安部野方面		72 field	
-121	text	安部野方面		72 field	
-122	text	湖西方面		72 field	
-123	text	湖西方面		72 field	
-124	text	湖西方面		72 field	
-125	text	大江山方面		72 field	
-126	text	山陰道方面		72 field	
-127	text	石隈へ		72 field	
-128	text	淡路へ		72 field	
-129	text	加太へ		72 field	
-12A	text	御野津へ		72 field	
-12B	text	坂出へ		72 field	
-12C	text	外に出ます		72 field	
-12D	text	辺津の鏡をてにいれた！{br}青ぼたんで　ちずを見る事が{br}できるようになりました！		176/160 x3	
-12E	text	四国の結界が　破れました{br}舟にのる事ができます！！		176/160 x3	
-12F	text	立向盤をてにいれた！{br}伊予の国に入る事ができます！		176/160 x3	
-130	text	反魂法珠をてにいれた！{br}将門の結界を破りました！		176/160 x3	
-131	text	そろそろ、来るころだと{br}思っておったよ・・		176/160 x3	
-132	text	ご存知でしたか・・それならば{br}話ははやい。{page}力をかしてもらえますね？		176/160 x3	
-133	text	広行、それはよいが、そなた{br}敵の目的を知っておるのか？		176/160 x3	
-134	text	敵の目的は、京の都を消滅{br}させる事です。{page}山童に伝わる大法術、移転の法{br}を使って・・		176/160 x3	
-135	text	それはよい、だがもう一つある{br}今年は、あの将門の大乱から{br}六十年がたつ・・{page}人が死んで六十干支、死人返し{br}をするには、よい年になる・・{page}そう思わぬか・・広行		176/160 x3	
-136	text	・・・・！！{page}死人返しは、晴明殿とあなたの{br}弟子の道摩（どうま）にしか、{br}使えぬ術・・{page}しかも、道摩は、十五年前から{br}行方知れずのはず・・・・・・{br}・・・まさか・・{page}しかし、それならば、この時を{br}えらんだのも、わかります。{page}こうしてはおれません！{br}私は急いで、人をあつめます。{br}これにて失礼！		176/160 x3	
-137	text	あいかわらずな奴よな・・・{page}誰かおらぬか？		176/160 x3	
-138	text	はい、何でしょう晴明様。		176/160 x3	
-139	text	たしか神楽と、天海が名づけて{br}おった・・あの子に力をかりる{br}事になるとは・・・{page}これが、宿命というものか・・		176/160 x3	
-13A	text	何か、お言いになりましたか？		176/160 x3	
-13B	text	いや、ひとりごとだ・・{page}熊野の天海殿の元に、使いを{br}してくれ・・、力をかして{br}もらわねばならぬ・・		176/160 x3	
-13C+13D+13E+13F+140	text	火天法印		48 field	
-141	text	水天法印		48 field	
-142	text	風天法印		48 field	
-143	text	日天法印		48 field	
-144	text	梵天法印		48 field	
-145	text	月天法印		48 field	
-146	text	帝釈天印		48 field	
-147	text	不動法印		48 field	
-148	text	降三世印		48 field	
-149	text	大威徳印		48 field	
-14A	text	金剛法印		48 field	
-14B	text	軍荼利印		48 field	
-14C	text	四天王印		48 field	
-14D	text	歓喜天印		48 field	
-14E	text	大黒天印		48 field	
-14F	text	自在天印		48 field	
-150	text	大元帥印		48 field	
-151	text	大日法印		48 field	
-152	text	文殊法印		48 field	
-153	text	阿弥陀印		48 field	
-154	text	薬師法印		48 field	
-155	text	観世音印		48 field	
-156	text	勢至法印		48 field	
-157	text	孔雀法印		48 field	
-158	text	火精召喚		48 field	
-159	text	木精召喚		48 field	
-15A	text	水精召喚		48 field	
-15B	text	金精召喚		48 field	
-15C	text	土精召喚		48 field	
-15D	text	流泉		48 field	
-15E	text	豚木		48 field	
-15F	text	神楽唄		48 field	
-160	text	福寿護法		48 field	
-161	text	宝珠護法		48 field	
-162	text	光神護法		48 field	
-163	text	破魔行法		48 field	
-164	text	浄化行法		48 field	
-165	text	破魔聖法		48 field	
-166	text	浄化聖法		48 field	
-167	text	火乃言霊		48 field	
-168	text	水乃言霊		48 field	
-169	text	風乃言霊		48 field	
-16A	text	土乃言霊		48 field	
-16B	text	降魔邪法		48 field	
-16C	text	天照神法		48 field	
-16D	text	断気歩行		48 field	
-16E	text	符返呪法		48 field	
-16F	text	晴明呪法		48 field	
-170	text	鬼縛呪法		48 field	
-171	text	隠形呪法		48 field	
-172	text	封鬼呪法		48 field	
-173	text	変異呪法		48 field	
-174	text	居合斬り		48 field	
-175	text	二段斬り		48 field	
-176	text	乱れ斬り		48 field	
-177	text	突進斬り		48 field	
-178	text	真空斬り		48 field	
-179	text	閃光斬り		48 field	
-17A	text	返し斬り		48 field	
-17B	text	貫通斬り		48 field	
-17C	text	公時げり		48 field	
-17D	text	見切り		48 field	
-17E	text	体当たり		48 field	
-17F	text	気合い		48 field	
-180	text	根性		48 field	
-181	text	練気		48 field	
-182	text	火鬼将軍		48 field	
-183	text	水鬼将軍		48 field	
-184	text	風鬼将軍		48 field	
-185	text	土鬼将軍		48 field	
-186	text	炎鬼大将		48 field	
-187	text	氷鬼大将		48 field	
-188	text	雷鬼大将		48 field	
-189	text	地鬼大将		48 field	
-18A	text	精鬼大将		48 field	
-18B	text	金鳥大使		48 field	
-18C	text	精気木霊		48 field	
-18D	text	李桃小姫		48 field	
-18E	text	夜叉大将		48 field	
-18F	text	天尊貴人		48 field	
-190	text	騰蛇真君		48 field	
-191	text	勾陳真君		48 field	
-192	text	天上聖母		48 field	
-193	text	天空大帝		48 field	
-194	text	朱雀星君		48 field	
-195	text	玄武星君		48 field	
-196	text	白虎星君		48 field	
-197	text	青龍星君		48 field	
-198	text	羅刹大将		48 field	
-199	text	武神鐘馗		48 field	
-19A	text	馬頭大王		48 field	
-19B	text	牛頭大王		48 field	
-19C	text	麒麟星君		48 field	
-19D	text	鳳凰大帝		48 field	
-19E	text	天仙娘々		48 field	
-19F	text	関聖帝君		48 field	
-1A0	text	天宝元帥		48 field	
-1A1	text	斉天大聖		48 field	
-1A2	text	南斗辰君		48 field	
-1A3	text	北斗辰君		48 field	
-1A4	text	牛魔王		48 field	
-1A5	text	らごう		48 field	
-1A6	text	阿修羅		48 field	
-1A7	text	火炎法呪		48 field	
-1A8	text	氷結法呪		48 field	
-1A9	text	風刃法呪		48 field	
-1AA+1AD	text	精神法呪		48 field	
-1AB	text	雷撃法呪		48 field	
-1AC	text	波動法呪		48 field	
-1AE	text	物理法呪		48 field	
-1AF	text	聖光法呪		48 field	
-1B0	text	暗黒法呪		48 field	
-1B1	text	守護法呪		48 field	
-1B2	text	式鬼護法		48 field	
-1B3	text	神楽部隊		48 field	
-1B4	text	晴明部隊		48 field	
-1B5	text	広行部隊		48 field	
-1B6	text	盛高部隊		48 field	
-1B7	text	上宮部隊		48 field	
-1B8	text	紅葉部隊		48 field	
+101	text	京の都	Kyoto	48 field	
+102	text	安部野	Abeno	48 field	
+103	text	熊野本宮	Kumano Hongu	48 field	
+104	text	伊勢斎宮	Ise Saigu	48 field	
+105	text	高野山	Mount Koya	48 field	
+106	text	比叡山	Mount Hiei	48 field	
+107	text	丹後国分寺	Tango Kokubunji	48 field	
+108	text	戸隠の里	Togakushi Village	48 field	
+109	text	出雲の里	Izumo Village	48 field	
+10A	text	逢坂峠	Osaka Pass	48 field	
+10B	text	越中越智家	Ochi Manor of Etchu	48 field	
+10C	text	安芸佐伯家	Saeki Manor of Aki	48 field	
+10D	text	丹波の家	House in Tanba	48 field	
+10E	text	淡路藤原家	Fujiwara Manor, Awaji	48 field	
+10F	text	三野山小屋	Mino Mountain Hut	48 field	
+110	text	伊那山小屋	Ina Mountain Hut	48 field	
+111	text	伊和峠	Iwa Pass	48 field	
+112	text	道具がいっぱいです{br}なにか捨てて下さい{br}　もらう道具・・{name}	Your bag is full.{br}Please throw something away.{br}Received: {name}	176/160 x3	
+113	text	本当によろしいですか？{end2}	Are you sure?{end2}	176/160 x3	
+114	text	きろく{num}がこわれています。	Record {num} is corrupted.	176/160 x3	
+115+116+117	text	安部野方面	To Abeno	72 field	
+118	text	山陰道方面	To the San'indo	72 field	
+119	text	東国方面	To the East	72 field	
+11A	text	都大路	Capital Avenue	72 field	
+11B	text	紀伊方面	To Kii	72 field	
+11C	text	山陽道方面	To the San'yodo	72 field	
+11D	text	高野方面	To Koya	72 field	
+11E	text	熊野参道	Kumano Pilgrim Road	72 field	
+11F	text	伊勢参道	Ise Pilgrim Road	72 field	
+120	text	安部野方面	To Abeno	72 field	
+121	text	安部野方面	To Abeno	72 field	
+122	text	湖西方面	To Kosei	72 field	
+123	text	湖西方面	To Kosei	72 field	
+124	text	湖西方面	To Kosei	72 field	
+125	text	大江山方面	To Mount Oe	72 field	
+126	text	山陰道方面	To the San'indo	72 field	
+127	text	石隈へ	To Ishikuma	72 field	
+128	text	淡路へ	To Awaji	72 field	
+129	text	加太へ	To Kada	72 field	
+12A	text	御野津へ	To Minotsu	72 field	
+12B	text	坂出へ	To Sakaide	72 field	
+12C	text	外に出ます	Go outside	72 field	
+12D	text	辺津の鏡をてにいれた！{br}青ぼたんで　ちずを見る事が{br}できるようになりました！	You got the Hetsu Mirror!{br}Press the Blue button to view{br}the map!	176/160 x3	
+12E	text	四国の結界が　破れました{br}舟にのる事ができます！！	The barrier over Shikoku has{br}been broken! You can now{br}take a boat!!	176/160 x3	
+12F	text	立向盤をてにいれた！{br}伊予の国に入る事ができます！	You got the Tatemuki Board!{br}You can now enter the{br}province of Iyo!	176/160 x3	
+130	text	反魂法珠をてにいれた！{br}将門の結界を破りました！	You got the Hangon Jewel!{br}Masakado's barrier{br}has been broken!	176/160 x3	
+131	text	そろそろ、来るころだと{br}思っておったよ・・	I thought you would come{br}about now...	176/160 x3	
+132	text	ご存知でしたか・・それならば{br}話ははやい。{page}力をかしてもらえますね？	So you knew... Then this will{br}be quick to explain.{page}You will lend us your strength?	176/160 x3	
+133	text	広行、それはよいが、そなた{br}敵の目的を知っておるのか？	That is well, Hiroyuki, but do{br}you know what the enemy{br}is after?	176/160 x3	
+134	text	敵の目的は、京の都を消滅{br}させる事です。{page}山童に伝わる大法術、移転の法{br}を使って・・	The enemy means to wipe Kyoto{br}from the face of the earth.{page}With the Rite of Transference,{br}a great art handed down{br}among the Yamawaro...	176/160 x3	
+135	text	それはよい、だがもう一つある{br}今年は、あの将門の大乱から{br}六十年がたつ・・{page}人が死んで六十干支、死人返し{br}をするには、よい年になる・・{page}そう思わぬか・・広行	That, yes. But there is more.{br}It is sixty years this year since{br}Masakado's great revolt...{page}Sixty years, one full cycle{br}since his death: a fine year{br}for Raising the Dead...{page}Do you not think so... Hiroyuki?	176/160 x3	
+136	text	・・・・！！{page}死人返しは、晴明殿とあなたの{br}弟子の道摩（どうま）にしか、{br}使えぬ術・・{page}しかも、道摩は、十五年前から{br}行方知れずのはず・・・・・・{br}・・・まさか・・{page}しかし、それならば、この時を{br}えらんだのも、わかります。{page}こうしてはおれません！{br}私は急いで、人をあつめます。{br}これにて失礼！	...!!{page}Raising the Dead is an art{br}only you, Seimei-dono, and your{br}disciple Doma can work...{page}And Doma vanished fifteen{br}years ago...{br}...Surely not...{page}But if it is so, that explains{br}why he chose this moment.{page}I cannot stand idle here!{br}I must gather men at once.{br}Forgive me!	176/160 x3	
+137	text	あいかわらずな奴よな・・・{page}誰かおらぬか？	As hasty as ever, that one...{page}Is anyone there?	176/160 x3	
+138	text	はい、何でしょう晴明様。	Yes, what is it, Seimei-sama?	176/160 x3	
+139	text	たしか神楽と、天海が名づけて{br}おった・・あの子に力をかりる{br}事になるとは・・・{page}これが、宿命というものか・・	Kagura, Tenkai named her...{br}To think I must borrow{br}that child's power...{page}Is this what men call fate...	176/160 x3	
+13A	text	何か、お言いになりましたか？	Did you say something, sir?	176/160 x3	
+13B	text	いや、ひとりごとだ・・{page}熊野の天海殿の元に、使いを{br}してくれ・・、力をかして{br}もらわねばならぬ・・	No, only talking to myself...{page}Send a messenger to Tenkai-dono{br}at Kumano... We shall need{br}his help...	176/160 x3	
+13C+13D+13E+13F+140	text	火天法印	Katen Seal	48 field	
+141	text	水天法印	Suiten Seal	48 field	
+142	text	風天法印	Futen Seal	48 field	
+143	text	日天法印	Nitten Seal	48 field	
+144	text	梵天法印	Bonten Seal	48 field	
+145	text	月天法印	Gatten Seal	48 field	
+146	text	帝釈天印	Taishaku Seal	48 field	
+147	text	不動法印	Fudo Seal	48 field	
+148	text	降三世印	Gozanze Seal	48 field	
+149	text	大威徳印	Daiitoku Seal	48 field	
+14A	text	金剛法印	Kongo Seal	48 field	
+14B	text	軍荼利印	Gundari Seal	48 field	
+14C	text	四天王印	Shitenno Seal	48 field	
+14D	text	歓喜天印	Kangiten Seal	48 field	
+14E	text	大黒天印	Daikoku Seal	48 field	
+14F	text	自在天印	Jizaiten Seal	48 field	
+150	text	大元帥印	Daigensui Seal	48 field	
+151	text	大日法印	Dainichi Seal	48 field	
+152	text	文殊法印	Monju Seal	48 field	
+153	text	阿弥陀印	Amida Seal	48 field	
+154	text	薬師法印	Yakushi Seal	48 field	
+155	text	観世音印	Kannon Seal	48 field	
+156	text	勢至法印	Seishi Seal	48 field	
+157	text	孔雀法印	Kujaku Seal	48 field	
+158	text	火精召喚	Summon Fire Spirit	48 field	
+159	text	木精召喚	Summon Wood Spirit	48 field	
+15A	text	水精召喚	Summon Water Spirit	48 field	
+15B	text	金精召喚	Summon Metal Spirit	48 field	
+15C	text	土精召喚	Summon Earth Spirit	48 field	
+15D	text	流泉	Ryusen	48 field	
+15E	text	豚木	Takuboku	48 field	
+15F	text	神楽唄	Kagura Song	48 field	
+160	text	福寿護法	Fortune Ward	48 field	
+161	text	宝珠護法	Jewel Ward	48 field	
+162	text	光神護法	Light God Ward	48 field	
+163	text	破魔行法	Exorcism Rite	48 field	
+164	text	浄化行法	Purification Rite	48 field	
+165	text	破魔聖法	Holy Exorcism	48 field	
+166	text	浄化聖法	Holy Purification	48 field	
+167	text	火乃言霊	Fire Kotodama	48 field	
+168	text	水乃言霊	Water Kotodama	48 field	
+169	text	風乃言霊	Wind Kotodama	48 field	
+16A	text	土乃言霊	Earth Kotodama	48 field	
+16B	text	降魔邪法	Demon Quelling	48 field	
+16C	text	天照神法	Amaterasu Rite	48 field	
+16D	text	断気歩行	Silent Step	48 field	
+16E	text	符返呪法	Charm Reversal	48 field	
+16F	text	晴明呪法	Seimei Hex	48 field	
+170	text	鬼縛呪法	Demon Bind Hex	48 field	
+171	text	隠形呪法	Vanishing Hex	48 field	
+172	text	封鬼呪法	Demon Seal Hex	48 field	
+173	text	変異呪法	Mutation Hex	48 field	
+174	text	居合斬り	Iai Slash	48 field	
+175	text	二段斬り	Double Slash	48 field	
+176	text	乱れ斬り	Wild Slash	48 field	
+177	text	突進斬り	Charging Slash	48 field	
+178	text	真空斬り	Vacuum Slash	48 field	
+179	text	閃光斬り	Flash Slash	48 field	
+17A	text	返し斬り	Counter Slash	48 field	
+17B	text	貫通斬り	Piercing Slash	48 field	
+17C	text	公時げり	Kintoki Kick	48 field	
+17D	text	見切り	Foresight	48 field	
+17E	text	体当たり	Body Slam	48 field	
+17F	text	気合い	Kiai	48 field	
+180	text	根性	Guts	48 field	
+181	text	練気	Ki Training	48 field	
+182	text	火鬼将軍	Fire Oni General	48 field	
+183	text	水鬼将軍	Water Oni General	48 field	
+184	text	風鬼将軍	Wind Oni General	48 field	
+185	text	土鬼将軍	Earth Oni General	48 field	
+186	text	炎鬼大将	Flame Oni Chief	48 field	
+187	text	氷鬼大将	Ice Oni Chief	48 field	
+188	text	雷鬼大将	Thunder Oni Chief	48 field	
+189	text	地鬼大将	Ground Oni Chief	48 field	
+18A	text	精鬼大将	Spirit Oni Chief	48 field	
+18B	text	金鳥大使	Golden Bird Envoy	48 field	
+18C	text	精気木霊	Kodama Spirit	48 field	
+18D	text	李桃小姫	Plum Princess	48 field	
+18E	text	夜叉大将	Yaksha Chief	48 field	
+18F	text	天尊貴人	Tenson Kijin	48 field	
+190	text	騰蛇真君	Toda Shinkun	48 field	
+191	text	勾陳真君	Kochin Shinkun	48 field	
+192	text	天上聖母	Tenjo Seibo	48 field	
+193	text	天空大帝	Tenku Taitei	48 field	
+194	text	朱雀星君	Suzaku Seikun	48 field	
+195	text	玄武星君	Genbu Seikun	48 field	
+196	text	白虎星君	Byakko Seikun	48 field	
+197	text	青龍星君	Seiryu Seikun	48 field	
+198	text	羅刹大将	Rakshasa Chief	48 field	
+199	text	武神鐘馗	Shoki the Warrior	48 field	
+19A	text	馬頭大王	Mezu Daio	48 field	
+19B	text	牛頭大王	Gozu Daio	48 field	
+19C	text	麒麟星君	Kirin Seikun	48 field	
+19D	text	鳳凰大帝	Hoo Taitei	48 field	
+19E	text	天仙娘々	Tensen Nyannyan	48 field	
+19F	text	関聖帝君	Kansei Teikun	48 field	
+1A0	text	天宝元帥	Tenpo Gensui	48 field	
+1A1	text	斉天大聖	Seiten Taisei	48 field	
+1A2	text	南斗辰君	Nanto Shinkun	48 field	
+1A3	text	北斗辰君	Hokuto Shinkun	48 field	
+1A4	text	牛魔王	Gyumao	48 field	
+1A5	text	らごう	Ragou	48 field	
+1A6	text	阿修羅	Asura	48 field	
+1A7	text	火炎法呪	Flame Spell	48 field	
+1A8	text	氷結法呪	Frost Spell	48 field	
+1A9	text	風刃法呪	Wind Blade Spell	48 field	
+1AA+1AD	text	精神法呪	Mind Spell	48 field	
+1AB	text	雷撃法呪	Thunder Spell	48 field	
+1AC	text	波動法呪	Wave Spell	48 field	
+1AE	text	物理法呪	Force Spell	48 field	
+1AF	text	聖光法呪	Holy Light Spell	48 field	
+1B0	text	暗黒法呪	Darkness Spell	48 field	
+1B1	text	守護法呪	Guard Spell	48 field	
+1B2	text	式鬼護法	Shiki Ward	48 field	
+1B3	text	神楽部隊	Kagura Squad	48 field	
+1B4	text	晴明部隊	Seimei Squad	48 field	
+1B5	text	広行部隊	Hiroyuki Squad	48 field	
+1B6	text	盛高部隊	Moritaka Squad	48 field	
+1B7	text	上宮部隊	Jogu Squad	48 field	
+1B8	text	紅葉部隊	Momiji Squad	48 field	
 1B9	text	　　　{name}の闘い		176/160 x3	
 1BA	text	{name}が仲間になった！		176/160 x3	
 1BB	text	{name}たちが仲間になった！		176/160 x3	
 1BC	text	{name}部隊が加わった！		176/160 x3	
-1BD+1BE+1BF	text	加太舟場		48 field	
-1C0	text	石隈舟場		48 field	
-1C1	text	淡路舟場		48 field	
-1C2	text	御野津舟場		48 field	
-1C3	text	坂出舟場		48 field	
-1C4	text	伊予舟場		48 field	
+1BD+1BE+1BF	text	加太舟場	Kada Ferry	48 field	
+1C0	text	石隈舟場	Ishikuma Ferry	48 field	
+1C1	text	淡路舟場	Awaji Ferry	48 field	
+1C2	text	御野津舟場	Minotsu Ferry	48 field	
+1C3	text	坂出舟場	Sakaide Ferry	48 field	
+1C4	text	伊予舟場	Iyo Ferry	48 field	
 1C5	text	　　　敵とそうぐうした！　　		176/160 x3	
 1C6	text	警告！{br}敵が平安京に近づいています！		176/160 x3	
 1C7	text	最終通告！{br}平安京に敵部隊が{br}突入しました！		176/160 x3	
-1C8	text	どうぐがいっぱいです		128 popup	
-1C9	text	そうびできません。		128 popup	
+1C8	text	どうぐがいっぱいです	Your bag is full.	128 popup	
+1C9	text	そうびできません。	Can't equip that.	128 popup	
 1CA	text	天の四方、守りたる主にねがう{br}北に多聞天、南に増長天、{br}西に広目天、東に持国天。{page}わが求めに応じ、{br}よこしまなる敵をうて、{br}南無四天王降臨。		176/160 x3	
 1CB	text	生玉、足玉、死返玉、道返玉{br}もちて、荒魂にたてまつる。{br}はらいましませ、鳥羽玉の闇。		176/160 x3	
 1CC	text	あはりや　あそばすとまうさぬ{br}あさくらに　あまてらすおおみ{br}かみ　おりましませ。		176/160 x3	
@@ -479,7 +479,7 @@ id	kind	jp	en	max	notes
 200	text	くっそぉ・・{br}死にたくねえ・・・。		176/160 x3	
 201	text	ちっ、目がかすんで{br}きやがった・・。		176/160 x3	
 202	text	やるな・・おぬし・・。{br}気に入ったぞ・・。		176/160 x3	
-203	text	音楽		24 field	battle window title over the music list
+203	text	音楽	Music	24 field	battle window title over the music list
 204	text	　　　{name}はれべるあっぷ		176/160 x3	
 205	text	　　　{name}のばんです		176/160 x3	
 206	text	　　　体力があがった		176/160 x3	
@@ -537,82 +537,82 @@ id	kind	jp	en	max	notes
 240	text	えれえ　気前のいい人だねえ{br}まいった、あんたにゃあ{br}これをやるよ。		176/160 x3	
 241	text	と思ったけど、それ以上は{br}もてそうにないな、わるいけど{br}あきらめな。		176/160 x3	
 242	text	薬がほしいなら　いつでも{br}きがるにこえを　かけてくれ{br}よな。　まってるぜ。		176/160 x3	
-243	text	　きろくしました。　		112 popup	
-244	text	おつかれさまでした。		112 popup	
+243	text	　きろくしました。　	Saved.	112 popup	
+244	text	おつかれさまでした。	Thanks for playing!	112 popup	
 245	text	　よろしいですか？　		176/160 x3	
 246	text	　では、さようなら。		176/160 x3	
 247	text	術をかけるあいてがいません		176/160 x3	
 248	text	　{name}はまひにかかった		176/160 x3	
 249	text	　{name}は術を封じられた		176/160 x3	
-24A	text	　佐渡　		48 field	
-24B	text	越後北部		48 field	
-24C	text	越後南部		48 field	
-24D	text	越後西部		48 field	
-24E	text	上野北部		48 field	
-24F	text	上野南部		48 field	
-250	text	下野の国		48 field	
-251	text	下総の国		48 field	
-252	text	上総の国		48 field	
-253	text	安房の国		48 field	
-254	text	信濃北部		48 field	
-255	text	信濃南部		48 field	
-256	text	　諏訪　		48 field	
-257	text	武蔵の国		48 field	
-258	text	相模の国		48 field	
-259	text	伊豆の国		48 field	
-25A	text	甲斐の国		48 field	
-25B	text	駿河の国		48 field	
-25C	text	越中の国		48 field	
-25D	text	能登の国		48 field	
-25E	text	越前北部		48 field	
-25F	text	越前南部		48 field	
-260	text	美濃の国		48 field	
-261	text	遠江の国		48 field	
-262	text	三河の国		48 field	
-263	text	飛騨の国		48 field	
-264	text	尾張の国		48 field	
-265	text	若狭の国		48 field	
-266	text	近江東部		48 field	
-267	text	近江西部		48 field	
-268	text	伊勢北部		48 field	
-269	text	伊勢南部		48 field	
-26A	text	伊賀の国		48 field	
-26B	text	大和の国		48 field	
-26C	text	紀伊の国		48 field	
-26D	text	和泉の国		48 field	
-26E	text	丹後の国		48 field	
-26F	text	山城の国		48 field	
-270	text	丹波北部		48 field	
-271	text	丹波西部		48 field	
-272	text	播磨の国		48 field	
-273	text	但馬の国		48 field	
-274	text	美作の国		48 field	
-275	text	出雲の国		48 field	
-276	text	備前の国		48 field	
-277	text	備中北部		48 field	
-278	text	備中南部		48 field	
-279	text	備後の国		48 field	
-27A	text	安芸の国		48 field	
-27B	text	石見の国		48 field	
-27C	text	周防の国		48 field	
-27D	text	長門の国		48 field	
-27E	text	淡路の国		48 field	
-27F	text	讃岐の国		48 field	
-280	text	阿波の国		48 field	
-281	text	伊予の国		48 field	
-282	text	土佐の国		48 field	
-283	text	因幡の国		48 field	
-284	text	摂津の国		48 field	
-285	text	河内の国		48 field	
-286	text	加賀の国		48 field	
-287	text	美濃の国		48 field	
-288	text	陸奥の国		48 field	
+24A	text	　佐渡　	Sado	48 field	
+24B	text	越後北部	North Echigo	48 field	
+24C	text	越後南部	South Echigo	48 field	
+24D	text	越後西部	West Echigo	48 field	
+24E	text	上野北部	North Kozuke	48 field	
+24F	text	上野南部	South Kozuke	48 field	
+250	text	下野の国	Shimotsuke	48 field	
+251	text	下総の国	Shimosa	48 field	
+252	text	上総の国	Kazusa	48 field	
+253	text	安房の国	Awa (Boso)	48 field	
+254	text	信濃北部	North Shinano	48 field	
+255	text	信濃南部	South Shinano	48 field	
+256	text	　諏訪　	Suwa	48 field	
+257	text	武蔵の国	Musashi	48 field	
+258	text	相模の国	Sagami	48 field	
+259	text	伊豆の国	Izu	48 field	
+25A	text	甲斐の国	Kai	48 field	
+25B	text	駿河の国	Suruga	48 field	
+25C	text	越中の国	Etchu	48 field	
+25D	text	能登の国	Noto	48 field	
+25E	text	越前北部	North Echizen	48 field	
+25F	text	越前南部	South Echizen	48 field	
+260	text	美濃の国	Mino	48 field	
+261	text	遠江の国	Totomi	48 field	
+262	text	三河の国	Mikawa	48 field	
+263	text	飛騨の国	Hida	48 field	
+264	text	尾張の国	Owari	48 field	
+265	text	若狭の国	Wakasa	48 field	
+266	text	近江東部	East Omi	48 field	
+267	text	近江西部	West Omi	48 field	
+268	text	伊勢北部	North Ise	48 field	
+269	text	伊勢南部	South Ise	48 field	
+26A	text	伊賀の国	Iga	48 field	
+26B	text	大和の国	Yamato	48 field	
+26C	text	紀伊の国	Kii	48 field	
+26D	text	和泉の国	Izumi	48 field	
+26E	text	丹後の国	Tango	48 field	
+26F	text	山城の国	Yamashiro	48 field	
+270	text	丹波北部	North Tanba	48 field	
+271	text	丹波西部	West Tanba	48 field	
+272	text	播磨の国	Harima	48 field	
+273	text	但馬の国	Tajima	48 field	
+274	text	美作の国	Mimasaka	48 field	
+275	text	出雲の国	Izumo	48 field	
+276	text	備前の国	Bizen	48 field	
+277	text	備中北部	North Bitchu	48 field	
+278	text	備中南部	South Bitchu	48 field	
+279	text	備後の国	Bingo	48 field	
+27A	text	安芸の国	Aki	48 field	
+27B	text	石見の国	Iwami	48 field	
+27C	text	周防の国	Suo	48 field	
+27D	text	長門の国	Nagato	48 field	
+27E	text	淡路の国	Awaji	48 field	
+27F	text	讃岐の国	Sanuki	48 field	
+280	text	阿波の国	Awa	48 field	
+281	text	伊予の国	Iyo	48 field	
+282	text	土佐の国	Tosa	48 field	
+283	text	因幡の国	Inaba	48 field	
+284	text	摂津の国	Settsu	48 field	
+285	text	河内の国	Kawachi	48 field	
+286	text	加賀の国	Kaga	48 field	
+287	text	美濃の国	Mino	48 field	
+288	text	陸奥の国	Mutsu	48 field	
 289	text	　すべての能力があがった		176/160 x3	
 28A	text	　　{name}は攻撃を防いだ		176/160 x3	
-28B	text	道具がありません！		112 popup	
+28B	text	道具がありません！	No items!	112 popup	
 28C	text	おれは、薬を売りながら諸国を{br}旅してる、しがねえ薬売りさ。{page}薬がほしいのなら　こうかん{br}できるものをもって来てくれ。		176/160 x3	
-28D	text	これでいいですか？		112 popup	
-28E	text	　　はい　　いいえ		112 popup	yes/no line: the cursor sits at +10..16 px (option 1) and +58..64 px (option 2) from the line start; put Yes at +24 px and No at +72 px like the Japanese (spaces are 4 px)
+28D	text	これでいいですか？	Is this all right?	112 popup	
+28E	text	　　はい　　いいえ	Yes      No	112 popup	yes/no line: the cursor sits at +10..16 px (option 1) and +58..64 px (option 2) from the line start; put Yes at +24 px and No at +72 px like the Japanese (spaces are 4 px)
 28F	text	きろく{num}が消えてしまいます。{br}よろしいのですか？{end2}		176/160 x3	
 290	text	・・・・永観二年（９８４）　{br}師貞親王即位　花山天皇と称す		176/160 x3	
 291	text	同年　大納言　藤原為光の娘　{br}祇子（女御祇子）入内す・・　		176/160 x3	

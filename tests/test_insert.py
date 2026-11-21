@@ -44,7 +44,14 @@ def test_banner_offsets(rom):
         assert off[o] * 8 + w <= insert.BANNER_PX and abs((insert.BANNER_PX - w) / 2 - off[o] * 8) <= 4, (text, off[o])
     assert off[0x016869 + 0x15] == 0      # too wide: left edge, the lint reports it
     out, _ = insert.insert(rom, "build")
-    assert out[0x01364D:0x01364D + 0x1A] == rom[0x01364D:0x01364D + 0x1A]   # no English yet: untouched
+    texts = {}
+    for ids, _, row in insert.strings("build"):
+        text = insert.text_of(row, "build")
+        if text is not None:
+            texts.update({i: text for i in ids})
+    built = insert.banner_offsets(texts)
+    for o in range(0x01364D, 0x01364D + 0x1A):   # replaced entries get their centred offset, the rest stay
+        assert out[o] == built.get(o, rom[o]), hex(o)
 
 
 @pytest.mark.parametrize("mode", ["build", "marker"])
@@ -63,7 +70,7 @@ def test_pointers_reach_strings(rom, mode):
             got, end = words_at(out, addr)
             assert got == words, row["id"]
             assert (addr >> 16) == ((end - 1) >> 16), "string %s crosses a bank" % row["id"]
-            text = row["en"] or (insert.marker(row) if mode == "marker" else row["jp"])
+            text = insert.text_of(row, mode) or row["jp"]
             assert kss_script.decode(en_t if (row["en"] or mode == "marker") else jp_t, got) == \
                 text.removesuffix("{end2}") + ("{end2}" if text.endswith("{end2}") else "")
 
