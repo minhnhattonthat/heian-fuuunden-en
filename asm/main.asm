@@ -32,6 +32,14 @@ org $C1A3CB             ; slot VRAM addresses, panel A ($C1A3DB: panel B = +$200
     dw $7200,$7228,$7250,$7278,$72A0,$72C8,$72F0,$7318
     dw $7400,$7428,$7450,$7478,$74A0,$74C8,$74F0,$7518
 
+; ---- squad formation screen: the same panels (C8:939E slots 0-3, C8:9450, C8:9506), same 5-tile slots ------
+org $C16011             ; JSL $C1753B (one name slot, buffer $7F:0000)
+    jsl PartyName
+org $C1E6CE             ; slot VRAM addresses: 0-3 panel C8:939E, 4-11 C8:9450, 12-19 C8:9506
+    dw $7200,$7228,$7250,$7278
+    dw $7400,$7428,$7450,$7478,$74A0,$74C8,$74F0,$7518
+    dw $7600,$7628,$7650,$7678,$76A0,$76C8,$76F0,$7718
+
 ; ---- string pointers: 24-bit table instead of the C3/C6 16-bit table --------------------------------------
 org $C17270             ; LDA $C30000,x / bank select by id (dialogue reader); X = id*2
     jml TextPtr

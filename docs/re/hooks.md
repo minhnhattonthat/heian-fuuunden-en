@@ -21,7 +21,9 @@ Assembled by `build.py` with `tools/asar/asar.exe` (asar 1.91, github.com/RPGHac
 | `C1:2C04`, `C1:32AE`, `C1:3327` | `JSL $C1753B` (one name slot) | `JSL PartyName` |
 | `C1:2C0D`, `C1:32B7`, `C1:3360` | buffer step `ADC #$0030` | `$0050` (5 tiles) |
 | `C1:A3CB` / `C1:A3DB` | slot VRAM $7200 + 3 tiles per slot (2 rows of 16) | $7200 + n * $28 (5 tiles; panel B +$200) |
-| `C8:939E`, `C8:9450` (compressed tilemaps) | 3 tiles per slot, two rows | 5 tiles in one row (`tools/gfx_edits.py`, applied by build.py) |
+| `C8:939E`, `C8:9450`, `C8:9506` (compressed tilemaps) | 3 tiles per slot, two rows | 5 tiles in one row (`tools/gfx_edits.py`, applied by build.py) |
+| `C1:6011` (squad formation screen) | `JSL $C1753B` | `JSL PartyName` |
+| `C1:E6CE` (its 20 slot VRAM addresses) | $7200/$7400/$7600 + 3-tile steps | + n * $28 (5 tiles) |
 - `PartyName` papers the slot's 5 buffer tiles, sets `PARTY` (`$7E:1CF0`), calls the renderer, clears it. With
   `PARTY` set, `VwfMenu` draws every English glyph in the narrow font into the top half-row and drops glyphs past
   40 px; control codes (`{small}` `{narrow}` `{sbr}`) draw nothing; `MenuEnd` queues one DMA of the 5 top tiles

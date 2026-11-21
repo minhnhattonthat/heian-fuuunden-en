@@ -7,11 +7,13 @@ between the slot's own portrait (ends x 32) and the next one (starts x 72). Both
 $240-$27F, C8:9450 tiles $280-$2BF; the game flips between them with $10CC) then place slot n at tiles base + 5n
 .. + 4 in columns 4-8, 11-15, 18-22, 25-29 of tile row 4 (slots 0-3) or 8 (slots 4-7); the row under it is blank.
 The slot table `C1:A3CB` (asm) gives the same VRAM addresses: $7200 + n * $28 (+ $200 for panel B).
+The squad formation screen loads the same panels plus a third, C8:9506 (tiles $2C0-$2FF, same layout); its slot
+table `C1:E6CE` (asm) is widened the same way: 0-3 at $7200.., 4-11 at $7400.., 12-19 at $7600 + n * $28.
 """
 import struct
 from pathlib import Path
 
-PARTY_PANELS = {"08939E.bin": 0x240, "089450.bin": 0x280}
+PARTY_PANELS = {"08939E.bin": 0x240, "089450.bin": 0x280, "089506.bin": 0x2C0}
 PARTY_ROWS = (4, 8)          # tile row of each slot row (the original's top half-row)
 PARTY_COLS = (5, 12, 19, 26)  # the original name columns; the new slots start one column left
 SLOT_TILES = 5
