@@ -8,7 +8,7 @@ Pilot: opening scene ids 131-13B (Seimei's mansion), merged 2026-11-22. Match th
 | Abe no Seimei (old master onmyoji) | おる/おった, そなた, 〜ぬ, 〜よな, ・・ trailing | formal, unhurried, wry; "I had thought...", "Do you not think so...", "that one"; no contractions |
 | Kamo no Hiroyuki (onmyoji, younger) | です/ます, ご存知, 失礼 | earnest, respectful, quick; "Forgive me!", "Seimei-dono" |
 | Tenkai (old priest, Kumano) | わし, じゃ, のう, 〜かの | warm, gruff, grandfatherly; "eh?", "my girl", contractions ok |
-| Kagura (heroine, young) | plain speech, 〜よ/〜ね, ーっ | direct, lively, modern-plain but never slangy |
+| Kagura (the hero: a boy of 16, he/him) | plain speech, ーっ | direct, lively, modern-plain but never slangy |
 | Servants, villagers | はい, 〜でございます | short and polite; "sir", "my lord" |
 | Bandits, oni, rough men | 〜ぜ, 〜ねぇ, おめえ, 〜だぜ | clipped, rough; "ya", "ain't", "Heh" |
 | Court nobles | 〜でおじゃる, 麻呂 | stiff, pompous; "We", "most", "indeed" |

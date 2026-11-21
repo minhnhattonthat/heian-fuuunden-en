@@ -1,7 +1,7 @@
 # Translator brief - Heian Fuuunden (SNES, KSS 1995)
 
 You translate part of the Japanese script of Heian Fuuunden into English for a fan patch. A strategy RPG set in
-Heian-era Japan: the young onmyoji Kagura, raised by Priest Tenkai at Kumano, gathers allies across the provinces
+Heian-era Japan: the young onmyoji Kagura (a boy of 16: he/him), raised by Priest Tenkai at Kumano, gathers allies across the provinces
 while Seimei and Hiroyuki face Doma's plot to raise Taira no Masakado and the Yamawaro's rite to wipe out Kyoto.
 Work only on the batches named in your dispatch, one at a time in the order given, each to a passing check before
 the next. Do all translation yourself; do not dispatch subagents.

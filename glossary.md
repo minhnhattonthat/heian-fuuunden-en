@@ -30,7 +30,11 @@ Binding for every translator and reviewer. Agents propose additions in reports; 
 ## Characters (party: short form in the 40-px party slot; full form in name fields)
 | JP | EN | max | notes | Avoid |
 |---|---|---|---|---|
-| 神楽 | Kagura | 40 narrow | heroine, young onmyoji raised by Tenkai at Kumano | |
+| 神楽 | Kagura | 40 narrow | the hero: a BOY of 16 (he/him, id 295 男子), raised by Tenkai at Kumano | |
+| 芦屋道満 | Ashiya Doman | | Seimei's disciple (prologue 2A2) | |
+| 花山帝 / 花山天皇 | Emperor Kazan | | in the prologue (984-985); later the Retired Emperor Kazan | |
+| 為光 | Tamemitsu | | Major Counselor Fujiwara no Tamemitsu, Lady Kishi's father | |
+| 女官 | Lady-in-waiting | | | |
 | 安部晴明 / 晴明 | Abe no Seimei / Seimei | 48 field | the great onmyoji; old, formal, wry | Abe Seimei |
 | 賀茂広行 / 広行 | Kamo no Hiroyuki / Hiroyuki | | onmyoji, Seimei's colleague; earnest, formal | |
 | 藤原盛高 / 盛高 | Fujiwara no Moritaka / Moritaka | | | |

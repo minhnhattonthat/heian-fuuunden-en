@@ -51,11 +51,24 @@ def popup(row):
     return min(hit) if hit else None
 
 
-def name_px(rows):
-    """Widest English name `{name}` can stand for (fields and party names in the 16-px dialogue font); 64 px until
-    names are translated."""
+# Rows whose `{name}` can only be one kind of name, read from the Japanese around it: {row id: (first, last) name
+# ids}. Every other row gets the widest name of all. Squad messages ({name}部隊) name the leader by the short party
+# name; 214 summons a shikigami; 112/218/21E name an item; 1B9 (province card, windows.md) a province.
+NAME_CLASSES = {
+    **{i: insert.PARTY_IDS for i in (0x1BC, 0x222, 0x224, 0x225, 0x22F)},
+    0x214: (0x182, 0x1A6),
+    **{i: (0x001, 0x053) for i in (0x112, 0x218, 0x21E)},
+    0x1B9: (0x24A, 0x288),
+}
+
+
+def name_px(rows, row=None):
+    """Widest English name `{name}` can stand for in `row` (fields and party names in the 16-px dialogue font): the
+    row's NAME_CLASSES range, else every name; 64 px until names are translated."""
+    cls = NAME_CLASSES.get(insert.ids_of(row)[0]) if row else None
     w = [font_en.text_px(r["en"]) for r in rows if r["en"] and (insert.is_field(r) or any(
-        insert.PARTY_IDS[0] <= i <= insert.PARTY_IDS[1] for i in insert.ids_of(r)))]
+        insert.PARTY_IDS[0] <= i <= insert.PARTY_IDS[1] for i in insert.ids_of(r)))
+        and (cls is None or any(cls[0] <= i <= cls[1] for i in insert.ids_of(r)))]
     return max(w + [64])
 
 
@@ -149,7 +162,8 @@ def run(strict=False, write_max=False, script_dir=None):
                     if strict:
                         errors.append("%s %s: untranslated" % (bank, r["id"]))
                 continue
-            errors += ["%s %s: %s" % (bank, r["id"], e) for e in check_row(r, npx, en_t)]
+            rpx = name_px(rows, r) if "{name}" in r["en"] else npx
+            errors += ["%s %s: %s" % (bank, r["id"], e) for e in check_row(r, rpx, en_t)]
         if write_max:
             kss_script.write_tsv(Path(script_dir or kss_script.SCRIPT) / (bank + ".tsv"), rs)
     return errors, todo

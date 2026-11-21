@@ -85,13 +85,19 @@ def read_tsv(path):
 
 
 def write_tsv(path, rows):
-    with open(path, "w", encoding="utf-8", newline="\n") as f:
-        w = csv.DictWriter(f, COLS, delimiter="\t", quoting=csv.QUOTE_NONE, lineterminator="\n", escapechar=None)
+    """Whole file to a temp name, then replaced: a bad row never leaves a half-written script. Quotes are plain
+    characters (QUOTE_NONE, no quotechar), as read_tsv reads them."""
+    for r in rows:
+        if any(c in v for v in r.values() for c in "\t\n"):
+            raise ValueError("tab or newline in row %s" % r["id"])
+    tmp = Path(str(path) + ".tmp")
+    with open(tmp, "w", encoding="utf-8", newline="\n") as f:
+        w = csv.DictWriter(f, COLS, delimiter="\t", quoting=csv.QUOTE_NONE, lineterminator="\n", quotechar=None,
+                           escapechar=None)
         w.writeheader()
         for r in rows:
-            if any(c in v for v in r.values() for c in "\t\n"):
-                raise ValueError("tab or newline in row %s" % r["id"])
             w.writerow(r)
+    tmp.replace(path)
 
 
 def load_script(script_dir=SCRIPT):

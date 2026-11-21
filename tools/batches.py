@@ -31,7 +31,7 @@ FREE = {"{br}", "{page}", "{small}", "{sbr}", "{narrow}"}  # layout codes the En
 VARIABLE = r"\{(?:num|name)\}"  # a number or name the game draws: "1st" comes out as "1th"
 # JP honorific -> ruled English form (glossary D1). HONORIFIC_SKIP: words that contain the kanji but are no honorific.
 HONORIFICS = {"殿": "-dono", "様": "-sama"}
-HONORIFIC_SKIP = re.compile(r"宮殿|御殿|殿上|殿中|様子|様々|皆様|神様|仏様|同様|奥様|仕様|模様|有様|如何様|貴様|左様|この様|その様|あの様|どの様|様な|様に")
+HONORIFIC_SKIP = re.compile(r"宮殿|御殿|殿上|殿中|様子|様々|皆様|神様|仏様|人様|同様|奥様|仕様|模様|有様|如何様|貴様|左様|この様|その様|あの様|どの様|様な|様に")
 SUFFIXES = set("殿様姫達公")  # a name followed by these still counts as the name (晴明様 holds 晴明)
 _STATE = {}
 
@@ -40,7 +40,7 @@ def _state():
     if not _STATE:
         script = kss_script.load_script(SCRIPT)
         rows = [r for b, rs in script.items() if b in lint.kss_text.BANKS for r in rs]
-        _STATE.update(npx=lint.name_px(rows), tbl=kss_script.table(insert.EN_TBL))
+        _STATE.update(rows=rows, tbl=kss_script.table(insert.EN_TBL))
     return _STATE
 
 
@@ -73,7 +73,8 @@ def width_problems(entry, en):
     """Every budget in tools/lint.py (lines, pixels, fields, popups, party slots, encoding)."""
     row = dict(entry, en=en)
     st = _state()
-    return [p for p in lint.check_row(row, st["npx"], st["tbl"]) if not p.startswith("control codes")]
+    npx = lint.name_px(st["rows"], row)
+    return [p for p in lint.check_row(row, npx, st["tbl"]) if not p.startswith("control codes")]
 
 
 def encodable(char):

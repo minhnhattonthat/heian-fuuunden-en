@@ -408,142 +408,142 @@ id	kind	jp	en	max	notes
 1B6	text	盛高部隊	Moritaka Squad	48 field	
 1B7	text	上宮部隊	Jogu Squad	48 field	
 1B8	text	紅葉部隊	Momiji Squad	48 field	
-1B9	text	　　　{name}の闘い		176/160 x3	
-1BA	text	{name}が仲間になった！		176/160 x3	
-1BB	text	{name}たちが仲間になった！		176/160 x3	
-1BC	text	{name}部隊が加わった！		176/160 x3	
+1B9	text	　　　{name}の闘い	The Battle of {name}	176/160 x3	
+1BA	text	{name}が仲間になった！	{name}{br}joined the party!	176/160 x3	
+1BB	text	{name}たちが仲間になった！	{name} and{br}companions joined!	176/160 x3	
+1BC	text	{name}部隊が加わった！	{name} Squad joins!	176/160 x3	
 1BD+1BE+1BF	text	加太舟場	Kada Ferry	48 field	
 1C0	text	石隈舟場	Ishikuma Ferry	48 field	
 1C1	text	淡路舟場	Awaji Ferry	48 field	
 1C2	text	御野津舟場	Minotsu Ferry	48 field	
 1C3	text	坂出舟場	Sakaide Ferry	48 field	
 1C4	text	伊予舟場	Iyo Ferry	48 field	
-1C5	text	　　　敵とそうぐうした！　　		176/160 x3	
-1C6	text	警告！{br}敵が平安京に近づいています！		176/160 x3	
-1C7	text	最終通告！{br}平安京に敵部隊が{br}突入しました！		176/160 x3	
+1C5	text	　　　敵とそうぐうした！　　	Enemies encountered!	176/160 x3	
+1C6	text	警告！{br}敵が平安京に近づいています！	Warning!{br}The enemy is nearing Heian-kyo!	176/160 x3	
+1C7	text	最終通告！{br}平安京に敵部隊が{br}突入しました！	Final warning!{br}An enemy squad has broken{br}into Heian-kyo!	176/160 x3	
 1C8	text	どうぐがいっぱいです	Your bag is full.	128 popup	
 1C9	text	そうびできません。	Can't equip that.	128 popup	
-1CA	text	天の四方、守りたる主にねがう{br}北に多聞天、南に増長天、{br}西に広目天、東に持国天。{page}わが求めに応じ、{br}よこしまなる敵をうて、{br}南無四天王降臨。		176/160 x3	
-1CB	text	生玉、足玉、死返玉、道返玉{br}もちて、荒魂にたてまつる。{br}はらいましませ、鳥羽玉の闇。		176/160 x3	
-1CC	text	あはりや　あそばすとまうさぬ{br}あさくらに　あまてらすおおみ{br}かみ　おりましませ。		176/160 x3	
-1CD	text	たららさんたん　らえんび{br}そわか　げどうふくめつ{br}あたばく元帥招来。		176/160 x3	
-1CE	text	おん　ばざらだと　ばん{br}ぶつばつ　はじゃ{br}びるしゃな到来。		176/160 x3	
-1CF	text	南方の王、赤帝龍王に命じる{br}わがもとにつどいて、{br}われをたすけよ。		176/160 x3	
-1D0	text	東方の王、青帝龍王に命じる{br}わがもとにつどいて、{br}われをたすけよ。		176/160 x3	
-1D1+1D2	text	青龍、白虎、朱雀、玄武、勾陳{br}南斗、北斗、三台、玉女、{br}烈破滅殺、金神到来。		176/160 x3	
-1D3	text	天地太晴、日月太明、陰陽太和{br}のろいをはらい{br}みたまをかえさん。		176/160 x3	
-1D4	text	八十までいきたのだ・・{br}悔いはない。{br}神楽、後はたのむぞ・・。		176/160 x3	
-1D5	text	わたしの・・力が・・{br}およばなかったか・・。		176/160 x3	
-1D6	text	神楽、すまんな・・。{br}おれは・・もう・だめ・・{br}みたいだ・・。		176/160 x3	
-1D7	text	私をたおせる者が{br}おったのか・・・。		176/160 x3	
-1D8	text	神楽・・。あなたに会えて、{br}よかった・・ありがとう。		176/160 x3	
-1D9	text	長老さま・・やくそく・・{br}はたせませんでした・・。		176/160 x3	
-1DA	text	天照大神様・・{br}神楽たちを・・{br}お守り下さい・・・。		176/160 x3	
-1DB	text	おれ、もうだめみたいだ・・。{br}・・神楽・・ごめんよ・・。		176/160 x3	
-1DC	text	こういう　さいごも{br}わるくはないね・・・。		176/160 x3	
-1DD	text	今まで、さんざん人様のものを{br}ぬすんできたんだ・・。{br}これも、むくいさ・・。		176/160 x3	
-1DE	text	山賊よりも、ふつうの女で{br}いたかった・・。		176/160 x3	
-1DF	text	のぞめるならば、ふるさとで{br}はてたかった・・。		176/160 x3	
-1E0	text	少しつかれた・・。{br}休ませてくれ・・。		176/160 x3	
-1E1	text	死して、みちばたの花と{br}なろう・・。		176/160 x3	
-1E2	text	おぬしていどの者に{br}敗れるとは・・むねん・・。		176/160 x3	
-1E3	text	もう少し、あなたたちと{br}いっしょにいたかった・・。		176/160 x3	
-1E4	text	ごめんなさい・・{br}お役に立てなくて・・。		176/160 x3	
-1E5	text	なにすんのよ・・ばか・・。		176/160 x3	
-1E6	text	神楽・・ごめんね・・。		176/160 x3	
-1E7	text	八百万のあらぶる神々よ・・{br}今、おそばにまいります・・。		176/160 x3	
-1E8	text	さいごまで・・{br}あきらめないで・・・。		176/160 x3	
-1E9	text	御仏につかえたときより{br}すてた命・・。{br}おしくはない・・・。		176/160 x3	
-1EA	text	おまえら　強すぎるよ・・。		176/160 x3	
-1EB	text	坊主を手にかけるとは・・。{br}この　ばちあたりめ！・・。		176/160 x3	
-1EC	text	ざんねんだが{br}ここまでのようだ・・。		176/160 x3	
-1ED	text	山川草木悉皆成仏・・。		176/160 x3	
-1EE	text	高野に入り三十余年・・{br}高野で死ぬべき身が{br}こんな所ではてるとは・・。		176/160 x3	
-1EF	text	言いわけはせぬ・・{br}さらばだ・・。		176/160 x3	
-1F0	text	人は皆、いずれは死ぬ・・{br}これも　さだめよ・・。		176/160 x3	
-1F1	text	このたわけめが・・・。		176/160 x3	
-1F2	text	わが名は・・比叡の・・{br}でんぽうあじゃり・・{br}六角である。		176/160 x3	
-1F3	text	・・先にいくぞ・・。		176/160 x3	
-1F4	text	後は若い者に{br}まかせるとしよう・・。		176/160 x3	
-1F5	text	神楽、つよく・・{br}つよく生きろよ・・。		176/160 x3	
-1F6	text	これが死というものか・・。		176/160 x3	
-1F7	text	むねん！　ここまでか・・。		176/160 x3	
-1F8	text	・・・・・・・。		176/160 x3	
-1F9	text	目がかすんで{br}きやがった・・。		176/160 x3	
-1FA	text	今のは　きいたぜ・・・。		176/160 x3	
-1FB	text	名にはじぬ　ことはした・・。{br}くいはない・・。		176/160 x3	
-1FC	text	どうやら、げんかいがきた{br}ようだ・・さらば・・。		176/160 x3	
-1FD	text	おれの死を・・{br}むだにするなよ・・。		176/160 x3	
-1FE	text	・・・ぶれいもの。		176/160 x3	
-1FF	text	くっ・・おのれらを{br}甘く見ていたか・・・。		176/160 x3	
-200	text	くっそぉ・・{br}死にたくねえ・・・。		176/160 x3	
-201	text	ちっ、目がかすんで{br}きやがった・・。		176/160 x3	
-202	text	やるな・・おぬし・・。{br}気に入ったぞ・・。		176/160 x3	
+1CA	text	天の四方、守りたる主にねがう{br}北に多聞天、南に増長天、{br}西に広目天、東に持国天。{page}わが求めに応じ、{br}よこしまなる敵をうて、{br}南無四天王降臨。	O lords who guard the four{br}quarters of heaven: Tamon in the{br}north, Zocho in the south,{page}Komoku in the west, Jikoku in{br}the east. Answer my call and{br}strike down the wicked foe.{page}Namu, Four Heavenly Kings,{br}descend!	176/160 x3	
+1CB	text	生玉、足玉、死返玉、道返玉{br}もちて、荒魂にたてまつる。{br}はらいましませ、鳥羽玉の闇。	With the Jewel of Life, of{br}Plenty, of Return from Death,{br}of Turning Back, I offer to{page}the wild spirits. Sweep away{br}the jet-black darkness!	176/160 x3	
+1CC	text	あはりや　あそばすとまうさぬ{br}あさくらに　あまてらすおおみ{br}かみ　おりましませ。	Ahare ya, asobasu to mosanu,{br}upon this seat, great{br}Amaterasu, descend to us!	176/160 x3	
+1CD	text	たららさんたん　らえんび{br}そわか　げどうふくめつ{br}あたばく元帥招来。	Tarara santan raenbi{br}sowaka, gedo fukumetsu.{br}Atabaku Gensui, come forth!	176/160 x3	
+1CE	text	おん　ばざらだと　ばん{br}ぶつばつ　はじゃ{br}びるしゃな到来。	On bazaradato ban,{br}butsubatsu haja.{br}Birushana, come forth!	176/160 x3	
+1CF	text	南方の王、赤帝龍王に命じる{br}わがもとにつどいて、{br}われをたすけよ。	King of the south, Red Emperor{br}Dragon King, I command you:{br}gather to me and aid me!	176/160 x3	
+1D0	text	東方の王、青帝龍王に命じる{br}わがもとにつどいて、{br}われをたすけよ。	King of the east, Blue Emperor{br}Dragon King, I command you:{br}gather to me and aid me!	176/160 x3	
+1D1+1D2	text	青龍、白虎、朱雀、玄武、勾陳{br}南斗、北斗、三台、玉女、{br}烈破滅殺、金神到来。	Seiryu, Byakko, Suzaku, Genbu,{br}Kochin, Nanto, Hokuto, Santai,{br}Gyokujo! Fierce destruction,{page}Konjin, come forth!	176/160 x3	
+1D3	text	天地太晴、日月太明、陰陽太和{br}のろいをはらい{br}みたまをかえさん。	Heaven and earth clear, sun and{br}moon bright, yin and yang at{br}peace: lift the curse and{page}return the soul!	176/160 x3	
+1D4	text	八十までいきたのだ・・{br}悔いはない。{br}神楽、後はたのむぞ・・。	I have lived to eighty...{br}I have no regrets.{br}Kagura, I leave the rest to you...	176/160 x3	
+1D5	text	わたしの・・力が・・{br}およばなかったか・・。	My... power... was not{br}enough after all...	176/160 x3	
+1D6	text	神楽、すまんな・・。{br}おれは・・もう・だめ・・{br}みたいだ・・。	Sorry, Kagura...{br}Looks like I'm... done{br}for...	176/160 x3	
+1D7	text	私をたおせる者が{br}おったのか・・・。	So there was someone{br}who could defeat me...	176/160 x3	
+1D8	text	神楽・・。あなたに会えて、{br}よかった・・ありがとう。	Kagura... I'm glad I met{br}you... Thank you.	176/160 x3	
+1D9	text	長老さま・・やくそく・・{br}はたせませんでした・・。	Elder... I could not keep{br}my promise...	176/160 x3	
+1DA	text	天照大神様・・{br}神楽たちを・・{br}お守り下さい・・・。	Great Amaterasu-sama...{br}please... watch over{br}Kagura and the others...	176/160 x3	
+1DB	text	おれ、もうだめみたいだ・・。{br}・・神楽・・ごめんよ・・。	Looks like I'm done for...{br}Kagura... I'm sorry...	176/160 x3	
+1DC	text	こういう　さいごも{br}わるくはないね・・・。	An end like this{br}isn't so bad...	176/160 x3	
+1DD	text	今まで、さんざん人様のものを{br}ぬすんできたんだ・・。{br}これも、むくいさ・・。	I've stolen plenty from{br}other folks all these years...{br}Guess this is my payback...	176/160 x3	
+1DE	text	山賊よりも、ふつうの女で{br}いたかった・・。	I wish I had been an ordinary{br}woman, not a bandit...	176/160 x3	
+1DF	text	のぞめるならば、ふるさとで{br}はてたかった・・。	If I could choose, I would{br}have died in my homeland...	176/160 x3	
+1E0	text	少しつかれた・・。{br}休ませてくれ・・。	I'm a little tired...{br}Let me rest...	176/160 x3	
+1E1	text	死して、みちばたの花と{br}なろう・・。	In death, let me become{br}a flower by the roadside...	176/160 x3	
+1E2	text	おぬしていどの者に{br}敗れるとは・・むねん・・。	To lose to the likes{br}of you... how bitter...	176/160 x3	
+1E3	text	もう少し、あなたたちと{br}いっしょにいたかった・・。	I wanted to stay with{br}you all a little longer...	176/160 x3	
+1E4	text	ごめんなさい・・{br}お役に立てなくて・・。	I'm sorry... that I{br}couldn't be of more use...	176/160 x3	
+1E5	text	なにすんのよ・・ばか・・。	What do you think you're{br}doing... you idiot...	176/160 x3	
+1E6	text	神楽・・ごめんね・・。	Kagura... I'm sorry...	176/160 x3	
+1E7	text	八百万のあらぶる神々よ・・{br}今、おそばにまいります・・。	O eight million raging gods...{br}I come now to your side...	176/160 x3	
+1E8	text	さいごまで・・{br}あきらめないで・・・。	Don't... give up...{br}to the very end...	176/160 x3	
+1E9	text	御仏につかえたときより{br}すてた命・・。{br}おしくはない・・・。	I gave up this life{br}when I entered the Buddha's{br}service... I do not mourn it...	176/160 x3	
+1EA	text	おまえら　強すぎるよ・・。	You guys are way too strong...	176/160 x3	
+1EB	text	坊主を手にかけるとは・・。{br}この　ばちあたりめ！・・。	Laying hands on a monk...{br}You'll pay for this{br}sacrilege!	176/160 x3	
+1EC	text	ざんねんだが{br}ここまでのようだ・・。	A pity, but it seems{br}this is as far as I go...	176/160 x3	
+1ED	text	山川草木悉皆成仏・・。	Mountains, rivers, grass and{br}trees: all attain Buddhahood...	176/160 x3	
+1EE	text	高野に入り三十余年・・{br}高野で死ぬべき身が{br}こんな所ではてるとは・・。	Thirty years and more on{br}Mount Koya... I who should die{br}there, end in a place like this...	176/160 x3	
+1EF	text	言いわけはせぬ・・{br}さらばだ・・。	I make no excuses...{br}Farewell...	176/160 x3	
+1F0	text	人は皆、いずれは死ぬ・・{br}これも　さだめよ・・。	All men die in time...{br}This too is fate...	176/160 x3	
+1F1	text	このたわけめが・・・。	You utter fool...	176/160 x3	
+1F2	text	わが名は・・比叡の・・{br}でんぽうあじゃり・・{br}六角である。	My name is... Rokkaku...{br}Denpo Ajari... of Mount{br}Hiei...	176/160 x3	
+1F3	text	・・先にいくぞ・・。	...I'll go on ahead...	176/160 x3	
+1F4	text	後は若い者に{br}まかせるとしよう・・。	I shall leave the rest{br}to the young ones...	176/160 x3	
+1F5	text	神楽、つよく・・{br}つよく生きろよ・・。	Kagura... live strong...{br}live strong, you hear...	176/160 x3	
+1F6	text	これが死というものか・・。	So this is what death is...	176/160 x3	
+1F7	text	むねん！　ここまでか・・。	Curses! Is this the end...	176/160 x3	
+1F8	text	・・・・・・・。	...	176/160 x3	
+1F9	text	目がかすんで{br}きやがった・・。	My eyes are going{br}all blurry...	176/160 x3	
+1FA	text	今のは　きいたぜ・・・。	That one really stung...	176/160 x3	
+1FB	text	名にはじぬ　ことはした・・。{br}くいはない・・。	I did nothing to shame{br}my name... No regrets...	176/160 x3	
+1FC	text	どうやら、げんかいがきた{br}ようだ・・さらば・・。	It seems I have reached{br}my limit... Farewell...	176/160 x3	
+1FD	text	おれの死を・・{br}むだにするなよ・・。	Don't let my death...{br}go to waste...	176/160 x3	
+1FE	text	・・・ぶれいもの。	...Insolent wretch.	176/160 x3	
+1FF	text	くっ・・おのれらを{br}甘く見ていたか・・・。	Ngh... So I underestimated{br}you lot...	176/160 x3	
+200	text	くっそぉ・・{br}死にたくねえ・・・。	Dammit...{br}I don't wanna die...	176/160 x3	
+201	text	ちっ、目がかすんで{br}きやがった・・。	Tch, my eyes are going{br}all blurry...	176/160 x3	
+202	text	やるな・・おぬし・・。{br}気に入ったぞ・・。	Not bad... you... I like{br}you...	176/160 x3	
 203	text	音楽	Music	24 field	battle window title over the music list
-204	text	　　　{name}はれべるあっぷ		176/160 x3	
-205	text	　　　{name}のばんです		176/160 x3	
-206	text	　　　体力があがった		176/160 x3	
-207	text	　　　攻撃力があがった		176/160 x3	
-208	text	　　　防御力があがった		176/160 x3	
-209	text	　　　技量があがった		176/160 x3	
-20A	text	　　　術力があがった		176/160 x3	
-20B	text	　　　速さがあがった		176/160 x3	
-20C	text	　　　術の回数がふえた		176/160 x3	
-20D	text	　　{name}は攻撃をよけた		176/160 x3	
-20E	text	　　{name}はまひしている		176/160 x3	
-20F	text	　　　　動けない！		176/160 x3	
-210	text	{name}は術を封じられている		176/160 x3	
-211	text	　　　術はつかえない！		176/160 x3	
-212	text	　つかえる術はありません		176/160 x3	
-213	text	　攻撃するあいてがいません		176/160 x3	
-214	text	　　{name}を召喚します		176/160 x3	
-215	text	　{name}にはきかなかった		176/160 x3	
-216	text	　{name}は死んでしまった		176/160 x3	
-217	text	　　　{num}経験がふえた		176/160 x3	
-218	text	　　　{name}をつかった		176/160 x3	
-219	text	　　　体力がかいふく		176/160 x3	
-21A	text	　　　まひがなおった		176/160 x3	
-21B	text	　　　{name}は動けます		176/160 x3	
-21C	text	　　{name}は封術をやぶった		176/160 x3	
-21D	text	　{name}は術をつかえます		176/160 x3	
-21E	text	　　{name}をてにいれた		176/160 x3	
-21F	text	　　　　敵をたおした		176/160 x3	
-220	text	　　　敵の頭を倒した！		176/160 x3	
-221	text	　　敵の部隊は全滅した！		176/160 x3	
-222	text	　　　{name}部隊の勝利！		176/160 x3	
-223	text	　　{name}が倒された！		176/160 x3	
-224	text	　　{name}部隊は負けた！		176/160 x3	
-225	text	　　{name}部隊は全滅した！		176/160 x3	
-226	text	{name}によわい		176/160 x3	
-227	text	　{name}の式神を封じた		176/160 x3	
-228	text	　　術防御力があがった		176/160 x3	
-229+22A+22B+22C+22D+22E	text	　　　きろくしますか？{end2}		176/160 x3	
-22F+230	text	注意！{br}{name}部隊が敵とそうぐう！{br}戦闘になります。		176/160 x3	
-231	text	若造どもが、わしとたたかう{br}など　五十年はやいわ！		176/160 x3	
-232	text	ほう、わしにむかってくるか{br}命知らずめが！		176/160 x3	
-233	text	敵がみえるな、みなのもの{br}いくぞ！		176/160 x3	
-234	text	敵か？　よし！用意はよいな？{br}いくぞ！		176/160 x3	
-235	text	おー、敵が来てる、来てる、{br}退屈だったんだ　ひまつぶしに{br}ちょうどいいさ。		176/160 x3	
-236	text	敵さんもひまだねえ、{br}他にやることは　ないのかよ！		176/160 x3	
-237	text	・・・・敵だな・・。		176/160 x3	
-238	text	・・おろかな・・、それほど{br}死にたいのか・・・。		176/160 x3	
-239	text	ざんねんだけど、ここまでよ・{br}せめて　私のうでの中で静かに{br}眠らせてあげる・・。		176/160 x3	
-23A	text	私と戦うつもり？・・・そう{br}うれしいわ、でもあなたじゃ{br}役不足ね・・。{page}それをおしえてあげる・・。		176/160 x3	
-23B	text	あんた、いいものもってるねえ{br}おれのもってる薬と　こうかん{br}しねえかい？{end2}		176/160 x3	
-23C	text	よし、じゃあ　こうかんする{br}ものを　きめてくれ。		176/160 x3	
-23D	text	それで　いいのかい？{end2}		176/160 x3	
-23E	text	おいおい　もちものがいっぱい{br}だぜ、何か減らしなよ。		176/160 x3	
-23F	text	じょうだんじゃねえ、こっちは{br}生活がかかってんだ、{br}ひやかしならよそでやんな。		176/160 x3	
-240	text	えれえ　気前のいい人だねえ{br}まいった、あんたにゃあ{br}これをやるよ。		176/160 x3	
-241	text	と思ったけど、それ以上は{br}もてそうにないな、わるいけど{br}あきらめな。		176/160 x3	
-242	text	薬がほしいなら　いつでも{br}きがるにこえを　かけてくれ{br}よな。　まってるぜ。		176/160 x3	
+204	text	　　　{name}はれべるあっぷ	{name}: Level up!	176/160 x3	
+205	text	　　　{name}のばんです	{name}'s turn.	176/160 x3	
+206	text	　　　体力があがった	Vitality rose!	176/160 x3	
+207	text	　　　攻撃力があがった	Attack rose!	176/160 x3	
+208	text	　　　防御力があがった	Defense rose!	176/160 x3	
+209	text	　　　技量があがった	Skill rose!	176/160 x3	
+20A	text	　　　術力があがった	Jutsu power rose!	176/160 x3	
+20B	text	　　　速さがあがった	Speed rose!	176/160 x3	
+20C	text	　　　術の回数がふえた	Jutsu uses increased!	176/160 x3	
+20D	text	　　{name}は攻撃をよけた	{name} dodged!	176/160 x3	
+20E	text	　　{name}はまひしている	{name} paralyzed	176/160 x3	
+20F	text	　　　　動けない！	Cannot move!	176/160 x3	
+210	text	{name}は術を封じられている	{name} is sealed.	176/160 x3	
+211	text	　　　術はつかえない！	Cannot use jutsu!	176/160 x3	
+212	text	　つかえる術はありません	No jutsu can be used.	176/160 x3	
+213	text	　攻撃するあいてがいません	No one to attack.	176/160 x3	
+214	text	　　{name}を召喚します	Summoning {name}.	176/160 x3	
+215	text	　{name}にはきかなかった	{name}: no effect	176/160 x3	
+216	text	　{name}は死んでしまった	{name} has died.	176/160 x3	
+217	text	　　　{num}経験がふえた	Gained {num} experience.	176/160 x3	
+218	text	　　　{name}をつかった	Used {name}.	176/160 x3	
+219	text	　　　体力がかいふく	Vitality restored.	176/160 x3	
+21A	text	　　　まひがなおった	Paralysis cured.	176/160 x3	
+21B	text	　　　{name}は動けます	{name} can move.	176/160 x3	
+21C	text	　　{name}は封術をやぶった	{name}: unsealed!	176/160 x3	
+21D	text	　{name}は術をつかえます	{name} may cast.	176/160 x3	
+21E	text	　　{name}をてにいれた	Obtained {name}.	176/160 x3	
+21F	text	　　　　敵をたおした	Enemy defeated.	176/160 x3	
+220	text	　　　敵の頭を倒した！	Enemy leader defeated!	176/160 x3	
+221	text	　　敵の部隊は全滅した！	Enemy squad wiped out!	176/160 x3	
+222	text	　　　{name}部隊の勝利！	{name} Squad wins!	176/160 x3	
+223	text	　　{name}が倒された！	{name} fell!	176/160 x3	
+224	text	　　{name}部隊は負けた！	{name} Squad lost!	176/160 x3	
+225	text	　　{name}部隊は全滅した！	{name} Squad wiped out!	176/160 x3	
+226	text	{name}によわい	Weak to {name}	176/160 x3	
+227	text	　{name}の式神を封じた	Shikigami sealed:{br}{name}	176/160 x3	
+228	text	　　術防御力があがった	Jutsu defense rose!	176/160 x3	
+229+22A+22B+22C+22D+22E	text	　　　きろくしますか？{end2}	Save your progress?{end2}	176/160 x3	
+22F+230	text	注意！{br}{name}部隊が敵とそうぐう！{br}戦闘になります。	Caution! {name} Squad{br}has met the enemy!{br}A battle begins.	176/160 x3	
+231	text	若造どもが、わしとたたかう{br}など　五十年はやいわ！	You whelps, fighting me?{br}You're fifty years too early!	176/160 x3	
+232	text	ほう、わしにむかってくるか{br}命知らずめが！	Ho, you dare come at me?{br}Reckless fools!	176/160 x3	
+233	text	敵がみえるな、みなのもの{br}いくぞ！	I see the enemy. Everyone,{br}let's go!	176/160 x3	
+234	text	敵か？　よし！用意はよいな？{br}いくぞ！	The enemy? Right! Are you{br}ready? Let's go!	176/160 x3	
+235	text	おー、敵が来てる、来てる、{br}退屈だったんだ　ひまつぶしに{br}ちょうどいいさ。	Oh, here they come, here{br}they come! I was bored stiff.{br}Just the thing to kill time.	176/160 x3	
+236	text	敵さんもひまだねえ、{br}他にやることは　ないのかよ！	You lot sure have time to{br}kill. Ain't you got anything{br}better to do?	176/160 x3	
+237	text	・・・・敵だな・・。	...The enemy, is it...	176/160 x3	
+238	text	・・おろかな・・、それほど{br}死にたいのか・・・。	...Fools... Are you so{br}eager to die...	176/160 x3	
+239	text	ざんねんだけど、ここまでよ・{br}せめて　私のうでの中で静かに{br}眠らせてあげる・・。	Too bad, but this is as far{br}as you go. At least let me{br}rock you to sleep in my arms...	176/160 x3	
+23A	text	私と戦うつもり？・・・そう{br}うれしいわ、でもあなたじゃ{br}役不足ね・・。{page}それをおしえてあげる・・。	You mean to fight me? Oh,{br}how delightful. But you are{br}no match for me...{page}Allow me to show you...	176/160 x3	
+23B	text	あんた、いいものもってるねえ{br}おれのもってる薬と　こうかん{br}しねえかい？{end2}	Say, you got somethin' nice{br}there. Wanna trade it for{br}some of my medicine?{end2}	176/160 x3	
+23C	text	よし、じゃあ　こうかんする{br}ものを　きめてくれ。	All right, then pick what{br}you want to trade.	176/160 x3	
+23D	text	それで　いいのかい？{end2}	That suit ya?{end2}	176/160 x3	
+23E	text	おいおい　もちものがいっぱい{br}だぜ、何か減らしなよ。	Whoa, whoa, your bag's full.{br}Lighten your load first.	176/160 x3	
+23F	text	じょうだんじゃねえ、こっちは{br}生活がかかってんだ、{br}ひやかしならよそでやんな。	Don't joke with me, pal. My{br}livelihood's on the line here.{br}Go window-shop somewhere else.	176/160 x3	
+240	text	えれえ　気前のいい人だねえ{br}まいった、あんたにゃあ{br}これをやるよ。	Well, ain't you generous!{br}You got me. Here, this{br}one's yours.	176/160 x3	
+241	text	と思ったけど、それ以上は{br}もてそうにないな、わるいけど{br}あきらめな。	Then again, looks like you{br}can't carry any more. Sorry,{br}but forget it.	176/160 x3	
+242	text	薬がほしいなら　いつでも{br}きがるにこえを　かけてくれ{br}よな。　まってるぜ。	Whenever ya want medicine,{br}just give me a holler.{br}I'll be waitin'.	176/160 x3	
 243	text	　きろくしました。　	Saved.	112 popup	
 244	text	おつかれさまでした。	Thanks for playing!	112 popup	
-245	text	　よろしいですか？　		176/160 x3	
-246	text	　では、さようなら。		176/160 x3	
-247	text	術をかけるあいてがいません		176/160 x3	
-248	text	　{name}はまひにかかった		176/160 x3	
-249	text	　{name}は術を封じられた		176/160 x3	
+245	text	　よろしいですか？　	Is that all right?	176/160 x3	
+246	text	　では、さようなら。	Well then, farewell.	176/160 x3	
+247	text	術をかけるあいてがいません	No one to cast jutsu on.	176/160 x3	
+248	text	　{name}はまひにかかった	{name} paralyzed	176/160 x3	
+249	text	　{name}は術を封じられた	{name}: sealed!	176/160 x3	
 24A	text	　佐渡　	Sado	48 field	
 24B	text	越後北部	North Echigo	48 field	
 24C	text	越後南部	South Echigo	48 field	
@@ -607,34 +607,34 @@ id	kind	jp	en	max	notes
 286	text	加賀の国	Kaga	48 field	
 287	text	美濃の国	Mino	48 field	
 288	text	陸奥の国	Mutsu	48 field	
-289	text	　すべての能力があがった		176/160 x3	
-28A	text	　　{name}は攻撃を防いだ		176/160 x3	
+289	text	　すべての能力があがった	All abilities rose!	176/160 x3	
+28A	text	　　{name}は攻撃を防いだ	{name} blocked!	176/160 x3	
 28B	text	道具がありません！	No items!	112 popup	
-28C	text	おれは、薬を売りながら諸国を{br}旅してる、しがねえ薬売りさ。{page}薬がほしいのなら　こうかん{br}できるものをもって来てくれ。		176/160 x3	
+28C	text	おれは、薬を売りながら諸国を{br}旅してる、しがねえ薬売りさ。{page}薬がほしいのなら　こうかん{br}できるものをもって来てくれ。	Me, I'm just a humble medicine{br}peddler, roamin' the provinces.{page}If ya want medicine, bring me{br}somethin' to trade for it.	176/160 x3	
 28D	text	これでいいですか？	Is this all right?	112 popup	
 28E	text	　　はい　　いいえ	Yes      No	112 popup	yes/no line: the cursor sits at +10..16 px (option 1) and +58..64 px (option 2) from the line start; put Yes at +24 px and No at +72 px like the Japanese (spaces are 4 px)
-28F	text	きろく{num}が消えてしまいます。{br}よろしいのですか？{end2}		176/160 x3	
-290	text	・・・・永観二年（９８４）　{br}師貞親王即位　花山天皇と称す		176/160 x3	
-291	text	同年　大納言　藤原為光の娘　{br}祇子（女御祇子）入内す・・　		176/160 x3	
-292	text	・・・・寛和元年（９８５）　{br}女御祇子　病により　急逝・・		176/160 x3	
-293	text	　　　　　　　　　　　　　　{br}・・・・・そして・・・・・・		176/160 x3	
-294	text	　　　　　　　　　　　　　　{br}　　長保二年（１０００）　　		176/160 x3	
-295	text	紀州熊野に　一人の男子あり　{br}名を神楽　この年・・十六　　		176/160 x3	
-296	text	　　　　　　　　　　　　　　{br}　　　物語が始まる・・　　　		176/160 x3	
-297	text	女官{br}女御祇子様　なくなりまして{br}ございます。		speaker + 176/160 x3	
-298	text	花山帝{br}そうか・・・・・・・・・・・{br}・・・何か言うておったか？		speaker + 176/160 x3	
-299	text	女官{br}帝と大納言為光様にあてて、{br}幸せでした・・・と、そう・・		speaker + 176/160 x3	
-29A	text	花山帝{br}子は・・どうなった？{br}無事に生まれたか？		speaker + 176/160 x3	
-29B	text	女官{br}おなくなりになった後、生まれ{br}ましてございます・・。{br}ふたごの男の子ですが・・・		speaker + 176/160 x3	
-29C	text	花山帝{br}どうした、まさか死んだのでは{br}あるまいな！		speaker + 176/160 x3	
-29D	text	女官{br}・・！　あっいえ・・お一人は{br}お元気にお生まれしました。{br}ただ、もうお一人の子は・・・		speaker + 176/160 x3	
-29E	text	安倍晴明{br}おそれながら、もうしあげます{br}死んだ母から生まれた子は{br}忌み子ともうします・・。		speaker + 176/160 x3	
-29F	text	花山帝{br}朝廷にはおけぬ、と　そう言う{br}のであろう・・。　晴明。		speaker + 176/160 x3	
-2A0	text	安倍晴明{br}熊野に知り合いがおりますれば{br}その者にあずけるつもりですが		speaker + 176/160 x3	
-2A1	text	花山帝{br}すまぬな・・晴明・・もう一人{br}の子は、そなたが　てあつく{br}ほうむってくれ・・・・・・。		speaker + 176/160 x3	
-2A2	text	安倍晴明{br}私の弟子、芦屋道満に命じて{br}てあつくほうむらせましょう。		speaker + 176/160 x3	
-2A3	text	花山帝{br}晴明・・、人はこのような時に{br}仏にすがりたくなるのだな・・		speaker + 176/160 x3	
-2A4	text	安倍晴明{br}帝、人の死はそうさだめられた{br}ものなれば、かなしむことは{br}ありませぬぞ・・。		speaker + 176/160 x3	
+28F	text	きろく{num}が消えてしまいます。{br}よろしいのですか？{end2}	Record {num} will be erased.{br}Are you sure?{end2}	176/160 x3	
+290	text	・・・・永観二年（９８４）　{br}師貞親王即位　花山天皇と称す	...Eikan 2 (984){br}Prince Morosada takes the{br}throne as Emperor Kazan.	176/160 x3	
+291	text	同年　大納言　藤原為光の娘　{br}祇子（女御祇子）入内す・・　	That year, Kishi, daughter of{br}Major Counselor Fujiwara no{br}Tamemitsu, enters the court.	176/160 x3	
+292	text	・・・・寛和元年（９８５）　{br}女御祇子　病により　急逝・・	...Kanna 1 (985){br}Lady Kishi dies suddenly{br}of an illness...	176/160 x3	
+293	text	　　　　　　　　　　　　　　{br}・・・・・そして・・・・・・	{br}...And then...	176/160 x3	
+294	text	　　　　　　　　　　　　　　{br}　　長保二年（１０００）　　	{br}Choho 2 (1000)	176/160 x3	
+295	text	紀州熊野に　一人の男子あり　{br}名を神楽　この年・・十六　　	In Kumano of Kii there lives{br}a boy named Kagura. This{br}year... he turns sixteen.	176/160 x3	
+296	text	　　　　　　　　　　　　　　{br}　　　物語が始まる・・　　　	{br}The story begins...	176/160 x3	
+297	text	女官{br}女御祇子様　なくなりまして{br}ございます。	Lady-in-waiting{br}Lady Kishi-sama has{br}passed away, Your Majesty.	speaker + 176/160 x3	
+298	text	花山帝{br}そうか・・・・・・・・・・・{br}・・・何か言うておったか？	Emperor Kazan{br}I see...{br}...Did she say anything?	speaker + 176/160 x3	
+299	text	女官{br}帝と大納言為光様にあてて、{br}幸せでした・・・と、そう・・	Lady-in-waiting{br}To Your Majesty and Lord{br}Tamemitsu-sama: "I was happy,"{br}she said...	speaker + 176/160 x3	
+29A	text	花山帝{br}子は・・どうなった？{br}無事に生まれたか？	Emperor Kazan{br}And the child...?{br}Was it born safely?	speaker + 176/160 x3	
+29B	text	女官{br}おなくなりになった後、生まれ{br}ましてございます・・。{br}ふたごの男の子ですが・・・	Lady-in-waiting{br}After she passed, the child{br}was born... Twin boys,{br}Your Majesty, but...	speaker + 176/160 x3	
+29C	text	花山帝{br}どうした、まさか死んだのでは{br}あるまいな！	Emperor Kazan{br}What is it? Do not tell me{br}they died!	speaker + 176/160 x3	
+29D	text	女官{br}・・！　あっいえ・・お一人は{br}お元気にお生まれしました。{br}ただ、もうお一人の子は・・・	Lady-in-waiting{br}...! Ah, no... One of them{br}was born in good health.{br}But the other child...	speaker + 176/160 x3	
+29E	text	安倍晴明{br}おそれながら、もうしあげます{br}死んだ母から生まれた子は{br}忌み子ともうします・・。	Abe no Seimei{br}If I may be so bold... A child{br}born of a dead mother is called{br}a child of ill omen...	speaker + 176/160 x3	
+29F	text	花山帝{br}朝廷にはおけぬ、と　そう言う{br}のであろう・・。　晴明。	Emperor Kazan{br}You mean he cannot stay at{br}court. That is it, is it not...{br}Seimei.	speaker + 176/160 x3	
+2A0	text	安倍晴明{br}熊野に知り合いがおりますれば{br}その者にあずけるつもりですが	Abe no Seimei{br}I have an acquaintance in{br}Kumano. I mean to place the{br}child in his care.	speaker + 176/160 x3	
+2A1	text	花山帝{br}すまぬな・・晴明・・もう一人{br}の子は、そなたが　てあつく{br}ほうむってくれ・・・・・・。	Emperor Kazan{br}Forgive me... Seimei... The{br}other child... see that he is{br}buried with all due care...	speaker + 176/160 x3	
+2A2	text	安倍晴明{br}私の弟子、芦屋道満に命じて{br}てあつくほうむらせましょう。	Abe no Seimei{br}I shall have my disciple,{br}Ashiya Doman, see to his{br}burial with all due care.	speaker + 176/160 x3	
+2A3	text	花山帝{br}晴明・・、人はこのような時に{br}仏にすがりたくなるのだな・・	Emperor Kazan{br}Seimei... at a time like this,{br}a man longs to cling to the{br}Buddha...	speaker + 176/160 x3	
+2A4	text	安倍晴明{br}帝、人の死はそうさだめられた{br}ものなれば、かなしむことは{br}ありませぬぞ・・。	Abe no Seimei{br}Majesty, as death is fated{br}for all men, there is no{br}cause for grief...	speaker + 176/160 x3	
 2A5	text	花山帝{br}ああ・・晴明。　すまぬ・・{br}そなたには、くろうをかける。{br}さがってよい・・・・・。		speaker + 176/160 x3	
 2A6	text	・・・長保二年　紀州熊野		176/160 x3	
 2A7	text	なに？　反乱？　どこの国で{br}誰が兵をあげた？		176/160 x3	
