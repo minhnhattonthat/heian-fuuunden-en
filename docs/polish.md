@@ -5,6 +5,7 @@
 - [ ] 2A2/glossary - prologue 芦屋道満 (Ashiya Doman) and 道摩 (Doma) are historically one man; 5B3 has Doma raising the "buried" twin. Decide whether the prologue should say Doma or keep Doman (game text differs)
 - [ ] 5B3 - long Doma monologue (40 pages): re-read in game for pacing; "two halves of one ... yin and yang" check against 陰と陽
 - [ ] 612 - 天太祝詞移転法呪 rendered "Heavenly Norito, Curse of Transference!": check against the chant style of 1CA-1D3
+- [ ] 205 and other `{name}` lines (204, 20D, 20E, 1B9 cards) - centred by a fixed indent that fits the widest name the line can take (205 also takes enemy full names, e.g. Tachibana no Morohide 118 px), so "Kagura's turn." sits ~35 px left of centre; the Japanese also uses a fixed indent. Fix needs runtime centring (pad by the name's width at the `{name}` reader C1:74F1) or waive
 - [x] 470 - 似合いの夫婦 "but his fine bride" was loose -> "might have been his fitting bride, not the Ise Priestess"
 - [ ] 562 - Moritaka says "Aye, that is just what I did" in formal register; elsewhere he is casual ("Yeah, that's just it")
 - [x] 353/38D/3D1/51B/564/567 - British "travell-" forms -> American (glossary style rule added)

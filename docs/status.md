@@ -2,8 +2,16 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 8. QA in the emulator: in progress, one gate item left: **visual-QA verdicts** on the 18 sheets of
-  `work/qa/tour` (manifest `work/qa/manifest.tsv`, build sha1 92f0225dc7e1, 2026-11-22 worker 4). Done this session:
+- **Phase:** 9. Release: not started. Phase 8 met 2026-11-22 (worker 5): visual-QA verdicts
+  `work/qa/verdicts/final_1.tsv` 18/18 ok (fresh read-only pass by the worker itself, no reviewer available),
+  `qa_gate.py check work/qa/manifest.tsv work/qa/verdicts` exit 0 on build sha1 92f0225dc7e1; smoke ok, check.py 52
+  passed, textcover 1556/1556. Verdict notes: 205 "Kagura's turn." sits ~35 px left (fixed indent sized for enemy full
+  names, as the Japanese indent): new `docs/polish.md` line; shop plate "Mer/chant" is D17's syllable split.
+- **Next (phase 9):** read `$SKILL/references/pipeline.md` §Release and `references/translation.md` §Review. Story
+  pass per chapter (`work/qa/story/manifest.tsv`); the Codex re-read of every batch (D13) is due when its quota returns
+  (2026-11-26); clear every unticked `docs/polish.md` line (fix or `waived: reason`); `jp_left.py`, debug tool off in
+  the release build, README hashes, `tools/release.py`. Never `gh release create`.
+- **Phase 8 record (2026-11-22, worker 4):** Done:
   - **Text coverage 1556/1556, no waivers** (`textcover.py work/qa/cover build/strings.tsv`): `tools/lua/textids.lua`
     logs the id each reader opens; `tools/debug/msgview.py --uncovered work/qa/cover/warp` forces every other id into
     the new-game opening's dialogue box (cold boots, ~25 ids each, page shots `work/qa/cover/view/*/msg_*.png`).
@@ -19,7 +27,7 @@ Updated at the end of every session. Keep it to what the next session needs; his
     slot list); stress scenes `stress_items` (every unit's 4 slots = 8 widest item names x99; items live at slot
     offset 08A + unit*8, id + count), `stress_status`, `stress_slots` (map 0E = widest place). All look right.
   - Smoke ok; `warp_all` 139/139 on en and on the original (`work/qa/tour_jp`).
-- **Next (phase 8):** (1) Read every sheet in `work/qa/tour/sheet_*.png` (English left, Japanese right; scene list
+- **Phase 8 gate (done by worker 5):** (1) Read every sheet in `work/qa/tour/sheet_*.png` (English left, Japanese right; scene list
   `work/qa/tour/sheets.tsv`) with `docs/visual-qa-brief.md` as a fresh read-only pass, write
   `work/qa/verdicts/final_1.tsv` (`sheet_NNN<TAB>ok|issue<TAB>note`), then `qa_gate.py check work/qa/manifest.tsv
   work/qa/verdicts` must exit 0. The previous session already read an older tour of the same scenes and fixed what it
