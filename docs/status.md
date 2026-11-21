@@ -2,7 +2,25 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 9. Release: not started. Phase 8 met 2026-11-22 (worker 5): visual-QA verdicts
+- **Phase:** 9. Release in progress (worker 6, 2026-11-22): story pass 4/16 chapters done; tooling done.
+- **Phase 9 so far:** `tools/release.py` written (every gate of pipeline.md §Release; `--help` safe; checksum fixed in
+  the release step, playable image `build/Heian_Fuuunden_EN_vX.Y.sfc`); `tools/jp_slots.py` + `jp_left.py --tbl
+  tbl/jp.tbl --slots build/jp_slots.txt` = 0 runs (positive control on an original string finds it); README.md
+  filled (no placeholders), zip README `docs/release-readme.txt`; polish.md all ticked except 5B3 (judge it in
+  chapter 13's story read); 421 "Kagurazuki" and 562 Moritaka register fixed. D22: the story pass by the worker
+  itself stands in for D13's Codex re-read (Codex out of quota until 2026-11-26).
+- **Next (worker 7):** story pass chapters 05-16: `qa_gate.py todo work/qa/story/manifest.tsv work/qa/story/verdicts
+  --size 1`; read each `work/qa/story/chapters/NN_*.txt` with Read offset/limit (context-mode stubs whole-file
+  reads) against `$SKILL/assets/story-reviewer-brief.md`, `docs/synopsis.md`, `docs/style-reference.md`; write
+  `work/qa/story/verdicts/<chapter>.tsv` (`chapter<TAB>ok|issue<TAB>note`). Fix Critical/Important at once; Minors
+  to polish.md and fix them. After any script edit: `tools/pairs.py --chapters work/qa/story/chapters`, `qa_gate.py
+  init work/qa/story/manifest.tsv work/qa/story/chapters --glob "*.txt"` (changed chapters need a new verdict).
+  Then, because the text changed since phase 8's tour (421, 562 and any story fixes): rebuild, re-tour
+  (`warp_all.py --rom build/heian_en.sfc --out work/qa/en_warp --no-states --jobs 6`), `tools/qa_sheets.py`,
+  `qa_gate.py init work/qa/manifest.tsv ... --build build/heian_en.sfc`, verdict only the changed sheets (new
+  `work/qa/verdicts/final_2.tsv`), textcover re-run if needed, then `python -X utf8 tools/release.py`. Worker 6 hit
+  the context limit at chapter 05 (each chapter is 7-15k tokens: budget ~6 chapters per worker).
+- Phase 8 met 2026-11-22 (worker 5): visual-QA verdicts
   `work/qa/verdicts/final_1.tsv` 18/18 ok (fresh read-only pass by the worker itself, no reviewer available),
   `qa_gate.py check work/qa/manifest.tsv work/qa/verdicts` exit 0 on build sha1 92f0225dc7e1; smoke ok, check.py 52
   passed, textcover 1556/1556. Verdict notes: 205 "Kagura's turn." sits ~35 px left (fixed indent sized for enemy full
