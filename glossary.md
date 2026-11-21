@@ -53,7 +53,7 @@ Binding for every translator and reviewer. Agents propose additions in reports; 
 | 虚空坊 / 虚空 | Kokubo / Koku | | tengu | |
 | 狗法眼 / 狗法 | Kuhogen / Kuho | | | |
 | 猿法眼 / 猿法 | Enhogen / Enho | | | |
-| 夷 | Ebisu | | | |
+| 夷 | Natsume | | Tango Kokubunji; game furigana なつめ (315) | Ebisu |
 | 春菜 | Haruna | | | |
 | 飛騨 | Hida | | person; the province is also Hida | |
 | 雀 | Suzume | | | |
@@ -175,3 +175,6 @@ verbatim when dialogue names one (`build/terms_bNNN.txt` lists the ones a batch 
   桂川の姫 -> the princess of Katsuragawa (Uzuki); provinces 下野 Shimotsuke, 信濃 Shinano, 安芸 Aki, 備後 Bingo,
   周防 Suo; 右大臣 -> Minister of the Right; 姉ちゃん -> Sis; 陰陽師殿 -> Onmyoji-dono. The dev placeholder まさだ
   (and its stub ま) -> "Not yet." 愛深 is Aizen (furigana あいぜん in 4CA), not Aimi.
+- b008: 夷 is Natsume (furigana なつめ in 315), not Ebisu; 雀 Suzume is Tota's elder sister; 国分寺 -> Kokubunji;
+  丹後 Tango. Seimei's apprentice (324-328) speaks Kansai dialect: folksy "ya", "yer", dropped g's.
+  Furigana in the script outrank wave-0 guesses: check a name's first appearance with furigana.

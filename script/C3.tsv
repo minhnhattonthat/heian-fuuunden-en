@@ -95,7 +95,7 @@ id	kind	jp	en	max	notes
 061	text	虚空	Koku	40 narrow	
 062	text	狗法	Kuho	40 narrow	
 063	text	猿法	Enho	40 narrow	
-064	text	夷　	Ebisu	40 narrow	
+064	text	夷　	Natsume	40 narrow	
 065	text	春菜	Haruna	40 narrow	
 066	text	飛騨	Hida	40 narrow	
 067	text	雀　	Suzume	40 narrow	
@@ -185,7 +185,7 @@ id	kind	jp	en	max	notes
 0D0	text	虚空坊	Kokubo	48 field	
 0D1	text	狗法眼	Kuhogen	48 field	
 0D2	text	猿法眼	Enhogen	48 field	
-0D3	text	　夷	Ebisu	48 field	
+0D3	text	　夷	Natsume	48 field	
 0D4	text	　春菜	Haruna	48 field	
 0D5	text	　飛騨	Hida	48 field	
 0D6	text	　雀	Suzume	48 field	
@@ -942,24 +942,24 @@ id	kind	jp	en	max	notes
 4E8	text	陰陽師の方か？　このような{br}所に何の用が　あるのかね？{br}盛高ならば・・いないぞ。{page}先ほども　盛高をたずねて{br}誰か来ておったが。{page}あいつは　すっかりふぬけて{br}しまった・・{page}法術で敗れたらしいが・・{br}わが弟ながらなさけない。{page}せっかくだから　家で休んで{br}もらってもよいぞ。	An onmyoji? What business{br}have you in a place like this?{br}Moritaka? He's not here.{page}Someone came asking for{br}Moritaka just a while ago.{page}He has gone completely{br}spineless...{page}Beaten by sorcery, they say...{br}My own brother, and so pitiful.{page}Since you are here, you are{br}welcome to rest at my house.	176/160 x3	
 4E9	text	弟は　今ごろ　どこでどうして{br}いるのか・・・旅の方か？{page}休みたいなら　自由に家を{br}使ってくれ、私一人には{br}広すぎてな・・	Where is my brother now, and{br}what is he doing... A traveler?{page}If you want to rest, use the{br}house as you like. It's far{br}too big for me alone...	176/160 x3	
 4EA	text	盛高か？　何の用だ？{page}おまえのような　ふぬけに{br}私は用はないぞ。{page}・・・！　盛高？・・おまえ。	Moritaka? What do you want?{page}I've no use for a spineless{br}wretch like you.{page}...! Moritaka? ...You...	176/160 x3	
-4EB	text	もう大丈夫だ・・兄さん。{page}おれは　もう一度戦う事に{br}決めた・・あの道摩と、{br}それで別れにきたのさ。{page}多分、ここには戻らない。		176/160 x3	
-4EC	text	そうか・・おまえは　自分の{br}やりたい事を　すればいい。{br}私もそうさせてもらう。		176/160 x3	
-4ED	text	兄さん・ついてくるつもりか？{br}死ぬかも知れないんだぜ。		176/160 x3	
-4EE	text	おまえは　目的をみつけたの{br}だろう？　ならばその目的を{br}はたせばいい。{page}私も　目的をはたすだけだ{br}おまえを守るという目的を・・{br}さあ　行こうか？		176/160 x3	
-4EF	text	おーい　神楽どのーっ{br}おまち下され！		176/160 x3	
-4F0	text	あんたら　神楽ちゃんの仲間{br}じゃないのかい？{page}神楽ちゃんは　どこ？		176/160 x3	
-4F1	text	神楽ちゃん・・{page}ごめんよ・・紅葉様があんなに{br}わからずやとは　思わなかった{br}よ・・まったく・・{page}もう　紅葉様なんか知らないよ{br}だけど　神楽ちゃんにはかりが{br}あるからね・・{page}あたいでよかったら　仲間に{br}しておくれよ・紅葉様より役に{br}立ってみせるよ・・		176/160 x3	
-4F2	text	くすくすくす・・・{page}姉さんは　あんな事を言ってる{br}けど・姉さん　紅葉様とけんか{br}してしまって・・{page}戸隠の里へ行けば　わかります{br}けど、紅葉様には　かんたんに{br}戦えない理由があるんです・{page}姉さんにも　それはわかってる{br}はずなんですけど・・{page}でも姉さん、あやまるのがいや{br}だから・・私からもおねがい{br}します　仲間にして下さい。		176/160 x3	
-4F3	text	紅葉様の知り合いの方ですか？{br}紅葉様は今はいませんよ。{page}ここの子供たちは　紅葉様が{br}育てている　みなしごたち・{page}私も　紅葉様の母親に育てて{br}もらいましたの・・		176/160 x3	
-4F4	text	神楽様ね、紅葉様がおまちです{br}お会いになって下さい。		176/160 x3	
-4F5	text	紅葉様が　そう決めたのなら{br}仕方ありません・・		176/160 x3	
-4F6	text	本当に戦うのですか？{br}紅葉様にもしもの事があれば{br}この子供たちは・・{page}・・私も行きます・紅葉様だけ{br}危ない目に会わせられません！		176/160 x3	
-4F7	text	あれから　ずっとかんがえてた{br}あなたの事を・・、{page}楓に怒られてしまったわ。{br}すなおじゃない・・ってね。{page}わかっているの・・自分でも{br}多分　あなたが楓をたすけて{br}くれていなかったら・・、{page}私はあなたと戦う事になって{br}いたと思う・・たとえそれが{br}道摩のわなだったとしても・{page}楓にかんしゃしなくちゃ・・{br}あなたに会わせてくれた事・{br}だから・・・・{page}神楽、私でよければあなたと{br}共に戦いましょう・・		176/160 x3	
-4F8	text	紅葉様は　戸隠山の鬼女と{br}呼ばれているそうですが・・{br}そんな人ではありません・・{page}ここにいる子供たちは、みんな{br}紅葉様が育てている　みなしご{br}たちなのですよ・・		176/160 x3	
-4F9	text	神楽の仲間の方ね・・{br}おつかれなら・・この宮を{br}使って下さい・・		176/160 x3	
-4FA	text	紅葉様の母は　この宮の巫女{br}でした、もう死にましたが・{page}紅葉様の母は　みなしごたちを{br}この宮で育てていました。{page}紅葉様も　母と同じように{br}みなしごを育てています・・		176/160 x3	
-4FB	text	神楽さんですね、楓と葵を{br}たすけてくれたそうで・・{br}ありがとうございます。{page}私は桔梗ともうします。{br}楓と葵の姉にあたります・・		176/160 x3	
-4FC	text	この宮の子供たちは、全て{br}みなしごです・・{page}紅葉様がひきとって　育てて{br}いるのです・・{page}ですから　もし紅葉様が死ねば{br}この子供たちは　いったい{br}どうなるのか・・		176/160 x3	
-4FD	text	紅葉様・・私もお供します。		176/160 x3	
-4FE	text	よくやった・・神楽・{br}皆の者もごくろうであった。{br}これでぐっすりと眠れるな。{page}ところで　神楽。{br}これからどうするつもりだ？{page}・・そうだな・・{br}まずは　ゆっくりと休め・・{br}かんがえるのは　その後だ。{page}他の者も　まずはゆっくり{br}休むがよい。{page}そなたらは　この国をすくった{br}のだ・・・		176/160 x3	
+4EB	text	もう大丈夫だ・・兄さん。{page}おれは　もう一度戦う事に{br}決めた・・あの道摩と、{br}それで別れにきたのさ。{page}多分、ここには戻らない。	I'm all right now... brother.{page}I've decided to fight once{br}more... against that Doma.{br}So I came to say goodbye.{page}I probably won't be back.	176/160 x3	
+4EC	text	そうか・・おまえは　自分の{br}やりたい事を　すればいい。{br}私もそうさせてもらう。	I see... You should do what{br}you want to do.{br}And I shall do the same.	176/160 x3	
+4ED	text	兄さん・ついてくるつもりか？{br}死ぬかも知れないんだぜ。	Brother... You mean to come?{br}You might die, you know.	176/160 x3	
+4EE	text	おまえは　目的をみつけたの{br}だろう？　ならばその目的を{br}はたせばいい。{page}私も　目的をはたすだけだ{br}おまえを守るという目的を・・{br}さあ　行こうか？	You have found your purpose,{br}have you not? Then go and{br}fulfill it.{page}And I shall fulfill mine:{br}to protect you...{br}Now, shall we go?	176/160 x3	
+4EF	text	おーい　神楽どのーっ{br}おまち下され！	Heeey, Kagura-dono!{br}Wait for me!	176/160 x3	
+4F0	text	あんたら　神楽ちゃんの仲間{br}じゃないのかい？{page}神楽ちゃんは　どこ？	You lot are Kagura-chan's{br}friends, ain't you?{page}Where's Kagura-chan?	176/160 x3	
+4F1	text	神楽ちゃん・・{page}ごめんよ・・紅葉様があんなに{br}わからずやとは　思わなかった{br}よ・・まったく・・{page}もう　紅葉様なんか知らないよ{br}だけど　神楽ちゃんにはかりが{br}あるからね・・{page}あたいでよかったら　仲間に{br}しておくれよ・紅葉様より役に{br}立ってみせるよ・・	Kagura-chan...{page}I'm sorry... I never thought{br}Momiji-sama could be so{br}pig-headed... Honestly...{page}I'm done with Momiji-sama!{br}But I owe you one,{br}Kagura-chan...{page}If you'll have me, take me{br}along. I'll show you I'm more{br}use than Momiji-sama...	176/160 x3	
+4F2	text	くすくすくす・・・{page}姉さんは　あんな事を言ってる{br}けど・姉さん　紅葉様とけんか{br}してしまって・・{page}戸隠の里へ行けば　わかります{br}けど、紅葉様には　かんたんに{br}戦えない理由があるんです・{page}姉さんにも　それはわかってる{br}はずなんですけど・・{page}でも姉さん、あやまるのがいや{br}だから・・私からもおねがい{br}します　仲間にして下さい。	Tee hee hee...{page}Sis talks like that, but she{br}had a fight with Momiji-sama,{br}you see...{page}You will see it if you go to{br}Togakushi village: Momiji-sama{br}has reasons she cannot fight.{page}Sis should know that{br}too, but...{page}she hates to say sorry...{br}So I ask you too: please{br}let us join you.	176/160 x3	
+4F3	text	紅葉様の知り合いの方ですか？{br}紅葉様は今はいませんよ。{page}ここの子供たちは　紅葉様が{br}育てている　みなしごたち・{page}私も　紅葉様の母親に育てて{br}もらいましたの・・	Are you friends of{br}Momiji-sama's? She is{br}not here just now.{page}The children here are orphans{br}that Momiji-sama is raising...{page}I, too, was raised by{br}Momiji-sama's mother...	176/160 x3	
+4F4	text	神楽様ね、紅葉様がおまちです{br}お会いになって下さい。	You are Kagura-sama, yes?{br}Momiji-sama is waiting for{br}you. Please go and see her.	176/160 x3	
+4F5	text	紅葉様が　そう決めたのなら{br}仕方ありません・・	If Momiji-sama has decided{br}so, it cannot be helped...	176/160 x3	
+4F6	text	本当に戦うのですか？{br}紅葉様にもしもの事があれば{br}この子供たちは・・{page}・・私も行きます・紅葉様だけ{br}危ない目に会わせられません！	Are you truly going to fight?{br}If anything should happen to{br}Momiji-sama, these children...{page}...I am going too. I cannot{br}let Momiji-sama face danger{br}alone!	176/160 x3	
+4F7	text	あれから　ずっとかんがえてた{br}あなたの事を・・、{page}楓に怒られてしまったわ。{br}すなおじゃない・・ってね。{page}わかっているの・・自分でも{br}多分　あなたが楓をたすけて{br}くれていなかったら・・、{page}私はあなたと戦う事になって{br}いたと思う・・たとえそれが{br}道摩のわなだったとしても・{page}楓にかんしゃしなくちゃ・・{br}あなたに会わせてくれた事・{br}だから・・・・{page}神楽、私でよければあなたと{br}共に戦いましょう・・	I have been thinking about you{br}all this while...{page}Kaede scolded me. She said{br}I am not honest with myself...{page}I know it myself... If you{br}had not saved Kaede...{page}I think I would have ended{br}up fighting you... even if{br}that was Doma's trap...{page}I must thank Kaede... for{br}bringing me to meet you...{br}And so.......{page}Kagura, if you will have me,{br}let us fight side by side...	176/160 x3	
+4F8	text	紅葉様は　戸隠山の鬼女と{br}呼ばれているそうですが・・{br}そんな人ではありません・・{page}ここにいる子供たちは、みんな{br}紅葉様が育てている　みなしご{br}たちなのですよ・・	They call Momiji-sama the{br}Ogress of Togakushi, I hear...{br}But she is nothing like that...{page}The children here are all{br}orphans whom Momiji-sama{br}is raising...	176/160 x3	
+4F9	text	神楽の仲間の方ね・・{br}おつかれなら・・この宮を{br}使って下さい・・	You are Kagura's friends...{br}If you are tired... please,{br}make use of this shrine...	176/160 x3	
+4FA	text	紅葉様の母は　この宮の巫女{br}でした、もう死にましたが・{page}紅葉様の母は　みなしごたちを{br}この宮で育てていました。{page}紅葉様も　母と同じように{br}みなしごを育てています・・	Momiji-sama's mother was a{br}shrine maiden here. She has{br}since passed away...{page}She raised orphans here at{br}this shrine.{page}Momiji-sama raises orphans{br}just as her mother did...	176/160 x3	
+4FB	text	神楽さんですね、楓と葵を{br}たすけてくれたそうで・・{br}ありがとうございます。{page}私は桔梗ともうします。{br}楓と葵の姉にあたります・・	You must be Kagura-san. You{br}saved Kaede and Aoi, I hear...{br}Thank you so much.{page}My name is Kikyo. I am{br}Kaede and Aoi's elder sister...	176/160 x3	
+4FC	text	この宮の子供たちは、全て{br}みなしごです・・{page}紅葉様がひきとって　育てて{br}いるのです・・{page}ですから　もし紅葉様が死ねば{br}この子供たちは　いったい{br}どうなるのか・・	The children of this shrine{br}are all orphans...{page}Momiji-sama took them in{br}and raises them...{page}So if Momiji-sama were to die,{br}what would ever become of{br}these children...	176/160 x3	
+4FD	text	紅葉様・・私もお供します。	Momiji-sama... I will go{br}with you.	176/160 x3	
+4FE	text	よくやった・・神楽・{br}皆の者もごくろうであった。{br}これでぐっすりと眠れるな。{page}ところで　神楽。{br}これからどうするつもりだ？{page}・・そうだな・・{br}まずは　ゆっくりと休め・・{br}かんがえるのは　その後だ。{page}他の者も　まずはゆっくり{br}休むがよい。{page}そなたらは　この国をすくった{br}のだ・・・	Well done... Kagura. My thanks{br}to all of you as well. Now I{br}can sleep soundly.{page}Now then, Kagura.{br}What will you do now?{page}...Yes... First, rest{br}well... Think about it{br}after that.{page}The rest of you, too:{br}rest well first.{page}You have saved this land...	176/160 x3	
 4FF	data	　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　			dummy pointer to the zero run at the C3 bank end (0x3F866), no terminator

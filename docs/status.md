@@ -2,7 +2,7 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 6. Translate in progress: wave 0 (terms) + pilot + b001-b007 merged; 513 rows left (b008-b017).
+- **Phase:** 6. Translate in progress: wave 0 (terms) + pilot + b001-b008 merged; 452 rows left (b009-b017).
   Last build: `build/heian_en.sfc` 2026-11-22 sha1 7eb7f27372c6 (2 MB, smoke ok); marker `build/heian_marker.sfc`
   2026-11-22 sha1 6a70b2581615 (135/135 warp scenes ok, shots in `work/qa/marker_warp/`). No build since English.
 - **Phase 6 so far (2026-11-22):**
@@ -15,14 +15,17 @@ Updated at the end of every session. Keep it to what the next session needs; his
   - Tools: `tools/batches.py` (split/check/merge/fit; honorifics 殿/様 enforced), lint `NAME_CLASSES` (per-row
     `{name}` width: squad msgs = party names, 214 shikigami, 112/218/21E items, 1B9 provinces; others = widest
     name, ~119 px), `kss_script.write_tsv` atomic and quote-safe (a `"` once truncated C3.tsv mid-write).
+  - b008 (Moritaka and Takato, Kaede/Aoi/Kikyo at Togakushi, Kumano townsfolk 300-323, Seimei's Kansai-dialect
+    apprentice 324-328) merged. 夷 renamed Natsume (furigana なつめ, 315) in 064/0D3. `batches.py` honorific skip
+    now has 本殿 (main hall).
   - b003-b007 (Kumano after Tenkai's death, Seimei's and Michinaga's briefings, Kagura's parentage told 41F/463,
     Yamawaro elder, recruits: Morohide, Yorimitsu, Semimaru, Uzuki/Hazuki, Jogu, Hida, Aizen/Horen, Saeki daughter,
     Yorinobu/Sugimaru, Takato) merged 2026-11-22. New terms are in `glossary.md` "Decisions" (b003-b007).
     愛深 renamed Aizen (game furigana) in 06A/0D9/2DA. Dev placeholder rows まさだ -> "Not yet.".
   - Codex CLI is out of quota until 2026-11-26 (no codex translators/reviewers before then).
 - **Next (phase 6):** `python -X utf8 tools/batches.py split` was run; `work/tl/` is gitignored, so in a fresh
-  clone run `split` again (it batches only rows still without `en`; the numbering then restarts at b001, so
-check ids rather than batch names). Translate b008-b017 (each: write
+  clone run `split` again (it batches only rows still without `en`; batch names may then differ from
+the ones here, so go by ids). Translate b009-b017 (each: write
   `work/tl/bNNN.out.tsv`, `batches.py check bNNN` until OK, `batches.py merge bNNN`, commit). Then
   `script/tilemaps.tsv` (16 rows, graphics text), then a reviewer pass per batch (fresh read-only pass, or
   `codex exec` after 2026-11-26) with Minors to `docs/polish.md`. Translating ~3 batches per worker session fits
