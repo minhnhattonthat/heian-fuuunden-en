@@ -53,6 +53,8 @@ RELOC_PTRS = {
     0x0872B5: [0x01F22E],                      # quit map (T4)
     0x0872E0: [0x01F238],                      # saved map (T5)
     0x088954: [0x01F037, 0x01F0C3],            # small font (G5, smallfont_en)
+    # (lo, bank): named by code as LDA #$lo16 / LDA #$00bank: file offsets of the two operands
+    0x08BBEE: [(0x05265B, 0x052660)],          # Yes/No box map (C5:265A, tilemap_text "yesno")
 }
 RELOC_AREA = (0x1F8000, 0x200000)
 
@@ -71,6 +73,12 @@ def _relocate(out, off, blk, cursor):
     old = bytes([off & 0xFF, (off >> 8) & 0xFF, 0xC0 + (off >> 16)])
     new = bytes([cursor & 0xFF, (cursor >> 8) & 0xFF, 0xC0 + (cursor >> 16)])
     for p in ptrs:
+        if isinstance(p, tuple):            # code operands: lo16 at p[0], bank at p[1]
+            lo, bank = p
+            if bytes(out[lo:lo + 2]) != old[:2] or out[bank] != old[2]:
+                raise ValueError("operands at 0x%06X/0x%06X do not name block 0x%06X" % (lo, bank, off))
+            out[lo:lo + 2], out[bank] = new[:2], new[2]
+            continue
         if bytes(out[p:p + 3]) != old:
             raise ValueError("pointer at 0x%06X does not hold block 0x%06X" % (p, off))
         out[p:p + 3] = new

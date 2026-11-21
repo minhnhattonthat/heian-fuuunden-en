@@ -42,6 +42,7 @@ place_banner	132=02		poke 7E0036=0000,7E0034=0004;wait 04.05;60 -;poke 7E0036=00
 overworld	132=02		poke 7E0036=0000,7E0034=0004;wait 04.05	90	overworld (mode 4) at the slot position: province label 紀伊の国, squad label 神楽部隊
 battle_intro	132=02		poke 7E0036=0016,7E0034=0004;wait 07	180	battle title card 紀伊の国の闘い (overworld sub 16 = C0:D4AD starts the battle for the slot position)
 battle_save_prompt	132=02		poke 7E0036=0016,7E0034=0004;wait 07;330 -	30	きろくしますか? はい/いいえ before every battle
+battle_save_no	132=02		poke 7E0036=0016,7E0034=0004;wait 07;330 -;6 right;40 -	30	the same prompt with the cursor moved to No (いいえ)
 battle_map	132=02		poke 7E0036=0016,7E0034=0004;400 -;6 right;30 -;6 a;wait 07.01.06;wait 07.01.08;wait 07.01.06;20 -	60	player turn on the battle map (mode 7 sub 1), save prompt answered No
 battle_cmd_attack	132=02		poke 7E0036=0016,7E0034=0004;400 -;6 right;30 -;6 a;wait 07.01.06;wait 07.01.08;wait 07.01.06;20 -;6 y	60	Y: command column, G6 label こうげき
 battle_cmd_jutsu	132=02		poke 7E0036=0016,7E0034=0004;400 -;6 right;30 -;6 a;wait 07.01.06;wait 07.01.08;wait 07.01.06;20 -;6 y;60 -;6 down	40	G6 label じゅつ

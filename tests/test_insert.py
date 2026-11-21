@@ -178,12 +178,17 @@ def test_small_font_tilemaps_written(built_rom):
     orig = (ROOT / "rom" / "Heian Fuuunden (Japan).sfc").read_bytes()
     for prefix, off, width, _ in tilemap_text.BLOCKS:
         p = gfx_blocks.RELOC_PTRS[off][0]
-        a = d[p] | d[p + 1] << 8 | (d[p + 2] & 0x3F) << 16
+        if isinstance(p, tuple):    # named by code: LDA #lo16 ... LDA #bank
+            a = d[p[0]] | d[p[0] + 1] << 8 | (d[p[1]] & 0x3F) << 16
+        else:
+            a = d[p] | d[p + 1] << 8 | (d[p + 2] & 0x3F) << 16
         data = kss_comp.decode(d, a)[0]
         words = struct.unpack("<%dH" % (len(data) // 2), data)
         o = kss_comp.decode(orig, off)[0]
-        for n, (r, _, _) in enumerate(tilemap_text.pairs(list(struct.unpack("<%dH" % (len(o) // 2), o)), width, 0)):
+        cols = tilemap_text.span(prefix, width)
+        for n, (r, _, _) in enumerate(tilemap_text.pairs(list(struct.unpack("<%dH" % (len(o) // 2), o)), width, 0, cols)):
             row = rows["%s%d" % (prefix, n)]
-            assert spell(words, width, r)[:smallfont_en.budget(row)].rstrip() == row["en"], row["id"]
+            got = spell(words[r * width + cols[0]:(r + 1) * width], width - cols[0], 0)
+            assert got[:smallfont_en.budget(row)].rstrip() == row["en"], row["id"]
             seen.add(row["id"])
     assert seen == {i for i, r in rows.items() if r["en"]}

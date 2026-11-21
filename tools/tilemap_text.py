@@ -24,7 +24,12 @@ SMALL_BOTTOM = {0x2C: "ょ", 0x0F: "っ"}
 BLOCKS = [("save", 0x871C2, 10, "menu -> save (T2)"),
           ("option", 0x8723A, 16, "menu -> settings (T3)"),
           ("quit", 0x872B5, 9, "scene quit_nosave (T4)"),
-          ("saved", 0x872E0, 9, "scene save_message (T5)")]
+          ("saved", 0x872E0, 9, "scene save_message (T5)"),
+          ("yesno", 0x8BBEE, 10, "Yes/No box after 229, scene battle_save_prompt (named by code C5:265A)")]
+# Text columns [start, end) of a block's rows (default: the whole row): the Yes/No box has its frame in columns 0
+# and 9, the cursor in 1, and window fill (tile 0x0E) between はい and いいえ.
+SPAN = {"yesno": (2, 9)}
+FILL = 0x0E
 
 
 def pair_text(top, bottom):
@@ -44,15 +49,22 @@ def pair_text(top, bottom):
     return "".join(out).rstrip("　")
 
 
-def pairs(words, width, where):
-    """Yield (row, text, offset of the top row) for every row with text and the row below it."""
+def span(prefix, width):
+    return SPAN.get(prefix, (0, width))
+
+
+def pairs(words, width, where, cols=None):
+    """Yield (row, text, offset of the top row) for every row with text and the row below it (text in columns
+    `cols` = (start, end), default the whole row)."""
+    a, b = cols or (0, width)
     rows = [words[i:i + width] for i in range(0, len(words), width)]
     r = 0
     while r < len(rows):
         top = rows[r]
         if any((w & 0x3FF) in smallfont.CHARS for w in top):
             bottom = rows[r + 1] if r + 1 < len(rows) else [0] * width
-            yield r, pair_text(top, bottom), where + 2 * r * width
+            fill = [w if w & 0x3FF != FILL or not cols else 1 for w in top[a:b]]
+            yield r, pair_text(fill, bottom[a:b]), where + 2 * r * width
             r += 2
         else:
             r += 1
@@ -70,7 +82,7 @@ def entries(rom):
     for prefix, off, width, screen in BLOCKS:
         data = kss_comp.decode(rom, off)[0]
         words = list(struct.unpack("<%dH" % (len(data) // 2), data))
-        for n, (row, text, _) in enumerate(pairs(words, width, 0)):
+        for n, (row, text, _) in enumerate(pairs(words, width, 0, span(prefix, width))):
             out.append({"id": "%s%d" % (prefix, n), "jp": text,
                         "notes": "block C8:%04X row %d, width %d, %s" % (off & 0xFFFF, row, width, screen)})
     return out
@@ -81,11 +93,11 @@ def dump(force=False, path=kss_script.SCRIPT / "tilemaps.tsv"):
             for e in entries(kss_script.ROM.read_bytes())]
     if path.exists():
         if not force:
-            raise SystemExit("%s exists; --force keeps its en/max" % path)
+            raise SystemExit("%s exists; --force keeps its en/max/notes" % path)
         old = {r["id"]: r for r in kss_script.read_tsv(path)}
         for r in rows:
             if r["id"] in old:
-                r.update(en=old[r["id"]]["en"], max=old[r["id"]]["max"])
+                r.update({k: old[r["id"]][k] for k in ("en", "max", "notes")})
     kss_script.write_tsv(path, rows)
     print("%s: %d entries" % (path, len(rows)))
 

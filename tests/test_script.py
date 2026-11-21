@@ -120,7 +120,7 @@ def test_tilemap_text_matches_the_rom(rom):
     have = kss_script.read_tsv(kss_script.SCRIPT / "tilemaps.tsv")
     want = tilemap_text.entries(rom)
     assert [(r["id"], r["jp"]) for r in have] == [(e["id"], e["jp"]) for e in want]
-    assert {r["id"].rstrip("0123456789") for r in have} == {"caption", "save", "option", "quit", "saved"}
+    assert {r["id"].rstrip("0123456789") for r in have} == {"caption", "save", "option", "quit", "saved", "yesno"}
 
 
 def test_dump_refuses_to_clobber(tmp_path):

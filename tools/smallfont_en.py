@@ -27,6 +27,7 @@ CELLS = [*range(0x30, 0x40), *range(0x50, 0x60), *range(0x70, 0x80), *range(0x90
 CHARSET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.,'!?-:()/&"
 CELL = {**dict(zip(CHARSET, CELLS)), **{str(d): 0x10 + d for d in range(10)}}
 BLANK = 0x2001                  # the maps' own blank word (tile 1 is empty)
+MAP_BLANK = {"yesno": 0x200E}   # the Yes/No box's blank is its window fill, tile 0x0E
 SHIFT = 2
 PAPER, INK = 2, 3
 CAPTION_PTRS, CAPTION_WIDTH = tilemap_text.CAPTIONS, 18
@@ -141,16 +142,17 @@ def budget(row):
     return int(row["max"].split()[0].split("x")[0])
 
 
-def write_row(words, width, r, text, n):
-    """Spell `text` over the first n cells of row pair r (top row r, bottom row r + 1) of a `width`-word map."""
+def write_row(words, width, r, text, n, col=0, blank=BLANK):
+    """Spell `text` over n cells from column `col` of row pair r (top row r, bottom row r + 1) of a `width`-word
+    map; cells past the text get `blank`."""
     cells = cells_of(text)
     if len(cells) > n:
         raise ValueError("%r: %d cells > %d" % (text, len(cells), n))
     attr = next(w & 0xFC00 for w in words[r * width:(r + 1) * width] if w & 0x3FF)
     for i in range(n):
         c = cells[i] if i < len(cells) else None
-        words[r * width + i] = BLANK if c is None else attr | c
-        words[(r + 1) * width + i] = BLANK if c is None else attr | (c + 0x10)
+        words[r * width + col + i] = blank if c is None else attr | c
+        words[(r + 1) * width + col + i] = blank if c is None else attr | (c + 0x10)
 
 
 def rows_by_id(script_dir=None):
@@ -166,10 +168,12 @@ def apply_blocks(gfxdir, script_dir=None):
         p = gfxdir / ("%06X.bin" % off)
         data = p.read_bytes()
         words = list(struct.unpack("<%dH" % (len(data) // 2), data))
-        for n, (r, _, _) in enumerate(list(tilemap_text.pairs(words, width, 0))):
+        cols = tilemap_text.span(prefix, width)
+        col = cols[0]
+        for n, (r, _, _) in enumerate(list(tilemap_text.pairs(words, width, 0, cols))):
             row = rows["%s%d" % (prefix, n)]
             if row["en"]:
-                write_row(words, width, r, row["en"], budget(row))
+                write_row(words, width, r, row["en"], budget(row), col, MAP_BLANK.get(prefix, BLANK))
         p.write_bytes(struct.pack("<%dH" % len(words), *words))
 
 

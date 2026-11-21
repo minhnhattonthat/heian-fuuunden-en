@@ -15,3 +15,4 @@ option2	tilemap	おんがく　　　　[14A][14B][14E][14C][14D]	Music	8 cells 
 quit0	tilemap	おつかれさまでした	See you!	9 cells	block C8:72B5 row 0, width 9, scene quit_nosave (T4)
 saved0	tilemap	　きろくしました	Saved.	9 cells	block C8:72E0 row 0, width 9, scene save_message (T5)
 saved1	tilemap	おつかれさまでした	See you!	9 cells	block C8:72E0 row 3, width 9, scene save_message (T5)
+yesno0	tilemap	はい　　いいえ	Yes No	7 cells	block C8:BBEE row 1, width 10, Yes/No box after 229, scene battle_save_prompt (named by code C5:265A)
