@@ -16,7 +16,7 @@ helps most.
 | Dialogue / story, epilogues | Translated (every line, 1556 strings) |
 | Menus, items, jutsu, shikigami, provinces, battle and system messages | Translated |
 | Graphics with text (battle commands, status labels, help panels, chapter and province cards, game over) | Translated |
-| Title logo 平安風雲伝 | Left in Japanese (no official English logo exists); PUSH START and the company logos were English already |
+| Title logo 平安風雲伝 | Redrawn in English ("HEIAN FUUUNDEN", in the original's colours and drop shadow); PUSH START and the company logos were English already |
 | Name entry | None in this game |
 | Staff roll | Translated |
 

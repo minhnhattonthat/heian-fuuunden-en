@@ -49,6 +49,8 @@
 07A1FF-07D0FE   portrait name plates C7:A1FF, 94 x 0x80 raw (tools/plates.py, in place)
 0871C2-087359   small-font maps C8:71C2, 723A, 72B5, 72E0 (rewritten in place when they still fit)
 088954-0892E3   small font C8:8954 (smallfont_en; in place when it still fits)
+080000-080E28   title logo shadow sprites C8:0000 (logo_en G1; in place, packs smaller)
+0831F3-083B1D   title logo tiles C8:31F3 (logo_en G1; in place, packs smaller)
 08939E-0895BB   party panel tilemaps C8:939E, C8:9450, C8:9506 (LZ blocks repacked in place, gfx_edits)
 08A6CF-08B281   help-panel maps C8:A6CF-AA6E and font C8:ABF2 (gfx_en G7/T8; in place, they must not grow)
 08B282-08B4E7   battle command labels C8:B282 (gfx_en G6; in place when it still fits)

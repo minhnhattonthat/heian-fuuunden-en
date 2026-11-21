@@ -10,7 +10,7 @@ and still need an in-game shot via the debug tool.
 
 | # | Element | Source (verified unless marked) | Reached by | Plan |
 |---|---|---|---|---|
-| G1 | Title logo 平安風雲伝 | `C8:0000` LZ 4bpp (title BG) and a 2bpp copy `C8:31F3` | cold boot ~f2400 | **Kept Japanese** (D5); optional English subtitle |
+| G1 | Title logo 平安風雲伝 | `C8:31F3` 2bpp BG3 tiles (28x8 grid at (16,48), pal 3) and `C8:0000` 4bpp shadow sprites (same image, colours +12, at +3,-1) | cold boot ~f2400 | **Done** (D23): "HEIAN / FUUUNDEN", `tools/logo_en.py` |
 | G2 | PUSH START / ©1995 KSS, KSS logo, NATSUME logo | `C8:3B1E`, `C8:DAF9`, `C8:77CA` | cold boot | English already |
 | G3 | File select scroll kana はじめから / つづきから (vertical) | `C8:3E4F` LZ 2bpp, 0xF20 bytes, table B id 6 | `boot.txt` final frame | Redraw "New Game" / "Continue" (vertical scroll: likely horizontal lettering rotated or stacked; decide in phase 5) |
 | G4 | File select 記録 1 2 3 | same block | same | Redraw "Save 1-3" |
@@ -75,7 +75,7 @@ C7:1053/57A6/73D9, D2, D7:6C5D+, all type-2 blocks except those decoded above.
   (battle, C0:6A3A..) and page 1 (status, `C1:47AF` with A=1 from C0:A20E) are ever shown; pages 2/3 (field
   movement, squads) are unused but translated. G8/T7 prologue: map `C8:D861` (5 bands of 4 rows) is on screen whole;
   an HDMA window on BG3 types it out, up to each Japanese line's end (x 224, last line 168).
-- **Left:** nothing in the graphics survey (G1 logo kept, D5; G10/G11 unused).
+- **Left:** nothing in the graphics survey (G10/G11 unused). G1 logo redrawn in English later (D23).
 
 ## Still open
 - The T6 variants' screens; the field-menu help panel's map source (T8).

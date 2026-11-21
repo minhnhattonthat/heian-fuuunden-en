@@ -17,6 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import font_en  # noqa: E402
+import logo_en  # noqa: E402
 from kss_comp import decode  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -289,6 +290,7 @@ def apply_blocks(gfxdir):
     (gfxdir / CREDITS_MAP).write_bytes(new_map)
     apply_help(gfxdir)
     apply_prologue(gfxdir)
+    logo_en.apply(gfxdir)
 
 
 def writes(rom):

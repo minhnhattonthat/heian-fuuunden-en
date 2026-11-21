@@ -2,7 +2,7 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 9. Release built and verified (worker 7, 2026-11-22): `release/Heian_Fuuunden_EN_v1.0.zip` ready; publishing is the user's call.
+- **Phase:** 9. Release built and verified (worker 7, 2026-11-22): `release/Heian_Fuuunden_EN_v1.0.zip` ready (rebuilt with the English title logo, D23; sums below under "after the release"); publishing is the user's call.
 - **Phase 9 done (worker 7):** story pass 16/16 chapters ok (`qa_gate.py check work/qa/story/manifest.tsv
   work/qa/story/verdicts` exit 0; verdicts by the worker itself, D22). Minors fixed and ticked in polish.md: 3CA
   "plague (smallpox)" gloss, 56D and 2EC stray contractions (Doma double, Kazan); 5B3 closed (pacing and yin/yang
@@ -11,6 +11,14 @@ Updated at the end of every session. Keep it to what the next session needs; his
   smoke, jp_left 0 runs, both QA gates, textcover 1556/1556, polish all ticked, README, debug off, patch re-apply ==
   build. Zip 82169 B; patch `Heian_Fuuunden_EN_v1.0.bps` sha1 0916ee05f53a; base CRC32 4640D1A2; result CRC32
   47208D73 sha1 7b61cd2550a6 (`build/Heian_Fuuunden_EN_v1.0.sfc`).
+- **2026-11-22, after the release:** English title logo (D23, user's request): `tools/logo_en.py` renders
+  fonts/Shojumaru-Regular.ttf (OFL) to the committed `gfx/logo_en.png`; gfx_en.apply_blocks writes it to the logo
+  tiles C8:31F3 and the shadow sprites C8:0000 (both repack smaller, in place; ranges added to romdiff_ranges.txt).
+  Cold-boot title shot `work/qa/logo/built/final.png` == the approved preview; fade-in checked; `tests/test_logo.py`;
+  check.py 54 passed. Build sha1 74ed182dd65b. New tour scene `title_logo` (scenes.tsv; waits for step 01.01.0C);
+  re-toured 140/140, `qa_gate init --build`, 5 changed sheets re-read (`work/qa/verdicts/final_3.tsv`, all ok:
+  018 = logo, the rest typing timing), gate exit 0, inkbox 5/5. Release rebuilt by the user (`release.py --force`, every
+  gate passed): zip 86776 B, patch sha1 5e6ff3d959c9, base CRC32 4640D1A2, result CRC32 66693CE8 sha1 74ed182dd65b.
 - **Next:** publish only when the user asks (`$SKILL/references/pipeline.md` §Publish; never `gh release create`
   unprompted). Optional: D13's Codex re-read of the batches once its quota returns (2026-11-26); any fix then means
   rebuild, re-tour, re-verdict the changed sheets and `release.py --force`.
@@ -117,4 +125,4 @@ Updated at the end of every session. Keep it to what the next session needs; his
      (`--qa ID=...` stands in). Which unit opens the 音楽 battle menu (`$1516=6`) is not mapped.
 - **Open bugs:** none. Untranslated (Japanese) party names show only their top half in the party/squad slots until
   phase 6 fills `en` (by design of the one-row slots).
-- **Waiting on the user:** GUI keyboard input in `tools/mesen/Mesen.exe` not checked (headless session); not blocking. Title logo 平安風雲伝 kept Japanese under D5 (no official English logo); say if an English subtitle is wanted. Release v1.0 zip is built and verified locally; publishing (repo, GitHub release) waits for the user; not blocking.
+- **Waiting on the user:** GUI keyboard input in `tools/mesen/Mesen.exe` not checked (headless session); not blocking. Release v1.0 zip rebuilt with the English logo (D23); publishing (repo, GitHub release) waits for the user; not blocking.
