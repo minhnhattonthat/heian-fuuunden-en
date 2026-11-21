@@ -12,7 +12,7 @@ Addresses are for the dump in `rom.sha1` unless a note says otherwise.
 
 | File | Covers | State |
 |---|---|---|
-| text.md | encoding, control codes, pointer table, text ranges, menu-caption tilemaps, dialogue font | verified (kanji table pending) |
+| text.md | encoding, control codes, pointer table, text ranges, menu-caption tilemaps, dialogue font, `tbl/jp.tbl`, script files | verified (3 kanji guesses listed) |
 | rom-map.md | header, bank map, free-space candidates, expansion plan | partly verified |
 | graphics.md | graphics-text survey (tour + static sweep) | done; in-game shots of some rows in phase 2 |
 | compression.md | decompressor C1:05CF (3 types), block banks, load tables A/B | verified (decoder) |
