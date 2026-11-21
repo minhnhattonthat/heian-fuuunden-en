@@ -155,3 +155,35 @@ def test_party_tilemaps():
         assert [x & 0x3FF for x in w[4 * 32 + 4:4 * 32 + 9]] == [base + k for k in range(5)]
         assert [x & 0x3FF for x in w[8 * 32 + 25:8 * 32 + 30]] == [base + 35 + k for k in range(5)]
         assert not any(x & 0x3FF for x in w[5 * 32:6 * 32])        # the row under the names is blank
+
+
+def test_small_font_tilemaps_written(built_rom):
+    """Every script/tilemaps.tsv row with English is in the built ROM (T1 captions raw, T2-T5 in their blocks, maybe
+    relocated)."""
+    import gfx_blocks
+    import kss_comp
+    import smallfont_en
+    import tilemap_text
+    d = built_rom("build")
+    cell_ch = {v: k for k, v in smallfont_en.CELL.items()}
+
+    def spell(words, width, r):
+        return "".join(cell_ch.get(w & 0x3FF, " ") for w in words[r * width:(r + 1) * width]).rstrip()
+
+    rows, seen = smallfont_en.rows_by_id(), set()
+    for k, ptr in enumerate(struct.unpack_from("<6H", d, smallfont_en.CAPTION_PTRS)):
+        words = struct.unpack_from("<36H", d, 0x10000 + ptr)
+        assert spell(words, 18, 0) == rows["caption%d" % k]["en"]
+        seen.add("caption%d" % k)
+    orig = (ROOT / "rom" / "Heian Fuuunden (Japan).sfc").read_bytes()
+    for prefix, off, width, _ in tilemap_text.BLOCKS:
+        p = gfx_blocks.RELOC_PTRS[off][0]
+        a = d[p] | d[p + 1] << 8 | (d[p + 2] & 0x3F) << 16
+        data = kss_comp.decode(d, a)[0]
+        words = struct.unpack("<%dH" % (len(data) // 2), data)
+        o = kss_comp.decode(orig, off)[0]
+        for n, (r, _, _) in enumerate(tilemap_text.pairs(list(struct.unpack("<%dH" % (len(o) // 2), o)), width, 0)):
+            row = rows["%s%d" % (prefix, n)]
+            assert spell(words, width, r)[:smallfont_en.budget(row)].rstrip() == row["en"], row["id"]
+            seen.add(row["id"])
+    assert seen == {i for i, r in rows.items() if r["en"]}

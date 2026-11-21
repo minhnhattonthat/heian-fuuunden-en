@@ -11,7 +11,8 @@ Steps (docs/re/text.md, docs/re/compression.md):
   2. dialogue banks C3/C6: tools/kss_text.py repack, then tools/insert.py: English (or marker) strings relocated
      to $D8-$DE with 24-bit PTRS, banner offsets; asm/main.asm (asar) hooks the readers and the VWF;
   3. compressed graphics/tilemap blocks in gfx/blocks.tsv: tools/gfx_blocks.py; build/marker apply
-     tools/gfx_edits.py after the 2 MB expansion (party-list tilemaps; a block that grows moves to $DF:8000+);
+     tools/gfx_edits.py after the 2 MB expansion (party-list tilemaps; a block that grows moves to $DF:8000+) and
+     tools/smallfont_en.py (English small font + T2-T5 maps; the T1 caption words in bank C1);
   4. header checksum (mirrored sum for 1.5 MB);
   5. romdiff (tools/romdiff.py): every byte that differs from the original must sit in tools/romdiff_ranges.txt,
      or the build fails (phase 7 check; tests/test_romdiff.py builds its own ROM and runs it too).
@@ -36,6 +37,7 @@ import gfx_edits  # noqa: E402
 import insert  # noqa: E402
 import kss_text  # noqa: E402
 import romdiff  # noqa: E402
+import smallfont_en  # noqa: E402
 
 ROM = ROOT / "rom" / "Heian Fuuunden (Japan).sfc"
 OUT = ROOT / "build" / "heian_en.sfc"
@@ -94,7 +96,12 @@ def build(mode="build", qa=None, path=None):
         out, _ = repack(rom, tmp)
         out, stats = insert.insert(out, mode, qa=qa)
         gfx_edits.apply(Path(tmp) / "gfx")     # after the 2 MB expansion: grown blocks move to $DF:8000+
+        smallfont_en.apply_blocks(Path(tmp) / "gfx")
         out, _ = gfx_blocks.pack(out, Path(tmp) / "gfx")
+        out = bytearray(out)
+        for off, data in smallfont_en.caption_writes(out):
+            out[off:off + len(data)] = data
+        out = bytes(out)
     path = Path(path) if path else (OUT if mode == "build" else MARKER)
     path.parent.mkdir(exist_ok=True)
     path.unlink(missing_ok=True)

@@ -11,6 +11,8 @@ indents. The English is laid out here, never by hand, so a later wording change 
 - INDENT rows: the Japanese indent is kept as pixels (one full-width blank = 16 px = 4 spaces).
 - FIXED rows: a set layout (the yes/no line puts each option where the cursor expects it).
 - Any row whose Japanese ends in a blank keeps one trailing space (the lint's blank check, lint.blank_errors).
+- Renderer-2 popups (lint.POPUPS) are padded with spaces to the window width: MenuEnd uploads only the tiles the
+  text covers, and a short line otherwise leaves a see-through hole in the window.
 """
 import re
 import statistics
@@ -71,7 +73,9 @@ def layout(row, rows):
         return None
     body, end = ends(row["en"])
     trail = ends(row["jp"])[0][-1:] in tuple(BLANKS)
-    if not (rid in CENTRE or rid in INDENT or rid in FIXED):
+    import lint
+    pop = lint.popup(row)
+    if not (rid in CENTRE or rid in INDENT or rid in FIXED or pop):
         return body.rstrip(" ") + " " + end if trail else None
     body = body.rstrip(" ")
     if rid in FIXED:
@@ -80,10 +84,14 @@ def layout(row, rows):
         jp_body = ends(row["jp"])[0]
         n = len(jp_body) - len(jp_body.lstrip(BLANKS))
         body = " " * (n * 16 // SPACE_PX) + body.lstrip(" ")
-    else:
+    elif rid in CENTRE:
         typ, widest = name_widths(rows, row) if "{name}" in body else (0, 0)
         parts = LINE.split(body)
         body = "".join(p if LINE.fullmatch(p) else centre_line(p, CENTRE[rid], typ, widest) for p in parts)
+    if pop and "{" not in body:
+        # renderer-2 popup: MenuEnd uploads only the tiles the text covers, so pad to the window width or the rest
+        # of the window shows through as a hole (the Japanese fills it with blanks)
+        return body + " " * ((pop[0] - font_en.text_px(body)) // SPACE_PX) + end
     return body + (" " if trail else "") + end
 
 

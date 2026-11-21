@@ -48,6 +48,11 @@ def unpack(rom, outdir, path=LIST):
 RELOC_PTRS = {
     0x08939E: [0x01EEA7, 0x01EF33],            # party panel A tilemap (graphics load table C1:EE..)
     0x089450: [0x01EEB1, 0x01EED9, 0x01EF3D],  # party panel B tilemap
+    0x0871C2: [0x01F24C],                      # save menu map (T2), load table C1:F2..
+    0x08723A: [0x01F242],                      # options map (T3)
+    0x0872B5: [0x01F22E],                      # quit map (T4)
+    0x0872E0: [0x01F238],                      # saved map (T5)
+    0x088954: [0x01F037, 0x01F0C3],            # small font (G5, smallfont_en)
 }
 RELOC_AREA = (0x1F8000, 0x200000)
 

@@ -28,6 +28,7 @@ import font_en  # noqa: E402
 import insert  # noqa: E402
 import kss_script  # noqa: E402
 import kss_text  # noqa: E402
+import smallfont_en  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 KEEP = ROOT / "script" / "keep_jp.txt"
@@ -157,8 +158,10 @@ def check_tilemap(row):
         return ["max %r is not a cell budget" % row["max"]]
     width, nrows = int(m.group(1)), int(m.group(2) or 1)
     lines, err = row["en"].split("{br}"), []
-    if JP.search(row["en"]) or any(not " " <= c <= "~" for c in row["en"]):
-        err.append("not plain ASCII")
+    try:
+        smallfont_en.cells_of(row["en"].replace("{br}", ""))
+    except ValueError as e:
+        err.append(str(e))
     if len(lines) > nrows:
         err.append("%d rows > %d" % (len(lines), nrows))
     err += ["row %d: %d cells > %d" % (k + 1, len(ln), width) for k, ln in enumerate(lines) if len(ln) > width]

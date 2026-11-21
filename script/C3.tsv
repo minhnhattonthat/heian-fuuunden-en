@@ -421,8 +421,8 @@ id	kind	jp	en	max	notes
 1C5	text	　　　敵とそうぐうした！　　	       Enemies encountered! 	176/160 x3	
 1C6	text	警告！{br}敵が平安京に近づいています！	Warning!{br}The enemy is nearing Heian-kyo!	176/160 x3	
 1C7	text	最終通告！{br}平安京に敵部隊が{br}突入しました！	Final warning!{br}An enemy squad has broken{br}into Heian-kyo!	176/160 x3	
-1C8	text	どうぐがいっぱいです	Your bag is full.	128 popup	
-1C9	text	そうびできません。	Can't equip that.	128 popup	
+1C8	text	どうぐがいっぱいです	Your bag is full.          	128 popup	
+1C9	text	そうびできません。	Can't equip that.          	128 popup	
 1CA	text	天の四方、守りたる主にねがう{br}北に多聞天、南に増長天、{br}西に広目天、東に持国天。{page}わが求めに応じ、{br}よこしまなる敵をうて、{br}南無四天王降臨。	O lords who guard the four{br}quarters of heaven: Tamon in the{br}north, Zocho in the south,{page}Komoku in the west, Jikoku in{br}the east. Answer my call and{br}strike down the wicked foe.{page}Namu, Four Heavenly Kings,{br}descend!	176/160 x3	
 1CB	text	生玉、足玉、死返玉、道返玉{br}もちて、荒魂にたてまつる。{br}はらいましませ、鳥羽玉の闇。	With the Jewel of Life, of{br}Plenty, of Return from Death,{br}of Turning Back, I offer to{page}the wild spirits. Sweep away{br}the jet-black darkness!	176/160 x3	
 1CC	text	あはりや　あそばすとまうさぬ{br}あさくらに　あまてらすおおみ{br}かみ　おりましませ。	Ahare ya, asobasu to mosanu,{br}upon this seat, great{br}Amaterasu, descend to us!	176/160 x3	
@@ -537,8 +537,8 @@ id	kind	jp	en	max	notes
 240	text	えれえ　気前のいい人だねえ{br}まいった、あんたにゃあ{br}これをやるよ。	Well, ain't you generous!{br}You got me. Here, this{br}one's yours.	176/160 x3	
 241	text	と思ったけど、それ以上は{br}もてそうにないな、わるいけど{br}あきらめな。	Then again, looks like you{br}can't carry any more. Sorry,{br}but forget it.	176/160 x3	
 242	text	薬がほしいなら　いつでも{br}きがるにこえを　かけてくれ{br}よな。　まってるぜ。	Whenever ya want medicine,{br}just give me a holler.{br}I'll be waitin'.	176/160 x3	
-243	text	　きろくしました。　	         Saved. 	112 popup	
-244	text	おつかれさまでした。	Thanks for playing!	112 popup	
+243	text	　きろくしました。　	         Saved.          	112 popup	
+244	text	おつかれさまでした。	Thanks for playing!  	112 popup	
 245	text	　よろしいですか？　	    Is that all right? 	176/160 x3	
 246	text	　では、さようなら。	    Well then, farewell.	176/160 x3	
 247	text	術をかけるあいてがいません	No one to cast jutsu on.	176/160 x3	
@@ -609,10 +609,10 @@ id	kind	jp	en	max	notes
 288	text	陸奥の国	Mutsu	48 field	
 289	text	　すべての能力があがった	          All abilities rose!	176/160 x3	
 28A	text	　　{name}は攻撃を防いだ	  {name} blocked!	176/160 x3	
-28B	text	道具がありません！	No items!	112 popup	
+28B	text	道具がありません！	No items!                	112 popup	
 28C	text	おれは、薬を売りながら諸国を{br}旅してる、しがねえ薬売りさ。{page}薬がほしいのなら　こうかん{br}できるものをもって来てくれ。	Me, I'm just a humble medicine{br}peddler, roamin' the provinces.{page}If ya want medicine, bring me{br}somethin' to trade for it.	176/160 x3	
-28D	text	これでいいですか？	Is this all right?	112 popup	
-28E	text	　　はい　　いいえ	      Yes       No	112 popup	yes/no line: the cursor sits at +10..16 px (option 1) and +58..64 px (option 2) from the line start; put Yes at +24 px and No at +72 px like the Japanese (spaces are 4 px)
+28D	text	これでいいですか？	Is this all right?      	112 popup	
+28E	text	　　はい　　いいえ	      Yes       No       	112 popup	yes/no line: the cursor sits at +10..16 px (option 1) and +58..64 px (option 2) from the line start; put Yes at +24 px and No at +72 px like the Japanese (spaces are 4 px)
 28F	text	きろく{num}が消えてしまいます。{br}よろしいのですか？{end2}	Record {num} will be erased.{br}Are you sure?{end2}	176/160 x3	
 290	text	・・・・永観二年（９８４）　{br}師貞親王即位　花山天皇と称す	...Eikan 2 (984){br}Prince Morosada takes the{br}throne as Emperor Kazan.	176/160 x3	
 291	text	同年　大納言　藤原為光の娘　{br}祇子（女御祇子）入内す・・　	That year, Kishi, daughter of{br}Major Counselor Fujiwara no{br}Tamemitsu, enters the court. 	176/160 x3	
