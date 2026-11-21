@@ -107,13 +107,24 @@ def apply(src, p):
     return bytes(out)
 
 
+def _mirrored_sum(rom):
+    n = len(rom)
+    top = 1 << (n.bit_length() - 1)
+    if top == n:
+        return sum(rom)
+    rest = rom[top:]
+    rest_size = 1 << (len(rest) - 1).bit_length()  # the mirrored rest counts as this many bytes
+    return sum(rom[:top]) + _mirrored_sum(rest) * (top // rest_size)
+
+
 def snes_checksum(rom):
     """Recompute the header checksum. Picks LoROM/HiROM by which header has a sane map-mode byte.
-    ponytail: plain sum, correct for power-of-two sizes; 3/6 MB ROMs need the mirrored-sum rule."""
+    A size that is not a power of two sums the largest power-of-two part once and mirrors the rest up to the
+    same size again (1.5 MB = 1 MB + 2 x 512 KB; matches Heian Fuuunden's own $F5A2)."""
     rom = bytearray(rom)
     base = 0xFFB0 if len(rom) > 0xFFFF and (rom[0xFFD5] & 0xEF) in (0x21, 0x25, 0x31, 0x35) else 0x7FB0
     rom[base + 0x2C:base + 0x30] = b"\xff\xff\x00\x00"
-    total = sum(rom) & 0xFFFF
+    total = _mirrored_sum(rom) & 0xFFFF
     rom[base + 0x2C:base + 0x30] = (total ^ 0xFFFF).to_bytes(2, "little") + total.to_bytes(2, "little")
     return bytes(rom), total
 

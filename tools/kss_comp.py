@@ -91,6 +91,102 @@ def decode(data, off, limit=0x10000):
     return bytes(out), p - off
 
 
+WINDOW = 0x800
+MAXLEN = 34
+
+
+def encode_lz(data):
+    """Type-1 payload (no header). Greedy longest match; on equal length the farthest source wins.
+
+    This reproduces most of the game's blocks byte for byte (the original tool breaks some ties another way);
+    decode(encode(x)) == x always holds, which is what the build relies on."""
+    n = len(data)
+    heads = {}
+    out = bytearray()
+    pos = 0
+    while pos < n:
+        flags = 0
+        body = bytearray()
+        for bit in range(16):
+            if pos >= n:
+                break
+            best_len, best_src = 0, 0
+            maxlen = min(MAXLEN, n - pos)
+            if maxlen >= 3:
+                lo = pos - WINDOW
+                for s in heads.get(data[pos:pos + 3], ()):
+                    if s < lo:
+                        continue
+                    ln = 3
+                    while ln < maxlen and data[s + ln] == data[pos + ln]:
+                        ln += 1
+                    if ln > best_len:
+                        best_len, best_src = ln, s
+                        if ln == maxlen:
+                            break
+            step = best_len if best_len >= 3 else 1
+            if best_len >= 3:
+                body += struct.pack("<H", ((best_len - 3) << 11) | (pos - best_src - 1))
+                flags |= 1 << bit
+            else:
+                body.append(data[pos])
+            for q in range(pos, pos + step):
+                if q + 3 <= n:
+                    lst = heads.setdefault(data[q:q + 3], [])
+                    lst.append(q)
+                    if len(lst) > 64 and lst[0] < q - WINDOW:
+                        del lst[:next(i for i, v in enumerate(lst) if v >= q - WINDOW)]
+            pos += step
+        out += struct.pack("<H", flags) + body
+    return bytes(out)
+
+
+def encode_rle(data):
+    """Type-2 payload (no header): word runs (same / +1 / -1) of 2..65, else literal groups of 1..64."""
+    out = bytearray()
+    if len(data) & 1:
+        out.append(data[-1])
+    words = [data[i] | data[i + 1] << 8 for i in range(0, len(data) - 1, 2)]
+    n = len(words)
+    lits = []
+
+    def flush():
+        while lits:
+            chunk = lits[:64]
+            del lits[:64]
+            out.append(len(chunk) - 1)
+            for w in chunk:
+                out.extend(struct.pack("<H", w))
+
+    i = 0
+    while i < n:
+        best_mode, best_len = 0, 1
+        for mode, step in ((1, 0), (2, 1), (3, -1)):
+            ln = 1
+            while i + ln < n and ln < 65 and words[i + ln] == (words[i] + step * ln) & 0xFFFF:
+                ln += 1
+            if ln > best_len:
+                best_mode, best_len = mode, ln
+        if best_len >= 2:
+            flush()
+            out.append(best_mode << 6 | (best_len - 2))
+            out += struct.pack("<H", words[i])
+            i += best_len
+        else:
+            lits.append(words[i])
+            i += 1
+    flush()
+    return bytes(out)
+
+
+def encode(typ, data):
+    """Whole block (type byte, 16-bit size, payload)."""
+    if not 0 < len(data) <= 0xFFFF:
+        raise ValueError("block size %d" % len(data))
+    payload = {0: lambda d: bytes(d), 1: encode_lz, 2: encode_rle}[typ](data)
+    return bytes([typ]) + struct.pack("<H", len(data)) + payload
+
+
 def main(argv):
     rom = open(argv[1], "rb").read()
     off = int(argv[2], 16)

@@ -2,8 +2,15 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 3. Identity build next (phase 2 debug tool done). Last build: none yet.
+- **Phase:** 4. Extract next (phase 3 identity build done). Last build: `build/heian_en.sfc` 2026-11-21, sha1
+  `3b0ca4a2...` = the original (no edits yet), smoke ok.
 - **Done:**
+  - Phase 3: `build.py` (build / `identity [--recompress]`) unpacks the dialogue banks C3/C6 + pointer table
+    (`tools/kss_text.py`, JSON layout in `work/unpack/text/`) and the 541 compressed blocks in `gfx/blocks.tsv`
+    (`tools/gfx_blocks.py`, `work/unpack/gfx/`), repacks them and fixes the header checksum (mirrored sum for
+    1.5 MB, `tools/bps.py`): IDENTICAL. Encoder `kss_comp.encode` roundtrips every block; byte-exact on 302/541
+    (LZ tie-break order not recovered), so unchanged blocks keep their original bytes. `tests/test_identity.py`
+    (identity, encoder roundtrip, checksum, text edit shifts later strings, overflow refused, block edit lands).
   - Step 0 setup and phase 1 recon (text, compression, graphics survey): see `docs/re/`.
   - Phase 2 (`docs/re/save.md`): SRAM slot layout and checksum, live-state fields, main modes `$34`, battle states
     `$38`, battle HP table, province id. `tools/debug/warp.lua` warps from a cold boot (New Game -> edit slot 1 +
@@ -20,9 +27,13 @@ Updated at the end of every session. Keep it to what the next session needs; his
   - Tests: `tests/test_save.py`, `tests/test_scenes.py` (scene list format). Recon helpers in `tools/lua/`:
     `poke`, `slotpoke`, `modelog`, `log38` (battle state log), `memsnap` (WRAM+SRAM snapshots), `declog`.
 - **Next:**
-  1. Phase 3 identity build: `build.py` that unpacks (text table banks C3/C6, compressed graphics, tilemaps) and
-     repacks with no edits into a byte-identical `build/heian_en.sfc`, as a test (`references/pipeline.md` §Identity).
-  2. Carried from phase 2, not blocking: the story-progress flags (which provinces are won; needed for stage stress
+  1. Phase 4 extract (`references/pipeline.md` §Extract): build `tbl/jp.tbl` (kanji 0x58-0x3B6 by eye from
+     `tools/fontview.py` sheets + `fontmatch.py` guesses, checked in decoded text), dump `script/` from the
+     `kss_text` layout (ids, shared ids, `jp`, `en`, `max`), roundtrip test `encode(decode(words)) == words` for every
+     id, coverage test incl. the unreferenced C3 runs (`0x3143A`, `0x33AA4`, `0x33B98`, `0x347CC`) and other text
+     outside the table (menu captions `C1:9E7F`, small-font tilemaps in C8, `graphics.md` §T).
+  2. Later: graphics blocks that grow need relocation + load-table pointer rewrite (`gfx_blocks.pack` refuses now).
+  3. Carried from phase 2, not blocking: the story-progress flags (which provinces are won; needed for stage stress
      saves in phase 8) are not mapped; the battle map doesn't follow position (every forced battle uses the 紀伊
      map); G14 and T8 field-panel sources and the T6 variants' screens (`docs/re/graphics.md` §Still open).
 - **Open bugs:** none.

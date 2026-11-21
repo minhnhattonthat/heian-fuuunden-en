@@ -3,7 +3,7 @@
 Skill: translate-retro-game (Claude Code: plugin, enabled in .claude/settings.json; other agents: `<SKILL_DIR>/SKILL.md`; `$SKILL` = the directory holding its SKILL.md, printed by `python tools/skill.py`). Read it before ROM, text or QA work.
 
 ## Commands (run from repo root)
-- Build:    `python -X utf8 build.py` -> build/heian_en.sfc (checks the dump against `rom.sha1` first; not written yet, phase 3)
+- Build:    `python -X utf8 build.py` -> build/heian_en.sfc (checks the dump against `rom.sha1` first); `build.py identity [--recompress]` = unpack to `work/unpack/`, repack, compare (must say IDENTICAL)
 - Check:    `python -X utf8 tools/check.py`  (tests + lint; the pre-commit hook runs this; `git config core.hooksPath tools/hooks` once per clone)
 - Smoke:    `python -X utf8 $SKILL/scripts/emu.py build/heian_en.sfc --out work/qa/smoke --route tools/routes/boot.txt --smoke`
 - Warp:     `python -X utf8 tools/debug/warp_all.py [--rom F] [--only a,b]` (cold boot -> each scene in `tools/debug/scenes.tsv`, shots in `work/qa/warp/<scene>/`, states regenerated in `work/states/`; ~3 s per scene). One scene by hand: `emu.py ROM --out DIR --script tools/debug/warp.lua --var "SCENE='<name>'" --frames 9000`. Save editor: `tools/debug/save.py` (`docs/re/save.md`). God mode in battle: add `--script tools/lua/god.lua`. Never ask the user to play to a scene.

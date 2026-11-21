@@ -33,6 +33,9 @@ ROM: HiROM + FastROM (`$FFD5=$31`), 1.5 MB file, header size byte `$0B` (2 MB), 
   0x400-0x4FF are in C3 (file 0x30000), ids 0x300-0x3FF and 0x500-0x613 in C6 (file 0x60000).
 - The message id comes from `$1416`; `$142C` is the word index inside the string.
 - `tools/textmap.py` decodes every id and reports unreferenced ranges.
+- Layout (verified by the identity build, `tests/test_identity.py`): strings are back to back in pointer order, 24
+  strings are shared by several ids (123 ids), no pointer lands inside another string, all pointers even.
+  `tools/kss_text.py` unpacks each bank to an ordered list of strings + unreferenced raw runs and packs it back.
 
 ## Text ranges (verified by `tools/textmap.py`)
 - C3: strings `0x30C28-0x3F865`. Id 0x4FF is a dummy that points at `0x3F866`, a zero run to the bank end with no

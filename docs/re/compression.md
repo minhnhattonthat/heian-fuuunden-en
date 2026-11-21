@@ -10,8 +10,13 @@ block the game loaded in `work/qa/dec_*`: each decoded block ends exactly where 
 | 1 | `C1:05E6` | LZ. 16-bit flag words, LSB first; flag word 0 with ≥16 bytes left = 16 literals. Bit 0 = literal byte; bit 1 = word `w`: copy `(w>>11)+3` bytes from `out[pos-(w&0x7FF)-1]` |
 | 2 | `C1:074F` | word RLE (tilemaps). Odd size: one extra byte follows the header (last output byte). Command byte `c`: `c>>6` 0 = `n+1` literal words, 1 = one word `n+2` times, 2 = incrementing word `n+2` times, 3 = decrementing `n+2` times (`n = c&0x3F`) |
 
-An encoder is not written yet (phase 3/5). Blocks are packed back to back; a re-encoded block that grows must move
-to free space and have its pointer changed in the load tables below (or the code that names it).
+**Encoder** (`kss_comp.encode`, phase 3, verified by `tests/test_identity.py`): every block in `gfx/blocks.tsv`
+roundtrips (`decode(encode(x)) == x`). Byte-exact: all 45 type-0 and 70 type-2 blocks, 187 of 426 type-1 blocks:
+the original LZ is greedy longest-match but breaks equal-length ties in an order not recovered (farthest-first fits
+most; a hash-chain depth search did no better), and 2 blocks come out 1 byte longer. So `tools/gfx_blocks.py`
+keeps the original packed bytes of every unchanged block and re-encodes only edited ones. Blocks are packed back to
+back; a re-encoded block that grows must move to free space and have its pointer changed in the load tables below
+(or the code that names it): not implemented yet, `gfx_blocks.pack` refuses with "needs relocation".
 
 ## Where blocks live (`tools/kss_blocks.py`, list in `work/re/blocks.tsv`)
 - C8 (file 0x80000-0x8DF9E): title, file select, menus, small font, battle UI, ending/credits art, tilemaps. All
