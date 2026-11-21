@@ -26,11 +26,12 @@
 | 4B0 | 2 | changed 1 -> 3 in the first town | unknown |
 
 ## Main mode `$34` (jump table `C0:833F`; sub-state `$36`, then `$38`/`$3A`)
-0 logo · 1 title · 2 (`C0:8B34`) · 3 title menu (sub 3 = New/Continue, 5 = slot select) · 4 overworld (`C0:CBA4`,
+0 logo · 1 title · 2 history demo after ~50 s idle on the title (`C0:8B34`, ids 290-296; Start skips) · 3 title menu (sub 3 = New/Continue, 5 = slot select) · 4 overworld (`C0:CBA4`,
 sub table `C0:CBAB` indexed by `$36`; `$36=0` from the field draws it at the squad's slot position; **sub 0x16** =
 `C0:D4AD` starts a battle: `C1:501D` -> `$12AC` = province, then `$34=7`) · 5 field · 6 field menu (`C0:9F23`; `$38=8`
 = Select help panel) · 7 battle (`C0:623A`) · 8 game over (`C0:C78F`: Heian-kyō burns, 終 card G13) ·
-9 ending (`JSL CB:D8FA`) · 0A prologue (furigana text, G8) · 0C/0D dialogue (`C0:D7A7`) · 0E yes/no prompt.
+9 ending (`JSL CB:D8FA`) · 0A prologue (furigana text, G8) · 0B event scenes (`C5:99E4` command interpreter, windows.md) · 0C/0D shop
+(`C0:D7A7`, sub table `C0:D7AE`, shop type `$1446`; merchant dialogue, 価値 label at sub 3) · 0E yes/no prompt.
 Soft reset: L+R+Start+Select (`$76 == 0x3030`, `C0:8330`). `$0A00`: compared with 0x33 at battle end (final battle);
 used as scratch elsewhere (it churns on the overworld), so not a reliable event id.
 

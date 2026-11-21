@@ -12,6 +12,8 @@ pixels in emulator shots, not from the Japanese length. px = English VWF pixels 
 | Battle turn message (`{name}のばんです`, id 205) | dialogue | 176 px | 1 | measured: `marker_warp/battle_turn_msg` (box is wider than the buffer; cut at 176 by the VWF) |
 | Battle help prompt (id 0B8) | dialogue | 176 px | 1 | measured: `marker_warp/battle_help_prompt` (128-px marker shows whole); box ~200 px, buffer 176 |
 | Menu popup (id 28B in items/shikigami, id 243 save message) | renderer 2 (`C0:A93A`, VRAM 7000) | 112 px (14 tiles) | 1 | measured: `marker_warp/menu_items`, `save_message` (`n` after "brow" cut at x 112) |
+| Quit popup (id 244, save menu このままおわる) | renderer 2 `C0:AF62`, VRAM 7000 (as 243) | 112 px | 1 | measured: `marker_warp/quit_nosave` ("[244] The quick brown" cut like 243) |
+| Item-menu two-line popup (1C8 inventory full over 1C9 can't equip, both drawn by step `$3A=12`, `C0:A8CB`) | renderer 2 `C0:A8DE`/`A8F5`, VRAM 7E00/7F00, window `C1:1699` #0D | **128 px** (16 tiles) per line | 2 (one id each) | measured: `marker_warp/item_full` (scene pokes `$3A=12` in the item menu; "[1C9] The quick brown f" whole = 125 px, the `o` at 126+ cut; ink x 66-190, frame at 196) |
 | Item grid (ids 001-053 + 000 blank) | renderer 2 `C1:2D13`, VRAM 7600/7650/7700.. | 48 px (6 tiles) | 1 big or 2 small | measured: `stress_small/menu_items` (`--qa 000=...`: "0123456" / "abcdefg" in 8 px show whole, 48 px) |
 | Status screen class / name / equipment (0F3.., 0B9-0F2, items) | renderer 2 `C1:29D9`, VRAM 7000/7050/7100/7150 | 48 px (6 tiles) | 1 big or 2 small | measured: `marker_warp/menu_status` (small two-line markers whole) |
 | Party list names under the portraits (ids 054-083) | renderer 2 via `PartyName` (callers `C1:2C04`, `C1:32AE`, `C1:3327`), VRAM table `C1:A3CB` (`C1:A3DB` = +$200 when `$10CC`) | **40 px (5 tiles), narrow 8-px font, always** | 1 | measured: `work/qa/party/menu_items`, `menu_squad`, `menu_status` (`build.py marker --qa 054=Sadamitsu --qa 100=Yasumasa`: all 8 slots whole). Room per slot: x 32-71 (own portrait ends x 32, next starts x 72). Original: 3 tiles (24 px) of 16-px text; widened in the engine (D11, hooks.md §Party list) |
@@ -52,10 +54,23 @@ draws `{sbr}` as a space, so `{name}` in dialogue reads normally (verified: `mar
   | `C5:1281` / `C5:206A` | `$09EE,x` + $C2 or $12D / + $53 | 6E00 / 6D40 | ids in 001-0FE: 48 field |
   | `C5:12FF`, `C5:132A` | `C1:8785` + $1A7 (shikigami) | 6E40 / 6F00 | 48 field |
   | `C5:0064` / `0093` | fixed 101 / 102-103 | 6D40 / 6E00 | place names: 48 field |
-  | `C0:A8DE` / `A8F5` | fixed 1C8 / 1C9 (item full, can't equip) | 7E00 / 7F00 | 112 popup (guess) |
-  | `C0:AF62` | fixed 244 (quit message) | 7000, as 243 | 112 popup (guess; scene `quit_nosave`) |
-  | `C5:A4B5` / `A4CC` | fixed 28D / 28E (confirm, yes/no) | 7800 / 7900 | 112 popup (guess) |
+  | `C5:A4B5` / `A4CC` | fixed 28D / 28E (confirm, yes/no) | 7800 / 7900 | 112 popup (guess; same 0x100-word line slots as 1C8/1C9, so the buffer is 128) |
   | `C0:D938` / `C5:183B`,`1AE2` | fixed FF (価値) / 203 (音楽) | 6700 / 6D40 | 48 (guess) |
+
+  Triggers found so far (2026-11-22, probes in `work/qa/probe/`):
+  - 28D/28E: event-command interpreter `C5:99E4` (run by mode 0A prologue and mode 0B; command `$1244`, table
+    `C5:9A07`; command 0 = `C5:9C29`, a script at `[$12A6]` in bank C1, step `$129E`, table `C5:9C31`). Step $18
+    (`C5:A156`) is a squad pick (L/R cycles `$12C2` over 4 units, A/B advance); **Start jumps to step $1F** =
+    the confirm prompt; $20 opens window #12. Poking `$1242=1,$1244=0,$129E=1F` in the field renders both strings
+    (r2log) but no window shows. Not reached in the opening (mode 0A, mashed to the field, with `execpoke` forcing
+    Start at `C5:A156`): find the event script that uses step $18.
+  - FF 価値: mode 0C (`C0:D7A7`, sub table `C0:D7AE`) is the **shop** (`$122E = $1446` shop type; 0 = medicine
+    seller 28C, merchant 商人 portrait); sub 3 (`C0:D8ED`) draws 価値. Forcing `$34=0C,$36=0` from the field shows
+    the merchant's dialogue, then sub $12 without sub 3: needs a real shop NPC (or the shop setup at sub 0/1).
+  - 203 音楽: `C5:1801` state machine on `$1518` (no direct JSL; dispatched indirectly). Unknown screen.
+  - Mode 2 (`C0:8B34`, title idle ~f3380) is the history demo: ids 290-296, two lines over the city; the marker
+    fills each line to the Japanese 14 glyphs so no cut is visible (dialogue renderer, linted at 176).
+    Palace ids 297-2A5 are not in the demo, nor in New Game (mode 0A goes prologue -> 2A7 town).
   | `C0:921E` | 0 (blank slot) | 6C00+ | slot list, 48 |
 
 ## Not table text (stays Japanese in the marker build)

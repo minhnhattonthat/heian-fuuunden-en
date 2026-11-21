@@ -53,4 +53,5 @@ def test_fields_popups_party(en_t):
     assert lint.check_row(row("28B", "道具がありません！", "You have no items at all, sorry!"), 64, en_t)
     assert lint.check_row(row("054", "神楽", "Kagura"), 64, en_t) == []
     assert lint.check_row(row("054", "神楽", "Kagura-sama!"), 64, en_t)
-    assert lint.budget(row("054", "", "")) == "40 narrow" and lint.budget(row("1C8", "", "")).endswith("(guess)")
+    assert lint.budget(row("054", "", "")) == "40 narrow" and lint.budget(row("28D", "", "")).endswith("(guess)")
+    assert lint.budget(row("1C8", "", "")) == "128 popup"

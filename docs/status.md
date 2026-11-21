@@ -3,7 +3,8 @@
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
 - **Phase:** 5. Engine spike and marker build in progress (VWF, relocation, small/narrow names, party list, banners
-  and the lint done; left: shoot the guessed popups and the opening speaker box, see Next 1-3).
+  and the lint done; popups 244 and 1C8/1C9 measured; left: 28D/28E, FF, 203, the C1 lists and the palace speaker
+  box, see Next 1-2).
   Last build: `build/heian_en.sfc` 2026-11-22 sha1 8eb9b3e58340 (2 MB, smoke ok); marker `build/heian_marker.sfc`
   2026-11-22 sha1 9be2ddbb5507 (banner offsets; banner/slot/exit scenes shot, `work/qa/r2/`).
 - **Done:**
@@ -33,12 +34,16 @@ Updated at the end of every session. Keep it to what the next session needs; his
   - Phases 1-4: recon (`docs/re/`), warp tool + save editor + god mode, identity build, `tbl/jp.tbl` + `script/`.
   - Check: 40 passed (`test_lint.py`, `test_banner_offsets` new).
 - **Next:**
-  1. Shoot the "(guess)" budgets (windows.md §Not measured yet, `tools/lint.py POPUPS`): popups 1C8/1C9 (item full /
-     can't equip), 244 (`quit_nosave`), 28D/28E (`C5:A4B5`), labels FF (`C0:D938`) and 203 (`C5:183B`), the
-     `C1:6011` party-name screen, jutsu/shikigami lists outside battle (`C1:2E0E`, `C1:57C0`). Find each trigger from
-     the caller's mode/sub, add a scene, shoot the marker build, update the budget.
-  2. Opening palace scene (ids 29B-2A5: speaker line + 3 lines): find its trigger, measure, and teach the lint the
-     speaker line. Province card 1B9: shoot mid-card (`SHOTS_AFTER`) to confirm 176.
+  1. Shoot the remaining "(guess)" budgets (windows.md §Not measured yet has the trigger research): 28D/28E
+     (event command 0 step $1F, Start at the squad pick `C5:A156`; find the event script that uses it), FF 価値
+     (shop mode 0C sub 3: find a shop NPC or set up `$1446` + sub 0/1 properly), 203 音楽 (`C5:1801`, `$1518`),
+     the `C1:6011` party-name screen, jutsu/shikigami lists outside battle (`C1:2E0E`, `C1:57C0`). Done:
+     244 = 112 (`quit_nosave`), 1C8/1C9 = 128 (new scene `item_full`). Probe scenes: write a scratch scenes TSV and
+     pass `--scenes F` to `warp_all.py`; `-- --script tools/lua/r2log.lua` logs every renderer-2 call.
+  2. Opening palace scene (ids 297-2A5: speaker line + 3 lines): not in the title demo (mode 2 = ids 290-296 only,
+     title idle) nor in New Game (mode 0A: prologue -> 2A7 town). Find its trigger (maybe mode 2 after a finished
+     game, or a flag), measure, and teach the lint the speaker line. Province card 1B9: shoot mid-card
+     (`SHOTS_AFTER`) to confirm 176.
   3. Then phase 6 (glossary first; translators get the `max` column and `tools/lint.py`).
   4. Non-table Japanese (battle command labels, status labels, captions, help screen): graphics, phase 8.
   5. Leads kept: staff roll near `C2:CA80` (credits redraw), small-font tilemap text (`script/tilemaps.tsv`),
