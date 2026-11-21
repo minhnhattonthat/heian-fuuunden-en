@@ -2,9 +2,26 @@
 
 Updated at the end of every session. Keep it to what the next session needs; history is in git.
 
-- **Phase:** 6. Translate: not started (phase 5 width gate met 2026-11-22; glossary first).
+- **Phase:** 6. Translate in progress: wave 0 (terms) + pilot + b001-b002 merged; 732 rows left (b003-b017).
   Last build: `build/heian_en.sfc` 2026-11-22 sha1 7eb7f27372c6 (2 MB, smoke ok); marker `build/heian_marker.sfc`
-  2026-11-22 sha1 6a70b2581615 (135/135 warp scenes ok, shots in `work/qa/marker_warp/`).
+  2026-11-22 sha1 6a70b2581615 (135/135 warp scenes ok, shots in `work/qa/marker_warp/`). No build since English.
+- **Phase 6 so far (2026-11-22):**
+  - `glossary.md` (policy, style, characters, places, terms; enforced by `tools/batches.py check`, also a test),
+    `docs/translator-brief.md`, `docs/style-reference.md` (pilot 131-13B), `docs/synopsis.md`.
+  - Wave 0: every name/item/jutsu/shikigami/class/place/province field (466 rows) fitted with `batches.py fit`.
+  - b001 (battle/system messages, death lines, spell chants, medicine peddler, prologue 290-2A4) and b002
+    (Michinaga/Hiroyuki, epilogues 2B1-2EE, Kumano opening 401-40F) merged.
+  - **Kagura is a boy** (id 295 男子; surviving twin of Emperor Kazan and Lady Kishi): he/him everywhere.
+  - Tools: `tools/batches.py` (split/check/merge/fit; honorifics 殿/様 enforced), lint `NAME_CLASSES` (per-row
+    `{name}` width: squad msgs = party names, 214 shikigami, 112/218/21E items, 1B9 provinces; others = widest
+    name, ~119 px), `kss_script.write_tsv` atomic and quote-safe (a `"` once truncated C3.tsv mid-write).
+  - Codex CLI is out of quota until 2026-11-26 (no codex translators/reviewers before then).
+- **Next (phase 6):** `python -X utf8 tools/batches.py split` was run; `work/tl/` is gitignored, so in a fresh
+  clone run `split` again (it batches only rows still without `en`). Translate b003-b017 (each: write
+  `work/tl/bNNN.out.tsv`, `batches.py check bNNN` until OK, `batches.py merge bNNN`, commit). Then
+  `script/tilemaps.tsv` (16 rows, graphics text), then a reviewer pass per batch (fresh read-only pass, or
+  `codex exec` after 2026-11-26) with Minors to `docs/polish.md`. Translating ~3 batches per worker session fits
+  the context budget.
 - **Done:**
   - **Phase 5 met** (engine spike + marker build + width gate): every box variant is measured in-game
     (`docs/re/windows.md`; every row's budget is in the `max` column of `script/*.tsv`, no "(guess)" left).
@@ -24,9 +41,7 @@ Updated at the end of every session. Keep it to what the next session needs; his
     + `script/`.
   - Check: 41 passed.
 - **Next:**
-  1. Phase 6: glossary first (`glossary.md`: party/unit names 054-083 at 40 px narrow, provinces 280-288 / 1A0+
-     as 48-px fields, jutsu/shikigami 48 px, items 48 px), then batches with the translator agents; each gets the
-     `max` column and runs `python -X utf8 tools/lint.py`. Id 100 (empty squad slot, `　　`) must stay blank.
+  1. Phase 6 batches: see "Next (phase 6)" above. Id 100 (empty squad slot, `　　`) stays blank (split skips it).
   2. Non-table Japanese (battle command labels, status labels, captions, help screen, title logo under D5):
      graphics, phase 8.
   3. Leads kept: staff roll near `C2:CA80`, small-font tilemap text (`script/tilemaps.tsv`, incl. the New Game

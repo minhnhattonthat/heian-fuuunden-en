@@ -35,6 +35,9 @@ Binding for every translator and reviewer. Agents propose additions in reports; 
 | 花山帝 / 花山天皇 | Emperor Kazan | | in the prologue (984-985); later the Retired Emperor Kazan | |
 | 為光 | Tamemitsu | | Major Counselor Fujiwara no Tamemitsu, Lady Kishi's father | |
 | 女官 | Lady-in-waiting | | | |
+| 道長 | Michinaga | | Fujiwara no Michinaga, the regent (2A8) | |
+| 宮司 | Chief Priest | | of Kumano (2E8); 宮司殿 = Chief Priest-dono | |
+| 安倍晴明 | Abe no Seimei | | the script spells him both 安部 and 安倍 | |
 | 安部晴明 / 晴明 | Abe no Seimei / Seimei | 48 field | the great onmyoji; old, formal, wry | Abe Seimei |
 | 賀茂広行 / 広行 | Kamo no Hiroyuki / Hiroyuki | | onmyoji, Seimei's colleague; earnest, formal | |
 | 藤原盛高 / 盛高 | Fujiwara no Moritaka / Moritaka | | | |
@@ -112,7 +115,7 @@ Binding for every translator and reviewer. Agents propose additions in reports; 
 | JP | EN | max | notes | Avoid |
 |---|---|---|---|---|
 | 京の都 | Kyoto | 48 field | 都 alone in speech = "the capital" | |
-| 安部野 | Abeno | | | |
+| 安部野 / 安倍野 | Abeno | | | |
 | 熊野本宮 | Kumano Hongu | | 熊野 = Kumano | |
 | 熊野 | Kumano | | | |
 | 伊勢斎宮 | Ise Saigu / Ise Priestess | | the shrine; as a person/class: Ise Priestess | |
@@ -162,3 +165,7 @@ verbatim when dialogue names one (`build/terms_bNNN.txt` lists the ones a batch 
 ## Decisions from earlier batches
 - wave 0 (terms): 水龍剣 -> Water Dragon Blade (two 8-px lines of 48 px); 淡路藤原家 -> Fujiwara Manor, Awaji;
   降魔邪法 -> Demon Quelling; 独鈷杵/三鈷杵/五鈷杵/七鈷杵 -> 1/3/5/7-Prong Vajra.
+- b001: one-line battle messages hold a unit name of up to ~118 px, leaving ~58 px: terse forms ("{name} fell!",
+  "{name}: no effect", "{name} paralyzed"). 227 uses a `{br}` ("Shikigami sealed:{br}{name}"): check it in battle
+  in phase 8. Years: 永観二年（９８４） -> "Eikan 2 (984)". 伊予守 -> Governor of Iyo, 河内の国守 -> Governor of Kawachi.
+- b002: 藤太 -> Tota (Kagura's companion from Kumano). Tenkai calls Kagura "my boy".
